@@ -1,0 +1,8 @@
+Welcome to The Vaguely Parable.
+This is a somewhat satiricle game where your voice is your controller!
+Story segments are presented, and the last sentance always contains the phrase "Vaguely decided to".
+This last sentance will also guide you on what you can do next. Once the sentance is finished, you can guide Vaguely on her journey!
+Good luck!
+
+// @todo Initialise All Variables!!!
+#Stay 0

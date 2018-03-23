@@ -1,0 +1,6 @@
+4/00,	0/00b,	delay_500
+4/02,	4/99,	delay_1000
+4/03,	#prev,	auto
+4/04,	0/00b,	delay_500
+4/99,	0/00b,	delay_1000
+4/99,	#quit,	quit_the_game

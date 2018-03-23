@@ -1,0 +1,2 @@
+Vaguely decided to go through the door on the far left.
+// @todo randomise the door, or have it selected dependent on previous doors

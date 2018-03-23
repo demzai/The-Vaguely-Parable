@@ -1,0 +1,9 @@
+// @todo code stuffs
+#Stay +,#Stay,1
+###
+#select_storyline
+#Stay
+0, 2/25a
+1, 2/25b
+else, 2/25c
+###

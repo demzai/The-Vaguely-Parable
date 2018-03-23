@@ -1,0 +1,16 @@
+// @todo later, already tons to do as is
+// @todo format the file correctly
+
+Do you terribly mind, I'm trying to present the story to you! I can't very well do so if you're constantly interrupting me now can I?!
+
+
+*Silence*
+No, carry on. Don't let me interrupt you with all my narrating.
+*Silence until user silent*
+Finished?
+*Silence for a bit unless user continues with anything other than yes*
+Thank you, now, where was I...
+
+
+Thats it! If you really want to listen to my story, then come fine me when you're actually finished! Hmph.
+*Game quits*

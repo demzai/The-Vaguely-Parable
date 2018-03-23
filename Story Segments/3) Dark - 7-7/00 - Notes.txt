@@ -1,0 +1,6 @@
+the black chasms follow you, and there's a possibility of you falling back in again (though i'll need to do some kind of quick time event for the player as its unfair to put them through that every time)
+each time you fall in, the liklihood of you falling back in again after climbing out gets bigger
+and the chance of you not climbing out increases also
+
+
+Attempt to get shackles off
