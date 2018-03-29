@@ -1,9 +1,10 @@
-import Find_Files as ff
+# Dependencies
 import Extract_Narrative as en
-import Print_Colour as pc
-import re
 
+
+# Global Variables
 story_directory = "../Story Segments/"
+
 
 # Obtain all of the database files
 def getAllDatabases(files, folders, folderID=""):
@@ -14,8 +15,7 @@ def getAllDatabases(files, folders, folderID=""):
     for folder in folders:
         currFolderID = folderID + folder + '/'
         directory = folders[folder]
-        database_files = database_files + \
-                         getAllDatabases(directory[1], directory[2], currFolderID)
+        database_files = database_files + getAllDatabases(directory[1], directory[2], currFolderID)
     return database_files
 
 
@@ -34,6 +34,17 @@ def convertToGlobalAddress(address, global_appendage):
         return address
 
 
+# Convert a list into a map
+def listToMap(list):
+    map = {}
+    for entry in list:
+        if entry[0] in map:
+            map[entry[0]] = map[entry[0]] + [[entry[1], entry[2]]]
+        else:
+            map.update({entry[0]: [[entry[1], entry[2]]]})
+    return map
+
+
 # Obtain & sort all .csv files into a single database
 def getStoryDatabase(files, folders):
     # Find database files
@@ -42,20 +53,22 @@ def getStoryDatabase(files, folders):
     # Extract contents
     lines = []
     for database in databases:
-        csv_lines = en.splitCSV( en.getFileContents(database[1]) )
+        csv_lines = en.splitCSV(en.getFileContents(database[1]))
 
         # Format addresses appropriately
         for entry in csv_lines:
             entry[0] = convertToGlobalAddress(entry[0], database[0])
             entry[1] = convertToGlobalAddress(entry[1], database[0])
         lines = lines + csv_lines
-    return lines
+
+    # Convert the list into a map and return (improves code readability and access time)
+    return listToMap(lines)
 
 
-[files, folders] = ff.discoverFiles(story_directory)
-db = getStoryDatabase(files, folders)
-for i in db:
-    pc.printC(str(i), "WARNING")
+# [files, folders] = ff.discoverFiles(story_directory)
+# db = getStoryDatabase(files, folders)
+# for i in db:
+#     pc.printC(str(db[i]), "WARNING")
 
 
 
