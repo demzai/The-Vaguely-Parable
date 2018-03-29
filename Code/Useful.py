@@ -50,8 +50,6 @@ print(Colours.WARNING + "Insert Coloured Text Here!!!" + Colours.END_TEXT)
 
 # Valid file & folder detection
 # [^\/\\\:\*\?\"\<\>\|\W]+\)[^\/\\\:\*\?\"\<\>\|\W]*\.(txt|csv)
-# @todo iterate through each folder to get the relative absolute paths
-# @todo map files and folders to their start codes
 import os, glob
 folders = glob.glob('*)*' + os.path.sep)
 files = glob.glob("*)*.*")

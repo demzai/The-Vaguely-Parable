@@ -75,10 +75,10 @@ def discoverFiles(directory=""):
 
 
 # Uncomment for testing purposes
-[fils, folds] = discoverFiles("../Story Segments/")
-var = folds
-for a in var:
-    print(a + ",\t" + str(var[a]))
+# [fils, folds] = discoverFiles("../Story Segments/")
+# var = folds
+# for a in var:
+#     print(a + ",\t" + str(var[a]))
 
 
 
