@@ -1,9 +1,6 @@
 # Dependencies
 import Extract_Narrative as en
-
-
-# Global Variables
-story_directory = "../Story Segments/"
+import Print_Colour as pc
 
 
 # Obtain all of the database files
@@ -65,28 +62,23 @@ def getStoryDatabase(files, folders):
     return listToMap(lines)
 
 
+# Perform a secure "get" from the map
+def getFromMap(id, map):
+    if str(id) in map:
+        return map[id]
+    else:
+        pc.printC("ERROR: INVALID ID DETECTED - " + str(id), "FAIL")
+        return None
+
+
+
+# # Uncomment for testing
+# import Find_Files as ff
+# story_directory = "../Story Segments/"
 # [files, folders] = ff.discoverFiles(story_directory)
 # db = getStoryDatabase(files, folders)
 # for i in db:
 #     pc.printC(str(db[i]), "WARNING")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
