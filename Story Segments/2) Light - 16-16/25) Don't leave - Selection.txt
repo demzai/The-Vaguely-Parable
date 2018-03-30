@@ -1,7 +1,7 @@
 // @todo code stuffs
-#Stay +,#Stay,1
+#Stay(#+(#Stay,1))
 ###
-#select_storyline
+//#select_storyline
 #Stay
 0, 2/25a
 1, 2/25b

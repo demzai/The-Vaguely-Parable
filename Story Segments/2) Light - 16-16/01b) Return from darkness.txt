@@ -2,5 +2,5 @@ Breathless after the tiresome journey, Vaguely found herself in a strange, brigh
 
 Tired of the struggling, 
 
-#Door 0
-#Break 0
+#Door(0)
+#Break(0)

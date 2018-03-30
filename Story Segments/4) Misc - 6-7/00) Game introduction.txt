@@ -5,4 +5,4 @@ This last sentance will also guide you on what you can do next. Once the sentanc
 Good luck!
 
 // @todo Initialise All Variables!!!
-#Stay 0
+#Stay(0)

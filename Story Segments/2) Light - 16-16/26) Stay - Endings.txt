@@ -3,16 +3,17 @@ Ending:
 // @todo code stuffs
 // @todo to simplify for now, just create tons of separate files?
 ###
-#select_text
+//#select_text
 #Stay
-1, One is the loneliest number.
-2, Two's company.
-3_4, #Stay's a crowd.
-5_19, #Stay's a party.
-20_24, #Stay's a rave.
-25, Please stop.
-26, Pretty please.
-27, Don’t you have anything better to do.
-else, ...
+1, "One is the loneliest number."
+2, "Two's company."
+3_4, "#Stay's a crowd."
+5_19, "#Stay's a party."
+20_24, "#Stay's a rave."
+25, "Please stop."
+26, "Pretty please."
+27, "Don’t you have anything better to do."
+else, "..."
 ###
 
+_#code

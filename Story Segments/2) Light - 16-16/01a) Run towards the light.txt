@@ -2,5 +2,5 @@ Filled with hope, Vaguely pelted towards the light. Getting closer, the light se
 
 Eager for answers, 
 
-#Door 0
-#Break 0
+#Door(0)
+#Break(0)

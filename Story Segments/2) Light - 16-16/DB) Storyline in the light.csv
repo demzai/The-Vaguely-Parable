@@ -23,8 +23,8 @@
 2/03c,	2/04b,	look_back
 2/03c,	2/04c,	go_back
 2/04a,	4/99,	delay_1000							//_Auto_=_instant,_delay_1000_=_delayed_by_1000ms
-2/04b,	#&prev,	auto							//_Repeat_options_of_previous_file
-2/04c,	#&prev,	auto
+2/04b,	#&(#prev),	auto							//_Repeat_options_of_previous_file
+2/04c,	#&(#prev),	auto
 2/04c,	2/04d,	go_back							//_Overwrite_option_of_previous-file
 2/04d,	3/01,	auto
 2/13,	#code,	auto
@@ -33,9 +33,9 @@
 2/13c,	01c,	auto
 2/13d,	01c,	auto
 2/14,	4/99,	delay_1000
-2/23,	#&prev,	auto
+2/23,	#&(#prev),	auto
 2/23,	2/24,	pull_string						//_Add_option_to_previous_options
-2/24,	#&01c,	auto							//_Repeat_options_of_2/01c
+2/24,	#&(01c),	auto							//_Repeat_options_of_2/01c
 2/24,	2/25,	go_up_stairs
 2/25,	#code,	auto
 2/25a,	2/26,	auto
