@@ -32,14 +32,16 @@ def convertToGlobalAddress(address, global_appendage):
 
 
 # Convert a list into a map
-def listToMap(list):
-    map = {}
-    for entry in list:
-        if entry[0] in map:
-            map[entry[0]] = map[entry[0]] + [[entry[1], entry[2]]]
+def listToMap(list_of_values):
+    mapped_values = {}
+    for entry in list_of_values:
+        if entry[0] in mapped_values:
+            mapped_values[entry[0]] = mapped_values[entry[0]] + [[entry[1], entry[2]]]
+            # map[entry[0]].update({entry[2]: entry[1]})
         else:
-            map.update({entry[0]: [[entry[1], entry[2]]]})
-    return map
+            mapped_values.update({entry[0]: [[entry[1], entry[2]]]})
+            # map.update({entry[0]: {entry[2]: entry[1]}})
+    return mapped_values
 
 
 # Obtain & sort all .csv files into a single database
@@ -63,13 +65,12 @@ def getStoryDatabase(files, folders):
 
 
 # Perform a secure "get" from the map
-def getFromMap(id, map):
-    if str(id) in map:
-        return map[id]
+def getFromMap(key, map_of_values):
+    if str(key) in map_of_values:
+        return map_of_values[key]
     else:
-        pc.printC("ERROR: INVALID ID DETECTED - " + str(id), "FAIL")
+        pc.printC("ERROR: INVALID ID DETECTED - " + str(key), "FAIL")
         return None
-
 
 
 # # Uncomment for testing
@@ -79,8 +80,3 @@ def getFromMap(id, map):
 # db = getStoryDatabase(files, folders)
 # for i in db:
 #     pc.printC(str(db[i]), "WARNING")
-
-
-
-
-

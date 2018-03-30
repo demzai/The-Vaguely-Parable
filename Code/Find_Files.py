@@ -18,8 +18,8 @@ def search(directory="", foldersOnly=False, searchTerm='*)*', recurse=False):
 
 
 # Specialised search for files only
-def findFiles(directory="", type=".*"):
-    return search(directory, False, '*)*'+type, False)
+def findFiles(directory="", file_type=".*"):
+    return search(directory, False, '*)*' + file_type, False)
 
 
 # Specialised search for folders only
@@ -75,8 +75,8 @@ def discoverFiles(directory=""):
 
 
 # Uncomment for testing purposes
-# [fils, folds] = discoverFiles("../Story Segments/")
-# var = folds
+# [files, folders] = discoverFiles("../Story Segments/")
+# var = folders
 # for a in var:
 #     print(a + ",\t" + str(var[a]))
 

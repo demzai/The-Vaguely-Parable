@@ -6,7 +6,7 @@ def cleanFileContents(text):
     sentence = []
     for line in text.split("\n"):
         # Remove comments and excess whitespace at the start and end of the line
-        line = re.sub("\s*\/\/.*", "", line)
+        line = re.sub("\s*//.*", "", line)
         line = line.strip()
 
         # Ignore empty lines
@@ -26,7 +26,7 @@ def getFileContents(fileLocale):
 
 # Determine text entries to be replaced
 def getDynamicText(sentence):
-    codes = re.findall("\#[\w\&]*", sentence)
+    codes = re.findall("#[\w&]*", sentence)
     return codes
 
 
@@ -34,21 +34,22 @@ def getDynamicText(sentence):
 def findCodeLines(sentences):
     isCode = []
     codeSegment = False
-    for s in sentences:
-        if s[0] is '#':
-            if (s.__len__() >= 3) and \
-                    (s[1] is '#') and \
-                    (s[2] is '#'):
+    for sentence in sentences:
+        if sentence[0] is '#':
+            if (sentence.__len__() >= 3) and (sentence[:2] == '###'):
                 codeSegment = not codeSegment
-            if (s[1] is ' ') or (s[1] is '\t'):
+                isCode = isCode + ["True"]
+            elif (sentence[1] is ' ') or (sentence[1] is '\t'):
                 isCode = isCode + ["Error"]
+            elif sentence[1] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
+                isCode = isCode + ["Variable"]
             else:
-                isCode = isCode + [True]
+                isCode = isCode + ["True"]
         else:
             if codeSegment is True:
-                isCode = isCode + [True]
+                isCode = isCode + ["True"]
             else:
-                isCode = isCode + [False]
+                isCode = isCode + ["False"]
     return isCode
 
 
