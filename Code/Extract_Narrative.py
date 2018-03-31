@@ -39,8 +39,6 @@ def findCodeLines(sentences):
             if (sentence.__len__() >= 3) and (sentence[:2] == '###'):
                 codeSegment = not codeSegment
                 isCode = isCode + ["True"]
-            elif (sentence[1] is ' ') or (sentence[1] is '\t'):
-                isCode = isCode + ["Error"]
             elif sentence[1] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
                 isCode = isCode + ["Variable"]
             else:
@@ -48,6 +46,8 @@ def findCodeLines(sentences):
         else:
             if codeSegment is True:
                 isCode = isCode + ["True"]
+            elif re.findall('(^|\\\{2,}|[^\\\])\#\S+', sentence).__len__() is not 0:
+                isCode = isCode + ["Container"]
             else:
                 isCode = isCode + ["False"]
     return isCode
@@ -63,13 +63,13 @@ def splitCSV(lines):
 
 # Uncomment for testing
 # import Print_Colour as pr
-# file = "a) Pass/DB) Database Test.txt"
+# file = "a) Pass/DB) Database Test.csv"
 # sentences = getFileContents(file)
 # codeLines = findCodeLines(sentences)
 # # sentences = splitCSV(sentences)
 # for s in range(0, sentences.__len__()):
-#     pr.printC(str(codeLines[s]) + '\t' + str(sentences[s]), "OK_BLUE")
-#     dynamicText = getDynamicText(sentences[s])
-#     if dynamicText.__len__() is not 0:
-#         pr.printC(str(dynamicText), "OK_GREEN")
+    # pr.printC(str(codeLines[s]) + '\t' + str(sentences[s]), "OK_BLUE")
+    # dynamicText = getDynamicText(sentences[s])
+    # if dynamicText.__len__() is not 0:
+        # pr.printC(str(dynamicText), "OK_GREEN")
 
