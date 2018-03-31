@@ -2,7 +2,7 @@
 This module is for testing bracket pairings within a given string
 Tested with Python 3.5.4
 >>> resolveCodeBrackets('#Testy(1, #Fire(4, ") fly["))')
-[['#Testy', '', '1, #Fire', '', '4, ', '', ') fly[', '', '', ''], ['(', '(', '"', '"', ')', ')']]
+[[0, 'code', ['#Testy']], [1, 'code', ['1', '#Fire']], [2, 'code', ['4']], [3, 'string', ') fly[']]
 >>> resolveCodeBrackets('#Testy(1, "yup"')
 Traceback (most recent call last):
  ...
@@ -161,6 +161,54 @@ def doBracketsMatch(list_of_brackets, other_text=None):
         return [True, mergeNonSeparated('', other_text), endBrackets]
 
 
+def getBracketHierarchy(brackets, texts):
+    """
+    # Takes a list of brackets and text, and assigns a bracket depth and type to that text
+    :param brackets:
+    :param texts:
+    :return [hierarchical depth, code or string, original text]:
+    >>> getBracketHierarchy(['(', '(', '"', '"', ')', ')'], \
+    ['#Testy', '', '1, #Fire', '', '4, ', '', ') fly[', '', '', ''])
+    [[0, 'code', ['#Testy']], [1, 'code', ['1', '#Fire']], [2, 'code', ['4']], [3, 'string', ') fly[']]
+    >>> getBracketHierarchy(['(', '"', '"', '(', '"', '"', ')', ')'], \
+    ['#test', '', '4,', '', 'lo', '', ', #hel', '', '', '5', '', '', ''])
+    [[0, 'code', ['#test']], [1, 'code', ['4']], [2, 'string', 'lo'], [1, 'code', ['#hel']], [3, 'string', '5']]
+    """
+    stack = []
+    bracket_num = 0
+    hierarchy = 0
+    breakdown = []
+    # For each text...
+    for text in texts:
+        # If a bracket...
+        if text == '':
+            # If an opening bracket...
+            if brackets[bracket_num] in opening and \
+                    (stack.__len__() is 0 or \
+                     brackets[bracket_num] != bracket_pairs[stack[-1]][0]):
+                stack.append(brackets[bracket_num])
+                hierarchy = hierarchy + 1
+            # If a closing bracket...
+            else:
+                stack.pop()
+                hierarchy = hierarchy - 1
+            bracket_num = bracket_num + 1
+        else:
+            # If no brackets, or inside a parenthesis, then text is code
+            if stack.__len__() is 0 or bracket_pairs[stack[-1]][1] is 0:
+                text_type = 'code'
+                # Remove excess whitespace
+                text = "".join(text.split())
+                # Breakdown into comma separated values
+                text = [x for x in text.split(',') if x != '']
+                breakdown = breakdown + [[hierarchy, text_type, text]]
+            # Otherwise, it is a string
+            else:
+                text_type = 'string'
+                breakdown = breakdown + [[hierarchy, text_type, text]]
+    return breakdown
+
+
 def resolveCodeBrackets(code):
     """
     Converts the code snippet into a list of elements
@@ -174,11 +222,15 @@ def resolveCodeBrackets(code):
     if code_breakdown[0] is False:
         raise ValueError('Invalid bracketing in code - ' + str(code_breakdown))
     else:
-        return code_breakdown[1:]
+        return getBracketHierarchy(code_breakdown[2], code_breakdown[1])
 
 
 # Testing prompt
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-
+    while False:
+        print("Please enter an example code for testing:")
+        string = input()
+        results = resolveCodeBrackets(string)
+        print(str(results) + '\n')
