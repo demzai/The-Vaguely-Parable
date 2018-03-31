@@ -1,17 +1,13 @@
 """
 This module is for testing bracket pairings within a given string
+It also converts a given code string into a pair of values [function name, function parameter list]
 Tested with Python 3.5.4
->>> resolveCodeBrackets('#Testy(1, #Fire(4, ") fly["))')
-[[0, 'code', ['#Testy']], [1, 'code', ['1', '#Fire']], [2, 'code', ['4']], [3, 'string', ') fly[']]
->>> resolveCodeBrackets('#Testy(1, "yup"')
-Traceback (most recent call last):
- ...
-ValueError: Invalid bracketing in code - [False, 3, ['(', '"', '"'], ['(', '"', '"']]
 """
 
 
 # Dependencies
 import re
+import ast
 
 
 # Global Variables
@@ -161,59 +157,17 @@ def doBracketsMatch(list_of_brackets, other_text=None):
         return [True, mergeNonSeparated('', other_text), endBrackets]
 
 
-def getBracketHierarchy(brackets, texts):
-    """
-    # Takes a list of brackets and text, and assigns a bracket depth and type to that text
-    :param brackets:
-    :param texts:
-    :return [hierarchical depth, code or string, original text]:
-    >>> getBracketHierarchy(['(', '(', '"', '"', ')', ')'], \
-    ['#Testy', '', '1, #Fire', '', '4, ', '', ') fly[', '', '', ''])
-    [[0, 'code', ['#Testy']], [1, 'code', ['1', '#Fire']], [2, 'code', ['4']], [3, 'string', ') fly[']]
-    >>> getBracketHierarchy(['(', '"', '"', '(', '"', '"', ')', ')'], \
-    ['#test', '', '4,', '', 'lo', '', ', #hel', '', '', '5', '', '', ''])
-    [[0, 'code', ['#test']], [1, 'code', ['4']], [2, 'string', 'lo'], [1, 'code', ['#hel']], [3, 'string', '5']]
-    """
-    stack = []
-    bracket_num = 0
-    hierarchy = 0
-    breakdown = []
-    # For each text...
-    for text in texts:
-        # If a bracket...
-        if text == '':
-            # If an opening bracket...
-            if brackets[bracket_num] in opening and \
-                    (stack.__len__() is 0 or \
-                     brackets[bracket_num] != bracket_pairs[stack[-1]][0]):
-                stack.append(brackets[bracket_num])
-                hierarchy = hierarchy + 1
-            # If a closing bracket...
-            else:
-                stack.pop()
-                hierarchy = hierarchy - 1
-            bracket_num = bracket_num + 1
-        else:
-            # If no brackets, or inside a parenthesis, then text is code
-            if stack.__len__() is 0 or bracket_pairs[stack[-1]][1] is 0:
-                text_type = 'code'
-                # Remove excess whitespace
-                text = "".join(text.split())
-                # Breakdown into comma separated values
-                text = [x for x in text.split(',') if x != '']
-                breakdown = breakdown + [[hierarchy, text_type, text]]
-            # Otherwise, it is a string
-            else:
-                text_type = 'string'
-                breakdown = breakdown + [[hierarchy, text_type, text]]
-    return breakdown
-
-
 def resolveCodeBrackets(code):
     """
     Converts the code snippet into a list of elements
     :param code:
     :return:
+    >>> resolveCodeBrackets('#Testy(1, #Fire(4, ") fly["))')
+    [True, ['#Testy', '', '1, #Fire', '', '4, ', '', ') fly[', '', '', ''], ['(', '(', '"', '"', ')', ')']]
+    >>> resolveCodeBrackets('#Testy(1, "yup"')
+    Traceback (most recent call last):
+     ...
+    ValueError: Invalid bracketing in code - [False, 3, ['(', '"', '"'], ['(', '"', '"']]
     """
     regexp = getRegexFromList(opening + closing)
     patterns = re.findall(regexp, str(code))
@@ -222,15 +176,131 @@ def resolveCodeBrackets(code):
     if code_breakdown[0] is False:
         raise ValueError('Invalid bracketing in code - ' + str(code_breakdown))
     else:
-        return getBracketHierarchy(code_breakdown[2], code_breakdown[1])
+        return code_breakdown
+
+
+def updateStack(stack, bracket):
+    """
+    Given a new bracket, keep track of what the currently open one is
+    :param stack:
+    :param bracket:
+    :return:
+    >>> updateStack([], '(')
+    ['(']
+    >>> updateStack([None], '(')
+    [None, '(']
+    >>> updateStack(['('], '(')
+    ['(', '(']
+    >>> updateStack(['('], ')')
+    []
+    >>> updateStack([], '"')
+    ['"']
+    >>> updateStack(['"'], '"')
+    []
+    >>> updateStack([], 'INCORRECT')
+    Traceback (most recent call last):
+     ...
+    ValueError: Invalid bracketing in code - "INCORRECT" is not a valid bracket
+    >>> updateStack([], ')')
+    Traceback (most recent call last):
+     ...
+    ValueError: Unpaired close bracket detected - ")"
+    """
+    if bracket not in bracket_pairs:
+        raise ValueError('Invalid bracketing in code - "' + str(bracket) + '" is not a valid bracket')
+    elif stack.__len__() > 0 and stack[-1] is not None and bracket == bracket_pairs[stack[-1]][0]:
+        stack.pop()
+    elif bracket in opening:
+        stack.append(bracket)
+    else:
+        raise ValueError('Unpaired close bracket detected - "' + str(bracket) + '"')
+    return stack
+
+
+def convertCodeToList(code):
+    """
+    # Takes a code in and returns a list pair [function name, function parameters]
+    :param code:
+    :return:
+    >>> convertCodeToList('#T(1, #F(4, "8 _ 8", "&") )')
+    ['#T', ['1', ['#F', ['4', '"8 _ 8"', '"&"']]]]
+    >>> convertCodeToList("#T (\t ( ( \t(1, (2) \t) )\t ) )")
+    ['#T', [[[[[[['1', [['2']]]]]]]]]]
+    """
+    result = resolveCodeBrackets(code)
+
+    text = result[1]
+    brackets = result[2]
+    stack = [None]
+
+    # Resolve whitespace and quotes
+    for i in range(0, text.__len__()):
+        # If not a bracket...
+        if text[i] != '':
+            # If not a string...
+            if stack[-1] != '"':
+                # Remove whitespace
+                text[i] = ''.join(str(text[i]).split())
+                # Add quotes around comma separated values
+                text[i] = str(text[i]).replace(',', '","')
+            # If a string...
+            else:
+                # Add delimited quotes around the string
+                text[i] = '\\"' + str(text[i]) + '\\"'
+            # Ensure all csv's, and only csv's, are quoted properly
+            text[i] = '"' + str(text[i]) + '"'
+            text[i] = str(text[i]).replace('"",', ',')
+            text[i] = str(text[i]).replace(',""', ',')
+        # If a bracket...
+        else:
+            # Update the stack
+            updateStack(stack, brackets[0])
+            brackets = brackets[1:]
+
+    new_text = []
+    brackets = result[2]
+    stack = [None]
+
+    # Resolve comma separation and brackets
+    for i in range(0, text.__len__()):
+        # If not a bracket...
+        if text[i] != '':
+            # If not a string...
+            if stack[-1] != '"' and text[i] != '""':
+                # Split into comma separated values and reinsert individually
+                values = str(text[i]).split(',')
+                for value in values:
+                    new_text.append(value)
+                    new_text.append(',')
+                new_text.pop()
+            # If a string...
+            elif stack[-1] == '"':
+                new_text.append(text[i])
+        # If a bracket...
+        else:
+            # If an opening parenthesis, '('...
+            if brackets[0] == '(' and new_text.__len__() is not 0:
+                # If previous entry wasn't a comma, empty, or an opening bracket...
+                if new_text[-1] != ',' and new_text[-1] != '' and new_text[-1][-1] != '[':
+                    new_text[-1] = '[' + new_text[-1] + ',['
+                else:
+                    new_text.append('[[')
+            # If an closing parenthesis, ')'...
+            elif brackets[0] == ')':
+                new_text.append(']]')
+            # Update the stack
+            updateStack(stack, brackets[0])
+            brackets = brackets[1:]
+
+    # Convert to a single string
+    string_list = ""
+    for i in new_text:
+        string_list = string_list + str(i)
+
+    return ast.literal_eval(string_list)
 
 
 # Testing prompt
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    while False:
-        print("Please enter an example code for testing:")
-        string = input()
-        results = resolveCodeBrackets(string)
-        print(str(results) + '\n')
