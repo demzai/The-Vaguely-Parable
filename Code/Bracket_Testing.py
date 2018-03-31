@@ -297,6 +297,10 @@ def convertCodeToList(code):
     for i in new_text:
         string_list = string_list + str(i)
 
+    # Resolve 0-brackets condition
+    if string_list[0] != '[':
+        string_list = '[' + string_list + ']'
+
     return ast.literal_eval(string_list)
 
 
