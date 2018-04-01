@@ -74,9 +74,10 @@ def getFromMap(key, map_of_values):
 
 
 # # Uncomment for testing
-# import Find_Files as ff
-# story_directory = "../Story Segments/"
-# [files, folders] = ff.discoverFiles(story_directory)
-# db = getStoryDatabase(files, folders)
-# for i in db:
-#     pc.printC(str(db[i]), "WARNING")
+if __name__ == '__main__':
+    import Find_Files as ff
+    story_directory = "../Story Segments/"
+    [files, folders] = ff.discoverFiles(story_directory)
+    db = getStoryDatabase(files, folders)
+    for i in db:
+        pc.printC(str(db[i]), "WARNING")

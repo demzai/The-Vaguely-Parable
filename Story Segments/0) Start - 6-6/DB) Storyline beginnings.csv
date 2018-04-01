@@ -1,3 +1,4 @@
+###
 0/00a,	0/00b,	auto
 0/00b,	0/01,	auto
 0/00c,	0/01,	auto
@@ -16,3 +17,4 @@
 0/03b,	2/01a,	run_toward_the	light
 0/03b,	0/04,	run_away_from_the_light
 0/04,	3/01,	auto
+###
