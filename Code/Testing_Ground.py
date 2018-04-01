@@ -10,8 +10,17 @@ import Bracket_Testing as bt
 import Database_Management as dm
 import Find_Files as ff
 import Print_Colour as pc
+import Extract_Narrative as en
+from Constants import *
 
-story_directory = "../Story Segments/"
+
+# Database managements test code:
+[files, folders] = ff.discoverFiles(story_directory)
+db = dm.getStoryDatabase(files, folders)
+for i in db:
+    pc.printC(str(db[i]), "WARNING")
+
+
 [files, folders] = ff.discoverFiles(story_directory)
 db = dm.getStoryDatabase(files, folders)
 for i in db:

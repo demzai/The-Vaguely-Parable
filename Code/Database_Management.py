@@ -37,10 +37,10 @@ def listToMap(list_of_values):
     for entry in list_of_values:
         if entry[0] in mapped_values:
             mapped_values[entry[0]] = mapped_values[entry[0]] + [[entry[1], entry[2]]]
-            # map[entry[0]].update({entry[2]: entry[1]})
+            # mapped_values[entry[0]].update({entry[2]: entry[1]})
         else:
             mapped_values.update({entry[0]: [[entry[1], entry[2]]]})
-            # map.update({entry[0]: {entry[2]: entry[1]}})
+            # mapped_values.update({entry[0]: {entry[2]: entry[1]}})
     return mapped_values
 
 
@@ -76,7 +76,7 @@ def getFromMap(key, map_of_values):
 # # Uncomment for testing
 if __name__ == '__main__':
     import Find_Files as ff
-    story_directory = "../Story Segments/"
+    from Constants import *
     [files, folders] = ff.discoverFiles(story_directory)
     db = getStoryDatabase(files, folders)
     for i in db:

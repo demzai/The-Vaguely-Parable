@@ -1,11 +1,14 @@
+"""
+Finds files, creating a database of their locations
+Provides a file location if given a valid code
+"""
+
+
+# Dependencies
 import os
 import glob
 import re
-
-
-# Valid file & folder detection
-# [^\/\\\:\*\?\"\<\>\|\W\#]+\)[^\/\\\:\*\?\"\<\>\|\W\#]*\.(txt|csv)
-# result = glob.glob("../**/*)*" + os.path.sep, recursive=True)
+from Constants import *
 
 
 # Standardised, yet generic, search function
@@ -74,22 +77,29 @@ def discoverFiles(directory=""):
     return [files, folders]
 
 
-# Uncomment for testing purposes
-# [files, folders] = discoverFiles("../Story Segments/")
-# var = folders
-# for a in var:
-#     print(a + ",\t" + str(var[a]))
+# Given a file code, provide the file location if it exists
+def getFileFromCode(code, file_locales, code_determiner='/'):
+    code = code.split(code_determiner)
+    file_locales = [start_directory] + file_locales
+    try:
+        for i in range(0, code.__len__()-1):
+            file_locales = file_locales[2][code[i]]
+        file = file_locales[1][code[-1]]
+    except KeyError:
+        print('BAD INDEX AFTER "' + str(file_locales[0]) + '" - "' + str(code[i]) + '"')
+        return ""
+    return file
 
 
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    [files, folders] = discoverFiles(start_directory)
+    var = folders
+    for a in var:
+        print(a + ",\t" + str(var[a]))
+    while True:
+        print("Please enter a code:")
+        string = input()
+        print(getFileFromCode(string, [files, folders]))
 
 
 

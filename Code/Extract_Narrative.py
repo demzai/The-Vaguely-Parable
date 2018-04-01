@@ -28,7 +28,7 @@ def findCodeLines(sentences):
     for sentence in sentences:
         if sentence.__len__() is 0:
             isCode = isCode + ["Text"]
-        elif sentence[0] is '#':
+        elif sentence[0] is '#' or sentence[:2] == '//':
             if (sentence.__len__() >= 3) and (sentence[:3] == '###'):
                 codeSegment = not codeSegment
                 isCode = isCode + ["Code"]
@@ -112,16 +112,16 @@ def splitCSV(lines):
 
 
 if __name__ == '__main__':
-    file = "a) Pass/DB) Database Test.csv"
     # file = "test.txt"
-    file_lines = getFileContents(file)
-    csv_lines = splitCSV(file_lines)
-    # Print file lines
-    for s in range(0, file_lines.__len__()):
-        print(pc.IPurple + str(file_lines[s][0]) + ',\t' + \
-              pc.IYellow + str(file_lines[s][1]) + ',\t' +  \
-              pc.IGreen + str(file_lines[s][2]) + pc.Reset)
+    # file_lines = getFileContents(file)
+    # # Print file lines
+    # for s in range(0, file_lines.__len__()):
+    #     print(pc.IPurple + str(file_lines[s][0]) + ',\t' + \
+    #           pc.IYellow + str(file_lines[s][1]) + ',\t' +  \
+    #           pc.IGreen + str(file_lines[s][2]) + pc.Reset)
 
+    file = "a) Pass/DB) Database Test.csv"
+    csv_lines = splitCSV(getFileContents(file))
     # Print CSV lines
     for s in range(0, csv_lines.__len__()):
         print(pc.IPurple + str(csv_lines[s][0]) + ',\t' + \
