@@ -13,3 +13,15 @@ nestable = {0: True, 1: False}
 bracket_pairs = dict(zip(opening + closing, \
                          [[(closing + opening)[i], (priority + priority)[i]] \
                           for i in range(0, opening.__len__() * 2)]))
+
+
+# Volatile variables, functions and function results
+map_variable = {}
+map_function = {}
+last_function_result = None
+
+
+# State machine variables
+database = {}
+addresses = ['', '', []]
+file_locales = []

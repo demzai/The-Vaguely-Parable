@@ -8,13 +8,7 @@ import Database_Management as dm
 import Extract_Narrative as en
 import Find_Files as ff
 import Print_Colour as pc
-from Globals import start_directory
-
-
-# Global Variables
-database = {}
-addresses = ['', '', []]
-file_locales = []
+from Globals import start_directory, database, addresses, file_locales
 
 
 # Get the start node
@@ -34,7 +28,6 @@ def initialise():
         - create directory database
         - determine previous, start and next addresses
     """
-    global database, addresses, file_locales
     file_locales = ff.discoverFiles(start_directory)
     [files, folders] = file_locales
     database = dm.getStoryDatabase(files, folders)

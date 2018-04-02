@@ -118,8 +118,8 @@ def interpretCode(code):
     elif False:
         raise ValueError("ERROR - " + str(code[0]) + " IS NOT A VALID COMMAND!")
     # If there aren't enough parameters for the function, then raise an exception
-    elif False:
-        raise ValueError("ERROR - " + str(code) + " DOES NOT CONTAIN ENOUGH PARAMETERS")
+    elif False: # @todo change str(len(code)) to get the actual number of parameters
+        raise ValueError("ERROR - " + str(code) + " DOES NOT CONTAIN " + str(len(code)) + " PARAMETERS")
     # Otherwise, get the function and perform it
     else:
         a = parameters
