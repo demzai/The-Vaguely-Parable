@@ -225,7 +225,9 @@ def convertCodeToList(code):
     >>> convertCodeToList('#T(1, #F(4, "8 _ 8", "&") )')
     ['#T', ['1', ['#F', ['4', '"8 _ 8"', '"&"']]]]
     >>> convertCodeToList("#T (\t ( ( \t(1, (2) \t) )\t ) )")
-    ['#T', [[[[[[['1', [['2']]]]]]]]]]
+    ['#T', [['#bracket', [['#bracket', [['#bracket', ['1', ['#bracket', ['2']]]]]]]]]]
+    >>> convertCodeToList("#Testy")
+    ['#Testy', []]
     """
     result = resolveCodeBrackets(code)
 
@@ -284,7 +286,7 @@ def convertCodeToList(code):
                 if new_text[-1] != ',' and new_text[-1] != '' and new_text[-1][-1] != '[':
                     new_text[-1] = '[' + new_text[-1] + ',['
                 else:
-                    new_text.append('[[')
+                    new_text.append('["#bracket",[')
             # If an closing parenthesis, ')'...
             elif brackets[0] == ')':
                 new_text.append(']]')
@@ -299,7 +301,7 @@ def convertCodeToList(code):
 
     # Resolve 0-brackets condition
     if string_list[0] != '[':
-        string_list = '[' + string_list + ']'
+        string_list = '[' + string_list + ',[]]'
 
     return ast.literal_eval(string_list)
 

@@ -1,2 +1,2 @@
-start_directory = "Story Segments/"
+start_directory = "../Story Segments/"
 story_directory = start_directory

@@ -8,6 +8,7 @@ import Database_Management as dm
 import Extract_Narrative as en
 import Find_Files as ff
 import Print_Colour as pc
+import Bracket_Testing as bt
 from Constants import *
 
 
@@ -28,12 +29,11 @@ def getStartNode(files):
     return (en.getFileContents(initial_file))[0][1]
 
 
-def initialise(start_directory=story_directory):
+def initialise():
     """
     # Prepare the work environment:
         - create directory database
         - determine previous, start and next addresses
-    :param start_directory:
     """
     global database, addresses, file_locales
     file_locales = ff.discoverFiles(start_directory)
@@ -48,6 +48,7 @@ def initialise(start_directory=story_directory):
 def updateAddresses(selection, is_direct_entry=False):
     """
     # Updates the address based on the selection presented
+    :param is_direct_entry:
     :param selection:
     :return:
     """
@@ -82,44 +83,27 @@ def readNarrative():
             print(str(text[1]))
 
 
-# if __name__ == '__main__':
-#     initialise()
-#     readNarrative()
-#     while True:
-#         print(pc.ICyan + 'Please select your narrative:\n' + pc.Reset + str(addresses[2]))
-#         string = input()
-#         if updateAddresses(string, True) is False:
-#             print('\n\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
-#             print(pc.IBlue + 'Please try again.' + pc.Reset)
-#         else:
-#             readNarrative()
-
-initialise()
-readNarrative()
-while True:
-    print('\nPlease select your narrative:\n' + str(addresses[2]))
-    string = input()
-    print("")
-    if updateAddresses(string, True) is False:
-        print('\nERROR - "' + str(string) + '" IS NOT AN OPTION!')
-        print('Please try again.')
-    else:
-        readNarrative()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    initialise()
+    readNarrative()
+    while True:
+        print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(addresses[2]))
+        string = input()
+        print("")
+        if updateAddresses(string, True) is False:
+            print('\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
+            print(pc.IBlue + 'Please try again.' + pc.Reset)
+        else:
+            readNarrative()
+else:
+    initialise()
+    readNarrative()
+    while True:
+        print('\nPlease select your narrative:\n' + str(addresses[2]))
+        string = input()
+        print("")
+        if updateAddresses(string, True) is False:
+            print('\nERROR - "' + str(string) + '" IS NOT AN OPTION!')
+            print('Please try again.')
+        else:
+            readNarrative()
