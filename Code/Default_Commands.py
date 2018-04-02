@@ -2,24 +2,43 @@
 # Contains the standard functions callable from the narrative files and databases
 """
 
+
 # Dependencies
 import time
 import Globals
 
 
-# Master function used to call the functions below
-def callFunction(function_code, parameters):
+# Add this files set of functions onto the functions list
+def addFunctionsToMap():
     """
-    # Calls the function pointed to by the function code, using the parameters provided
-    :param function_code: string
-    :param parameters: list
+    # Adds the functions present within this file to the map of available functions to the user
     :return:
+    >>> addFunctionsToMap()
+    <function addition at
     """
-    if isinstance(function_code, str) and \
-            isinstance(parameters, list):
-        Globals.last_function_result = Globals.map_function[function_code](*parameters)
-    else:
-        raise ValueError("ERROR - INVALID INPUTS " + str(function_code) + " AND " + str(parameters))
+    Globals.map_function.update({
+        '###': listSelect,
+        '#+': addition,
+        '#-': subtraction,
+        '#*': multiplication,
+        '#/': division,
+        '#%': remainder,
+        '#&': reference,
+        '#code': getLastResult,
+        '#prev': getPreviousAddress,
+        '#quit': endTheProgram,
+        '#auto': noUserChoice,
+        '#delay': delay,
+        '#interrupt_start_local': turnLocalInterruptsOn,
+        '#interrupt_stop_local': turnLocalInterruptsOff,
+        '#interrupt_start_global': turnGlobalInterruptsOn,
+        '#interrupt_stop_global': turnGlobalInterruptsOff,
+        '#bracket': bracketResolution
+    })
+
+    # Provide an output for the doctest
+    if __name__ == '__main__':
+        print(str(Globals.map_function['#+'])[:21])
     return
 
 
@@ -49,13 +68,12 @@ def addition(variable1, variable2):
     >>> addition(1, 1.5)
     2.5
     >>> addition(2.0, 3.5)
-    7.0
+    5.5
     >>> addition('hello ', 'world!')
-    hello world!
+    'hello world!'
     >>> addition([1], ['one'])
     [1, 'one']
     >>> addition(1, 'one')
-    None
     """
     if (isinstance(variable1, int) and isinstance(variable2, int)) or \
             (isinstance(variable1, float) and isinstance(variable2, int)) or \
@@ -81,10 +99,9 @@ def subtraction(variable1, variable2):
     0.0
     >>> subtraction(1, 1.5)
     -0.5
-    >>> subtraction(1.8, 1.7)
+    >>> round(subtraction(1.8, 1.7),2)
     0.1
     >>> subtraction(1, 'one')
-    None
     """
     if (isinstance(variable1, int) and isinstance(variable2, int)) or \
             (isinstance(variable1, float) and isinstance(variable2, int)) or \
@@ -107,25 +124,21 @@ def multiplication(variable1, variable2):
     >>> multiplication(1.0, 1)
     1.0
     >>> multiplication(2, 1.5)
-    3
+    3.0
     >>> multiplication(5.5, 3.5)
     19.25
     >>> multiplication('hey ', 2)
-    hey hey
+    'hey hey '
     >>> multiplication(2, 'hey ')
-    hey hey
+    'hey hey '
     >>> multiplication([1], 2)
     [1, 1]
     >>> multiplication(3, [1])
     [1, 1, 1]
     >>> multiplication('one', 'one')
-    None
     >>> multiplication([1], 'one')
-    None
     >>> multiplication('one', [1])
-    None
     >>> multiplication([1], [1])
-    None
     """
     if (isinstance(variable1, int) and isinstance(variable2, int)) or \
             (isinstance(variable1, float) and isinstance(variable2, int)) or \
@@ -148,23 +161,21 @@ def division(variable1, variable2):
     :param variable2:
     :return:
     >>> division(1, 1)
-    0
+    1.0
     >>> division(1.0, 1)
-    0.0
-    >>> division(1, 1.5)
+    1.0
+    >>> division(-1, 2.0)
     -0.5
     >>> division(3.2, 2.0)
     1.6
     >>> division(1.0, 0.0)
-    None
     >>> division(1, 'one')
-    None
     """
     if ((isinstance(variable1, int) and isinstance(variable2, int)) or \
             (isinstance(variable1, float) and isinstance(variable2, int)) or \
             (isinstance(variable1, int) and isinstance(variable2, float)) or \
             (isinstance(variable1, float) and isinstance(variable2, float))) and \
-            (variable2 is not 0) and (variable2 is not 0.0):
+            (variable2 is not 0) and (variable2 != 0.0):
         return variable1 / variable2
     else:
         return None
@@ -177,24 +188,22 @@ def remainder(variable1, variable2):
     :param variable1:
     :param variable2:
     :return:
-    >>> division(1, 1)
+    >>> remainder(1, 1)
     0
-    >>> division(1.0, 1)
+    >>> remainder(1.0, 1)
     0.0
-    >>> division(1, 1.5)
-    -0.5
-    >>> division(3.2, 2.0)
-    1.6
-    >>> division(1.0, 0.0)
-    None
-    >>> division(1, 'one')
-    None
+    >>> remainder(1, 1.5)
+    1.0
+    >>> round(remainder(3.2, 2.0), 2)
+    1.2
+    >>> remainder(1.0, 0.0)
+    >>> remainder(1, 'one')
     """
     if ((isinstance(variable1, int) and isinstance(variable2, int)) or \
             (isinstance(variable1, float) and isinstance(variable2, int)) or \
             (isinstance(variable1, int) and isinstance(variable2, float)) or \
             (isinstance(variable1, float) and isinstance(variable2, float))) and \
-            (variable2 is not 0) and (variable2 is not 0.0):
+            (variable2 is not 0) and (variable2 != 0.0):
         return variable1 % variable2
     else:
         return None
@@ -250,7 +259,7 @@ def noUserChoice():
 
 
 # #delay
-def wait(delay_time):
+def delay(delay_time):
     """
     # Wait and do nothing until the time delay (in seconds) is finished
     :param delay_time:
@@ -281,7 +290,7 @@ def turnLocalInterruptsOff():
 
 
 # #interrupt_start_global
-def turnLocalInterruptsOn():
+def turnGlobalInterruptsOn():
     """
     # Allow looking for interrupts general to the entire story
     :return:
@@ -291,7 +300,7 @@ def turnLocalInterruptsOn():
 
 
 # #interrupt_stop_global
-def turnLocalInterruptsOff():
+def turnGlobalInterruptsOff():
     """
     # Prevent looking for interrupts general to the entire story
     :return:
@@ -300,3 +309,13 @@ def turnLocalInterruptsOff():
     return
 
 
+# #bracket
+def bracketResolution(contents):
+    # @todo insert code
+    return contents
+
+
+addFunctionsToMap()
+if __name__ == '__main__':
+    import doctest
+    doctest.testmod()
