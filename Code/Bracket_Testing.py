@@ -8,17 +8,7 @@ Tested with Python 3.5.4
 # Dependencies
 import re
 import ast
-
-
-# Global Variables
-# Provide opening and closing patterns, along with their priorities & whether a priority is nestable
-opening = ['"', '(']
-closing = ['"', ')']
-priority = [1, 0]
-nestable = {0: True, 1: False}
-bracket_pairs = dict(zip(opening + closing, \
-                         [[(closing + opening)[i], (priority + priority)[i]] \
-                          for i in range(0, opening.__len__() * 2)]))
+from Globals import opening, closing, nestable, bracket_pairs
 
 
 def getRegexFromList(listOfPatterns):

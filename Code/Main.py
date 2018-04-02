@@ -8,8 +8,7 @@ import Database_Management as dm
 import Extract_Narrative as en
 import Find_Files as ff
 import Print_Colour as pc
-import Bracket_Testing as bt
-from Constants import *
+from Globals import start_directory
 
 
 # Global Variables

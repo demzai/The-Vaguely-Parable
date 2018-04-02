@@ -8,11 +8,18 @@ Provides a file location if given a valid code
 import os
 import glob
 import re
-from Constants import *
+from Globals import start_directory
 
 
-# Standardised, yet generic, search function
 def search(directory="", foldersOnly=False, searchTerm='*)*', recurse=False):
+    """
+    # Standardised, yet generic, search function
+    :param directory:
+    :param foldersOnly:
+    :param searchTerm:
+    :param recurse:
+    :return:
+    """
     searchEnd = ""
     if foldersOnly is True:
         searchEnd = os.path.sep
@@ -20,27 +27,47 @@ def search(directory="", foldersOnly=False, searchTerm='*)*', recurse=False):
     return discoveredItems
 
 
-# Specialised search for files only
 def findFiles(directory="", file_type=".*"):
+    """
+    # Specialised search for files only
+    :param directory:
+    :param file_type:
+    :return:
+    """
     return search(directory, False, '*)*' + file_type, False)
 
 
-# Specialised search for folders only
 def findFolders(directory=""):
+    """
+    # Specialised search for folders only
+    :param directory:
+    :return:
+    """
     return search(directory, True, '*)*', False)
 
 
-# Remove folder extensions attached to file names
 def removeExcessDirectories(objectName="", isFile=True, codeDeterminer="\\"):
+    """
+    # Remove folder extensions attached to file names
+    :param objectName:
+    :param isFile:
+    :param codeDeterminer:
+    :return:
+    """
     if isFile is True:
         return objectName.split(codeDeterminer)[-1]
     else:
         return objectName.split(codeDeterminer)[-2]
 
 
-# Obtain a code and determine its validity
 def getCode(objectName=")", isFile=True, codeDeterminer=")"):
-    # @todo reducedObjectName here only because it may simplify issues later
+    """
+    # Obtain a code and determine its validity
+    :param objectName:
+    :param isFile:
+    :param codeDeterminer:
+    :return:
+    """
     reducedObjectName = removeExcessDirectories(objectName, isFile)
     code = reducedObjectName.split(codeDeterminer)[0]
 
@@ -52,9 +79,13 @@ def getCode(objectName=")", isFile=True, codeDeterminer=")"):
         return False
 
 
-# Main function for finding and returning files and folders
 def discoverFiles(directory=""):
     # Find possibly relevant files and folders
+    """
+    # Main function for finding and returning files and folders
+    :param directory:
+    :return:
+    """
     filesList = findFiles(directory)
     foldersList = findFolders(directory)
 
@@ -77,29 +108,40 @@ def discoverFiles(directory=""):
     return [files, folders]
 
 
-# Given a file code, provide the file location if it exists
 def getFileFromCode(code, file_locales, code_determiner='/'):
+    """
+    # Given a file code, provide the file location if it exists
+    :param code:
+    :param file_locales:
+    :param code_determiner:
+    :return:
+    """
     code = code.split(code_determiner)
     file_locales = [start_directory] + file_locales
+    code_id = 0
     try:
         for i in range(0, code.__len__()-1):
+            code_id = i
             file_locales = file_locales[2][code[i]]
+        code_id = code.__len__()-1
         file = file_locales[1][code[-1]]
     except KeyError:
-        print('BAD INDEX AFTER "' + str(file_locales[0]) + '" - "' + str(code[i]) + '"')
+        print('BAD INDEX AFTER "' + str(file_locales[0]) + '" - "' + str(code[code_id]) + '"')
         return ""
+    finally:
+        del code, file_locales, code_determiner, code_id
     return file
 
 
 if __name__ == '__main__':
-    [files, folders] = discoverFiles(start_directory)
-    var = folders
+    directories = discoverFiles(start_directory)
+    var = directories[0]
     for a in var:
         print(a + ",\t" + str(var[a]))
     while True:
         print("Please enter a code:")
         string = input()
-        print(getFileFromCode(string, [files, folders]))
+        print(getFileFromCode(string, [directories[0], directories[1]]))
 
 
 

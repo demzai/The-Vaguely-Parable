@@ -57,7 +57,7 @@ def attemptConversion(string, to_type):
 
 def interpretParameters(parameters):
     """
-    # Scans through each prameter presented and converts it to the correct variable type
+    # Scans through each parameter presented and converts it to the correct variable type
     :param parameters:
     :return:
     """
@@ -122,7 +122,7 @@ def interpretCode(code):
         raise ValueError("ERROR - " + str(code) + " DOES NOT CONTAIN ENOUGH PARAMETERS")
     # Otherwise, get the function and perform it
     else:
-        a = 3
+        a = parameters
         # Store the returned value into #code
         # Return whatever the function returns
     return a
@@ -133,7 +133,7 @@ if __name__ == '__main__':
     doctest.testmod()
 
     # Convert the code into a list
-    code = bt.convertCodeToList("#Testy")
-    print(str(code))
+    code_string = bt.convertCodeToList("#Testy")
+    print(str(code_string))
 
 

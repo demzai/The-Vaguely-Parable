@@ -1,4 +1,7 @@
-from distutils.core import setup
+"""
+Generates a stand-alone .exe file of the project when run
+"""
+
 
 from cx_Freeze import setup, Executable
 
@@ -9,13 +12,13 @@ executables = [Executable("Main.py", base=base)]
 packages = ["idna"]
 options = {
     'build_exe': {
-        'packages':packages,
+        'packages': packages,
     },
 }
 
 setup(
     name='The_Vaguely_Parable',
-    options = options,
+    options=options,
     version='1.0.0',
     packages=[''],
     url='',
@@ -23,5 +26,5 @@ setup(
     author='Student',
     author_email='',
     description='',
-    executables = executables
+    executables=executables, requires=['cx_Freeze']
 )

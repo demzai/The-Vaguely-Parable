@@ -1,10 +1,20 @@
+"""
+# Sets up the narrative database and manages its usage
+"""
+
 # Dependencies
 import Extract_Narrative as en
 import Print_Colour as pc
 
 
-# Obtain all of the database files
 def getAllDatabases(files, folders, folderID=""):
+    """
+    # Obtain all of the database files
+    :param files:
+    :param folders:
+    :param folderID:
+    :return:
+    """
     database_files = []
     for file in files:
         if files[file][-4:] == '.csv':
@@ -16,8 +26,13 @@ def getAllDatabases(files, folders, folderID=""):
     return database_files
 
 
-# Convert a local address into a global address
 def convertToGlobalAddress(address, global_appendage):
+    """
+    # Convert a local address into a global address
+    :param address:
+    :param global_appendage:
+    :return:
+    """
     directory_difference = global_appendage.count('/') - address.count('/')
 
     if (directory_difference <= 1) and (address[0] != '#'):
@@ -31,8 +46,12 @@ def convertToGlobalAddress(address, global_appendage):
         return address
 
 
-# Convert a list into a map
 def listToMap(list_of_values):
+    """
+    # Convert a list into a map
+    :param list_of_values:
+    :return:
+    """
     mapped_values = {}
     for entry in list_of_values:
         if entry[0] in mapped_values:
@@ -44,9 +63,14 @@ def listToMap(list_of_values):
     return mapped_values
 
 
-# Obtain & sort all .csv files into a single database
 def getStoryDatabase(files, folders):
     # Find database files
+    """
+    # Obtain & sort all .csv files into a single database
+    :param files:
+    :param folders:
+    :return:
+    """
     databases = getAllDatabases(files, folders)
 
     # Extract contents
@@ -64,8 +88,13 @@ def getStoryDatabase(files, folders):
     return listToMap(lines)
 
 
-# Perform a secure "get" from the map
 def getFromMap(key, map_of_values):
+    """
+    # Perform a secure "get" from the map
+    :param key:
+    :param map_of_values:
+    :return:
+    """
     if str(key) in map_of_values:
         return map_of_values[key]
     else:
@@ -76,8 +105,8 @@ def getFromMap(key, map_of_values):
 # # Uncomment for testing
 if __name__ == '__main__':
     import Find_Files as ff
-    from Constants import *
-    [files, folders] = ff.discoverFiles(story_directory)
-    db = getStoryDatabase(files, folders)
-    for i in db:
-        pc.printC(str(db[i]), "WARNING")
+    from Globals import start_directory
+    directories = ff.discoverFiles(start_directory)
+    db = getStoryDatabase(directories[0], directories[1])
+    for j in db:
+        pc.printC(str(db[j]), "WARNING")
