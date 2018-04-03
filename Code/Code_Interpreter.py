@@ -52,6 +52,8 @@ def attemptConversion(string, to_type):
                 return [True, False]
             else:
                 return [False, None]
+        elif to_type == 'string':
+            return [True, str(string)]
     except ValueError:
         return [False, None]
     finally:
@@ -64,6 +66,7 @@ def interpretParameters(parameters):
     :param parameters:
     :return:
     """
+    # print('\t\t' + str(parameters))
     # If nothing to do, do nothing
     if parameters.__len__() is 0:
         return None
@@ -84,7 +87,7 @@ def interpretParameters(parameters):
         elif param[0] == '"' and param[-1] == '"':
             formatted_parameters = formatted_parameters + [param[1:-1]]
         # Otherwise, attempt to determine it type
-        # Valid types remaining are bool, int, and float
+        # Valid types remaining are bool, int, and float... if those fail default to an error or string?
         else:
             to_type = 'int'
             while attemptConversion(param, to_type)[0] is False:
@@ -93,6 +96,7 @@ def interpretParameters(parameters):
                 elif to_type == 'float':
                     to_type = 'bool'
                 else:
+                    to_type = 'string'
                     raise ValueError("ERROR - " + str(param) + " CANNOT BE CONVERTED")
             formatted_parameters = formatted_parameters + [attemptConversion(param, to_type)[1]]
 
@@ -105,7 +109,12 @@ def interpretCode(code):
     :param code:
     :return:
     """
-    code = bt.convertCodeToList(code)
+    # print(str(code))
+    if isinstance(code, str):
+        code = bt.convertCodeToList(code)
+    elif not isinstance(code, list):
+        raise ValueError("ERROR - INVALID CODE: " + str(code))
+    # print('\t' + str(code))
     # If the code is poorly formatted, then raise an exception
     """
     # Interprets the code and throws errors when something obvious is wrong

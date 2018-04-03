@@ -18,6 +18,7 @@
 2/02b,	#prev,	auto							//_Repeat_call_to_previous_file
 2/02c,	3/01,	auto
 2/02d,	2/23,	do_not_ignore_string
+2/02d,  #&("2/01c"),    auto
 2/03a,	2/03c,	auto
 2/03b,	2/03c,	auto
 2/03c,	2/04a,	go_back_into_the_phone_booth
@@ -36,7 +37,7 @@
 2/14,	4/99,	delay_1000
 2/23,	#&(#prev),	auto
 2/23,	2/24,	pull_string						//_Add_option_to_previous_options
-2/24,	#&(01c),	auto							//_Repeat_options_of_2/01c
+2/24,	#&("2/01c"),	auto							//_Repeat_options_of_2/01c
 2/24,	2/25,	go_up_stairs
 2/25,	#code,	auto
 2/25a,	2/26,	auto

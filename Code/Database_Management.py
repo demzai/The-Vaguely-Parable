@@ -109,17 +109,20 @@ def parseDatabaseEntry(entry):
     :param entry:
     :return:
     """
+    # print(str(entry))
     # Treat as any other text; clean it and deduce what type of input it is
-    assessed = en.cleanFileContents(entry[0])
-
+    assessed = en.cleanFileContents(entry[0])[0]
     # If text-only, then assume it is an address and return it
     if assessed[0] == 'Text':
-        return [[assessed[1], entry[1]]]
+        return [entry]
 
     # If code-only, then interpret it and return the result as a string
     elif assessed[0] == 'Variable' or assessed[0] == 'Code':
         code_results = ci.interpretCode(assessed[1])
-        return [[str(code_results), entry[1]]]
+        if isinstance(code_results, list):
+            return code_results
+        else:
+            return [[str(code_results), entry[1]]]
 
     # If text containing code, then parse it to get the correct result
     elif assessed[0] == 'Container':
@@ -127,8 +130,7 @@ def parseDatabaseEntry(entry):
 
     # Otherwise the author has asked for something invalid
     else:
-        raise ValueError("ERROR - " + str(entry[0]) + " IS NOT A VALID ENTRY!")
-        # address[0] = [ci.interpretCode(address[0])]
+        raise ValueError("ERROR - " + str(assessed) + " IS NOT A VALID ENTRY!")
 
 
 # # Uncomment for testing
@@ -137,5 +139,8 @@ if __name__ == '__main__':
     from Globals import start_directory
     directories = ff.discoverFiles(start_directory)
     db = getStoryDatabase(directories[0], directories[1])
-    for j in db:
-        pc.printC(str(db[j]), "WARNING")
+    # for j in db:
+    #     pc.printC(str(db[j]), "WARNING")
+
+    # Test the database entry parser
+    print(parseDatabaseEntry(['0/0b', 'auto']))

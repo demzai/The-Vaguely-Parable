@@ -30,7 +30,7 @@ def addFunctionsToMap():
         '#%': remainder,
         '#prev': getPreviousAddress,
         '#&': reference,
-        '#forget': popAddressStack(),
+        '#forget': popAddressStack,
         '#code': getLastResult,
         '#quit': endTheProgram,
         '#auto': noUserChoice,
@@ -248,7 +248,7 @@ def getPreviousAddress():
     Gets the address of the last narrative element visited
     :return:
     """
-    return glbl.address_stack[-getPreviousAddress.count]
+    return glbl.address_stack[-getPreviousAddress.count-1]
 
 
 # #&
@@ -266,7 +266,7 @@ def reference(referenced_address):
 
     # Look at the addresses pointed to & parse them
     for address in address_list:
-        returned_value = dm.parseDatabaseEntry(address[0])
+        returned_value = dm.parseDatabaseEntry(address)
         if isinstance(returned_value, list):
             return_list += returned_value
         else:
