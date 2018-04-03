@@ -19,7 +19,8 @@ bracket_pairs = dict(zip(opening + closing, \
 
 # State machine variables
 database = {}
-addresses = ['', '', []]
+address_stack = []
+next_addresses = []
 file_locales = []
 
 
@@ -27,6 +28,8 @@ file_locales = []
 map_variable = {}
 map_function = {}
 last_function_result = None
+
+
 # Master function used to call the default commands
 def callFunction(function_code, parameters):
     """
@@ -45,5 +48,12 @@ def callFunction(function_code, parameters):
     else:
         raise ValueError("ERROR - INVALID INPUTS " + str(function_code) + " AND " + str(parameters))
     return last_function_result
+
+
+# noinspection PyPep8
 import Default_Commands
+
+
 Default_Commands.addFunctionsToMap()
+
+

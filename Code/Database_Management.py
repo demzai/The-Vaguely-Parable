@@ -5,6 +5,7 @@
 # Dependencies
 import Extract_Narrative as en
 import Print_Colour as pc
+import Code_Interpreter as ci
 
 
 def getAllDatabases(files, folders, folderID=""):
@@ -100,6 +101,34 @@ def getFromMap(key, map_of_values):
     else:
         pc.printC("ERROR: INVALID ID DETECTED - " + str(key), "FAIL")
         return None
+
+
+def parseDatabaseEntry(entry):
+    """
+    Given an input from a database, resolve it based on its type and return
+    :param entry:
+    :return:
+    """
+    # Treat as any other text; clean it and deduce what type of input it is
+    assessed = en.cleanFileContents(entry[0])
+
+    # If text-only, then assume it is an address and return it
+    if assessed[0] == 'Text':
+        return [[assessed[1], entry[1]]]
+
+    # If code-only, then interpret it and return the result as a string
+    elif assessed[0] == 'Variable' or assessed[0] == 'Code':
+        code_results = ci.interpretCode(assessed[1])
+        return [[str(code_results), entry[1]]]
+
+    # If text containing code, then parse it to get the correct result
+    elif assessed[0] == 'Container':
+        return ci.parseContainerCode(assessed[1], assessed[2])
+
+    # Otherwise the author has asked for something invalid
+    else:
+        raise ValueError("ERROR - " + str(entry[0]) + " IS NOT A VALID ENTRY!")
+        # address[0] = [ci.interpretCode(address[0])]
 
 
 # # Uncomment for testing

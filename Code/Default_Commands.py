@@ -2,11 +2,16 @@
 # Contains the standard functions callable from the narrative files and databases
 """
 
-
 # Dependencies
 import time
-import Globals
+import functools
+import Globals as glbl
+import Database_Management as dm
 
+
+# ///////////////////////////////////////////////////////
+# /// HELPER FUNCTIONS
+# ///////////////////////////////////////////////////////
 
 # Add this files set of functions onto the functions list
 def addFunctionsToMap():
@@ -16,16 +21,17 @@ def addFunctionsToMap():
     >>> addFunctionsToMap()
     <function addition at
     """
-    Globals.map_function.update({
+    glbl.map_function.update({
         '###': listSelect,
         '#+': addition,
         '#-': subtraction,
         '#*': multiplication,
         '#/': division,
         '#%': remainder,
-        '#&': reference,
-        '#code': getLastResult,
         '#prev': getPreviousAddress,
+        '#&': reference,
+        '#forget': popAddressStack(),
+        '#code': getLastResult,
         '#quit': endTheProgram,
         '#auto': noUserChoice,
         '#delay': delay,
@@ -38,9 +44,35 @@ def addFunctionsToMap():
 
     # Provide an output for the doctest
     if __name__ == '__main__':
-        print(str(Globals.map_function['#+'])[:21])
+        print(str(glbl.map_function['#+'])[:21])
     return
 
+
+def count_calls(f):
+    """
+    Aids a function in keeping tabs on how many times it has been called
+    Treats a function as an objects and gives it the variable "count" which auto-increments on each call
+    :param f:
+    :return:
+    """
+
+    @functools.wraps(f)
+    def func(*args):
+        """
+        Function to be decorated
+        :param args:
+        :return:
+        """
+        func.count += 1
+        return f(*args)
+
+    func.count = 0
+    return func
+
+
+# ///////////////////////////////////////////////////////
+# /// DEFAULT FUNCTIONS
+# ///////////////////////////////////////////////////////
 
 # ###
 def listSelect(selection_variable, cases, results):
@@ -209,6 +241,16 @@ def remainder(variable1, variable2):
         return None
 
 
+# #prev
+@count_calls
+def getPreviousAddress():
+    """
+    Gets the address of the last narrative element visited
+    :return:
+    """
+    return glbl.address_stack[-getPreviousAddress.count]
+
+
 # #&
 def reference(referenced_address):
     """
@@ -217,7 +259,31 @@ def reference(referenced_address):
     :param referenced_address:
     :return:
     """
-    # @todo insert code
+    # @todo check for bugs - no, SERIOUSLY check for bugs!
+    calls_to_previous = getPreviousAddress.count
+    address_list = dm.getFromMap(referenced_address, glbl.database)
+    return_list = []
+
+    # Look at the addresses pointed to & parse them
+    for address in address_list:
+        returned_value = dm.parseDatabaseEntry(address[0])
+        if isinstance(returned_value, list):
+            return_list += returned_value
+        else:
+            return_list += [[returned_value, address[1]]]
+        # Ensure the #prev counter doesn't creep
+        getPreviousAddress.count = calls_to_previous
+    return return_list
+
+
+# #forget
+def popAddressStack():
+    """
+    # Forgets the current address
+    # Useful for narrative points where nothing happens
+    :return:
+    """
+    glbl.address_stack.pop()
     return
 
 
@@ -227,16 +293,7 @@ def getLastResult():
     # Gets the last value returned from any of the functions in this python file
     :return:
     """
-    return Globals.last_function_result
-
-
-# #prev
-def getPreviousAddress():
-    """
-    Gets the address of the last narrative element visited
-    :return:
-    """
-    return Globals.addresses[0]
+    return glbl.last_function_result
 
 
 # #quit
@@ -311,11 +368,16 @@ def turnGlobalInterruptsOff():
 
 # #bracket
 def bracketResolution(contents):
-    # @todo insert code
+    """
+    Resolves the contents of parentheses (a) -> a
+    :param contents:
+    :return:
+    """
     return contents
 
 
 addFunctionsToMap()
 if __name__ == '__main__':
     import doctest
+
     doctest.testmod()

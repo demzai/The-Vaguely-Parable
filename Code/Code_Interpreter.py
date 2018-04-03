@@ -4,10 +4,10 @@ Traceback (most recent call last):
  ...
 ValueError: Invalid bracketing in code - [False, 3, ['(', '"', '"'], ['(', '"', '"']]
 """
+# @todo write test scripts
 
 
 # Dependencies
-import Print_Colour as pc
 import Bracket_Testing as bt
 import Globals as glbl
 from inspect import signature
@@ -100,6 +100,12 @@ def interpretParameters(parameters):
 
 
 def interpretCode(code):
+    """
+    # Interprets the code and performs the necessary functions
+    :param code:
+    :return:
+    """
+    code = bt.convertCodeToList(code)
     # If the code is poorly formatted, then raise an exception
     """
     # Interprets the code and throws errors when something obvious is wrong
@@ -157,15 +163,45 @@ def interpretCode(code):
             return glbl.callFunction(code[0], parameters)
 
 
+def parseContainerCode(container_text, container_codes):
+    """
+    Takes a textual container in and converts the code segments into text
+    :param container_text:
+    :param container_codes:
+    :return:
+    """
+    # [type, text, [codes]]
+    resultant_string = ["", container_text]
+    return_string = ""
+
+    # For each code:
+    for code in container_codes:
+        try:
+            # If the code was found within the text, then split it, else raise an exception
+            if len(resultant_string[-1].split(code, 1)) is not 2:
+                raise ValueError("ERROR - CODE NOT FOUND WITHIN STRING!")
+            else:
+                # Insert the result of the code in its place
+                resultant_string[:-1] += resultant_string[-1].split(code, 1)
+                resultant_string[-2] += str(interpretCode(code))
+        except Exception:
+            raise ValueError("ERROR - CODE NOT FOUND WITHIN STRING!")
+
+    # Merge the string results back into a single sentence
+    for bit in resultant_string:
+        return_string += str(bit)
+    return return_string
+
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
 
     # Convert the code into a list
-    print(str(interpretCode(bt.convertCodeToList('#Testy("Hello ")'))))
+    print(str(interpretCode('#Testy("Hello ")')))
     print(str(glbl.map_variable))
-    print(str(interpretCode(bt.convertCodeToList('#+(#Testy,"World!!!")'))))
-    print(str(interpretCode(bt.convertCodeToList('#delay(0.1)'))))
-    print(str(interpretCode(bt.convertCodeToList(' # + ( # * ( "a" , 5\t  ) , # * ( "gh" , 1 ) ) '))))
+    print(str(interpretCode('#+(#Testy,"World!!!")')))
+    print(str(interpretCode('#delay(0.1)')))
+    print(str(interpretCode(' # + ( # * ( "a" , 5\t  ) , # * ( "gh" , 1 ) ) ')))
     print(str(glbl.last_function_result))
 

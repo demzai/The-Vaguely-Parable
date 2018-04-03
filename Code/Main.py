@@ -8,7 +8,7 @@ import Database_Management as dm
 import Extract_Narrative as en
 import Find_Files as ff
 import Print_Colour as pc
-from Globals import start_directory, database, addresses, file_locales
+import Globals as glbl
 
 
 # Get the start node
@@ -28,13 +28,22 @@ def initialise():
         - create directory database
         - determine previous, start and next addresses
     """
-    file_locales = ff.discoverFiles(start_directory)
-    [files, folders] = file_locales
-    database = dm.getStoryDatabase(files, folders)
-    addresses[0] = getStartNode(files)
-    addresses[1] = addresses[0]
-    addresses[2] = dm.getFromMap(addresses[1], database)
+    glbl.file_locales = ff.discoverFiles(glbl.start_directory)
+    [files, folders] = glbl.file_locales
+    glbl.database = dm.getStoryDatabase(files, folders)
+
+    # @todo first node = None
+    glbl.address_stack.append(getStartNode(files))
+    glbl.address_stack.append(getStartNode(files))
     return
+
+
+def getNarrativeOptions():
+    """
+    Creates a list of the next addresses accessible to the user
+    :return:
+    """
+    glbl.next_addresses = dm.getFromMap(glbl.address_stack[-1], glbl.database)
 
 
 def updateAddresses(selection, is_direct_entry=False):
@@ -45,21 +54,17 @@ def updateAddresses(selection, is_direct_entry=False):
     :return:
     """
     if is_direct_entry is False:
-        if selection not in addresses[2]:
+        if selection not in glbl.next_addresses:
             return False
         else:
-            addresses[0] = addresses[1]
-            addresses[1] = addresses[2][selection]
-            addresses[2] = dm.getFromMap(addresses[1], database)
+            glbl.address_stack.append(glbl.next_addresses[selection])
         return True
     else:
-        for i in addresses[2]:
+        for i in glbl.next_addresses:
             if selection not in i:
                 continue
             else:
-                addresses[0] = addresses[1]
-                addresses[1] = selection
-                addresses[2] = dm.getFromMap(addresses[1], database)
+                glbl.address_stack.append(glbl.next_addresses[selection])
                 return True
     return False
 
@@ -68,7 +73,7 @@ def readNarrative():
     """
     # Reads the narrative pointed to by the current address
     """
-    narrative_file = ff.getFileFromCode(addresses[1], file_locales)
+    narrative_file = ff.getFileFromCode(glbl.address_stack[-1], glbl.file_locales)
     narrative_text = en.getFileContents(narrative_file)
     for text in narrative_text:
         if text[0] == 'Text' or text[0] == 'Container':
@@ -76,10 +81,14 @@ def readNarrative():
 
 
 if __name__ == '__main__':
+    # Begin the game
     initialise()
     readNarrative()
+
+    # Play the game
     while True:
-        print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(addresses[2]))
+        # Get the users narrative selection
+        print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(glbl.next_addresses))
         string = input()
         print("")
         if updateAddresses(string, True) is False:
@@ -91,7 +100,7 @@ else:
     initialise()
     readNarrative()
     while True:
-        print('\nPlease select your narrative:\n' + str(addresses[2]))
+        print('\nPlease select your narrative:\n' + str(glbl.next_addresses))
         string = input()
         print("")
         if updateAddresses(string, True) is False:
@@ -99,3 +108,4 @@ else:
             print('Please try again.')
         else:
             readNarrative()
+            getNarrativeOptions()
