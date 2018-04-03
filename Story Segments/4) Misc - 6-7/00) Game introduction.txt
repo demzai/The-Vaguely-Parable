@@ -6,3 +6,4 @@ Good luck!
 
 // @todo Initialise All Variables!!!
 #Stay(0)
+#Dark(0)

@@ -5,3 +5,4 @@ Something was very clearly wrong. Shocked, frozen solid, Vaguely found herself u
 
 Vaguely decided to step out of her phone booth.
 // (Maybe include a beep noise the first time round?)
+#Dark(0)

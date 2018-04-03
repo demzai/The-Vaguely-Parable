@@ -32,6 +32,8 @@ def findCodeLines(sentences):
             if (sentence.__len__() >= 3) and (sentence[:3] == '###'):
                 codeSegment = not codeSegment
                 isCode = isCode + ["Segment"]
+            elif codeSegment is True:
+                isCode = isCode + ["Segment"]
             elif sentence[1] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
                 isCode = isCode + ["Variable"]
             else:
@@ -92,7 +94,7 @@ def getFileContents(fileLocale):
             text[line] = text[line] + [codes]
         # Segments are codes without the #segement(---) identifier
         elif text[line][0] == 'Segment':
-            text[line] = text[line] + [['#segment(' + str(text[line][1]) + ')']]
+            text[line] = text[line] + [['#segment("' + str(text[line][1]) + '")']]
         else:
             text[line] = text[line] + [[text[line][1]]]
     return text

@@ -218,6 +218,8 @@ def convertCodeToList(code):
     ['#T', [['#bracket', [['#bracket', [['#bracket', ['1', ['#bracket', ['2']]]]]]]]]]
     >>> convertCodeToList("#Testy")
     ['#Testy', []]
+    >>> convertCodeToList("#segment(###)")
+    ['#segment', ['###']]
     """
     result = resolveCodeBrackets(code)
 

@@ -22,7 +22,7 @@ def addFunctionsToMap():
     <function addition at
     """
     glbl.map_function.update({
-        '###': listSelect,
+        '#segment': listSelect,
         '#+': addition,
         '#-': subtraction,
         '#*': multiplication,
@@ -48,7 +48,28 @@ def addFunctionsToMap():
     return
 
 
-def count_calls(f):
+def rememberParameters(f):
+    """
+    Aids a function in logging the parameters that have been passed to it previously
+    Treats a function as an objects and gives it the variable "stack" to store parameters in at its own discretion
+    :param f:
+    :return:
+    """
+
+    @functools.wraps(f)
+    def func(*args):
+        """
+        Function to be decorated
+        :param args:
+        :return:
+        """
+        return f(*args)
+
+    func.stack = []
+    return func
+
+
+def countCalls(f):
     """
     Aids a function in keeping tabs on how many times it has been called
     Treats a function as an objects and gives it the variable "count" which auto-increments on each call
@@ -74,14 +95,23 @@ def count_calls(f):
 # /// DEFAULT FUNCTIONS
 # ///////////////////////////////////////////////////////
 
-# ###
-def listSelect(selection_variable, cases, results):
+# #segment
+@rememberParameters
+def listSelect(line_contents):
     """
     # A simple switch case function
-    :param selection_variable:
-    :param cases:
-    :param results:
+    :param line_contents:
     """
+    listSelect.stack += [line_contents]
+    # selection_variable, cases, results
+    # If the first node is faulty, then ignore the whole thing and reset
+    if listSelect.stack[0] != '###':
+        listSelect.stack = []
+    # If a full segment has been presented, then perform the switch case!
+    elif len(listSelect.stack) > 1 and listSelect.stack[-1] == '###':
+        print('#segment ready for action! - ' + str(listSelect.stack))
+        # Reset after use
+        listSelect.stack = []
     # @todo insert code
     return
 
@@ -242,7 +272,7 @@ def remainder(variable1, variable2):
 
 
 # #prev
-@count_calls
+@countCalls
 def getPreviousAddress():
     """
     Gets the address of the last narrative element visited

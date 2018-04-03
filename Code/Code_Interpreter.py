@@ -60,10 +60,11 @@ def attemptConversion(string, to_type):
         del string, to_type
 
 
-def interpretParameters(parameters):
+def interpretParameters(parameters, is_segment=False):
     """
     # Scans through each parameter presented and converts it to the correct variable type
-    :param parameters:
+    :param parameters: list
+    :param is_segment: bool
     :return:
     """
     # print('\t\t' + str(parameters))
@@ -95,9 +96,10 @@ def interpretParameters(parameters):
                     to_type = 'float'
                 elif to_type == 'float':
                     to_type = 'bool'
-                else:
+                elif is_segment is True:  # Some segment options may need further processing!
                     to_type = 'string'
-                    raise ValueError("ERROR - " + str(param) + " CANNOT BE CONVERTED")
+                else:
+                    raise ValueError("ERROR - " + str(param) + " CANNOT BE CONVERTED. is_segment = " + str(is_segment))
             formatted_parameters = formatted_parameters + [attemptConversion(param, to_type)[1]]
 
     return formatted_parameters
@@ -109,7 +111,7 @@ def interpretCode(code):
     :param code:
     :return:
     """
-    # print(str(code))
+    # print(str(code) + ' - ' + str(type(code)))
     if isinstance(code, str):
         code = bt.convertCodeToList(code)
     elif not isinstance(code, list):
@@ -129,7 +131,7 @@ def interpretCode(code):
         raise ValueError("ERROR - " + str(code) + " IS INCORRECT CODE!")
 
     # Interpret parameters first
-    parameters = interpretParameters(code[1])
+    parameters = interpretParameters(code[1], code[0] == '#segment')
 
     # Then perform the function
     # If code name starts with a capital letter, then it refers to a variable

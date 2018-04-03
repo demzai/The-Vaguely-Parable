@@ -90,7 +90,8 @@ def readNarrative():
         elif text[0] == 'Code' or text[0] == 'Variable':
             ci.interpretCode(text[2][0])
         elif text[0] == 'Segment':
-            print('@todo: implement segments!!!')
+            print('@todo: implement segments!!! - ' + str(text[2]))
+            ci.interpretCode(text[2][0])
 
 
 if __name__ == '__main__':
@@ -101,7 +102,7 @@ if __name__ == '__main__':
     readNarrative()
 
     # Skip the narrative a bit:
-    choices = ['0/00b', '0/01', '0/02b1', '0/02b2']
+    choices = ['0/00b', '0/01', '0/02b1', '0/02b2', '0/03b', '0/04', '3/01']
     # Play the game
     for choice in choices:
         # Get the users narrative selection
