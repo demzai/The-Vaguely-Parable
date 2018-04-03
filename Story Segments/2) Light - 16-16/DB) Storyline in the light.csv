@@ -35,7 +35,7 @@
 2/13c,	01c,	auto
 2/13d,	01c,	auto
 2/14,	4/99,	delay_1000
-2/23,	#&(#prev),	auto
+2/23,	#&("2/01c"),	auto
 2/23,	2/24,	pull_string						//_Add_option_to_previous_options
 2/24,	#&("2/01c"),	auto							//_Repeat_options_of_2/01c
 2/24,	2/25,	go_up_stairs

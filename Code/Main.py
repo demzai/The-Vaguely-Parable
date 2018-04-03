@@ -9,6 +9,7 @@ import Extract_Narrative as en
 import Find_Files as ff
 import Print_Colour as pc
 import Globals as glbl
+import Code_Interpreter as ci
 
 
 # Get the start node
@@ -82,8 +83,14 @@ def readNarrative():
     narrative_file = ff.getFileFromCode(glbl.address_stack[-1], glbl.file_locales)
     narrative_text = en.getFileContents(narrative_file)
     for text in narrative_text:
-        if text[0] == 'Text' or text[0] == 'Container':
+        if text[0] == 'Text':
             print(str(text[1]))
+        elif text[0] == 'Container':
+            print(str(ci.parseContainerCode(text[1], text[2])))
+        elif text[0] == 'Code' or text[0] == 'Variable':
+            ci.interpretCode(text[2][0])
+        elif text[0] == 'Segment':
+            print('@todo: implement segments!!!')
 
 
 if __name__ == '__main__':
@@ -94,7 +101,7 @@ if __name__ == '__main__':
     readNarrative()
 
     # Skip the narrative a bit:
-    choices = ['0/00b', '0/01', '0/02b1', '0/02b2', '0/03b', '2/01a', '2/01c', '2/02d', '2/23']
+    choices = ['0/00b', '0/01', '0/02b1', '0/02b2']
     # Play the game
     for choice in choices:
         # Get the users narrative selection

@@ -31,7 +31,7 @@ def findCodeLines(sentences):
         elif sentence[0] is '#' or sentence[:2] == '//':
             if (sentence.__len__() >= 3) and (sentence[:3] == '###'):
                 codeSegment = not codeSegment
-                isCode = isCode + ["Code"]
+                isCode = isCode + ["Segment"]
             elif sentence[1] in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
                 isCode = isCode + ["Variable"]
             else:
