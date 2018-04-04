@@ -20,8 +20,9 @@ bracket_pairs = dict(zip(opening + closing, \
 # State machine variables
 database = {}
 address_stack = []
-next_addresses = []
+next_addresses = {}
 file_locales = []
+do_auto_select = False
 
 
 # Volatile variables, functions and function results

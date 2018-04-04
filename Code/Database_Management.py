@@ -56,11 +56,11 @@ def listToMap(list_of_values):
     mapped_values = {}
     for entry in list_of_values:
         if entry[0] in mapped_values:
-            mapped_values[entry[0]] = mapped_values[entry[0]] + [[entry[1], entry[2]]]
-            # mapped_values[entry[0]].update({entry[2]: entry[1]})
+            # mapped_values[entry[0]] = mapped_values[entry[0]] + [[entry[1], entry[2]]]
+            mapped_values[entry[0]].update({entry[2]: entry[1]})
         else:
-            mapped_values.update({entry[0]: [[entry[1], entry[2]]]})
-            # mapped_values.update({entry[0]: {entry[2]: entry[1]}})
+            # mapped_values.update({entry[0]: [[entry[1], entry[2]]]})
+            mapped_values.update({entry[0]: {entry[2]: entry[1]}})
     return mapped_values
 
 
@@ -109,24 +109,26 @@ def parseDatabaseEntry(entry):
     :param entry:
     :return:
     """
-    # print(str(entry))
     # Treat as any other text; clean it and deduce what type of input it is
     assessed = en.cleanFileContents(entry[0])[0]
     # If text-only, then assume it is an address and return it
     if assessed[0] == 'Text':
-        return [entry]
+        return {entry[1]: entry[0]}
 
     # If code-only, then interpret it and return the result as a string
     elif assessed[0] == 'Variable' or assessed[0] == 'Code':
         code_results = ci.interpretCode(assessed[1])
         if isinstance(code_results, list):
-            return code_results
+            return_map = {}
+            for result in code_results:
+                return_map.update({result[1]: result[0]})
+            return return_map
         else:
-            return [[str(code_results), entry[1]]]
+            return {entry[1]: str(code_results)}
 
     # If text containing code, then parse it to get the correct result
     elif assessed[0] == 'Container':
-        return ci.parseContainerCode(assessed[1], assessed[2])
+        return {entry[1]: ci.parseContainerCode(assessed[1], assessed[2])}
 
     # Otherwise the author has asked for something invalid
     else:

@@ -149,7 +149,6 @@ def listSelect(line_contents):
             if (isinstance(check_range[0], int) or isinstance(check_range[0], float)) and \
                     (isinstance(check_range[1], int) or isinstance(check_range[1], float)) and \
                     check_range[0] <= variable < check_range[1]:
-                global selected_case
                 selected_case = i
                 break
 
@@ -399,7 +398,7 @@ def noUserChoice():
     # Do not allow the user to select a new narrative path, just pick the first option
     :return:
     """
-    # @todo insert code
+    glbl.do_auto_select = True
     return
 
 
