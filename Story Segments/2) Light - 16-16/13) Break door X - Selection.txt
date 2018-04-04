@@ -1,4 +1,4 @@
-// @todo code stuffs
+#auto
 ###
 //#select_storyline
 #Break
@@ -8,4 +8,3 @@
 3, 4, 2/13d		// 3 entries means "before, after, return"
 else, 2/14		// 2 entries means "case, return"
 ###
-#auto

@@ -1,4 +1,4 @@
-// @todo code stuffs
+#auto
 ###
 //#select_storyline
 #Door
@@ -8,4 +8,3 @@
 3, 4, 2/02a4
 else, 2/03a
 ###
-#auto

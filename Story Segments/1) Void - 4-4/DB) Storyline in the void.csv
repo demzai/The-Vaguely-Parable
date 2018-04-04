@@ -4,6 +4,6 @@
 1/01c,	1/02a,	do_not_go_anywhere
 1/01c,	2/01a,	run_toward_the	light
 1/01c,	1/02b,	run_away_from_the_light
-1/02a,	4/99,	auto
+1/02a,	4/98,	auto
 1/02b,	3/01,	auto
 ###

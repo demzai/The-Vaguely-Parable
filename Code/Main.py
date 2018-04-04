@@ -46,8 +46,12 @@ def getNarrativeOptions():
     glbl.next_addresses = {}
     options = dm.getFromMap(glbl.address_stack[-1], glbl.database)
 
+    # @todo - prioritising options
     for option in options:
         new_address = dm.parseDatabaseEntry([options[option], option])
+
+        # print('\t' + pc.IYellow + str(options[option]) + ' - ' + str(new_address) + pc.Reset)  # -------------------
+
         new_address.update(glbl.next_addresses)
         glbl.next_addresses = new_address
 
@@ -85,6 +89,7 @@ def readNarrative():
         if text[0] == 'Text':
             print(str(text[1]))
         elif text[0] == 'Container':
+            # print(str(text))  # ------------------------------------------------------------------------------------
             print(str(ci.parseContainerCode(text[1], text[2])))
         elif text[0] == 'Code' or text[0] == 'Variable':
             ci.interpretCode(text[2][0])
@@ -101,13 +106,43 @@ if __name__ == '__main__':
     readNarrative()
     string = ''
 
-    # Play the game
-    while True:
+    paths = ['leave_phone_booth', 'look_for_others', 'run_toward_the_light', \
+             'look_around', 'pull_string', 'go_up_stairs']  # stay_in_room
+    i = 0
+    while i < len(paths):
+        path = paths[i]
         # Get the users narrative selection
         getNarrativeOptions()
 
         if glbl.do_auto_select is False:
-            print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(glbl.next_addresses))
+            print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
+            string = path
+            print("")
+            i += 1
+        # Or automatically select the next element
+        else:
+            glbl.do_auto_select = False
+            for address in glbl.next_addresses:
+                if 'auto' in glbl.next_addresses:
+                    string = 'auto'
+                else:
+                    string = list(glbl.next_addresses)[0]
+
+        # Double check that the user hasn't made an error
+        if updateAddresses(string, False) is False:
+            print('\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
+            print(pc.IBlue + 'Please try again.' + pc.Reset)
+        else:
+            readNarrative()
+
+
+    # Play the game
+    while True:  # leave_phone_booth, look_for_others, run_away_from_the_light, climb_out, run_away_from_the_light
+        # Get the users narrative selection
+        getNarrativeOptions()
+
+        if glbl.do_auto_select is False:
+            print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
             string = input()
             print("")
         # Or automatically select the next element
@@ -140,3 +175,20 @@ if __name__ == '__main__':
 #         else:
 #             readNarrative()
 #             getNarrativeOptions()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

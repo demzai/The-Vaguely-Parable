@@ -353,9 +353,9 @@ def reference(referenced_address):
 
     # Look at the addresses pointed to & parse them
     for address in address_list:
-        returned_value = dm.parseDatabaseEntry(address)
-        if isinstance(returned_value, list):
-            return_list += returned_value
+        returned_value = dm.parseDatabaseEntry([address_list[address], address])
+        if isinstance(returned_value, dict):
+            return_list += [returned_value]
         else:
             return_list += [[returned_value, address[1]]]
         # Ensure the #prev counter doesn't creep

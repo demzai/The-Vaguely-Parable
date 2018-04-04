@@ -1,14 +1,14 @@
 ###
 3/01,	#code,	auto
 3/01a,	3/02,	feel_surroundings
-3/01a,	3/3a,	sit_in_despair
-3/01a,	3/3b,	do_not_give_up
+3/01a,	3/03a,	sit_in_despair
+3/01a,	3/03b,	do_not_give_up
 3/01a,	3/04,	climb_out
 3/01a,	3/13,	dig
 3/01b,	#&("3/01a"),	auto
 3/01c,	#&("3/01a"),	auto
 3/02,	#&("3/01a"),	auto
-3/03a,	4/99,	auto
+3/03a,	4/98,	auto
 3/03b,	#code,	auto
 3/03b1,	#&("3/01a"),	auto
 3/03b2,	#&("3/01a"),	auto
@@ -22,5 +22,5 @@
 3/14,	3/15,	pry_rock
 3/15,	#&("3/01a"),	auto
 3/15,	3/16,	reply
-3/16,	4/99,	auto
+3/16,	4/98,	auto
 ###

@@ -1,5 +1,5 @@
 ###
-//_Check_for_".	"_in_gui_and_auto-convert_them_to_",	"?
+//_Check_for_".	"_in_gui_and_auto-convert_them_to_"	"?
 2/01a,	2/01c,	auto
 2/01b,	2/01c,	auto
 2/01c,	2/02a,	go_through_door_X
@@ -17,14 +17,14 @@
 2/02a5,	2/02d,	look_around
 2/02b,	#prev,	auto							//_Repeat_call_to_previous_file
 2/02c,	3/01,	auto
-2/02d,	2/23,	do_not_ignore_string
+2/02d,	2/23,	pull_string
 2/02d,  #&("2/01c"),    auto
 2/03a,	2/03c,	auto
 2/03b,	2/03c,	auto
 2/03c,	2/04a,	go_back_into_the_phone_booth
 2/03c,	2/04b,	look_back
 2/03c,	2/04c,	go_back
-2/04a,	4/99,	auto                                //_Auto_=_instant,_delay_1000_=_delayed_by_1000ms
+2/04a,	4/98,	auto                                //_Auto_=_instant,_delay_1000_=_delayed_by_1000ms
 2/04b,	#&(#prev),	auto							//_Repeat_options_of_previous_file
 2/04c,	#&(#prev),	auto
 2/04c,	2/04d,	go_back							//_Overwrite_option_of_previous-file
@@ -34,17 +34,17 @@
 2/13b,	01c,	auto
 2/13c,	01c,	auto
 2/13d,	01c,	auto
-2/14,	4/99,	auto
+2/14,	4/98,	auto
 2/23,	#&("2/01c"),	auto
-2/23,	2/24,	pull_string						//_Add_option_to_previous_options
+2/23,	2/24,	go_up_stairs						//_Add_option_to_previous_options
 2/24,   #code,  auto
 2/24a,	#&("2/01c"),	auto							//_Repeat_options_of_2/01c
-2/24a,	2/25,	go_up_stairs
+2/24a,	2/25,	stay_in_room
 2/24b,	#&("2/01c"),	auto							//_Repeat_options_of_2/01c
-2/24b,	2/25,	go_up_stairs
+2/24b,	2/25,	stay_in_room
 2/25,	#code,	auto
 2/25a,	2/26,	auto
 2/25b,	2/26,	auto
 2/25c,	2/26,	auto
-2/26,	4/99,	auto
+2/26,	4/98,	auto
 ###

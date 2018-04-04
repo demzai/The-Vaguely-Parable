@@ -6,7 +6,7 @@
 0/01,	0/02b1,	leave_phone_booth
 0/02a1,	0/02a2,	auto
 0/02a2,	0/02a3,	interrupt_leave_phone_booth
-0/02a2,	4/99,	auto
+0/02a2,	4/98,	auto
 0/02a3,	0/02b2,	auto
 0/02b1,	0/02b2,	auto
 0/02b2,	4/03,	wait_around
@@ -14,7 +14,7 @@
 0/02b2,	0/03b,	look_for_others
 0/03a,	0/02a2,	auto
 0/03b,	1/01a,	do_not_go_anywhere
-0/03b,	2/01a,	run_toward_the	light
+0/03b,	2/01a,	run_toward_the_light
 0/03b,	0/04,	run_away_from_the_light
 0/04,	3/01,	auto
 ###

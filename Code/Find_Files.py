@@ -126,8 +126,7 @@ def getFileFromCode(code, file_locales, code_determiner='/'):
         code_id = code.__len__()-1
         file = file_locales[1][code[-1]]
     except KeyError:
-        print('BAD INDEX AFTER "' + str(file_locales[0]) + '" - "' + str(code[code_id]) + '"')
-        return ""
+        raise ValueError('BAD INDEX AFTER "' + str(file_locales[0]) + '" - "' + str(code[code_id]) + '"')
     finally:
         del code, file_locales, code_determiner, code_id
     return file

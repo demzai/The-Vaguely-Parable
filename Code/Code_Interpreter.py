@@ -67,7 +67,7 @@ def interpretParameters(parameters, is_segment=False):
     :param is_segment: bool
     :return:
     """
-    # print('\t\t' + str(parameters))
+    # print('\t\t' + str(parameters))  # -----------------------------------------------------------------------------
     # If nothing to do, do nothing
     if parameters is None or parameters.__len__() is 0:
         return None
@@ -111,12 +111,12 @@ def interpretCode(code):
     :param code:
     :return:
     """
-    # print(str(code) + ' - ' + str(type(code)))
+    # print(str(code) + ' - ' + str(type(code)))  # ------------------------------------------------------------------
     if isinstance(code, str):
         code = bt.convertCodeToList(code)
     elif not isinstance(code, list):
         raise ValueError("ERROR - INVALID CODE: " + str(code))
-    # print('\t' + str(code))
+    # print('\t' + str(code))  # -------------------------------------------------------------------------------------
     # If the code is poorly formatted, then raise an exception
     """
     # Interprets the code and throws errors when something obvious is wrong
@@ -132,6 +132,7 @@ def interpretCode(code):
 
     # Interpret parameters first
     parameters = interpretParameters(code[1], code[0] == '#segment')
+    # print('\t\t\t' + str(parameters))  # ---------------------------------------------------------------------------
 
     # Then perform the function
     # If code name starts with a capital letter, then it refers to a variable
@@ -177,7 +178,9 @@ def interpretCode(code):
                              str(len(signature(glbl.map_function[code[0]][0]).parameters)) + " PARAMETERS!")
         # Otherwise, get the function and perform it
         else:
-            return glbl.callFunction(code[0], parameters)
+            result = glbl.callFunction(code[0], parameters)
+            # print('\t\t\t' + str(code) + ' - ' + str(parameters) + ' - ' + str(result))  # -------------------------
+            return result
 
 
 def parseContainerCode(container_text, container_codes):
@@ -188,26 +191,18 @@ def parseContainerCode(container_text, container_codes):
     :return:
     """
     # [type, text, [codes]]
-    resultant_string = ["", container_text]
-    return_string = ""
 
     # For each code:
     for code in container_codes:
-        try:
-            # If the code was found within the text, then split it, else raise an exception
-            if len(resultant_string[-1].split(code, 1)) is not 2:
-                raise ValueError("ERROR - CODE NOT FOUND WITHIN STRING!")
-            else:
-                # Insert the result of the code in its place
-                resultant_string[:-1] += resultant_string[-1].split(code, 1)
-                resultant_string[-2] += str(interpretCode(code))
-        except Exception:
+        # If the code was found within the text, then split it, else raise an exception
+        if len(container_text.split(code, 1)) is not 2:
             raise ValueError("ERROR - CODE NOT FOUND WITHIN STRING!")
-
-    # Merge the string results back into a single sentence
-    for bit in resultant_string:
-        return_string += str(bit)
-    return return_string
+        else:
+            # Insert the result of the code in its place
+            code_split = container_text.split(code, 1)
+            code_split[0] += str(interpretCode(code))
+            container_text = code_split[0] + code_split[1]
+    return container_text
 
 
 if __name__ == '__main__':

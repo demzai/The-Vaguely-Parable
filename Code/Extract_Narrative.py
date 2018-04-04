@@ -3,8 +3,7 @@
 """
 
 import re
-if __name__ == '__main__':
-    import Print_Colour as pc
+import Print_Colour as pc
 
 
 def getDynamicText(sentence):
@@ -58,17 +57,48 @@ def cleanFileContents(text):
     lines = [i.strip() for i in text.split("\n")]
     isCode = findCodeLines(lines)
     sentence = []
-    for i in range(0, lines.__len__()):
-        # Remove comments and excess whitespace
-        if isCode[i] != 'Container' and isCode[i] != 'Text':
+    for i in range(0, len(lines)):
+        # Remove comments and excess whitespace...
+        # If a code
+        # print(pc.IYellow + str(isCode[i]) + ' - ' + str(lines[i]) + pc.Reset)  # -----------------------------------
+        if isCode[i] == 'Code' or isCode[i] == 'Variable' or \
+                (isCode == 'Segment' and len(lines[i]) >= 2 and lines[i][:2] == '//'):
             lines[i] = re.sub("\s*//.*", "", lines[i])
             lines[i] = re.sub("\s", "", lines[i])
-        elif lines[i].__len__() is not 0 and lines[i][0] == '_':
+        # If a segment then take extra care around textual data
+        elif len(lines[i]) is not 0 and isCode[i] == 'Segment':
+            sections = lines[i].split(',')  # Split into csv units
+            lines[i] = ''
+            combo = ''
+            # For each csv unit
+            for j in range(0, len(sections)):
+                section = sections[j].strip()  # Remove whitespace at the begninning and end
+
+                # If start of a string detected with no end, then stack the string together...
+                if combo == '' and len(section) > 1 and section[0] == '"' and section[-1] != '"' or \
+                        combo != '' and len(section) is not 0 and section[-1] != '"':
+                    combo += sections[j] + ','
+                    continue
+                # ... until the end piece is detected
+                elif combo != '' and len(section) is not 0 and section[-1] == '"':
+                    section = (combo + sections[j]).strip()
+                    combo = ''
+
+                # If a string, then add without further modification
+                if len(section) > 1 and section[0] == '"' and section[-1] == '"' and section != '"':
+                    lines[i] += section + ','
+                    continue
+                section = re.sub("\s*//.*", "", section)
+                lines[i] += re.sub("\s", "", section) + ','
+            lines[i] = lines[i][:-1]
+
+        elif len(lines[i]) is not 0 and lines[i][0] == '_':
             lines[i] = lines[i][1:]
 
         # Ignore empty lines
         if lines[i].strip() is not "":
             sentence = sentence + [[isCode[i], lines[i]]]
+        # print(pc.IGreen + str(isCode[i]) + ' - ' + str(lines[i]) + pc.Reset)  # ------------------------------------
     return sentence
 
 

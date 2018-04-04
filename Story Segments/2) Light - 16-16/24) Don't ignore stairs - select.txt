@@ -1,8 +1,7 @@
+#auto
 ###
 //#select_storyline
 "#Stay"
     0, "2/24a"
     else, "2/24b"
 ###
-
-#auto

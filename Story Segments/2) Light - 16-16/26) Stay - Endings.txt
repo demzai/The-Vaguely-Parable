@@ -1,4 +1,5 @@
-// @todo to simplify for now, just create tons of separate files?
+#Stay(#+(#Stay,1))
+
 ###
 //#select_text
 #Stay
@@ -9,8 +10,8 @@
 20_24, "#Stay's a rave."
 25, "Please stop."
 26, "Pretty please."
-27, "Don’t you have anything better to do."
-else, "..."
+27, "Don't you have anything better to do."
+else, "... "
 ###
 
 Ending: #code
