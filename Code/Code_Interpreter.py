@@ -69,7 +69,7 @@ def interpretParameters(parameters, is_segment=False):
     """
     # print('\t\t' + str(parameters))
     # If nothing to do, do nothing
-    if parameters.__len__() is 0:
+    if parameters is None or parameters.__len__() is 0:
         return None
 
     formatted_parameters = []
@@ -157,18 +157,24 @@ def interpretCode(code):
             raise ValueError("ERROR - " + str(code[0]) + " IS NOT A VALID COMMAND!\n" + str(glbl.map_function))
 
         # Resolve len(None) = DNE bug
-        if parameters is None:
+        if glbl.map_function[code[0]][1] is True:
+            if parameters is None:
+                parameters = '###'
+            parameters = [parameters]
+            len_param = 1
+        elif parameters is None:
             len_param = 0
         else:
             len_param = len(parameters)
-        if signature(glbl.map_function[code[0]]).parameters is None:
+        if signature(glbl.map_function[code[0]][0]).parameters is None:
             len_fun = 0
         else:
-            len_fun = len(signature(glbl.map_function[code[0]]).parameters)
+            len_fun = len(signature(glbl.map_function[code[0]][0]).parameters)
+
         # If there aren't enough parameters for the function, then raise an exception
         if len_param is not len_fun:
             raise ValueError("ERROR - " + str(code) + " DOES NOT CONTAIN " + \
-                             str(len(signature(glbl.map_function[code[0]]).parameters)) + " PARAMETERS!")
+                             str(len(signature(glbl.map_function[code[0]][0]).parameters)) + " PARAMETERS!")
         # Otherwise, get the function and perform it
         else:
             return glbl.callFunction(code[0], parameters)

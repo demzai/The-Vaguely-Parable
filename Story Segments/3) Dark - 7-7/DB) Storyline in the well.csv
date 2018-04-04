@@ -1,10 +1,10 @@
 ###
 3/01,	#code,	auto
-3/"3/01a",	3/02,	feel_surroundings
-3/"3/01a",	3/3a,	sit_in_despair
-3/"3/01a",	3/3b,	do_not_give_up
-3/"3/01a",	3/04,	climb_out
-3/"3/01a",	3/13,	dig
+3/01a,	3/02,	feel_surroundings
+3/01a,	3/3a,	sit_in_despair
+3/01a,	3/3b,	do_not_give_up
+3/01a,	3/04,	climb_out
+3/01a,	3/13,	dig
 3/01b,	#&("3/01a"),	auto
 3/01c,	#&("3/01a"),	auto
 3/02,	#&("3/01a"),	auto

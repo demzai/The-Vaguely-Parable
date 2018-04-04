@@ -41,12 +41,14 @@ def callFunction(function_code, parameters):
     global last_function_result
     if isinstance(function_code, str) and \
             isinstance(parameters, list):
-        last_function_result = map_function[function_code](*parameters)
+        last_function_result = map_function[function_code][0](*parameters)
     elif isinstance(function_code, str) and \
             isinstance(parameters, type(None)):
-        last_function_result = map_function[function_code]()
+        last_function_result = map_function[function_code][0]()
     else:
-        raise ValueError("ERROR - INVALID INPUTS " + str(function_code) + " AND " + str(parameters))
+        raise ValueError("ERROR - INVALID INPUTS " + \
+                         str(type(function_code)) + str(function_code) + ' - ' + \
+                         str(type(parameters)) + str(parameters))
     return last_function_result
 
 

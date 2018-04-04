@@ -7,6 +7,8 @@ import time
 import functools
 import Globals as glbl
 import Database_Management as dm
+import Code_Interpreter as ci
+import Extract_Narrative as en
 
 
 # ///////////////////////////////////////////////////////
@@ -22,24 +24,25 @@ def addFunctionsToMap():
     <function addition at
     """
     glbl.map_function.update({
-        '#segment': listSelect,
-        '#+': addition,
-        '#-': subtraction,
-        '#*': multiplication,
-        '#/': division,
-        '#%': remainder,
-        '#prev': getPreviousAddress,
-        '#&': reference,
-        '#forget': popAddressStack,
-        '#code': getLastResult,
-        '#quit': endTheProgram,
-        '#auto': noUserChoice,
-        '#delay': delay,
-        '#interrupt_start_local': turnLocalInterruptsOn,
-        '#interrupt_stop_local': turnLocalInterruptsOff,
-        '#interrupt_start_global': turnGlobalInterruptsOn,
-        '#interrupt_stop_global': turnGlobalInterruptsOff,
-        '#bracket': bracketResolution
+        '###': [listSelect, True],
+        '#segment': [listSelect, True],
+        '#+': [addition, False],
+        '#-': [subtraction, False],
+        '#*': [multiplication, False],
+        '#/': [division, False],
+        '#%': [remainder, False],
+        '#prev': [getPreviousAddress, False],
+        '#&': [reference, False],
+        '#forget': [popAddressStack, False],
+        '#code': [getLastResult, False],
+        '#quit': [endTheProgram, False],
+        '#auto': [noUserChoice, False],
+        '#delay': [delay, False],
+        '#interrupt_start_local': [turnLocalInterruptsOn, False],
+        '#interrupt_stop_local': [turnLocalInterruptsOff, False],
+        '#interrupt_start_global': [turnGlobalInterruptsOn, False],
+        '#interrupt_stop_global': [turnGlobalInterruptsOff, False],
+        '#bracket': [bracketResolution, False]
     })
 
     # Provide an output for the doctest
@@ -63,7 +66,18 @@ def rememberParameters(f):
         :param args:
         :return:
         """
-        return f(*args)
+        func.stack += [args[0]]
+
+        # If the first node is faulty, then ignore the whole thing and reset
+        if func.stack[0][:3] != '###':
+            func.stack = []
+
+        # If a start and end '###' have been found, run the code and reset the stack
+        elif len(listSelect.stack) > 3 and listSelect.stack[-1][:3] == '###':
+            return_value = f(*args)
+            func.stack = []
+            return return_value
+        return None
 
     func.stack = []
     return func
@@ -96,24 +110,68 @@ def countCalls(f):
 # ///////////////////////////////////////////////////////
 
 # #segment
+# noinspection PyUnusedLocal
 @rememberParameters
 def listSelect(line_contents):
     """
     # A simple switch case function
     :param line_contents:
+    :return :
     """
-    listSelect.stack += [line_contents]
-    # selection_variable, cases, results
-    # If the first node is faulty, then ignore the whole thing and reset
-    if listSelect.stack[0] != '###':
-        listSelect.stack = []
-    # If a full segment has been presented, then perform the switch case!
-    elif len(listSelect.stack) > 1 and listSelect.stack[-1] == '###':
-        print('#segment ready for action! - ' + str(listSelect.stack))
-        # Reset after use
-        listSelect.stack = []
-    # @todo insert code
-    return
+    # Resolve the variable being compared against
+    code_type = en.findCodeLines([str(listSelect.stack[1][0])])[0]
+    if code_type == 'Code' or code_type == 'Variable' or code_type == 'Container':
+        variable = ci.interpretParameters([str(listSelect.stack[1][0])])[0]
+    else:
+        variable = listSelect.stack[1][0]
+
+    # For each case statement, compare to the state variable
+    num_cases = len(listSelect.stack)-1
+    selected_case = -1
+    for i in range(2, num_cases):
+        case = listSelect.stack[i]
+
+        # Ignore faulty cases
+        if len(case) is not 2 and len(case) is not 3:
+            print("WARNING - FAULTY CASE: " + str(case))
+            continue
+
+        # If a default case has been presented at the end:
+        if i is num_cases-1 and isinstance(case[0], str) is True and case[0] == 'else':
+            selected_case = i
+            break
+
+        # If testing a numerical value over a range:
+        elif (isinstance(variable, int) or isinstance(variable, float)) and \
+                isinstance(case[0], str) and len(str(case[0]).split('<')) is 2:
+            # Get the ranges and check for their validity and truth value
+            check_range = ci.interpretParameters(case[0].split('<'))
+            if (isinstance(check_range[0], int) or isinstance(check_range[0], float)) and \
+                    (isinstance(check_range[1], int) or isinstance(check_range[1], float)) and \
+                    check_range[0] <= variable < check_range[1]:
+                global selected_case
+                selected_case = i
+                break
+
+        # All other tests should be equalities over same-typed values
+        elif type(variable) == type(case[0]) and variable == case[0]:
+            selected_case = i
+            break
+
+    # Resolve based on the selection, defaulting to None if no valid selection was made
+    if selected_case is -1:
+        print('WARNING - NO VALID CASES FOUND')
+        return None
+    elif len(listSelect.stack[selected_case]) is 3 and code_type != 'Variable':
+        print('WARNING - INVALID CASE DETECTED: ' + str(listSelect.stack[selected_case]))
+        return None
+    else:
+        # If a valid triplet found, replace the variable with the presented contents
+        if len(listSelect.stack[selected_case]) is 3:
+            ci.interpretCode(str(listSelect.stack[1][0]) + \
+                             '(' + str(listSelect.stack[selected_case][1]) + ')')
+        # Return the selected switch-case value
+        return listSelect.stack[selected_case][-1]
 
 
 # #+

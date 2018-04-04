@@ -2,7 +2,6 @@
 # Main file
 """
 
-
 # Dependencies
 import Database_Management as dm
 import Extract_Narrative as en
@@ -50,7 +49,7 @@ def getNarrativeOptions():
     for option in options:
         glbl.next_addresses += dm.parseDatabaseEntry(option)
 
-    # glbl.next_addresses = dm.getFromMap(glbl.address_stack[-1], glbl.database)
+        # glbl.next_addresses = dm.getFromMap(glbl.address_stack[-1], glbl.database)
 
 
 def updateAddresses(selection, is_direct_entry=False):
@@ -90,7 +89,6 @@ def readNarrative():
         elif text[0] == 'Code' or text[0] == 'Variable':
             ci.interpretCode(text[2][0])
         elif text[0] == 'Segment':
-            print('@todo: implement segments!!! - ' + str(text[2]))
             ci.interpretCode(text[2][0])
 
 
@@ -144,29 +142,3 @@ else:
         else:
             readNarrative()
             getNarrativeOptions()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
