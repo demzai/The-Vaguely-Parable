@@ -1,6 +1,3 @@
-Ending:
-
-// @todo code stuffs
 // @todo to simplify for now, just create tons of separate files?
 ###
 //#select_text
@@ -16,4 +13,7 @@ Ending:
 else, "..."
 ###
 
-_#code
+Ending: #code
+
+#delay(0.5)
+#auto

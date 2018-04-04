@@ -1,2 +1,12 @@
 // True Start:
-This is the story of a woman named Vaguely. Vaguely worked for a company in a big, open building where she was employee number 427. Employee 427's job was simple. She sat in a telephone cubicle and spoke to a computer. Orders came to her through a speaker telling her what to say, how to say it, and in what order. This is what employee 427 did every day of every month of every year. Although others might have considered it soul rending, Vaguely relished every moment that orders came in; remembering the tortuousness of the university coursework, she once had to do. Vaguely was happy. And then, one day
+This is the story of a woman named Vaguely.
+Vaguely worked for a company in a big, open building where she was employee number 427.
+Employee 427's job was simple.
+She sat in a telephone cubicle and spoke to a computer.
+Orders came to her through a speaker telling her what to say, how to say it, and in what order.
+This is what employee 427 did every day of every month of every year.
+Although others might have considered it soul-rending, Vaguely relished every moment that orders came in; remembering the tortuousness of the university coursework, she once had to do.
+Vaguely was happy.
+But then, one day...
+
+#auto

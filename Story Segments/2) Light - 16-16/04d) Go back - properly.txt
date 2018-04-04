@@ -1,3 +1,4 @@
 Dissatisfied with how easy re-entering the phone booth would be, Vaguely stepped out of the room, and into the darkness...
 
 #Darkness_Return("2/03b")
+#auto

@@ -1,11 +1,23 @@
 // If the door is open the user can, without being prompted (QTE style), ask for Vaguely to jump out at this point.
 
-Vaguely tried to remain calm, after all, walls don't just magically shrink. Clearly she was just panicked and over-reacting. Attempting to take a deep breath her head began to brush against the ceiling.
-Keep calm and carry on. Deep breaths. Relax. Vaguely prayed to herself that everything was fine. Her devotion to this job would not faulter now.
+Vaguely tried to remain calm, after all, walls don't just magically shrink.
+Clearly, she was just panicked and over-reacting.
+Attempting to take a deep breath her head began to brush against the ceiling.
+Keep calm and carry on.
+Deep breaths.
+Relax.
+Vaguely prayed to herself that everything was fine.
+Her devotion to this job would not falter now.
 
 // Any option to escape is now gone, whether the door is open or not.
 
-But soon, it was too late. The phone booth had become so small that she could hardly move a finger.
-And so, paralysed in fear and stuck in a dead end phone booth, Vaguely went silently into the night. Agonising seconds turned into tortuous days, which melded into excruciating years, before amalgamating into harrowing millenia. Slowly encapsulated into an ever-shrinking eternal nanoscopic void.
+But soon, it was too late.
+The phone booth had become so small that she could hardly move a finger.
+And so, paralysed in fear and stuck in a dead end phone booth, Vaguely went silently into the night.
+Agonising seconds turned into tortuous days, which melded into excruciating years, before amalgamating into harrowing millennia.
+Slowly encapsulated into an ever-shrinking eternal nanoscopic void.
 
 Ending: Claustrophobia.
+
+#delay(0.5)
+#auto

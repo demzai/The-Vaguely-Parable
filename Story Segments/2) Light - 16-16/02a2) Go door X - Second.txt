@@ -1,4 +1,6 @@
 // Second Time:
-Confident that the first door closing was just a fluke, Vaguely approached the next door. In response, the door slammed shut in front her face once again.
+Confident that the first door closing was just a fluke, Vaguely approached the next door.
+In response, the door slammed shut in front her face once again.
 
-Slightly confused, 
+Slightly confused,
+#auto

@@ -1,7 +1,8 @@
 // @todo later, already tons to do as is
 // @todo format the file correctly
 
-Do you terribly mind, I'm trying to present the story to you! I can't very well do so if you're constantly interrupting me now can I?!
+Do you terribly mind, I'm trying to present the story to you!
+I can't very well do so if you're constantly interrupting me now can I?!
 
 
 *Silence*
@@ -12,5 +13,5 @@ Finished?
 Thank you, now, where was I...
 
 
-Thats it! If you really want to listen to my story, then come fine me when you're actually finished! Hmph.
+That's it! If you really want to listen to my story, then come find me when you're actually finished! Hmph.
 *Game quits*

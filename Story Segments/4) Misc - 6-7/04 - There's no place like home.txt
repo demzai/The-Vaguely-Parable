@@ -1,5 +1,11 @@
 // @todo later
 
-Vaguely closed her eyes. Clicking her heels together three times, she chanted "there's no place like home. There's no place like home. There's no place like home!"
+Vaguely closed her eyes.
+Clicking her heels together three times, she chanted "There's no place like home. There's no place like home. There's no place like home!"
 
-As Vaguely slowly opened her eyes, she found herself back where she truely belonged. Her heart was at ease. To commemorate such a jovial occasion, Vaguely picked up the phone in her phone booth, and listened to the sweet sound of dial tone.
+As Vaguely slowly opened her eyes, she found herself back where she truly belonged.
+Her heart was at ease.
+To commemorate such a jovial occasion, Vaguely picked up the phone in her phone booth, and listened to the sweet sound of dial tone.
+
+#delay(1)
+#auto

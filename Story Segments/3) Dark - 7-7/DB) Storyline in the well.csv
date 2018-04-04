@@ -8,7 +8,7 @@
 3/01b,	#&("3/01a"),	auto
 3/01c,	#&("3/01a"),	auto
 3/02,	#&("3/01a"),	auto
-3/03a,	4/99,	delay_1000
+3/03a,	4/99,	auto
 3/03b,	#code,	auto
 3/03b1,	#&("3/01a"),	auto
 3/03b2,	#&("3/01a"),	auto
@@ -17,8 +17,10 @@
 3/04a,	#Darkness_Return,	auto
 3/04b,	#&("3/04a"),	auto
 3/13,	#&("3/01a"),	auto
-3/13,	3/14,	pry_rock
+3/13,	3/14,	examine_rock
 3/14,	#&("3/01a"),	auto
-3/14,	3/15,	reply
-3/15,	4/99,	delay_1000
+3/14,	3/15,	pry_rock
+3/15,	#&("3/01a"),	auto
+3/15,	3/16,	reply
+3/16,	4/99,	auto
 ###

@@ -1,15 +1,6 @@
 Lying on the floor, Vaguely fumbles with the stone, noticing a loose rock.
 
-Vaguely decided to ignore it.
+Vaguely decided to ignore it, and continue sitting in despair.
 
 //User responses:
 //Vaguely pays closer attention to the loose rock.
-
-
-Toying with the rock further, Vaguely discovered a way to pry the stone block out.
-
-But considering it too much like hard work, Vaguely decided to continue to ignore it.
-
-//User responses:
-//Vaguely pries the rock/block/tile out
-
