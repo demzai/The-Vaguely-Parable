@@ -45,15 +45,30 @@ def getNarrativeOptions():
     """
     glbl.next_addresses = {}
     options = dm.getFromMap(glbl.address_stack[-1], glbl.database)
+    delayed = []
 
-    # @todo - prioritising options
     for option in options:
         new_address = dm.parseDatabaseEntry([options[option], option])
-
         # print('\t' + pc.IYellow + str(options[option]) + ' - ' + str(new_address) + pc.Reset)  # -------------------
+
+        # Referenced addresses have a lower priority than current addresses, so delay their assimilation
+        if len(options[option]) > 1 and options[option][:2] == '#&':
+            delayed += [new_address]
+            continue
 
         new_address.update(glbl.next_addresses)
         glbl.next_addresses = new_address
+
+    # Insert the referenced addresses
+    for address in delayed:
+        address.update(glbl.next_addresses)
+        glbl.next_addresses = address
+
+    # Remove select addresses
+    for address in glbl.ignore_addresses:
+        if isinstance(address, str) or isinstance(address, int) or isinstance(address, float):
+            glbl.next_addresses.pop(address, None)
+    glbl.ignore_addresses = []  # Reset the ignore list
 
 
 def updateAddresses(selection, is_direct_entry=False):

@@ -42,7 +42,8 @@ def addFunctionsToMap():
         '#interrupt_stop_local': [turnLocalInterruptsOff, False],
         '#interrupt_start_global': [turnGlobalInterruptsOn, False],
         '#interrupt_stop_global': [turnGlobalInterruptsOff, False],
-        '#bracket': [bracketResolution, False]
+        '#bracket': [bracketResolution, False],
+        '#ignore': [ignoreNarrativeState, False]
     })
 
     # Provide an output for the doctest
@@ -350,16 +351,32 @@ def reference(referenced_address):
     calls_to_previous = getPreviousAddress.count
     address_list = dm.getFromMap(referenced_address, glbl.database)
     return_list = []
+    delayed = []
 
     # Look at the addresses pointed to & parse them
     for address in address_list:
         returned_value = dm.parseDatabaseEntry([address_list[address], address])
         if isinstance(returned_value, dict):
-            return_list += [returned_value]
+            returned_value = [returned_value]
         else:
-            return_list += [[returned_value, address[1]]]
+            returned_value = [[returned_value, address[1]]]
+
+        # Referenced addresses have a lower priority than current addresses, so delay their assimilation
+        if len(address_list[address]) > 1 and address_list[address][:2] == '#&':
+            delayed += [returned_value]
+            continue
+
+        # Add on the processed value
+        return_list += returned_value
+
         # Ensure the #prev counter doesn't creep
         getPreviousAddress.count = calls_to_previous
+
+    # @todo test whether this actually works as expected!
+    # Add on the delayed entries
+    for address in delayed:
+        return_list += address
+
     return return_list
 
 
@@ -461,6 +478,18 @@ def bracketResolution(contents):
     :return:
     """
     return contents
+
+
+# #ignore
+def ignoreNarrativeState(state_to_be_ignored):
+    """
+    # Appends a state (e.g. "look_around") to the ignore list
+    :param state_to_be_ignored:
+    :return:
+    """
+    # @todo ensure thatthis can run from csv / database files!
+    glbl.ignore_addresses += [state_to_be_ignored]
+    return
 
 
 addFunctionsToMap()

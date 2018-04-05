@@ -21,6 +21,7 @@ bracket_pairs = dict(zip(opening + closing, \
 database = {}
 address_stack = []
 next_addresses = {}
+ignore_addresses = []
 file_locales = []
 do_auto_select = False
 
