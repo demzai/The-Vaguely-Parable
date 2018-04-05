@@ -89,13 +89,53 @@ Scratchpad for useful functions and code
 # print(str(map_["key"]) + ", " + str(map_["num"]) + ", " + str(map_["bin"]) + ", " + str(map_["life"]))
 #
 #
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# /// MULTIPROCESSING EXAMPLE
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+#
+# import time
+# import multiprocessing as mp
+# import winsound
+#
+# def worker(x, i):
+#     x[i] += [i]
+#     winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
 #
 #
 #
+# def func(val, lock):
+#     for i in range(50):
+#         time.sleep(0.01)
+#         with lock:
+#             val.value += 1
 #
 #
+# def main():
+#     v = mp.Value('i', 0)
+#     lock = mp.Lock()
+#     process = [mp.Process(target=func, args=(v,lock)) for i in range(10)]
+#     for p in process:
+#         p.start()
+#     for p in process:
+#         p.join()
+#     print(v.value)
+#
+#     num = 20
+#     x = mp.Manager().list([[]]*num)
+#     print(x)
+#     p = []
+#     for i in range(num):
+#         p.append(mp.Process(target=worker, args=(x, i)))
+#         p[i].start()
+#
+#     for i in range(num):
+#         p[i].join()
+#
+#     print(x)
 #
 #
-#
-#
+# if __name__ == '__main__':
+#     main()
 #
