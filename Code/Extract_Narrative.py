@@ -72,7 +72,7 @@ def cleanFileContents(text):
             combo = ''
             # For each csv unit
             for j in range(0, len(sections)):
-                section = sections[j].strip()  # Remove whitespace at the begninning and end
+                section = sections[j].strip()  # Remove whitespace at the beginning and end
 
                 # If start of a string detected with no end, then stack the string together...
                 if combo == '' and len(section) > 1 and section[0] == '"' and section[-1] != '"' or \

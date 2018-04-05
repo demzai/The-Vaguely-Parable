@@ -488,7 +488,7 @@ def ignoreNarrativeState(state_to_be_ignored):
     :param state_to_be_ignored:
     :return:
     """
-    # @todo ensure thatthis can run from csv / database files!
+    # @todo ensure that this can run from csv / database files!
     glbl.ignore_addresses += [state_to_be_ignored]
     return
 

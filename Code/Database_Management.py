@@ -4,7 +4,7 @@
 
 # Dependencies
 import Extract_Narrative as en
-import Print_Colour as pc
+# import Print_Colour as pc
 import Code_Interpreter as ci
 
 
@@ -101,7 +101,6 @@ def getFromMap(key, map_of_values):
         return map_of_values[key]
     else:
         raise ValueError("ERROR: INVALID ID DETECTED - " + str(key))
-        return None
 
 
 def parseDatabaseEntry(entry):

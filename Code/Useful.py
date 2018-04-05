@@ -139,3 +139,60 @@ Scratchpad for useful functions and code
 # if __name__ == '__main__':
 #     main()
 #
+# ///////////////////////////////////////////////////////////////////////
+# /// TEXT TO SPEECH EXAMPLES:
+# ///////////////////////////////////////////////////////////////////////
+# # Offline using the os-specific text to speech converter
+# import win32com.client
+# speaker = win32com.client.Dispatch("SAPI.SpVoice")
+# speaker.Speak("Jump-man Jump-man Jump-man Them boys up to something!")
+#
+#
+# # Online with Google API:
+# from gtts import gTTS
+# import winsound
+# text = "Jump-man Jump-man Jump-man. Them boys up to something!"
+# tts = gTTS(text=text, lang='en')
+# tts.save('speech.mp3')
+# # Convert to wav file... or find another alternative
+# winsound.PlaySound('speech.wav', winsound.SND_FILENAME)
+#
+#
+#
+#
+# ////////////////////////////////////////////////////////////////////////////
+# /// SPEECH TO TEXT CONVERSION EXAMPLE!
+# ////////////////////////////////////////////////////////////////////////////
+#
+# Standard beginnings:
+from pprint import pprint
+import speech_recognition as sr
+r = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Say something!")
+    audio = r.listen(source)
+
+# Offline translation using CMUSphinx:
+try:
+    print("You said: " + r.recognize_sphinx(audio))
+    print(str(r.recognize_sphinx(audio, show_all=True)))
+except sr.UnknownValueError:
+    print("Sphinx could not understand audio")
+    pass
+except sr.RequestError as e:
+    print("Sphinx error; {0}".format(e))
+    pass
+
+# Online translation using Google's API:
+try:
+    # for testing purposes, we're just using the default API key
+    # to use another API key, use `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
+    # instead of `r.recognize_google(audio)`
+    print(r.recognize_google(audio, show_all=False))
+    pprint(r.recognize_google(audio, show_all=True))
+except sr.UnknownValueError:
+    print("Google Speech Recognition could not understand audio")
+    pass
+except sr.RequestError as e:
+    print("Could not request results from Google Speech Recognition service; {0}".format(e))
+    pass

@@ -150,15 +150,14 @@ if __name__ == '__main__':
         else:
             readNarrative()
 
-
     # Play the game
     while True:  # leave_phone_booth, look_for_others, run_away_from_the_light, climb_out, run_away_from_the_light
         # Get the users narrative selection
         getNarrativeOptions()
 
         if glbl.do_auto_select is False:
-            # print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
-            print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
+            print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
+            # print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
             string = input()
             print("")
         # Or automatically select the next element
@@ -172,10 +171,10 @@ if __name__ == '__main__':
 
         # Double check that the user hasn't made an error
         if updateAddresses(string, False) is False:
-            # print('\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
-            # print(pc.IBlue + 'Please try again.' + pc.Reset)
-            print('\nERROR - "' + str(string) + '" IS NOT AN OPTION!')
-            print('Please try again.')
+            print('\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
+            print(pc.IBlue + 'Please try again.' + pc.Reset)
+            # print('\nERROR - "' + str(string) + '" IS NOT AN OPTION!')
+            # print('Please try again.')
         else:
             readNarrative()
 

@@ -8,7 +8,7 @@ Use protection, get consent, and play nice kids!
 """
 
 import multiprocessing as mp
-import winsound
+import win32com.client
 import time
 import os
 
@@ -22,6 +22,7 @@ def fakeReader(to_be_read, lock_to_be_read):
     """
     # Prove the reader exists by printing the passed parameters
     print(os.getpid())
+    speaker = win32com.client.Dispatch("SAPI.SpVoice")
 
     # Continue indefinitely until terminated
     while True:
@@ -34,7 +35,8 @@ def fakeReader(to_be_read, lock_to_be_read):
             with lock_to_be_read:
                 string = to_be_read[0]
                 print(string)
-                winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
+                speaker.Speak(string)
+                # winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
                 to_be_read[1] = False
         else:
             time.sleep(0.1)
@@ -73,7 +75,7 @@ if __name__ == '__main__':
             # When not busy, ask for something new to be printed
             if is_busy is False:
                 with to_read[1]:
-                    to_read[0][0] = str(i)
+                    to_read[0][0] = str('Hello World')
                     to_read[0][1] = True
                 is_busy = True
                 i += 1
