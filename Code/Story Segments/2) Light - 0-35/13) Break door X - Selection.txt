@@ -1,10 +1,11 @@
 #auto
+#Door(0)
 ###
 //#select_storyline
-#Break
-0, 1, 2/13a
-1, 2, 2/13b
-2, 3, 2/13c
-3, 4, 2/13d		// 3 entries means "before, after, return"
-else, 2/14		// 2 entries means "case, return"
+"#Break"
+0, 1, "2/13a"
+1, 2, "2/13b"
+2, 3, "2/13c"
+3, 5, "2/13d"	// 3 entries means 'before, after, return'
+else, 4, "2/14"		// 2 entries means 'case, return'
 ###

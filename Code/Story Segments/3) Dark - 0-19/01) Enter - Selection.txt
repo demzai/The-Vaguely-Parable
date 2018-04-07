@@ -1,4 +1,5 @@
 #auto
+#Dig(0)
 ###
 //#select_storyline
 "#Dark"

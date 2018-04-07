@@ -15,6 +15,7 @@
 2/02a5,	2/02b,	look_back
 2/02a5,	2/02c,	go_back
 2/02a5,	2/02d,	look_around
+2/02a5, 2/13,   break_the_door_down
 2/02b,	#prev,	auto							//_Repeat_call_to_previous_file
 2/02c,	3/01,	auto
 2/02d,	2/23,	pull_string
@@ -34,7 +35,12 @@
 2/13b,	01c,	auto
 2/13c,	01c,	auto
 2/13d,	01c,	auto
-2/14,	4/98,	auto
+2/14,   15a,    look_around
+2/14,   15b,    climb
+2/14,   15c,    stop_climbing
+2/15a,  #&("2/14"),   auto
+2/15b,  #&("2/14"),   auto
+2/15c,	4/98,	auto
 2/23,	#&("2/01c"),	auto
 2/23,	2/24,	go_up_stairs						//_Add_option_to_previous_options
 2/24,   #code,  auto

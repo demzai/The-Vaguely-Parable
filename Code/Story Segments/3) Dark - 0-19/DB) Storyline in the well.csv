@@ -16,11 +16,12 @@
 3/04,	#code,	auto
 3/04a,	#Darkness_Return,	auto
 3/04b,	#&("3/04a"),	auto
-3/13,	#&("3/01a"),	auto
-3/13,	3/14,	examine_rock
-3/14,	#&("3/01a"),	auto
-3/14,	3/15,	pry_rock
-3/15,	#&("3/01a"),	auto
-3/15,	3/16,	reply
-3/16,	4/98,	auto
+3/13,   #code,  auto
+3/13a,	#&("3/01a"),	auto
+3/13a,  3/13,   examine_rock
+3/13b,	#&("3/01a"),	auto
+3/13b,  3/13,   pry_rock
+3/13c,	#&("3/01a"),	auto
+3/13c,  3/13,   reply
+3/13d,	4/98,	auto
 ###

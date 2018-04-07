@@ -1,0 +1,9 @@
+Lying on the floor, Vaguely fumbles with the stone, noticing a loose rock.
+
+Vaguely decided to ignore it, and continue sitting in despair.
+
+#ignore("dig")
+
+
+//User responses:
+//Vaguely pays closer attention to the loose rock.

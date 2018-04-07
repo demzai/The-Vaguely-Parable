@@ -67,7 +67,10 @@ def cleanFileContents(text):
             lines[i] = re.sub("\s", "", lines[i])
         # If a segment then take extra care around textual data
         elif len(lines[i]) is not 0 and isCode[i] == 'Segment':
-            sections = lines[i].split(',')  # Split into csv units
+            # Remove comments
+            lines[i] = re.sub("\s*//.*", "", lines[i])
+            # Split into csv units
+            sections = lines[i].split(',')
             lines[i] = ''
             combo = ''
             # For each csv unit

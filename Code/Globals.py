@@ -4,7 +4,7 @@
 
 
 # Location of the start directory of the narrative and database files
-start_directory = "../Story Segments/"
+start_directory = "Story Segments/"
 
 
 # Provide opening and closing patterns, along with their priorities & whether a priority is nestable
