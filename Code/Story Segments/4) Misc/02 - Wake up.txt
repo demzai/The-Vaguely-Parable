@@ -1,0 +1,15 @@
+// @todo later
+
+"Enough of this madness", exclaimed Vaguely, "None of this can really be happening! I must be dreaming."
+So certain of this, Vaguely was, that she immediately began pinching herself.
+Slowly becoming more and more restless, Vaguely jolted up in a cold sweat. Panting with a sigh of relief, "Oh thank goodness!"
+Vaguely began looking around to try and get her bearings again.
+It looked as though she was in a library working on a computer.
+"Ah, how could I have forgotten!"
+It was then that Vaguely remembered the true task lying before her.
+She was just about to begin her application for a job at a large call centre...
+
+Ending: Inception.
+
+#delay(1)
+#auto

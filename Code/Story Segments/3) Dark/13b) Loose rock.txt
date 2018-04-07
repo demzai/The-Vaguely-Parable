@@ -1,0 +1,9 @@
+Toying with the rock further, Vaguely discovered a method to pry it out.
+
+But considering it too much like hard work, Vaguely decided to ignore it and sit in despair.
+
+#ignore("dig")
+
+//User responses:
+//Vaguely pries the rock/block/tile out
+

@@ -1,0 +1,12 @@
+// Third Time:
+Refusing to give up, Vaguely attempted to fill herself with DETERMINATION!
+But nothing happened...
+Vaguely remembered all of the other times she climbed out, only to fall back in again.
+#delay(0.5)
+No.
+#delay(0.5)
+Not by herself.
+#delay(1)
+Not again.
+#delay(1.5)
+Once again, slumped against the wall, Vaguely decided to give up.

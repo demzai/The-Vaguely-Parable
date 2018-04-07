@@ -1,9 +1,0 @@
-Breathless after the tiresome journey, Vaguely found herself in a strange, bright, room with 7 open doors ahead of her.
-Thinking back, Vaguely remembered this room from before falling into the well, though the walls were not marred with strange dark streaks back then.
-Looking back at her chains, they were but mere threads.
-
-Tired of the struggling, 
-
-#Door(0)
-#Break(0)
-#auto

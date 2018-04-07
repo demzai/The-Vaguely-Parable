@@ -1,0 +1,12 @@
+Filled with hope, Vaguely pelted towards the light.
+Getting closer, the light seemingly began to shine brighter... and brighter... and brighter still.
+It became so bright Vaguely had to stop to cover her eyes whilst they adjusted.
+Edges slowly began to define themselves, blurrily outlining a set of 7 open doorways in front of her.
+This had to be it.
+Whoever opened the door must be on the other side of one of those doors!
+
+Eager for answers, 
+
+#Door(0)
+#Break(0)
+#auto

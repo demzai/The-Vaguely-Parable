@@ -1,0 +1,3 @@
+Vaguely decided to go through one of the open doors.
+
+// @todo randomise the door or have it selected dependent on previous doors
