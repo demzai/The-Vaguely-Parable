@@ -160,39 +160,52 @@ Scratchpad for useful functions and code
 #
 #
 #
-# ////////////////////////////////////////////////////////////////////////////
-# /// SPEECH TO TEXT CONVERSION EXAMPLE!
-# ////////////////////////////////////////////////////////////////////////////
+# # ////////////////////////////////////////////////////////////////////////////
+# # /// SPEECH TO TEXT CONVERSION EXAMPLE!
+# # ////////////////////////////////////////////////////////////////////////////
+# #
+# # Standard beginnings:
+# from pprint import pprint
+# import speech_recognition as sr
 #
-# Standard beginnings:
-from pprint import pprint
-import speech_recognition as sr
-r = sr.Recognizer()
-with sr.Microphone() as source:
-    print("Say something!")
-    audio = r.listen(source)
-
-# Offline translation using CMUSphinx:
-try:
-    print("You said: " + r.recognize_sphinx(audio))
-    print(str(r.recognize_sphinx(audio, show_all=True)))
-except sr.UnknownValueError:
-    print("Sphinx could not understand audio")
-    pass
-except sr.RequestError as e:
-    print("Sphinx error; {0}".format(e))
-    pass
-
-# Online translation using Google's API:
-try:
-    # for testing purposes, we're just using the default API key
-    # to use another API key, use `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
-    # instead of `r.recognize_google(audio)`
-    print(r.recognize_google(audio, show_all=False))
-    pprint(r.recognize_google(audio, show_all=True))
-except sr.UnknownValueError:
-    print("Google Speech Recognition could not understand audio")
-    pass
-except sr.RequestError as e:
-    print("Could not request results from Google Speech Recognition service; {0}".format(e))
-    pass
+# r = sr.Recognizer()
+# with sr.Microphone() as source:
+#     print("Say something!")
+#     audio = r.listen(source)
+#
+# # Offline translation using CMUSphinx:
+# try:
+#     print("You said: " + r.recognize_sphinx(audio))  # Returns the best estimate only
+#
+#     # Returns 10 best estimates, along with more detailed info for the best result
+#     result = r.recognize_sphinx(audio, show_all=True)
+#     hypothesis = result.hyp()
+#     logmath = result.get_logmath()
+#     print('Best hypothesis: "', hypothesis.hypstr, '", model score: ', hypothesis.best_score, ", confidence: ",
+#           logmath.exp(hypothesis.prob))
+#     print('Best hypothesis segments: ', [seg.word for seg in result.seg()])
+#     print('Best 10 hypothesis: ')
+#     for best, i in zip(result.nbest(), range(10)):
+#         print(best.hypstr, best.score)
+# # Resolve exceptions
+# except sr.UnknownValueError:
+#     print("Sphinx could not understand audio")
+#     pass
+# except sr.RequestError as e:
+#     print("Sphinx error; {0}".format(e))
+#     pass
+# print('\n')
+#
+# # Online translation using Google's API:
+# try:
+#     # for testing purposes, we're just using the default API key
+#     # to use another API key, use `r.recognize_google(audio, key="GOOGLE_SPEECH_RECOGNITION_API_KEY")`
+#     # instead of `r.recognize_google(audio)`
+#     print(r.recognize_google(audio, show_all=False))
+#     pprint(r.recognize_google(audio, show_all=True))
+# except sr.UnknownValueError:
+#     print("Google Speech Recognition could not understand audio")
+#     pass
+# except sr.RequestError as e:
+#     print("Could not request results from Google Speech Recognition service; {0}".format(e))
+#     pass

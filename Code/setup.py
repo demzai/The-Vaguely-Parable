@@ -26,5 +26,6 @@ setup(
     author='Student',
     author_email='',
     description='',
-    executables=executables, requires=['cx_Freeze', 'gtts']
+    executables=executables,
+    requires=['cx_Freeze', 'gtts']
 )
