@@ -2,22 +2,26 @@
 
 Vaguely tried to remain calm, after all, walls don't just magically shrink.
 Clearly, she was just panicked and over-reacting.
-Attempting to take a deep breath her head began to brush against the ceiling.
+Attempting to take another deep and relaxing breath, her head brushed against the ceiling.
+#delay(0.5)
 Keep calm and carry on.
+#delay(0.6)
 Deep breaths.
+#delay(0.75)
 Relax.
-Vaguely prayed to herself that everything was fine.
+#delay(0.75)
+Vaguely prayed to herself that everything was going to be fine.
 Her devotion to this job would not falter now.
 
 // Any option to escape is now gone, whether the door is open or not.
 
 But soon, it was too late.
-The phone booth had become so small that she could hardly move a finger.
-And so, paralysed in fear and stuck in a dead end phone booth, Vaguely went silently into the night.
+The phone booth had become so small that even a fly could hardly flap a wing.
+And so, paralysed with fear, and stuck in a dead end phone booth, Vaguely went silently into the night.
 Agonising seconds turned into tortuous days, which melded into excruciating years, before amalgamating into harrowing millennia.
 Slowly encapsulated into an ever-shrinking eternal nanoscopic void.
 
 Ending: Claustrophobia.
 
-#delay(0.5)
+#delay(1)
 #auto

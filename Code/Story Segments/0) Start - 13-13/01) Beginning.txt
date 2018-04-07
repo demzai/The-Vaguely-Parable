@@ -1,8 +1,10 @@
 // Rest Of Intro:
-something very peculiar happened.
-Something that would forever change Vaguely, something she would never quite forget.
+Something very peculiar happened.
+Something that would forever change Vaguely.
+Something she would never quite forget.
+#delay(0.8)
 She had been at her phone booth for over an hour when she realised that not one single order had arrived over the speaker for her to follow.
-No one had shown up to give her instructions, call a meeting, or even to say 'hi'.
+No one had shown up to give her instructions, call a meeting, or even to give a friendly 'hello'.
 Never in all her years at the company had this happened, this complete isolation.
 Something was very clearly wrong.
 Shocked, frozen solid, Vaguely found herself unable to speak for the longest time.
