@@ -22,7 +22,7 @@ def listener(user_input, lock_user_input, is_faulty):
     """
     try:
         recorder = sr.Recognizer()
-        recorder.energy_threshold = 15  # 10 to 25?
+        # recorder.energy_threshold = 500  # 10 to 25?
         with sr.Microphone() as source:
             while True:
                 with lock_user_input:
@@ -39,8 +39,10 @@ def listener(user_input, lock_user_input, is_faulty):
                 # Otherwise, wait patiently for the main process to finish
                 else:
                     time.sleep(0.1)
-    except Exception:
-        print('Listener has failed unexpectedly.')
+    except Exception as e:
+        is_faulty[0] = True
+        print('Listener has failed unexpectedly. {0}'.format(e))
+    finally:
         is_faulty[0] = True
 
 

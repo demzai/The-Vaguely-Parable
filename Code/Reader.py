@@ -22,12 +22,9 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
     :return:
     """
     try:
-        # Prove the reader exists by printing the passed parameters
-        print(os.getpid())
         # noinspection SpellCheckingInspection
         speaker = win32com.client.Dispatch("SAPI.SpVoice")
         speaker.Rate = 0
-        speaker.Voice = speaker.GetVoices().Item(1)
 
         # Continue indefinitely until terminated
         while True:
@@ -46,8 +43,8 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
                     to_be_read[1] = False
             else:
                 time.sleep(0.1)
-    except Exception:
-        print('Reader has failed unexpectedly.')
+    except Exception as e:
+        print('Reader has failed unexpectedly. {0}'.format(e))
     finally:
         is_faulty[0] = True
 

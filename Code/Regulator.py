@@ -77,7 +77,7 @@ def main():
                 # Play the next thing (in this case, repeat what the computer thinks the user just said back to them
                 with selector_results[1] and to_be_read[1]:
                     print(str(selector_results[0][0][0]))
-                    to_be_read[0][0] = selector_results[0][0][0][0]
+                    to_be_read[0][0] = selector_results[0][2]
                     to_be_read[0][-1] = True
                 prev_state[1] = False
                 prev_state[2] = True
