@@ -1,11 +1,11 @@
 Several errors can be expected:
-•	Speech to text mistranslation or incomplete input (e.g. user silent for a prolonged period of time)
+?	Speech to text mistranslation or incomplete input (e.g. user silent for a prolonged period of time)
 o	Results in garbage-in, resulting in a high likelihood of garbage-out
 o	Resolve with the narrator apologising for their bad hearing in a variety of different manners
-•	Conflicting information detected in the input
+?	Conflicting information detected in the input
 o	Results in an inability for the program to progress with the narrative
 o	Resolve with the narrator apologising for their confusion and asking for clarification by guiding them towards one of the possible narrative options they were presented with
-•	Incorrect or invalid input
+?	Incorrect or invalid input
 o	Results in an inability for the program to progress with the narrative
 o	Resolve with a witty remark regarding the poor writing skills of the author and attempt to direct the user towards a valid option
 

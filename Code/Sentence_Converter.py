@@ -12,6 +12,11 @@ import num2words as nw
 
 
 def formatWordsList(words):
+    """
+    # Takes in a list of words and formats them nicely for the grammar interpreter
+    :param words:
+    :return:
+    """
     return_list = []
     for word in words:
         # If '%' is contained, then the word is probably not a word!
@@ -27,6 +32,11 @@ def formatWordsList(words):
 
 
 def getSynonyms(word):
+    """
+    For a given word, searches for synonyms on both thesaurus.com and powerthesaurus.org
+    :param word:
+    :return:
+    """
     word_set = {formatWordsList([word])[0]: 0}
 
     # Get synonyms from http://thesaurus.com
@@ -34,15 +44,15 @@ def getSynonyms(word):
         site1 = lh.parse('http://thesaurus.com/browse/' + word)
         for i in range(10):
             discovered = site1.xpath('//div[' + str(i) + ']/div[2]/div[3]/div/ul/li/a/span[1]/text()')
-            for i in formatWordsList(discovered):
-                word_set.update({i: 0})
+            for j in formatWordsList(discovered):
+                word_set.update({j: 0})
     except OSError as e:
         print('Failed to load site 1 HTTP resource, {0}'.format(e))
 
     # Get synonyms from http://powerthesaurus.org
     try:
         site2 = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
-        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="\/(.*)\/synonyms"', site2)
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site2)
         for i in formatWordsList(discovered):
             word_set.update({i: 0})
     except OSError as e:
@@ -52,6 +62,11 @@ def getSynonyms(word):
 
 
 def readFile(file_location):
+    """
+    Generic, simplified, function to extract the contents of a file
+    :param file_location:
+    :return:
+    """
     fileObject = open(file_location, 'r')
     fileContents = fileObject.read()
     fileObject.close()
@@ -59,6 +74,14 @@ def readFile(file_location):
 
 
 def writeGrammarFile(file_location, grammar_name, grammar_rules, imports=None):
+    """
+    Auto-generates a grammar file when given a set of grammar rules etc.
+    :param file_location:
+    :param grammar_name:
+    :param grammar_rules:
+    :param imports:
+    :return:
+    """
     grammar_file = open(file_location, 'w')
 
     # Add the grammar name
@@ -81,7 +104,12 @@ def writeGrammarFile(file_location, grammar_name, grammar_rules, imports=None):
     return
 
 
+# noinspection SpellCheckingInspection
 def getDictionary():
+    """
+    Extracts the model dictionary, allowing testing for word inclusion
+    :return:
+    """
     # dictionary = readFile(pocketsphinx.get_model_path() + '/cmudict-en-us.dict')
     dictionary = readFile('C:/Program Files/Python35/Lib/site-packages/speech_recognition/pocketsphinx-data/en-US' + \
                           '/pronounciation-dictionary.dict')
@@ -89,6 +117,11 @@ def getDictionary():
 
 
 def getSentences(file_locale):
+    """
+    Extracts a list of sentences to process, and splits them off into groups
+    :param file_locale:
+    :return:
+    """
     # Get each individual sentence in each sentence set
     sentence_sets = []
     for text in readFile(file_locale).split('\n\n'):
@@ -98,6 +131,11 @@ def getSentences(file_locale):
 
 
 def getUniqueWords(sentence_sets):
+    """
+    Given a set of sentences, generate a list of unique words used within them
+    :param sentence_sets:
+    :return:
+    """
     unique_words = {}
     for sentences in sentence_sets:
         for sentence in sentences:
@@ -107,6 +145,12 @@ def getUniqueWords(sentence_sets):
 
 
 def getSynonymsForAllWords(unique_words):
+    """
+    Automatically acquire all synonyms for all words generated
+    Ensure each synonym phrases uniqueness & validity within the dictionary
+    :param unique_words:
+    :return:
+    """
     # Get synonyms for each word
     for word in unique_words:
         if word is '':
@@ -140,6 +184,11 @@ def getSynonymsForAllWords(unique_words):
 
 
 def genGrammarsForWords(unique_words):
+    """
+    Generate grammar rules for each unique word
+    :param unique_words:
+    :return:
+    """
     word_grammar_rules = {}
     for word in unique_words:
         # Create a single, unified list of synonyms
@@ -161,6 +210,12 @@ def genGrammarsForWords(unique_words):
 
 
 def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
+    """
+    Generate grammar rules for each set of sentences, based on the grammar rules generated for each word
+    :param sentence_sets:
+    :param word_grammar_rules:
+    :return:
+    """
     sets_of_grammar_rules = {}
     for i in range(len(sentence_sets)):
         sentence_set = sentence_sets[i]
@@ -188,6 +243,10 @@ def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
 
 
 def main():
+    """
+    Main process for generating grammar files
+    :return:
+    """
     sentence_sets = getSentences("Grammars/Selection Texts.txt")
     unique_words = getUniqueWords(sentence_sets)
     unique_words = getSynonymsForAllWords(unique_words)

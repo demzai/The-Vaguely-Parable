@@ -16,6 +16,7 @@ options = {
     },
 }
 
+# noinspection SpellCheckingInspection
 setup(
     name='The_Vaguely_Parable',
     options=options,
@@ -27,5 +28,6 @@ setup(
     author_email='',
     description='',
     executables=executables,
-    requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'lxml', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32']
+    requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'lxml', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32',
+              'num2words', 'requests']
 )

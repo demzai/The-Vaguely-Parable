@@ -1,45 +1,55 @@
 """
-The code presented focuses on retrieving data to be read to the user.
-It will act as a middle-man between the text to speech engine and the text-generator,
-    handing the communications side of things.
-The code here is intended to be called as a child process... thread safety rules
-    apply.
+The code presented focuses on reading textual data to the user.
+It provides a text to speech service as an independent process that can be killed at a moments notice.
+The code here is intended to be called as a child process... thread safety rules apply.
 Use protection, get consent, and play nice kids!
 """
 
+# Dependencies:
 import multiprocessing as mp
 import win32com.client
 import time
 import os
 
 
-def fakeReader(to_be_read, lock_to_be_read):
+# noinspection PyBroadException
+def reader(to_be_read, lock_to_be_read, is_faulty):
     """
     # Temporary place holder for the text to speech algorithm
-    :param to_be_read: mp.Value(ct.c_char_p, '')
-    :param lock_to_be_read: mp.Lock()
-    :return: N/A
+    :param to_be_read:
+    :param lock_to_be_read:
+    :param is_faulty:
+    :return:
     """
-    # Prove the reader exists by printing the passed parameters
-    print(os.getpid())
-    speaker = win32com.client.Dispatch("SAPI.SpVoice")
+    try:
+        # Prove the reader exists by printing the passed parameters
+        print(os.getpid())
+        # noinspection SpellCheckingInspection
+        speaker = win32com.client.Dispatch("SAPI.SpVoice")
+        speaker.Rate = 0
+        speaker.Voice = speaker.GetVoices().Item(1)
 
-    # Continue indefinitely until terminated
-    while True:
-        # Check whether something needs to be done
-        with lock_to_be_read:
-            has_changed = to_be_read[1]
-
-        # If new text is available, then display / say it
-        if has_changed is True:
+        # Continue indefinitely until terminated
+        while True:
+            # Check whether something needs to be done
             with lock_to_be_read:
-                string = to_be_read[0]
+                has_changed = to_be_read[1]
+
+            # If new text is available, then display / say it
+            if has_changed is True:
+                with lock_to_be_read:
+                    string = to_be_read[0]
                 print(string)
                 speaker.Speak(string)
                 # winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
-                to_be_read[1] = False
-        else:
-            time.sleep(0.1)
+                with lock_to_be_read:
+                    to_be_read[1] = False
+            else:
+                time.sleep(0.1)
+    except Exception:
+        print('Reader has failed unexpectedly.')
+    finally:
+        is_faulty[0] = True
 
 
 def startReader():
@@ -48,39 +58,15 @@ def startReader():
     :return: list
     """
     to_be_read = mp.Manager().list(['', False])
+    is_faulty = mp.Manager().list([False])
     lock_to_be_read = mp.Lock()
 
     process = mp.Process(
-        target=fakeReader,
-        args=(to_be_read, lock_to_be_read)
+        target=reader,
+        args=(to_be_read, lock_to_be_read, is_faulty)
     )
     process.start()
-    time.sleep(0.01)
 
-    return [process, [to_be_read, lock_to_be_read]]
+    return [process, [to_be_read, lock_to_be_read], is_faulty]
 
-
-if __name__ == '__main__':
-    while True:
-        # Create a new reader
-        [reader, to_read] = startReader()
-        is_busy = True
-        i = 0
-
-        while i < 3:
-            # Check if the reader is busy
-            with to_read[1]:
-                is_busy = to_read[0][1]
-
-            # When not busy, ask for something new to be printed
-            if is_busy is False:
-                with to_read[1]:
-                    to_read[0][0] = str('Hello World')
-                    to_read[0][1] = True
-                is_busy = True
-                i += 1
-                time.sleep(0.1)
-
-        # Kill the process before repeating!
-        reader.terminate()
 
