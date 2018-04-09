@@ -3,6 +3,8 @@ Still tearful, and most emphatically apologising for ever leaving, Vaguely cried
 Eventually, with a slow stutter, Vaguely awoke in a panic!
 Ashamed that she might have dozed off at work, she lifted up the telephone and awaited her next command...
 
+#delay(0.5)
+
 Ending: Rinse & Repeat.
 
 #delay(1)

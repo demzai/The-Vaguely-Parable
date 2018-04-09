@@ -6,3 +6,5 @@ The far side looked overrun with vegetation.
 A most unsightly room indeed.
 
 In hopes to unsee the horrors against fashion, feng shui, and all things beautiful, Vaguely decided to run back and go through one of the open doors.
+
+#ignore("look_around")

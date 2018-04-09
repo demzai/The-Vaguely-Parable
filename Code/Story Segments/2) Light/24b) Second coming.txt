@@ -4,3 +4,5 @@ As she began to see the various flowing colours of the room, she was greeted wit
 Upon further inspection, Vaguely noticed that the horror standing before her was an exact duplicate of her!
 
 In a panic, Vaguely decided to run back and go through one of the open doors.
+
+#ignore("look_around")

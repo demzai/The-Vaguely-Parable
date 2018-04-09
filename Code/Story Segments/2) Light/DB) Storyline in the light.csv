@@ -26,8 +26,8 @@
 2/03c,	2/04b,	look_back
 2/03c,	2/04c,	go_back
 2/04a,	4/98,	auto                                //_Auto_=_instant,_delay_1000_=_delayed_by_1000ms
-2/04b,	#&(#prev),	auto							//_Repeat_options_of_previous_file
-2/04c,	#&(#prev),	auto
+2/04b,	#&("2/03c"),	auto							//_Repeat_options_of_previous_file
+2/04c,	#&("2/03c"),	auto
 2/04c,	2/04d,	go_back							//_Overwrite_option_of_previous-file
 2/04d,	3/01,	auto
 2/13,	#code,	auto

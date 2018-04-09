@@ -1,6 +1,6 @@
 Welcome to "The Vaguely Parable".
-This is a somewhat satirical, yet sad, game, where your voice is the controller!
-Story segments are narrated, with the last sentence always contains the phrase "Vaguely decided to".
+This is a somewhat satirical game, where your voice is the controller!
+Story segments are narrated, with the last sentence always containing the phrase, "Vaguely decided to".
 This last sentence will guide you on what you can do next.
 And with that, you can guide Vaguely on her journey!
 Good luck!

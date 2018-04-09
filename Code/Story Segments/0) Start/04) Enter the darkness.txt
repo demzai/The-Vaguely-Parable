@@ -5,6 +5,7 @@ When, suddenly, seemingly out of nowhere, she had the floor ripped from under he
 Vaguely screamed as she fell into the abyss.
 "What is going on? Where is everyone? Why am I falling? When is this nightmare going to end?" she thought.
 Before... nothing.
+#delay(0.5)
 
 #Darkness_Return("1/01b")
 #auto

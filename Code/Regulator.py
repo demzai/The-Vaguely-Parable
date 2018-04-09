@@ -34,14 +34,15 @@ def main():
     try:
         prev_state = [False, False, False]
         while True:
-            # Ensure that the listener and reader processes are fully functional
-            if is_listen_faulty is True:
-                [listen, user_input, is_listen_faulty] = resetChildProcess(listen, Listener.startListener)
-            if is_select_faulty is True:
-                [select, selector_inputs, selector_results, is_select_faulty] = \
-                    resetChildProcess(select, Selector.startSelector)
-            if is_reader_faulty is True:
-                [read, to_be_read, is_reader_faulty] = resetChildProcess(read, Reader.startReader)
+            # Ensure that the listener, selector, and reader processes are fully functional
+            if True:
+                if is_listen_faulty is True:
+                    [listen, user_input, is_listen_faulty] = resetChildProcess(listen, Listener.startListener)
+                if is_select_faulty is True:
+                    [select, selector_inputs, selector_results, is_select_faulty] = \
+                        resetChildProcess(select, Selector.startSelector)
+                if is_reader_faulty is True:
+                    [read, to_be_read, is_reader_faulty] = resetChildProcess(read, Reader.startReader)
 
             # Check the status of the listener
             with user_input[1]:

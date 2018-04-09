@@ -14,7 +14,7 @@ For although their journeys would not be without falls...
 They were together now, and could pull each other out from their darkest wells.
 #delay(1)
 And so they walked.
-#delay(1.5)
+#delay(2.5)
 And as the minutes turned to days, and days melted into years, and those years drifted into millennia, their paths and sombre smiles drifted into the void.
 
 Ending: Enlightened.

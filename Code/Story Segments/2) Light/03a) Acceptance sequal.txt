@@ -9,6 +9,8 @@ Who had been slamming those doors on her?
 Why was this even happening?
 Positively certain that somebody had to be in that room, she looked more and more frantically, before... a gradual acceptance of her situation began to console her.
 
+#delay(0.5)
+
 Abandonment had never been far behind Vaguely.
 Her world abandoned her when she changed school as a young child.
 Her friends abandoned her when she started university, and even her uni-friends drifted away when she started to work.
@@ -22,7 +24,7 @@ Leaving it all alone to fend for itself.
 No, she had to get back to it!
 Back to her one and only friend...
 But before she could leap back out of this strange room... there it stood.
-Welcoming her with seemingly open and forgiving arms.
+Welcoming her with seemingly open, and forgiving arms.
 Her phone booth stood majestically in the corner of the room.
 
 With a tearful smile,

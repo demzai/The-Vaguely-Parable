@@ -3,12 +3,14 @@
 """
 
 # Dependencies
+import time
+
 import Database_Management as dm
 import Extract_Narrative as en
 import Find_Files as ff
-import Print_Colour as pc
 import Globals as glbl
-import Code_Interpreter as ci
+
+import Reader
 
 
 # Get the start node
@@ -94,23 +96,74 @@ def updateAddresses(selection, is_direct_entry=False):
     return False
 
 
-def readNarrative():
+# def readNarrative():
+#     """
+#     # Reads the narrative pointed to by the current address
+#     """
+#     narrative_file = ff.getFileFromCode(glbl.address_stack[-1], glbl.file_locales)
+#     narrative_text = en.getFileContents(narrative_file)
+#     for text in narrative_text:
+#         if text[0] == 'Text':
+#             print(str(text[1]))
+#         elif text[0] == 'Container':
+#             print(str(ci.parseContainerCode(text[1], text[2])))
+#         elif text[0] == 'Code' or text[0] == 'Variable':
+#             ci.interpretCode(text[2][0])
+#         elif text[0] == 'Segment':
+#             ci.interpretCode(text[2][0])
+#     print('')
+def readNarrative(reader):
     """
     # Reads the narrative pointed to by the current address
+    :param reader: Reader.ReaderObj()
+    :return:
     """
     narrative_file = ff.getFileFromCode(glbl.address_stack[-1], glbl.file_locales)
     narrative_text = en.getFileContents(narrative_file)
-    for text in narrative_text:
-        if text[0] == 'Text':
-            print(str(text[1]))
-        elif text[0] == 'Container':
-            # print(str(text))  # ------------------------------------------------------------------------------------
-            print(str(ci.parseContainerCode(text[1], text[2])))
-        elif text[0] == 'Code' or text[0] == 'Variable':
-            ci.interpretCode(text[2][0])
-        elif text[0] == 'Segment':
-            ci.interpretCode(text[2][0])
-    print('')
+    reader.stack += narrative_text
+
+
+def read(reader, text):
+    """
+    Pass single sentences for processing over to the reader
+    :param reader:
+    :param text:
+    :return:
+    """
+    to_reader = [['Text', str(text), []]]
+    reader.stack += to_reader
+
+
+def getSelection(preselect=None):
+    """
+    Select the next narrative path
+    :param preselect:
+    :return:
+    """
+    # Get the users selection
+    if glbl.do_auto_select is False:
+        # print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
+        print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
+        if preselect is not None:
+            string = preselect
+        else:
+            string = input()
+        print("")
+
+        with open("log_file.txt", "a") as log_file:
+            log_file.write('User Select - ' + str(string) + '\n')
+    # Or automatically select the next element
+    else:
+        glbl.do_auto_select = False
+        addresses = list(glbl.next_addresses)
+        string = addresses[0]
+        if 'auto' in addresses:
+            string = 'auto'
+        with open("log_file.txt", "a") as log_file:
+            log_file.write('Auto Select - ' + str(string) + '\n')
+
+    # Return the selection
+    return string
 
 
 def main():
@@ -120,60 +173,44 @@ def main():
     """
     # Begin the game
     initialise()
-    # print(str(glbl.database))  # -----------------------------------------------------------------------------------
-    readNarrative()
-    string = ''
+    reader = Reader.ReaderObj()
+    readNarrative(reader)
+    reader.checkReaderStatus()
 
     try:
-        paths = [
-                 ]
-        i = 0
-
         # Play the game
-        while True:  # leave_phone_booth, look_for_others, run_away_from_the_light, climb_out, run_away_from_the_light
+        while True:
+            # Block whilst the narrator reads the script
+            # @todo convert to non-blocking method to allow interrupts
+            while reader.alive is True:
+                reader.checkReaderStatus()
+                time.sleep(0.5)
+
             # Get the users narrative selection
             getNarrativeOptions()
 
-            if glbl.do_auto_select is False:
-                # print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
-                print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
-                if i < len(paths):
-                    string = paths[i]
-                else:
-                    string = input()
-                print("")
-                i += 1
-
-                with open("log_file.txt", "a") as log_file:
-                    log_file.write('User Select - ' + str(string) + '\n')
-            # Or automatically select the next element
-            else:
-                glbl.do_auto_select = False
-                for address in glbl.next_addresses:
-                    if 'auto' in glbl.next_addresses[address]:
-                        string = 'auto'
-                    else:
-                        string = list(glbl.next_addresses)[0]
-                with open("log_file.txt", "a") as log_file:
-                    log_file.write('Auto Select - ' + str(string) + '\n')
+            # Get the users selection
+            string = getSelection()
 
             # Double check that the user hasn't made an error
             if updateAddresses(string, False) is False:
-                # print('\n' + pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
+                # print(pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
                 # print(pc.IBlue + 'Please try again.' + pc.Reset)
-                print('\nERROR - "' + str(string) + '" IS NOT AN OPTION!')
-                print('Please try again.')
+                read(reader, 'ERROR: "' + str(string) + '" IS NOT AN OPTION!')
+                read(reader, 'Please try again.')
+                reader.checkReaderStatus()
                 with open("log_file.txt", "a") as log_file:
                     log_file.write('User Error - ERROR - "' + str(string) + '" IS NOT AN OPTION!' + '\n')
             else:
-                readNarrative()
+                readNarrative(reader)
+                reader.checkReaderStatus()
     except Exception as e:
         with open("log_file.txt", "a") as log_file:
             log_file.write('Program Error - {0}'.format(e) + '\n')
         print('{0}'.format(e))
     finally:
-        print('ERROR HAS OCCURRED')
-        input()
+        print('AN ERROR HAS OCCURRED! THIS GAME IS NOW CLOSING!')
+        time.sleep(5)
 
 
 if __name__ == '__main__':

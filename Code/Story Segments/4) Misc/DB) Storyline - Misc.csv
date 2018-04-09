@@ -2,7 +2,8 @@
 4/00,	0/00b,	auto
 4/02,	4/98,	auto
 4/03,	#prev,	auto
-4/04,	0/00b,	auto
-4/98,	0/00b,	continue
+4/04,	0/00a,	auto
+4/98,	0/00a,	continue
 4/98,	4/99,	quit
+4/99,   #quit,  auto
 ###
