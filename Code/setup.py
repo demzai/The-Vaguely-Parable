@@ -27,5 +27,5 @@ setup(
     author_email='',
     description='',
     executables=executables,
-    requires=['cx_Freeze', 'gtts']
+    requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'lxml', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32']
 )

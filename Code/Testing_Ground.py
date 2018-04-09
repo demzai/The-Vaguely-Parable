@@ -1,8 +1,8 @@
-"""
-# This is the testing ground.
-# Develop functions here, but do not leave them here!
-# This is a glorified playground to make a mess in!
-"""
+# """
+# # This is the testing ground.
+# # Develop functions here, but do not leave them here!
+# # This is a glorified playground to make a mess in!
+# """
 
 # Dependencies:
 import speech_recognition as sr
@@ -92,6 +92,7 @@ def listener(user_input, lock_user_input, is_faulty):
     """
     try:
         recorder = sr.Recognizer()
+        recorder.energy_threshold = 15  # 10 to 25?
         with sr.Microphone() as source:
             while True:
                 with lock_user_input:
@@ -145,14 +146,15 @@ def selector(inputs, lock_inputs, outputs, lock_outputs, is_faulty):
     """
     # Offline translation using CMUSphinx:
     try:
-        use_google = True
+        converter = sr.Recognizer()
+        use_google = False
         while True:
             with lock_inputs:
                 is_work_to_do = inputs[-1]
             if is_work_to_do is True:
                 # Returns 10 best estimates, along with more detailed info for the best result
-                converter = sr.Recognizer()
                 resultG = None
+                resultS = None
                 with lock_inputs:
                     if use_google is True:
                         try:
@@ -161,11 +163,15 @@ def selector(inputs, lock_inputs, outputs, lock_outputs, is_faulty):
                             use_google = False
                             print('I take exception to that!')
                     if use_google is False:
-                        resultS = converter.recognize_sphinx(inputs[0], show_all=True)
+                        resultS = converter.recognize_sphinx(inputs[0], show_all=False, grammar='Numbers.jsgf')
+                        print(str(resultS))
                 if use_google is False:
-                    top_10 = [[best.hypstr, best.score] for best, k in zip(resultS.nbest(), range(10))]
-                    segments = [seg.word for seg in resultS.seg()]
-                    confidence = resultS.get_logmath().exp(resultS.hyp().prob)
+                    top_10 = [['Hello World']]
+                    segments = None
+                    confidence = None
+                    # top_10 = [[best.hypstr, best.score] for best, k in zip(resultS.nbest(), range(10))]
+                    # segments = [seg.word for seg in resultS.seg()]
+                    # confidence = resultS.get_logmath().exp(resultS.hyp().prob)
                 else:
                     top_10 = resultG
                     segments = None
@@ -290,3 +296,24 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# Dependencies:
+# import speech_recognition as sr
+#
+# r = sr.Recognizer()
+#
+# print('Please say "do not go anywhere":')
+# with sr.Microphone() as source:
+#     audio_en = r.listen(source)
+# print('Processing...')
+#
+# try:
+#     print(r.recognize_google(audio_en))
+#     print(r.recognize_sphinx(audio_en))
+#     print(r.recognize_sphinx(audio_en, grammar='Grammars/donotgoanywhere.gram'))
+# except sr.UnknownValueError:
+#     print("Sphinx could not understand audio")
+# except sr.RequestError as e:
+#     print("Sphinx error; {0}".format(e))
+

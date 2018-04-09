@@ -209,3 +209,34 @@ Scratchpad for useful functions and code
 # except sr.RequestError as e:
 #     print("Could not request results from Google Speech Recognition service; {0}".format(e))
 #     pass
+#
+#
+# # ////////////////////////////////////////////////////////////////////////////
+# # /// GETTING A WEBSITES HTML FUNCTION
+# # ////////////////////////////////////////////////////////////////////////////
+# # noinspection PyCompatibility
+# import urllib.request as url_req
+# # noinspection PyCompatibility
+# import urllib.error as url_err
+#
+#
+# def retrieveWebPage(web_address):
+#     """
+#     Retrieves the html of a selected web-page if possible
+#     :param web_address:
+#     :return:
+#     """
+#     # Attempt next website
+#     req = url_req.Request(web_address)
+#     try:
+#         with url_req.urlopen(req) as response:
+#             html = response.read()
+#
+#     except url_err.URLError as err:
+#         if hasattr(err, 'reason'):
+#             print('We failed to reach a server.\nReason: ', err.reason)
+#         elif hasattr(err, 'code'):
+#             print("The server couldn't fulfill the request.\nError code: ", err.code)
+#         return [False, None]
+#     else:
+#         return [True, html]
