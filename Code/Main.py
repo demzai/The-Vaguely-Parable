@@ -57,7 +57,7 @@ def main():
             glbl.is_reading = reader.alive
             while reader.alive is True:
                 reader.checkReaderStatus()
-                time.sleep(0.5)
+                time.sleep(0.01)
             glbl.is_reading = False
 
             # Get the users narrative selection

@@ -7,3 +7,12 @@ Auto Select - auto
 Auto Select - auto
 User Select - leave_phone_booth
 Auto Select - auto
+Auto Select - auto
+Auto Select - auto
+User Select - leave_phone_booth
+Auto Select - auto
+User Select - wait_around
+Auto Select - auto
+Auto Select - auto
+User Select - leave_phone_booth
+Auto Select - auto
