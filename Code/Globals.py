@@ -20,10 +20,15 @@ bracket_pairs = dict(zip(opening + closing, \
 # State machine variables
 database = {}
 address_stack = []
+interrupt_addresses = []
+user_error_addresses = []
+creator_error_addresses = []
+constant_addresses = []
 next_addresses = {}
 ignore_addresses = []
 file_locales = []
 do_auto_select = False
+is_reading = False
 
 
 # Volatile variables, functions and function results

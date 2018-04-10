@@ -123,7 +123,7 @@ class ReaderObj:
         Forcibly kill the reader if it is running
         :return:
         """
-        if self.alive is True and self.interruptable is True:
+        if self.alive is True:
             self.__process.terminate()
             self.alive = False
 
@@ -148,17 +148,18 @@ class ReaderObj:
         if len(self.stack) is not 0 and self.alive is False:
             self.startReader()
 
-        # Check if the reader has work to do
+        # Update the readers busy status
         with self.__lock_to_be_read:
             self.is_busy = self.__to_be_read[1]
 
-            # If alive and not busy
-            if self.alive is True and self.is_busy is False:
-                # If no work then kill it
-                if len(self.stack) is 0:
-                    self.stopReader()
-                # If there's work left to do then get the next chunk for processing
-                else:
+        # If alive and not busy
+        if self.alive is True and self.is_busy is False:
+            # If no work then kill it
+            if len(self.stack) is 0:
+                self.stopReader()
+            # If there's work left to do then get the next chunk for processing
+            else:
+                with self.__lock_to_be_read:
                     [self.__to_be_read[0], self.stack] = getNextText(self.stack)
                     if self.__to_be_read[0] is None:
                         self.__stopReader()

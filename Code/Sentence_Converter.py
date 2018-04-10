@@ -8,7 +8,13 @@ import lxml.html as lh
 import requests as req
 import re
 import num2words as nw
+import os
 # import pocketsphinx
+
+
+# Global Values
+grammar_directory = "Grammar/"
+confidence_threshold = 1*10**-6
 
 
 def formatWordsList(words):
@@ -242,17 +248,72 @@ def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
     return sets_of_grammar_rules
 
 
+# noinspection PyBroadException
+def genGrammarForSelectionSet(selections, grammar_name):
+    """
+    Given a list of narrative selections, find their corresponding grammars and generate
+        a meta-grammar to search for all of them
+    :param selections:
+    :param grammar_name:
+    :return:
+    """
+    # Find valid selections
+    valid = []
+    regex_map = {}
+    for selection in selections:
+        shorthand = str(selection).replace('_', '')
+        file = grammar_directory + shorthand + '.gram'
+        try:
+            if os.path.isfile(file) is True:
+                grammar = readFile(file)
+                regex_map.update({selection: '(' + re.findall('// (.+)\n', grammar)[0] + ')'})  # Crash if none found
+                valid += [shorthand]
+        except Exception:
+            continue
+
+    # Create a grammar using the valid selections
+    grammar_rule = '<' + str(grammar_name) + '> = ( <'
+    for selection in valid:
+        grammar_rule += str(selection[0]) + '> | <'
+    grammar_rule = grammar_rule[:-4] + ' );'
+
+    # Create grammar file for the grammar
+    writeGrammarFile(grammar_directory + grammar_name, grammar_name, {grammar_name: grammar_rule}, valid)
+
+    # Return the file directory and name, as well as the respective parent grammar files
+    return [grammar_directory + grammar_name, regex_map]
+
+
+# noinspection PyBroadException
+def cleanupGrammarFile(grammar_name):
+    """
+    Delete extraneous files to prevent file spamming
+    :param grammar_name:
+    :return:
+    """
+    # Remove the grammar file (.gram)
+    try:
+        os.remove(grammar_directory + str(grammar_name) + '.gram')
+    except Exception:
+        pass
+    # Remove the phoneme file (.fsg)
+    try:
+        os.remove(grammar_directory + str(grammar_name) + '.fsg')
+    except Exception:
+        pass
+
+
 def main():
     """
     Main process for generating grammar files
     :return:
     """
-    sentence_sets = getSentences("Grammars/Selection Texts.txt")
+    sentence_sets = getSentences(grammar_directory + "Selection Texts.txt")
     unique_words = getUniqueWords(sentence_sets)
     unique_words = getSynonymsForAllWords(unique_words)
 
     word_grammar_rules = genGrammarsForWords(unique_words)
-    writeGrammarFile("Grammars/words.gram", 'words', word_grammar_rules)
+    writeGrammarFile(grammar_directory + "words.gram", 'words', word_grammar_rules)
     sentence_set_grammar_rules = genGrammarsForSentenceSets(sentence_sets, word_grammar_rules)
 
     for rule in sentence_set_grammar_rules:
@@ -260,8 +321,28 @@ def main():
             continue
         print('Generating: ' + str(rule) + '.gram')
         sentence_rule = {rule: sentence_set_grammar_rules[rule]}
-        writeGrammarFile("Grammars/" + str(rule) + ".gram", str(rule), sentence_rule, ['words'])
+        writeGrammarFile(grammar_directory + str(rule) + ".gram", str(rule), sentence_rule, ['words'])
 
 
 if __name__ == '__main__':
     main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
