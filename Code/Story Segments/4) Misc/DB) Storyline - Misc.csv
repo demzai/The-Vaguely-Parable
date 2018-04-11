@@ -1,8 +1,12 @@
 ###
-4/00,	0/00b,	auto
-4/02,	4/98,	auto
-4/03,	#prev,	auto
-4/04,	0/00a,	auto
+4/00,	0/00b,	auto // start
+4/01,   #&(#prev),  auto // interrupt_narrator
+4/02,	4/98,	auto // wake_up
+4/03,	#&(#prev),  auto // do_nothing
+4/04,	0/00c,	auto // restart
+4/05,   #&(#prev),  auto // user_error
+4/06,   #&(#prev),  auto // creator_error
+4/07,   #&(#prev),  auto // silence
 4/98,	0/00a,	continue
 4/98,	4/99,	quit
 4/99,   #quit,  auto

@@ -1,0 +1,8 @@
+#JSGF V1.0;
+
+grammar 9548;
+
+import <lookforothers.*>;
+
+public <9548> = ( <lookforothers> ); // N/A
+

@@ -1,0 +1,17 @@
+
+###
+#CreatorBugs
+
+0, "I'm terribly sorry old bean, but you've discovered a bug! I'm not sure what its exact species it is, but its of the "lazy creator us didn't test enough us" family. If you try saying your option again differently then it may go away. Apologies for that!"
+
+1, "By jove! Thats another bug! Try saying your option in a different way again."
+
+2, "Well this is just unacceptable! Please inform the game creator just how sloppy this entrail of a game is. You can also try saying your option again in a different manner."
+
+else, "Could you say that again, but using different words? The creator apologises for this games lackluster performance."
+
+###
+_#code
+
+#CreatorBugs(#+(#CreatorBugs, 1))
+#forget

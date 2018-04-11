@@ -13,8 +13,8 @@ import os
 
 
 # Global Values
-grammar_directory = "Grammar/"
-confidence_threshold = 1*10**-6
+grammar_directory = "Grammars/"
+confidence_threshold = 1*10**-5
 
 
 def formatWordsList(words):
@@ -88,25 +88,23 @@ def writeGrammarFile(file_location, grammar_name, grammar_rules, imports=None):
     :param imports:
     :return:
     """
-    grammar_file = open(file_location, 'w')
+    with open(file_location, 'w') as grammar_file:
+        # Add the grammar name
+        grammar_file.write("#JSGF V1.0;\n\ngrammar " + str(grammar_name) + ';\n\n')
 
-    # Add the grammar name
-    grammar_file.write("#JSGF V1.0;\n\ngrammar " + str(grammar_name) + ';\n\n')
+        # Add imports, if any
+        if imports is not None:
+            for i in imports:
+                grammar_file.write('import <' + str(i) + '.*>;\n')
+            grammar_file.write('\n')
 
-    # Add imports, if any
-    if imports is not None:
-        for i in imports:
-            grammar_file.write('import <' + str(i) + '.*>;\n')
+        # Add grammar rules
+        for rule in grammar_rules:
+            if rule == '' or rule is None:
+                continue
+            grammar_file.write('public ' + str(grammar_rules[rule][0]) + ' // ' + str(grammar_rules[rule][1]) + '\n')
         grammar_file.write('\n')
 
-    # Add grammar rules
-    for rule in grammar_rules:
-        if rule == '' or rule is None:
-            continue
-        grammar_file.write('public ' + str(grammar_rules[rule][0]) + ' // ' + str(grammar_rules[rule][1]) + '\n')
-    grammar_file.write('\n')
-
-    grammar_file.close()
     return
 
 
@@ -274,14 +272,15 @@ def genGrammarForSelectionSet(selections, grammar_name):
     # Create a grammar using the valid selections
     grammar_rule = '<' + str(grammar_name) + '> = ( <'
     for selection in valid:
-        grammar_rule += str(selection[0]) + '> | <'
+        grammar_rule += str(selection) + '> | <'
     grammar_rule = grammar_rule[:-4] + ' );'
 
     # Create grammar file for the grammar
-    writeGrammarFile(grammar_directory + grammar_name, grammar_name, {grammar_name: grammar_rule}, valid)
+    writeGrammarFile(grammar_directory + str(grammar_name) + '.gram',
+                     str(grammar_name), {str(grammar_name): [grammar_rule, 'N/A']}, valid)
 
     # Return the file directory and name, as well as the respective parent grammar files
-    return [grammar_directory + grammar_name, regex_map]
+    return [grammar_directory + str(grammar_name) + '.gram', regex_map]
 
 
 # noinspection PyBroadException
@@ -291,6 +290,7 @@ def cleanupGrammarFile(grammar_name):
     :param grammar_name:
     :return:
     """
+    print('Cleaning up: ' + str(grammar_name))
     # Remove the grammar file (.gram)
     try:
         os.remove(grammar_directory + str(grammar_name) + '.gram')

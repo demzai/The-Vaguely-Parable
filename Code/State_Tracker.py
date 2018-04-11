@@ -131,7 +131,6 @@ def getNarrativeOptions():
         if isinstance(address, str) or isinstance(address, int) or isinstance(address, float):
             glbl.next_addresses.pop(address, None)
             address_types.pop(address, None)
-    glbl.ignore_addresses = []
 
     # Return the paired names
     return address_types
@@ -200,7 +199,9 @@ def getSelection(preselect=None):
         print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
         if preselect is not None:
             string = preselect
+            print(string)
         else:
+            print('ERROR?! How did you get here?!?!?!')
             string = input()
         print("")
 

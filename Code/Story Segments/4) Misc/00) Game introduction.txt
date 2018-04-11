@@ -5,6 +5,9 @@ This last sentence will guide you on what you can do next.
 And with that, you can guide Vaguely on her journey!
 Good luck!
 
+#NarratorInterrupt(0)
+#CreatorBugs(0)
+#NumErrors(0)
 #Stay(0)
 #Dark(0)
 #Dig(0)

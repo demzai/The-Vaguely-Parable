@@ -18,12 +18,16 @@ don't go anywhere
 do not look around 
 
 stay in phone booth
+stay in telephone box
 stay
 stay where you are
 stay put
 remain
 don't leave
 don't leave the phone booth
+do not leave the phone booth
+don't leave the telephone box
+do not leave the telephone box
 stay in the phone booth
 close the door
 wait

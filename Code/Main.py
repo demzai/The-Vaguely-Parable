@@ -3,12 +3,13 @@
 """
 
 # Dependencies
-import time
 import Database_Management as dm
+import State_Tracker as st
 import Find_Files as ff
 import Globals as glbl
+import Listener
 import Reader
-import State_Tracker as st
+import time
 
 
 def initialise():
@@ -45,6 +46,7 @@ def main():
     """
     # Begin the game
     initialise()
+    listener = Listener.ListenerObj()
     reader = Reader.ReaderObj()
     st.readNarrative(reader)
     reader.checkReaderStatus()
@@ -56,30 +58,70 @@ def main():
             # @todo convert to non-blocking method to allow interrupts
             glbl.is_reading = reader.alive
             while reader.alive is True:
+                listener.should_listen = False
+                listener.checkListenerStatus()
                 reader.checkReaderStatus()
                 time.sleep(0.01)
+
             # Interrupts should be cleared only once the reader has finished reading
-            glbl.interrupt_addresses = []
+            # glbl.interrupt_addresses = []
+            glbl.ignore_addresses = []
             glbl.is_reading = False
 
-            # Get the users narrative selection
-            st.getNarrativeOptions()
+            # Get the users narrative options
+            types = st.getNarrativeOptions()
+
+            # If the reader is reading, then ignore 'auto' preferences
+            # Otherwise, default to auto if it is available
+            if reader.alive is False and 'auto' in types:
+                select = 'auto'
+            else:
+                # Wait for a specific amount of time before defaulting to $Silent
+                t1 = time.time()
+                select = '$Silent'
+                listener.should_listen = True
+
+                while time.time() < t1+10 or listener.num_selectors is not 0:
+                    # If over the time period, stop listening
+                    if time.time() > t1+10:
+                        listener.should_listen = False
+
+                    # Update the listener & reader statuses
+                    listener.checkListenerStatus()
+                    reader.checkReaderStatus()
+
+                    # Check if the listener thinks the user said something.
+                    # If so, then hmm and um until processing has finished
+                    if listener.num_selectors is not 0 and reader.alive is False:
+                        reader.interruptable = True
+                        read(reader, "Hmm hmm hmm... Um... Uhh..."*5)
+
+                    # Check whether a selection has been made
+                    if len(listener.stack_user_input) > 0:
+                        select = listener.stack_user_input[0][0]
+                        break
+
+                    # Wait patiently before checking again
+                    time.sleep(0.01)
+                listener.dumpStackUserInput()
+                listener.dumpStackSelector()
 
             # Get the users selection
-            string = st.getSelection()
+            string = st.getSelection(select)
+
+            # ###################################### TESTING LISTENER INTEGRATION!
+            reader.stopReader()
+            reader.dumpStack()
+            reader.interruptable = False
 
             # Double check that the user hasn't made an error
             if st.updateAddresses(string, False) is False:
-                # print(pc.IRed + 'ERROR - "' + str(string) + '" IS NOT AN OPTION!' + pc.Reset)
-                # print(pc.IBlue + 'Please try again.' + pc.Reset)
-                read(reader, 'ERROR: "' + str(string) + '" IS NOT AN OPTION!')
-                read(reader, 'Please try again.')
-                reader.checkReaderStatus()
-                with open("log_file.txt", "a") as log_file:
-                    log_file.write('User Error - ERROR - "' + str(string) + '" IS NOT AN OPTION!' + '\n')
-            else:
-                st.readNarrative(reader)
-                reader.checkReaderStatus()
+                string = '$Creator_Error'
+                st.updateAddresses(string, False)
+
+            # Update the narrative
+            st.readNarrative(reader)
+            reader.checkReaderStatus()
     except Exception as e:
         with open("log_file.txt", "a") as log_file:
             log_file.write('Program Error - {0}'.format(e) + '\n')

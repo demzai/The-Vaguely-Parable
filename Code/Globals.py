@@ -20,9 +20,9 @@ bracket_pairs = dict(zip(opening + closing, \
 # State machine variables
 database = {}
 address_stack = []
-interrupt_addresses = []
-error_addresses = []  # They should all start with '$'. There should be "$Ignore", "$User_Error", and "$Creator_Error"
-constant_addresses = []
+interrupt_addresses = [{'$Interrupt': '4/01'}]
+error_addresses = [{'$User_Error': '4/05'}, {'$Creator_Error': '4/06'}, {'$Silence': '4/07'}]
+constant_addresses = [{'restart': '4/04'}, {'do_nothing': '4/03'}, {'wake_up': '4/02'}]
 next_addresses = {}
 ignore_addresses = []
 file_locales = []

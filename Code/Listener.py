@@ -34,8 +34,7 @@ def listener(user_input, lock_user_input, is_faulty):
                 # @todo manually check if user is talking?
                 # If the main process isn't busy processing the previous input, then listen for use instructions
                 if should_wait is False:
-                    print("Please speak when ready.")
-                    # audio = input()  # @todo revert back to audio input
+                    print("---Please speak when ready.---")
                     audio = recorder.listen(source)
                     timestamp = time.time()
                     with lock_user_input:
@@ -66,7 +65,7 @@ class ListenerObj:
         self.stack_user_input = []
         self.__stack_selector = {}
         self.__selector_id = 0
-        self.selector_id = 0
+        self.num_selectors = 0
         self.__user_input = mp.Manager().list([{}, False])  # [map of {timestamp: audio}, has_new_input]
         self.__is_faulty = mp.Manager().list([False])
         self.__lock_user_input = mp.Lock()
@@ -110,6 +109,9 @@ class ListenerObj:
         Determines whether the listener should be active or not
         :return:
         """
+        # Provide the user with the number of selectors currently running
+        self.num_selectors = len(self.__stack_selector)
+
         # Check whether the listener has crashed
         if self.alive is True and self.__is_faulty[0] is True:
             self.__restartListener()
@@ -127,7 +129,6 @@ class ListenerObj:
         Checks whether there's been an error within the listener and rectifies it if possible
         :return:
         """
-        self.selector_id = self.__selector_id
         # Resolve (in)active status issues
         self.__updateAliveStatus()
 
@@ -138,8 +139,7 @@ class ListenerObj:
         # If there are new recordings, then create a new selector to process it
         if has_new_input is True:
             # Get the current narrative options once only
-            # narrative_options = st.getNarrativeOptions()
-            narrative_options = None
+            narrative_options = st.getNarrativeOptions()
             with self.__lock_user_input:
 
                 # For each new audio snippet:
@@ -165,10 +165,12 @@ class ListenerObj:
             self.__stack_selector[selector].checkSelectorStatus()
             # If its finished then return its results if they're non-empty
             if self.__stack_selector[selector].is_finished is True and \
-                    self.__stack_selector[selector].selected_narrative is not None and \
-                    self.__stack_selector[selector].selected_narrative != '':
-                self.stack_user_input += self.__stack_selector[selector].selected_narrative
+                    self.__stack_selector[selector].selected_narrative[0] != '':
                 to_be_removed += [selector]
+
+                # If its an ignore, then don't show add to the user input stack
+                if self.__stack_selector[selector].selected_narrative[0] != '$Ignore':
+                    self.stack_user_input += [self.__stack_selector[selector].selected_narrative]
 
         # Remove completed selectors
         for selector in to_be_removed:

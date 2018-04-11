@@ -16,6 +16,7 @@ def main():
         t.sleep(0.5)
         print('num_selecta: ' + str(listener.selector_id))
         listener.checkListenerStatus()
+        print(str(listener.stack_user_input))
     listener.stopListener()
 
 

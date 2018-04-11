@@ -111,7 +111,7 @@ class ReaderObj:
         :return:
         """
         if self.alive is True:
-            if self.interruptable is True and self.is_busy is False:
+            if self.interruptable is True or self.is_busy is False:
                 self.__stopReader()
                 return True
             else:

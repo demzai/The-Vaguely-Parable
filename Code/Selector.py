@@ -20,13 +20,18 @@ def readSphinxData(sphinx_data, error):
     :param error:
     :return:
     """
+    return_value = ['', 0, error]
     if error != '' or sphinx_data is None or sphinx_data == []:
-        return ['', 0, error]
+        return return_value
 
-    top_10 = [[best.hypstr, best.score] for best, k in zip(sphinx_data.nbest(), range(10))]
-    # segments = [seg.word for seg in sphinx_data.seg()]
-    confidence = sphinx_data.get_logmath().exp(sphinx_data.hyp().prob)
-    return [top_10[0][0], confidence, error]  # [Top Result, Confidence, Error]
+    try:
+        top_10 = [[best.hypstr, best.score] for best, k in zip(sphinx_data.nbest(), range(10))]
+        # segments = [seg.word for seg in sphinx_data.seg()]
+        confidence = sphinx_data.get_logmath().exp(sphinx_data.hyp().prob)
+        return_value = [top_10[0][0], confidence, error]  # [Top Result, Confidence, Error]
+    except AttributeError:  # Figure out why this happens!
+        pass
+    return return_value
 
 
 def readGoogleData(google_data, error):
@@ -90,7 +95,7 @@ def getGoogleTranslation(audio, result):
     try:
         # Translate the audio into text
         translation = converter.recognize_google(audio, show_all=True)
-        if translation is []:
+        if not bool(translation):
             error = 'Bad Recognition'
     except sr.UnknownValueError:
         error = 'Bad Recognition'
@@ -131,21 +136,22 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
     # Throw everything inside of a try except loop to call all errors
     try:
         # If the admin made a boo boo, then give him a firm warning
-        if isinstance(narratives, list) is False and narratives is not None:
-            raise TypeError('"narratives" IS NOT A LIST!')
+        if isinstance(narratives, dict) is False and narratives is not None:
+            raise TypeError('"narratives" IS NOT A MAP!')
 
         # Get grammars and regex's
-        elif narratives is not None and len(narratives) is not 0:
+        elif len(narratives) is not 0:
             # Get a list of narrative names
-            narrative_names = [x[0] for x in narratives]
+            narrative_names = list(narratives.keys())
             [grammar_file, regex_map] = sc.genGrammarForSelectionSet(narrative_names, process_id)
 
         # Convert the audio using CMUsphinx (offline) and Google (online)
         if True:
+            # @todo return to using google as a benchmark
             result_sphinx = mp.Manager().list(['', 0, ''])
             result_google = mp.Manager().list(['', 0, ''])
             process_sphinx = mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, grammar_file))
-            process_google = mp.Process(target=getGoogleTranslation, args=(audio, result_google))
+            process_google = mp.Process(target=getSphinxTranslation, args=(audio, result_google))
             process_sphinx.start()
             process_google.start()
             process_sphinx.join()
@@ -153,10 +159,10 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             with lock_outputs:
                 outputs[0] = [x for x in result_sphinx]
                 outputs[1] = [x for x in result_google]
-        sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
+        # sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
 
         # If the Google result gave a bad recognition error then ignore the whole thing
-        if result_google[2] == 'Bad Recognition':
+        if result_google[2] == 'Bad Recognition' or result_google[1] < sc.confidence_threshold:
             with lock_outputs:
                 outputs[2] = ['$Ignore', []]
                 outputs[-1] = True
@@ -169,15 +175,15 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             for regex in regex_map:
                 # Search for the regex within the resulting file to ID which grammar found it
                 if len(re.findall(regex_map[regex], result_sphinx[0])) is not 0:
-                    matches += regex
+                    matches += [regex]
                     # @todo insert break when not testing?
 
-        # Attempt to resolve via a language model, if needed
-        if len(matches) is 0 and result_google[1] > sc.confidence_threshold:
+        # Attempt (in vein) to resolve via a language model if the grammar model failed
+        if len(matches) is 0:
             for regex in regex_map:
                 # Search for the regex within the resulting file to ID which grammar found it
                 if len(re.findall(regex_map[regex], result_google[0])) is not 0:
-                    matches += regex
+                    matches += [regex]
                     # @todo insert break when not testing?
 
         # Determine which narrative to select

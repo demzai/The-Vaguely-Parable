@@ -1,0 +1,14 @@
+###
+"#NumErrors"
+0, "Sorry, I didn't catch that."
+1, "Once more?"
+2, "Come again?"
+3, "Could you repeat that sorry?"
+4, "Pardon?."
+5, "Once again?"
+else, 0, "I do apologise, I'm not very good at this. Could you repeat that once more please."
+###
+_#code
+
+#NumErrors(#+(#NumErrors, 1))
+#forget
