@@ -13,34 +13,38 @@ import os
 import re
 
 
-def readSphinxData(sphinx_data):
+def readSphinxData(sphinx_data, error):
     """
     Given an object returned from sphinx, convert it into a single result and its confidence level
     :param sphinx_data:
+    :param error:
     :return:
     """
-    if sphinx_data is None:
-        return ['', 0]
+    if error != '' or sphinx_data is None or sphinx_data == []:
+        return ['', 0, error]
 
     top_10 = [[best.hypstr, best.score] for best, k in zip(sphinx_data.nbest(), range(10))]
     # segments = [seg.word for seg in sphinx_data.seg()]
     confidence = sphinx_data.get_logmath().exp(sphinx_data.hyp().prob)
-    return [top_10[0][0], confidence]  # [Top Result, Confidence]
+    return [top_10[0][0], confidence, error]  # [Top Result, Confidence, Error]
 
 
-def readGoogleData(google_data):
+def readGoogleData(google_data, error):
     """
     Given an object returned from google, convert it into a single result and its confidence level
     :param google_data:
+    :param error:
     :return:
     """
-    if google_data is None:
-        return ['', 0]
+    if error != '' or google_data is None or google_data == []:
+        return ['', 0, error]
+
     return [google_data['alternative'][0]['transcript'],
-            google_data['alternative'][0]['confidence']]  # [Top Result, Confidence]
+            google_data['alternative'][0]['confidence'],
+            error]  # [Top Result, Confidence, Error]
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal,PyBroadException
 def getSphinxTranslation(audio, result, grammar=None):
     """
     Given an audio snippet, and maybe some grammar, convert the speech into text using CMUsphinx
@@ -51,18 +55,27 @@ def getSphinxTranslation(audio, result, grammar=None):
     :return:
     """
     converter = sr.Recognizer()
-    result = None
+    translation = None
+    error = ''
     try:
+        # Translate with or without grammar
         if grammar is not None:
-            result = converter.recognize_sphinx(audio, show_all=True, grammar=grammar)
+            translation = converter.recognize_sphinx(audio, show_all=True, grammar=grammar)
         else:
-            result = converter.recognize_sphinx(audio, show_all=True)
+            translation = converter.recognize_sphinx(audio, show_all=True)
+    except sr.UnknownValueError:
+        error = 'Bad Recognition'
+    except Exception:
+        error = 'Failed Server Request'
     finally:
-        result = readSphinxData(result)
+        # Return only the data of interest
+        translation = readSphinxData(translation, error)
+        for i in range(3):
+            result[i] = translation[i]
         return result
 
 
-# noinspection PyUnusedLocal
+# noinspection PyUnusedLocal, PyBroadException
 def getGoogleTranslation(audio, result):
     """
     Given an audio snippet, and maybe some grammar, convert the speech into text using Google
@@ -72,11 +85,22 @@ def getGoogleTranslation(audio, result):
     :return:
     """
     converter = sr.Recognizer()
-    result = None
+    translation = None
+    error = ''
     try:
-        result = converter.recognize_sphinx(audio, show_all=True)
+        # Translate the audio into text
+        translation = converter.recognize_google(audio, show_all=True)
+        if translation is []:
+            error = 'Bad Recognition'
+    except sr.UnknownValueError:
+        error = 'Bad Recognition'
+    except Exception:
+        error = 'Failed Server Request'
     finally:
-        result = readGoogleData(result)
+        # Return only the information of interest
+        translation = readGoogleData(translation, error)
+        for i in range(3):
+            result[i] = translation[i]
         return result
 
 
@@ -101,25 +125,25 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
     process_id = os.getpid()
     grammar_file = None
     regex_map = {}  # @todo double check if needed
-    result_sphinx = ['', 0]
-    result_google = ['', 0]
+    result_sphinx = ['', 0, '']
+    result_google = ['', 0, '']
 
     # Throw everything inside of a try except loop to call all errors
     try:
         # If the admin made a boo boo, then give him a firm warning
-        if isinstance(narratives, list) is False:
+        if isinstance(narratives, list) is False and narratives is not None:
             raise TypeError('"narratives" IS NOT A LIST!')
 
         # Get grammars and regex's
-        elif len(narratives) is not 0:
+        elif narratives is not None and len(narratives) is not 0:
             # Get a list of narrative names
             narrative_names = [x[0] for x in narratives]
             [grammar_file, regex_map] = sc.genGrammarForSelectionSet(narrative_names, process_id)
 
         # Convert the audio using CMUsphinx (offline) and Google (online)
         if True:
-            result_sphinx = mp.Manager().list([])
-            result_google = mp.Manager().list([])
+            result_sphinx = mp.Manager().list(['', 0, ''])
+            result_google = mp.Manager().list(['', 0, ''])
             process_sphinx = mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, grammar_file))
             process_google = mp.Process(target=getGoogleTranslation, args=(audio, result_google))
             process_sphinx.start()
@@ -127,43 +151,49 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             process_sphinx.join()
             process_google.join()
             with lock_outputs:
-                outputs[0] = result_sphinx
-                outputs[1] = result_google
+                outputs[0] = [x for x in result_sphinx]
+                outputs[1] = [x for x in result_google]
         sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
 
-        matches = []
+        # If the Google result gave a bad recognition error then ignore the whole thing
+        if result_google[2] == 'Bad Recognition':
+            with lock_outputs:
+                outputs[2] = ['$Ignore', []]
+                outputs[-1] = True
+            return
+
         # Deduce if its worth running regex's
+        matches = []
         if result_sphinx[1] > sc.confidence_threshold:
             # Use regex's to select a narrative
             for regex in regex_map:
                 # Search for the regex within the resulting file to ID which grammar found it
-                if len(re.findall(regex_map[regex], result_sphinx)) is not 0:
+                if len(re.findall(regex_map[regex], result_sphinx[0])) is not 0:
                     matches += regex
                     # @todo insert break when not testing?
+
         # Attempt to resolve via a language model, if needed
         if len(matches) is 0 and result_google[1] > sc.confidence_threshold:
             for regex in regex_map:
                 # Search for the regex within the resulting file to ID which grammar found it
-                if len(re.findall(regex_map[regex], result_google)) is not 0:
+                if len(re.findall(regex_map[regex], result_google[0])) is not 0:
                     matches += regex
                     # @todo insert break when not testing?
 
         # Determine which narrative to select
-        # sphinx results, google results, selected narrative, is_finished
         with lock_outputs:
             # Check for a "user error" - speech to text failed or user said something incorrect
             if len(matches) is 0:
-                outputs[2] = ['User_Error', matches]
+                outputs[2] = ['$User_Error', matches]
                 outputs[-1] = True
             # Check for creator error - creator has specified a similar sentence (inc. synonyms) for two selections
             elif len(matches) >= 2:
-                outputs[2] = ['Creator_Error', matches]
+                outputs[2] = ['$Creator_Error', matches]
                 outputs[-1] = True
             # Return the users selection
             else:
                 outputs[2] = [matches[0], matches]
                 outputs[-1] = True
-        # Return the results
         return
 
     # On exception: print cause, or skip entirely
@@ -193,7 +223,7 @@ class SelectorObj:
         self.result_google = None
         self.selected_narrative = None
         self.__outputs = mp.Manager().list(
-            [None, None, None, False])  # sphinx results, google results, selected narrative, is_finished
+            ['', '', [], False])  # sphinx results, google results, selected narrative, is_finished
         self.__lock_outputs = mp.Lock()
 
         # Initialise the selector
@@ -212,8 +242,9 @@ class SelectorObj:
         Forcibly terminate the selector process
         :return:
         """
-        self.__process.terminate()
-        self.is_finished = True
+        if self.is_finished is False:
+            self.__process.terminate()
+            self.is_finished = True
 
     def checkSelectorStatus(self):
         """
@@ -233,4 +264,26 @@ class SelectorObj:
                         self.result_google = self.__outputs[1]
                         self.selected_narrative = self.__outputs[2]
                         self.stopSelector()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

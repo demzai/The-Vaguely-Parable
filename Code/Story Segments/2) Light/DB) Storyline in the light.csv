@@ -16,7 +16,7 @@
 2/02a5,	2/02c,	go_back
 2/02a5,	2/02d,	look_around
 2/02a5, 2/13,   break_the_door_down
-2/02b,	#prev,	auto							//_Repeat_call_to_previous_file
+2/02b,	01c,	auto							//_Repeat_call_to_previous_file
 2/02c,	3/01,	auto
 2/02d,	2/23,	pull_string
 2/02d,  #&("2/01c"),    auto

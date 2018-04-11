@@ -24,7 +24,7 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
     try:
         # noinspection SpellCheckingInspection
         speaker = win32com.client.Dispatch("SAPI.SpVoice")
-        speaker.Rate = 5
+        speaker.Rate = 3
 
         # Continue indefinitely until terminated
         while True:

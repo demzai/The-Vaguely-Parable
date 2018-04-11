@@ -116,23 +116,15 @@ def getNarrativeOptions():
 
     # Insert addresses which are constant throughout the entire narrative
     if glbl.is_reading is False:
-        # @todo find a better place to reset the interrupt addresses
-            # Interrupts might be added pre-read; 2 calls to this function would thus lose those interrupts
-        glbl.interrupt_addresses = []
         # Constant addresses, e.g. "repeat" or "date and time"
         prev = set(glbl.next_addresses)
         glbl.next_addresses = parseInputAndAddToMap(glbl.constant_addresses, True, glbl.next_addresses)
         address_types.update(pairWithName(set(glbl.next_addresses)-prev, 'constant'))
 
-        # User error addresses, e.g. "taking too long" or "illegible"
+        # Error addresses, e.g. "taking too long", "illegible", or "creator messed up"
         prev = set(glbl.next_addresses)
-        glbl.next_addresses = parseInputAndAddToMap(glbl.user_error_addresses, True, glbl.next_addresses)
+        glbl.next_addresses = parseInputAndAddToMap(glbl.error_addresses, True, glbl.next_addresses)
         address_types.update(pairWithName(set(glbl.next_addresses)-prev, 'user_error'))
-
-        # Creator error addresses, e.g. "not sure which you meant"
-        prev = set(glbl.next_addresses)
-        glbl.next_addresses = parseInputAndAddToMap(glbl.creator_error_addresses, True, glbl.next_addresses)
-        address_types.update(pairWithName(set(glbl.next_addresses)-prev, 'creator_error'))
 
     # Remove certain addresses if they exist
     for address in glbl.ignore_addresses:

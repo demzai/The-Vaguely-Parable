@@ -58,6 +58,8 @@ def main():
             while reader.alive is True:
                 reader.checkReaderStatus()
                 time.sleep(0.01)
+            # Interrupts should be cleared only once the reader has finished reading
+            glbl.interrupt_addresses = []
             glbl.is_reading = False
 
             # Get the users narrative selection
