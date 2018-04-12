@@ -2,7 +2,7 @@
 //_Check_for_".	"_in_gui_and_auto-convert_them_to_"	"?
 2/01a,	2/01c,	auto
 2/01b,	2/01c,	auto
-2/01c,	2/02a,	go_through_door_X
+2/01c,	2/02a,	go_through_an_open_door
 2/01c,	2/02b,	look_back
 2/01c,	2/02c,	go_back
 2/01c,	2/02d,	look_around

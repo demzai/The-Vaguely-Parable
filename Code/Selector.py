@@ -159,7 +159,6 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             with lock_outputs:
                 outputs[0] = [x for x in result_sphinx]
                 outputs[1] = [x for x in result_google]
-        # sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
 
         # If the Google result gave a bad recognition error then ignore the whole thing
         if result_google[2] == 'Bad Recognition' or result_google[1] < sc.confidence_threshold:
@@ -208,8 +207,8 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
         pass
     # Ensure the faulty flag is raised on an error, no matter what
     finally:
-        # noinspection PyUnusedLocal
-        is_faulty = True
+        sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
+        is_faulty[0] = True
 
 
 class SelectorObj:

@@ -196,7 +196,7 @@ def getSelection(preselect=None):
     # Get the users selection
     if glbl.do_auto_select is False:
         # print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
-        print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
+        # print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
         if preselect is not None:
             string = preselect
             print(string)
