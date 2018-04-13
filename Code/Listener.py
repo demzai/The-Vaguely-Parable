@@ -174,6 +174,10 @@ class ListenerObj:
 
         # Remove completed selectors
         for selector in to_be_removed:
+            with open("log_file.txt", "a") as log_file:
+                log_file.write('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx) + '\n')
+                log_file.write('Google: ' + str(self.__stack_selector[selector].result_google) + '\n')
+                log_file.write('Select: ' + str(self.__stack_selector[selector].selected_narrative) + '\n')
             print('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx))
             print('Google: ' + str(self.__stack_selector[selector].result_google))
             print('Select: ' + str(self.__stack_selector[selector].selected_narrative))
@@ -186,7 +190,7 @@ class ListenerObj:
         """
         for selector in self.__stack_selector:
             selector.stopSelector()
-        self.__stack_selector = []
+        self.__stack_selector = {}
 
     def dumpStackUserInput(self):
         """

@@ -44,6 +44,8 @@ def main():
     The main function
     :return:
     """
+    with open("log_file.txt", "a") as log_file:
+        log_file.write('NEW GAME START!' + '\n')
     # Begin the game
     initialise()
     listener = Listener.ListenerObj()
@@ -51,84 +53,84 @@ def main():
     st.readNarrative(reader)
     reader.checkReaderStatus()
 
-    try:
-        # Play the game
-        while True:
-            # Block whilst the narrator reads the script
-            # @todo convert to non-blocking method to allow interrupts
-            glbl.is_reading = reader.alive
-            while reader.alive is True:
-                listener.should_listen = False
+    # try:
+    # Play the game
+    while True:
+        # Block whilst the narrator reads the script
+        # @todo convert to non-blocking method to allow interrupts
+        glbl.is_reading = reader.alive
+        while reader.alive is True:
+            listener.should_listen = False
+            listener.checkListenerStatus()
+            reader.checkReaderStatus()
+            time.sleep(0.01)
+
+        # Interrupts should be cleared only once the reader has finished reading
+        # glbl.interrupt_addresses = []
+        glbl.ignore_addresses = []
+        glbl.is_reading = False
+
+        # Get the users narrative options
+        types = st.getNarrativeOptions()
+
+        # If the reader is reading, then ignore 'auto' preferences
+        # Otherwise, default to auto if it is available
+        if reader.alive is False and 'auto' in types:
+            select = 'auto'
+        else:
+            # Wait for a specific amount of time before defaulting to $Silent
+            t1 = time.time()
+            select = '$Silent'
+            listener.should_listen = True
+
+            while time.time() < t1+10 or listener.num_selectors is not 0:
+                # If over the time period, stop listening
+                if time.time() > t1+10:
+                    listener.should_listen = False
+
+                # Update the listener & reader statuses
                 listener.checkListenerStatus()
                 reader.checkReaderStatus()
+
+                # Check if the listener thinks the user said something.
+                # If so, then hmm and um until processing has finished
+                if listener.num_selectors is not 0 and reader.alive is False:
+                    reader.interruptable = True
+                    read(reader, "Hmm hmm hmm... Um... Uhh..."*5)
+
+                # Check whether a selection has been made
+                if len(listener.stack_user_input) > 0:
+                    select = listener.stack_user_input[0][0]
+                    break
+
+                # Wait patiently before checking again
                 time.sleep(0.01)
+            listener.dumpStackUserInput()
+            listener.dumpStackSelector()
 
-            # Interrupts should be cleared only once the reader has finished reading
-            # glbl.interrupt_addresses = []
-            glbl.ignore_addresses = []
-            glbl.is_reading = False
+        # Get the users selection
+        string = st.getSelection(select)
 
-            # Get the users narrative options
-            types = st.getNarrativeOptions()
+        # ###################################### TESTING LISTENER INTEGRATION!
+        reader.stopReader()
+        reader.dumpStack()
+        reader.interruptable = False
 
-            # If the reader is reading, then ignore 'auto' preferences
-            # Otherwise, default to auto if it is available
-            if reader.alive is False and 'auto' in types:
-                select = 'auto'
-            else:
-                # Wait for a specific amount of time before defaulting to $Silent
-                t1 = time.time()
-                select = '$Silent'
-                listener.should_listen = True
+        # Double check that the user hasn't made an error
+        if st.updateAddresses(string, False) is False:
+            string = '$Creator_Error'
+            st.updateAddresses(string, False)
 
-                while time.time() < t1+10 or listener.num_selectors is not 0:
-                    # If over the time period, stop listening
-                    if time.time() > t1+10:
-                        listener.should_listen = False
-
-                    # Update the listener & reader statuses
-                    listener.checkListenerStatus()
-                    reader.checkReaderStatus()
-
-                    # Check if the listener thinks the user said something.
-                    # If so, then hmm and um until processing has finished
-                    if listener.num_selectors is not 0 and reader.alive is False:
-                        reader.interruptable = True
-                        read(reader, "Hmm hmm hmm... Um... Uhh..."*5)
-
-                    # Check whether a selection has been made
-                    if len(listener.stack_user_input) > 0:
-                        select = listener.stack_user_input[0][0]
-                        break
-
-                    # Wait patiently before checking again
-                    time.sleep(0.01)
-                listener.dumpStackUserInput()
-                listener.dumpStackSelector()
-
-            # Get the users selection
-            string = st.getSelection(select)
-
-            # ###################################### TESTING LISTENER INTEGRATION!
-            reader.stopReader()
-            reader.dumpStack()
-            reader.interruptable = False
-
-            # Double check that the user hasn't made an error
-            if st.updateAddresses(string, False) is False:
-                string = '$Creator_Error'
-                st.updateAddresses(string, False)
-
-            # Update the narrative
-            st.readNarrative(reader)
-            reader.checkReaderStatus()
-    except Exception as e:
-        with open("log_file.txt", "a") as log_file:
-            log_file.write('Program Error - {0}'.format(e) + '\n')
-        print('{0}'.format(e))
-    finally:
-        print('AN ERROR HAS OCCURRED! THIS GAME IS NOW CLOSING!')
-        time.sleep(5)
+        # Update the narrative
+        st.readNarrative(reader)
+        reader.checkReaderStatus()
+    # except Exception as e:
+    #     with open("log_file.txt", "a") as log_file:
+    #         log_file.write('Program Error - {0}'.format(e) + '\n')
+    #     print('{0}'.format(e))
+    # finally:
+    #     print('AN ERROR HAS OCCURRED! THIS GAME IS NOW CLOSING!')
+    #     time.sleep(5)
 
 
 if __name__ == '__main__':

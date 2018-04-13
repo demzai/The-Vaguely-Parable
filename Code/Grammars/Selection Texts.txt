@@ -1,113 +1,133 @@
 break the door down
-open the door
+use door
 break door
 break open
-use door
+open the door
 use door handle
 check if locked
+break the door down
 
+climb up
 climb
 climb up
-climb around
 move around
+climb around
 
 climb out
 climb up
+climb out
 drag yourself up
-clamber up
 
 continue
 yes
+continue
 go on then
 I suppose so
 
+dig
 dig
 examine the floor
 look for another way out
 
 do not give up
 don't give up
+do not give up
 pull yourself together
 
 do not go anywhere
-don't go anywhere
-do not do anything
-don't do anything
-do not move
-don't move
-remain
 stay
-stay put
 wait
-wait around
+remain
+stay put
+don't move
 do nothing
+do not move
+wait around
+don't go anywhere
+don't do anything
+do not go anywhere
+do not do anything
 
 do nothing
 wait
-wait around
 stay
 stay put
-do not move
+do nothing
 don't move
-do not do anything
+wait around
+do not move
 don't do anything
+do not do anything
 
 examine rock
-examine it
-look at rock
-look at it
 dig
-pry the rock out
-pry it out
-move the rock
 move it
-pull the rock
+examine it
+look at it
+pry it out
 pull it out
+look at rock
+examine rock
+move the rock
+pull the rock
+pry the rock out
 
 feel surroundings
-look at surroundings
-feel area around
 look around
 attempt to move
+feel area around
+feel surroundings
+look at surroundings
 
 go back
-return from whence you came
+go back
 leave the way you came in
+return from whence you came
 
 go back into the phone booth
-go back into the telephone box
 go back
 get back in
 return to the phone booth
 return to the telephone box
+go back into the phone booth
+go back into the telephone box
 
 go through an open door
-go through door
-go through the door
 try door
-try another door
 try the door
+go through door
+try another door
 run through door
+go through the door
+go through an open door
 
 go up stairs
-traverse the stairs
+go up stairs
 climb the stairs
+traverse the stairs
 
 leave phone booth
-leave
-step out
-get out
 exit
+leave
+get out
+step out
+leave phone booth
+leave telephone box
+leave the phone booth
+leave the telephone box
 
 look around
-look for others
 explore
+look around
+look for others
 search the place
 scope out the situation
 
 look back
+look back
 look behind you
 
+look for others
 look for others
 see if anyone else is around
 check the other phone booths
@@ -115,16 +135,19 @@ check the other telephone boxes
 
 pry rock
 dig
+pry rock
 pull the rock out
 
 pull string
-check out the string
+pull string
 examine string
+check out the string
 
 quit
 no
-not now
+quit
 later
+not now
 fuck no
 sod off
 
@@ -134,62 +157,69 @@ shout down
 ask for help
 
 run away from the light
-go hide
 hide
+go hide
 run away
 avoid the light
 go around the light 
+run away from the light
 
 run toward the light
-go towards the light
 light
 run toward
 go to light
-walk into the light
 enter the light
+walk into the light
+run toward the light
+go towards the light
 
 sit in despair
-give up
-don't care any more
 sleep
+give up
 do nothing
+sit in despair
+don't care any more
 
 stay in phone booth
-stay in telephone box
 stay
-stay where you are
-stay put
+wait
 remain
+stay put
+don't move
+close door
+do nothing
 don't leave
+don't do anything
+do not go anywhere
+stay where you are
+stay in phone booth
+stay in telephone box
 don't leave the phone booth
 do not leave the phone booth
 don't leave the telephone box
 do not leave the telephone box
-close door
-wait
-do nothing
-don't do anything
-don't move
-do not go anywhere 
 
 stay in room
 remain
-do not go anywhere
-don't go anywhere
 do not move
+stay in room
+don't go anywhere
+do not go anywhere
 
 stop climbing
-give up
-do nothing
 stop
 jump
 fall
+give up
+do nothing
+stop climbing
 
 try another door
 go through open door
 use a different door
 
 wait around
+wait around
 time passes
-do not do anything
 don't do anything
+do not do anything

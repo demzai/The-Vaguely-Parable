@@ -6,11 +6,46 @@ Use protection, get consent, and play nice kids!
 """
 
 # Dependencies:
+import Generate_Dictionary as gd
 import Sentence_Converter as sc
 import speech_recognition as sr
 import multiprocessing as mp
+import pocketsphinx as ps
 import os
 import re
+
+
+def recognise_sphinx(audio, dictionary=None):
+    """
+    Custom sphinx recogniser
+    :param audio:
+    :param dictionary:
+    :return:
+    """
+    # Ensure audio is of the correct format
+    assert isinstance(audio, sr.AudioData), "``audio_data`` must be audio data"
+    # The included language models require audio to be 16-bit mono 16 kHz in little-endian format
+    raw_data = audio.get_raw_data(convert_rate=16000, convert_width=2)
+
+    # Create decoder object
+    config = ps.Decoder.default_config()
+    print(str(dictionary))
+    if dictionary is not None and os.path.isfile(dictionary):
+        config.set_string("-dict", dictionary)
+    elif dictionary is not None:
+        print('WARNING: "{0}" WAS NOT FOUND'.format(dictionary))
+        config.set_string("-dict", ps.get_model_path() + '\cmudict-en-us.dict')
+    config.set_string("-hmm", ps.get_model_path() + '\en-us')
+    config.set_string("-lm", ps.get_model_path() + '\en-us.lm.bin')
+    config.set_string("-logfn", os.devnull)
+    decoder = ps.Decoder(config)
+
+    # Obtain recognition results
+    decoder.start_utt()  # Begin utterance processing
+    # Process audio data with recognition enabled (no_search = False), as a full utterance (full_utt = True)
+    decoder.process_raw(raw_data, False, True)
+    decoder.end_utt()  # Stop utterance processing
+    return decoder
 
 
 def readSphinxData(sphinx_data, error):
@@ -50,13 +85,13 @@ def readGoogleData(google_data, error):
 
 
 # noinspection PyUnusedLocal,PyBroadException
-def getSphinxTranslation(audio, result, grammar=None):
+def getSphinxTranslation(audio, result, dictionary=None):
     """
     Given an audio snippet, and maybe some grammar, convert the speech into text using CMUsphinx
     :param audio:
     :param result:
     :type result: mp.Manager().list
-    :param grammar:
+    :param dictionary:
     :return:
     """
     converter = sr.Recognizer()
@@ -64,8 +99,8 @@ def getSphinxTranslation(audio, result, grammar=None):
     error = ''
     try:
         # Translate with or without grammar
-        if grammar is not None:
-            translation = converter.recognize_sphinx(audio, show_all=True, grammar=grammar)
+        if dictionary is not None:
+            translation = recognise_sphinx(audio, dictionary=dictionary)
         else:
             translation = converter.recognize_sphinx(audio, show_all=True)
     except sr.UnknownValueError:
@@ -129,10 +164,10 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
     narratives = inputs[1]
     process_id = os.getpid()
     grammar_file = None
+    dictionary_file = None
     regex_map = {}  # @todo double check if needed
     result_sphinx = ['', 0, '']
     result_google = ['', 0, '']
-
     # Throw everything inside of a try except loop to call all errors
     try:
         # If the admin made a boo boo, then give him a firm warning
@@ -144,14 +179,15 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             # Get a list of narrative names
             narrative_names = list(narratives.keys())
             [grammar_file, regex_map] = sc.genGrammarForSelectionSet(narrative_names, process_id)
+            dictionary_file = gd.genDictionaryForSelectionSet(narrative_names, process_id)
 
         # Convert the audio using CMUsphinx (offline) and Google (online)
         if True:
             # @todo return to using google as a benchmark
             result_sphinx = mp.Manager().list(['', 0, ''])
             result_google = mp.Manager().list(['', 0, ''])
-            process_sphinx = mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, grammar_file))
-            process_google = mp.Process(target=getSphinxTranslation, args=(audio, result_google))
+            process_sphinx = mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, dictionary_file))
+            process_google = mp.Process(target=getGoogleTranslation, args=(audio, result_google))
             process_sphinx.start()
             process_google.start()
             process_sphinx.join()

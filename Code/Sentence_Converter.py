@@ -14,6 +14,7 @@ import os
 
 # Global Values
 grammar_directory = "Grammars/"
+dictionary_directory = "Dictionaries/"
 confidence_threshold = 1*10**-5
 
 
@@ -227,7 +228,8 @@ def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
         # Open up a new grammar rule and regex definition
         grammar_rule = '<' + str(sentence_id) + '> = '
         regex_rule = ''
-        for sentence in sentence_set:
+        for j in range(1, len(sentence_set)):
+            sentence = sentence_set[j]
             # Open up another possible sentence match
             grammar_rule += '( '
             regex_rule += '('
@@ -301,6 +303,11 @@ def cleanupGrammarFile(grammar_name):
         os.remove(grammar_directory + str(grammar_name) + '.fsg')
     except Exception:
         pass
+    # Remove the dictionary file (.dict)
+    try:
+        os.remove(dictionary_directory + str(grammar_name) + '.fsg')
+    except Exception:
+        pass
 
 
 def main():
@@ -326,23 +333,6 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

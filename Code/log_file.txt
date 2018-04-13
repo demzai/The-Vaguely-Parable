@@ -1,0 +1,189 @@
+Auto Select - auto
+Auto Select - auto
+Program Error - [WinError 232] The pipe is being closed
+User Select - leave_phone_booth
+Auto Select - auto
+Program Error - 'list' object has no attribute 'update'
+Program Error - 
+Program Error - [WinError 232] The pipe is being closed
+User Select - $User_Error
+Program Error - ERROR - #NumErrors WAS NOT FOUND!
+{'#Dark': 0}
+Program Error - [WinError 232] The pipe is being closed
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+User Select - $Silent
+Program Error - ERROR - #CreatorBugs WAS NOT FOUND!
+{'#Dark': 0}
+Program Error - 'int' object has no attribute 'stopSelector'
+User Select - $User_Error
+Program Error - ERROR - #NumErrors WAS NOT FOUND!
+{'#Dark': 0}
+User Select - $User_Error
+Program Error - ERROR - #NumErrors WAS NOT FOUND!
+{'#Dark': 0}
+User Select - $User_Error
+Program Error - ERROR - #NumErrors WAS NOT FOUND!
+{'#Dark': 0}
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+Program Error - 
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+Program Error - 
+Program Error - 'int' object has no attribute 'stopSelector'
+User Select - leave_phone_booth
+Auto Select - auto
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+Program Error - 
+Program Error - 
+User Select - leave_phone_booth
+Auto Select - auto
+Program Error - [WinError 232] The pipe is being closed
+Program Error - 
+Program Error - 
+Program Error - 
+User Select - leave_phone_booth
+Auto Select - auto
+User Select - leave_phone_booth
+Auto Select - auto
+User Select - $Silent
+Program Error - ERROR - #CreatorBugs WAS NOT FOUND!
+{'#Dark': 0}
+User Select - $User_Error
+Program Error - ERROR - #NumErrors WAS NOT FOUND!
+{'#Dark': 0}
+User Select - $Silent
+Program Error - ERROR - #CreatorBugs WAS NOT FOUND!
+{'#Dark': 0}
+User Select - leave_phone_booth
+Auto Select - auto
+Program Error - 
+User Select - leave_phone_booth
+Auto Select - auto
+User Select - leave_phone_booth
+Auto Select - auto
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['leave', 0.07645155377527285, '']
+Google: ['leave', 0.83500171, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Program Error - 'list' object has no attribute 'update'
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['leave are', 4.084723706802905e-05, '']
+Google: ['leave', 0.85625541, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['leave', 0.10202222695937536, '']
+Google: ['leave', 0.93709815, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['look for others', 0.002058419107512254, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['$Creator_Error', ['look_for_others', 'do_nothing']]
+User Select - $Creator_Error
+Sphinx: ['look for all this', 0.00033414759668992997, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: [None, 0.23710153088916153, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Silent
+Sphinx: [None, 0.12934952160456, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Silent
+Sphinx: ['look for office', 0.0011369729940151276, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: ['another world', 0.004353695798641475, '']
+Google: ['hello world', 0.97110075, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['this thing', 0.1921860869078676, '']
+Google: ['testing', 0.94813681, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['look for a focus', 0.0015947367575228034, '']
+Google: ['look for others', 0.96490318, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['leave', 0.011606191981325151, '']
+Google: ['leave', 0.88870686, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['whom put office if a move', 0.00034384332983611977, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: ['look for all this', 0.001199585015008757, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: ['do nothing', 0.10263627178882612, '']
+Google: ['do nothing', 0.97110075, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: ['look for and who', 7.56041024612801e-05, '']
+Google: ['look for runners', 0.86770803, '']
+Select: ['do_nothing', ['do_nothing']]
+User Select - do_nothing
+Sphinx: ['look for others it and', 0.010486901395754446, '']
+Google: ['look for others', 0.9363277, '']
+Select: ['$Creator_Error', ['do_nothing', 'look_for_others']]
+User Select - $Creator_Error
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['up the and leave', 0.05921220209551185, '']
+Google: ['leave', 0.90584779, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['look for others', 0.012495234136589307, '']
+Google: ['look for others', 0.96240872, '']
+Select: ['look_for_others', ['look_for_others']]
+User Select - look_for_others
+Sphinx: ['of', 0.15138654179459604, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+Sphinx: ['away from the light', 0.014378924793836057, '']
+Google: ['away from the light', 0.913472, '']
+Select: ['run_toward_the_light', ['run_toward_the_light']]
+User Select - run_toward_the_light
+Auto Select - auto
+Sphinx: ['from', 0.006432545503935523, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Silent
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['leave the it it it the the', 0.06991267004850077, '']
+Google: ['leave', 0.88434249, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['the and a look for office and it in', 4.731335514005289e-07, '']
+Google: ['look for others', 0.97110075, '']
+Select: ['look_for_others', ['look_for_others']]
+User Select - look_for_others
