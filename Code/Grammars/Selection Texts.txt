@@ -1,225 +1,250 @@
 break the door down
-use door
-break door
-break open
-open the door
-use door handle
-check if locked
 break the door down
+check if locked
+use door handle
+open the door
+break open
+break door
+use door
 
+climb up
+climb around
+move around
 climb up
 climb
-climb up
-move around
-climb around
 
-climb out
-climb up
 climb out
 drag yourself up
+climb out
+climb up
 
 continue
-yes
-continue
-go on then
 I suppose so
+go on then
+continue
+uh-huh
+indeed
+sure
+yes
+yup
+ok
 
 dig
-dig
-examine the floor
 look for another way out
+examine the floor
+dig
 
-do not give up
-don't give up
 do not give up
 pull yourself together
+don't give up
 
 do not go anywhere
-stay
-wait
-remain
-stay put
-don't move
-do nothing
-do not move
-wait around
+don't do anything
 don't go anywhere
-don't do anything
-do not go anywhere
-do not do anything
-
-do nothing
-wait
-stay
-stay put
+wait around
 do nothing
 don't move
-wait around
-do not move
+stay put
+remain
+wait
+stay
+
+do nothing
 don't do anything
-do not do anything
+wait around
+don't move
+do nothing
+stay put
+stay
+wait
 
 examine rock
-dig
-move it
-examine it
-look at it
-pry it out
-pull it out
-look at rock
-examine rock
-move the rock
-pull the rock
 pry the rock out
+pull the rock
+move the rock
+examine rock
+look at rock
+pull it out
+pry it out
+look at it
+examine it
+move it
+dig
 
-feel surroundings
-look around
-attempt to move
-feel area around
 feel surroundings
 look at surroundings
+feel surroundings
+feel area around
+attempt to move
+look around
 
 go back
-go back
-leave the way you came in
 return from whence you came
-
-go back into the phone booth
+leave the way you came in
 go back
-get back in
-return to the phone booth
-return to the telephone box
+
 go back into the phone booth
 go back into the telephone box
+go back into the phone booth
+return to the telephone box
+return to the phone booth
+get back in
+go back
 
 go through an open door
-try door
-try the door
-go through door
-try another door
-run through door
+go through an open door
+walk towards the door
 go through the door
-go through an open door
+run through door
+try another door
+go through door
+try the door
+open a door
+try a door
+try door
 
 go up stairs
-go up stairs
-climb the stairs
 traverse the stairs
+climb the stairs
+go up the stairs
+climb stairs
+go upstairs
+stairs
 
 leave phone booth
-exit
-leave
-get out
-step out
-leave phone booth
-leave telephone box
-leave the phone booth
 leave the telephone box
+leave the phone booth
+leave telephone box
+leave phone booth
+step out
+get out
+leave
+exit
 
+look around
+scope out the situation
+search the place
+look for others
 look around
 explore
-look around
-look for others
-search the place
-scope out the situation
 
-look back
 look back
 look behind you
+look back
 
 look for others
-look for others
-see if anyone else is around
-check the other phone booths
 check the other telephone boxes
+check the other phone booths
+see if anyone else is around
+look for others
+search
+look
 
-pry rock
-dig
 pry rock
 pull the rock out
+pry rock
+dig
 
 pull string
-pull string
-examine string
 check out the string
+examine string
+pull string
 
+quit
+sod off
+fuck no
+not now
+later
 quit
 no
-quit
-later
-not now
-fuck no
-sod off
 
 reply
-call back
-shout down
 ask for help
+shout down
+call back
+reply
 
 run away from the light
-hide
-go hide
-run away
-avoid the light
+run away from the light
 go around the light 
-run away from the light
+avoid the light
+run away
+go hide
+hide
 
-run toward the light
-light
-run toward
-go to light
-enter the light
-walk into the light
 run toward the light
 go towards the light
+run toward the light
+walk into the light
+enter the light
+go to light
+run toward
+light
 
-sit in despair
-sleep
-give up
-do nothing
 sit in despair
 don't care any more
-
-stay in phone booth
-stay
-wait
-remain
-stay put
-don't move
-close door
+sit in despair
 do nothing
-don't leave
-don't do anything
-do not go anywhere
-stay where you are
-stay in phone booth
-stay in telephone box
-don't leave the phone booth
-do not leave the phone booth
-don't leave the telephone box
-do not leave the telephone box
+give up
+sleep
 
-stay in room
+stay in phone booth
+don't leave the telephone box
+don't leave the phone booth
+stayed in the telephone box
+stays in the telephone box
+stayed in the phone booth
+stay in the telephone box
+stays in the phone booth
+stay in the phone booth
+stay in telephone box
+stayed in phone booth
+stay in phone booth
+stay where you are
+don't do anything
+don't go anywhere
+don't leave
+do nothing
+close door
+don't move
+stay put
 remain
-do not move
+wait
+stay
+
 stay in room
 don't go anywhere
-do not go anywhere
+stay in room
+don't move
+remain
 
 stop climbing
-stop
-jump
-fall
-give up
+stop climbing
 do nothing
-stop climbing
-
+give up
+fall
+jump
+stop
 try another door
-go through open door
 use a different door
+go through open door
+try another door
 
 wait around
-wait around
-time passes
 don't do anything
-do not do anything
+time passes
+wait around
+
+repeat
+say that again
+repeat
+
+restart
+start again from the beginning
+start again
+restart
+reset
+
+wake up
+stop dreaming
+wake up

@@ -4,7 +4,7 @@ The grammar file is also constructed by finding a list of synonyms for each uniq
 """
 
 # Dependencies:
-import lxml.html as lh
+# import lxml.html as lh
 import requests as req
 import re
 import num2words as nw
@@ -16,6 +16,32 @@ import os
 grammar_directory = "Grammars/"
 dictionary_directory = "Dictionaries/"
 confidence_threshold = 1*10**-5
+inflexions = {
+    "huh": ["huh"],
+    "like": ["like"],
+    "um": ["um"],
+    "umm": ["umm"],
+    "er": ["er"],
+    "err": ["err"],
+    "hm": ["hm"],
+    "hmm": ["hmm"],
+    "uh": ["uh"],
+    "uhh": ["uhh"],
+    "eh": ["eh"],
+    "ehh": ["ehh"],
+    "ah": ["ah"],
+    "ahh": ["ahh"],
+    "ooh": ["ooh"],
+    "oh": ["oh"],
+    "please": ["please"],
+    "thanks": ["thanks"],
+    "thank": ["thank"],
+    "ta": ["ta"],
+    "could": ["could"],
+    "vaguely": ["vaguely"],
+    "I'd": ["I'd"],
+    "can": ["can"]
+}
 
 
 def formatWordsList(words):
@@ -27,6 +53,7 @@ def formatWordsList(words):
     return_list = []
     for word in words:
         # If '%' is contained, then the word is probably not a word!
+        word = word.replace('%27', "'")
         if '%' not in word:
             # Convert numbers to words
             numbers = re.findall('[0-9]+', word)
@@ -46,20 +73,39 @@ def getSynonyms(word):
     """
     word_set = {formatWordsList([word])[0]: 0}
 
-    # Get synonyms from http://thesaurus.com
+    # # Get synonyms from http://thesaurus.com
+    # try:
+    #     site = lh.parse('http://thesaurus.com/browse/' + word)
+    #     for i in range(10):
+    #         discovered = site.xpath('//div[' + str(i) + ']/div[2]/div[3]/div/ul/li/a/span[1]/text()')
+    #         for j in formatWordsList(discovered):
+    #             word_set.update({j: 0})
+    # except OSError as e:
+    #     print('Failed to load site 1 HTTP resource, {0}'.format(e))
+
+    # Get "narrower" words from http://powerthesaurus.org
     try:
-        site1 = lh.parse('http://thesaurus.com/browse/' + word)
-        for i in range(10):
-            discovered = site1.xpath('//div[' + str(i) + ']/div[2]/div[3]/div/ul/li/a/span[1]/text()')
-            for j in formatWordsList(discovered):
-                word_set.update({j: 0})
+        site = req.get('http://powerthesaurus.org/' + word + '/narrower').text
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/narrower"', site)
+        for i in formatWordsList(discovered):
+            word_set.update({i: 0})
     except OSError as e:
-        print('Failed to load site 1 HTTP resource, {0}'.format(e))
+        print('Failed to load site 2 HTTP resource, {0}'.format(e))
 
     # Get synonyms from http://powerthesaurus.org
+    if len(word_set) is 0:
+        try:
+            site = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
+            discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site)
+            for i in formatWordsList(discovered):
+                word_set.update({i: 0})
+        except OSError as e:
+            print('Failed to load site 2 HTTP resource, {0}'.format(e))
+
+    # Get related words from http://powerthesaurus.org
     try:
-        site2 = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
-        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site2)
+        site = req.get('http://powerthesaurus.org/' + word + '/related').text
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/related"', site)
         for i in formatWordsList(discovered):
             word_set.update({i: 0})
     except OSError as e:
@@ -164,9 +210,9 @@ def getSynonymsForAllWords(unique_words):
         print(word)
         # Odd error where the site formatting changes and gives 0 results back... just try it a second time to be sure
         try1 = getSynonyms(word)
-        try2 = getSynonyms(word)
-        if len(try2) > len(try1):
-            try1 = try2
+        # try2 = getSynonyms(word)
+        # if len(try2) > len(try1):
+        #     try1 = try2
 
         # Determine if each synonym / phrase is fully described from the dictionary, if not then ignore it
         word_list = []
@@ -202,6 +248,9 @@ def genGrammarsForWords(unique_words):
         for i in unique_words[word]:
             synonyms += [i]
 
+        if len(synonyms) is 0:
+            continue
+
         # Create a grammar rule
         rule = '<' + word + '> = ( '
         regex = '('
@@ -214,14 +263,21 @@ def genGrammarsForWords(unique_words):
     return word_grammar_rules
 
 
-def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
+def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules, inflexion_rules=None):
     """
     Generate grammar rules for each set of sentences, based on the grammar rules generated for each word
     :param sentence_sets:
     :param word_grammar_rules:
+    :param inflexion_rules:
     :return:
     """
-    sets_of_grammar_rules = {}
+    # Initialise
+    if inflexion_rules is not None:
+        sets_of_grammar_rules = inflexion_rules
+    else:
+        sets_of_grammar_rules = {}
+
+    # For each sentence set
     for i in range(len(sentence_sets)):
         sentence_set = sentence_sets[i]
         sentence_id = sentence_set[0].replace(' ', '')
@@ -234,12 +290,22 @@ def genGrammarsForSentenceSets(sentence_sets, word_grammar_rules):
             grammar_rule += '( '
             regex_rule += '('
             for word in sentence.split(' '):
+                if word == '':
+                    continue
                 # Insert each word of the sentence, along with a space afterwards
-                grammar_rule += '<' + word + '> '
-                regex_rule += word_grammar_rules[word][1] + ' '
+                if inflexion_rules is None:
+                    grammar_rule += '<' + word + '> '
+                    regex_rule += word_grammar_rules[word][1] + ' '
+                else:
+                    grammar_rule += '<inflexions> <' + word + '> '
+                    regex_rule += inflexion_rules['inflexions'][1] + word_grammar_rules[word][1] + ' '
             # Close off the sentence possibility, leaving the option for another one to come after
-            grammar_rule += ') | '
-            regex_rule = regex_rule[:-1] + ')|'
+            if inflexion_rules is None:
+                grammar_rule += ') | '
+                regex_rule = regex_rule[:-1] + ')|'
+            else:
+                grammar_rule += '<inflexions> ) | '
+                regex_rule = regex_rule[:-1] + inflexion_rules['inflexions'][1] + ')|'
         # Close off the sentence set and add to the rules list
         grammar_rule = grammar_rule[:-3] + ';'
         regex_rule = regex_rule[:-1]
@@ -315,13 +381,22 @@ def main():
     Main process for generating grammar files
     :return:
     """
+    inflexion_sets = getSentences(grammar_directory + "Inflexions.txt")
+    inflexion_grammar = genGrammarsForWords(inflexions)
+    inflexion_rules = genGrammarsForSentenceSets(inflexion_sets, inflexion_grammar)
+    inflexion_rules['inflexions'][0] = '{0} ]'.format(inflexion_rules['inflexions'][0]).replace('(', '[', 1)
+    inflexion_rules['inflexions'][0] = inflexion_rules['inflexions'][0].replace('( ', '').replace(' )', '')
+    inflexion_rules['inflexions'][1] = inflexion_rules['inflexions'][1].replace('((', '').replace('))', '')
+    inflexion_rules['inflexions'][1] = '[{0}]? ?'.format(inflexion_rules['inflexions'][1])
+    print(inflexion_rules)
+
     sentence_sets = getSentences(grammar_directory + "Selection Texts.txt")
     unique_words = getUniqueWords(sentence_sets)
     unique_words = getSynonymsForAllWords(unique_words)
 
     word_grammar_rules = genGrammarsForWords(unique_words)
     writeGrammarFile(grammar_directory + "words.gram", 'words', word_grammar_rules)
-    sentence_set_grammar_rules = genGrammarsForSentenceSets(sentence_sets, word_grammar_rules)
+    sentence_set_grammar_rules = genGrammarsForSentenceSets(sentence_sets, word_grammar_rules, inflexion_rules)
 
     for rule in sentence_set_grammar_rules:
         if rule == '':

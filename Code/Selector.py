@@ -37,6 +37,7 @@ def recognise_sphinx(audio, dictionary=None):
         config.set_string("-dict", ps.get_model_path() + '\cmudict-en-us.dict')
     config.set_string("-hmm", ps.get_model_path() + '\en-us')
     config.set_string("-lm", ps.get_model_path() + '\en-us.lm.bin')
+    # noinspection SpellCheckingInspection
     config.set_string("-logfn", os.devnull)
     decoder = ps.Decoder(config)
 
@@ -69,6 +70,7 @@ def readSphinxData(sphinx_data, error):
     return return_value
 
 
+# noinspection PyBroadException
 def readGoogleData(google_data, error):
     """
     Given an object returned from google, convert it into a single result and its confidence level
@@ -76,12 +78,16 @@ def readGoogleData(google_data, error):
     :param error:
     :return:
     """
-    if error != '' or google_data is None or google_data == []:
-        return ['', 0, error]
-
-    return [google_data['alternative'][0]['transcript'],
-            google_data['alternative'][0]['confidence'],
-            error]  # [Top Result, Confidence, Error]
+    result = ['', 0, error]
+    try:
+        if error == '' and google_data is not None and google_data != []:
+            result = [google_data['alternative'][0]['transcript'],
+                      google_data['alternative'][0]['confidence'],
+                      error]  # [Top Result, Confidence, Error]
+    except Exception as e:
+        result = ['', 0, e]
+    finally:
+        return result
 
 
 # noinspection PyUnusedLocal,PyBroadException
@@ -209,6 +215,7 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             # Use regex's to select a narrative
             for regex in regex_map:
                 # Search for the regex within the resulting file to ID which grammar found it
+                print(str(regex))
                 if len(re.findall(regex_map[regex], result_sphinx[0])) is not 0:
                     matches += [regex]
                     # @todo insert break when not testing?

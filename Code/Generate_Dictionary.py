@@ -15,6 +15,33 @@ import pocketsphinx as ps
 grammar_directory = "Grammars/"
 dictionary_directory = "Dictionaries/"
 confidence_threshold = 1*10**-5
+inflexions = {
+    "huh": ["huh"],
+    "like": ["like"],
+    "um": ["um"],
+    "umm": ["umm"],
+    "er": ["er"],
+    "err": ["err"],
+    "hm": ["hm"],
+    "hmm": ["hmm"],
+    "uh": ["uh"],
+    "uhh": ["uhh"],
+    "eh": ["eh"],
+    "ehh": ["ehh"],
+    "ah": ["ah"],
+    "ahh": ["ahh"],
+    "ooh": ["ooh"],
+    "oh": ["oh"],
+    "please": ["please"],
+    "thanks": ["thanks"],
+    "thank you": ["thank you"],
+    "ta": ["ta"],
+    "could you": ["could you"],
+    "vaguely": ["vaguely"],
+    "I'd like to": ["I'd like to"],
+    "could I": ["could I"],
+    "can I": ["can I"]
+}
 
 
 def readFile(file_location):
@@ -141,7 +168,7 @@ def getSynonyms(word, word_set):
 
 def genSubDictionary(words_list, full_dictionary, file_location):
     # Generate a full words list
-    words = {}
+    words = inflexions
     for word in words_list:
         print('\t' + word)
         words = getSynonyms(word, words)

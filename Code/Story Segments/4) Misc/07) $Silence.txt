@@ -1,1 +1,2 @@
-#forget
+#auto
+#&(#prev)

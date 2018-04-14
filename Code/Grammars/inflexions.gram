@@ -1,0 +1,8 @@
+#JSGF V1.0;
+
+grammar inflexions;
+
+import <words.*>;
+
+public <inflexions> = [ <huh> | <like> | <um> | <umm> | <er> | <err> | <hm> | <hmm> | <uh> | <uhh> | <eh> | <ehh> | <ah> | <ahh> | <ooh> | <oh> | <please> | <thanks> | <thank> | <ta> | <vaguely> | <I'd> | <could> | <can>; ] // [huh|like|um|umm|er|err|hm|hmm|uh|uhh|eh|ehh|ah|ahh|ooh|oh|please|thanks|thank|ta|vaguely|I'd|could|can]? ?
+

@@ -7,9 +7,11 @@ Good luck!
 
 #NarratorInterrupt(0)
 #CreatorBugs(0)
+#NumIgnores(0)
 #NumErrors(0)
 #Stay(0)
 #Dark(0)
 #Dig(0)
+#IHeard("Nothing!")
 #delay(0.5)
 #auto

@@ -6,3 +6,4 @@ Upon further inspection, Vaguely noticed that the horror standing before her was
 In a panic, Vaguely decided to run back and go through one of the open doors.
 
 #ignore("look_around")
+#ignore("do_nothing")

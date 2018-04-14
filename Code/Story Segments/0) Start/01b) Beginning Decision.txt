@@ -1,0 +1,6 @@
+Vaguely decided to leave her phone booth.
+
+#Dark(0)
+#ignore("do_nothing")
+
+// (Maybe include a beeping noise the first time around?)

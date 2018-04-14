@@ -7,6 +7,7 @@ Use protection, get consent, and play nice kids!
 
 # Dependencies:
 import speech_recognition as sr
+import Code_Interpreter as ci
 import multiprocessing as mp
 import State_Tracker as st
 import Selector
@@ -168,8 +169,20 @@ class ListenerObj:
                     self.__stack_selector[selector].selected_narrative[0] != '':
                 to_be_removed += [selector]
 
-                # If its an ignore, then don't show add to the user input stack
+                # If its an ignore, then don't show / add to the user input stack
                 if self.__stack_selector[selector].selected_narrative[0] != '$Ignore':
+                    self.stack_user_input += [self.__stack_selector[selector].selected_narrative]
+                    if self.__stack_selector[selector].selected_narrative[0] == '$User_Error':
+                        if self.__stack_selector[selector].result_google != '':
+                            ci.interpretCode('#IHeard("{0}")'.format(
+                                str(self.__stack_selector[selector].result_google)
+                            ))
+                        else:
+                            ci.interpretCode('#IHeard("{0}")'.format(
+                                str(self.__stack_selector[selector].result_sphinx)
+                            ))
+                # Make an exception if there's nothing else being processed
+                elif len(self.__stack_selector) is 1:
                     self.stack_user_input += [self.__stack_selector[selector].selected_narrative]
 
         # Remove completed selectors
@@ -189,7 +202,7 @@ class ListenerObj:
         :return:
         """
         for selector in self.__stack_selector:
-            selector.stopSelector()
+            self.__stack_selector[selector].stopSelector()
         self.__stack_selector = {}
 
     def dumpStackUserInput(self):
