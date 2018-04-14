@@ -1,0 +1,206 @@
+NEW GAME START!
+Auto Select - auto
+Auto Select - auto
+User Select - auto
+Sphinx: ['well only sign if and there it move it leave', 6.269602274499881e-11, '']
+Google: ['the phone Booth', 0.76483268, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['yes', 0.13295641904023814, '']
+Google: ['yes', 0.97110075, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['leave the phone booth', 1.2113230517480649e-05, '']
+Google: ['leave the phone Booth', 0.91762602, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['look for us', 9.063419449006723e-05, '']
+Google: ['look for others', 0.8630113, '']
+Select: ['look_for_others', ['look_for_others']]
+User Select - look_for_others
+Sphinx: ['run towards the line', 0.0002790977098228629, '']
+Google: ['run towards the light', 0.91646749, '']
+Select: ['$Creator_Error', [['run_away_from_the_light', 'run_toward_the_light', 'do_not_go_anywhere'], ['run_away_from_the_light', 'run_toward_the_light', 'do_not_go_anywhere']]]
+User Select - $Creator_Error
+Sphinx: ['for the life oh a run toward the light of the year', 5.457632223470968e-12, '']
+Google: ["who's the light run towards the light", 0.92415637, '']
+Select: ['run_toward_the_light', ['run_toward_the_light', 'do_not_go_anywhere', 'run_away_from_the_light']]
+User Select - run_toward_the_light
+Auto Select - auto
+Sphinx: ['though unless they', 4.3682473676640974e-05, '']
+Google: ['door number two', 0.87082833, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['good unless they', 0.0004706065971125438, '']
+Google: ['though unless they', 0.77103871, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['the', 0.028816385282067175, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+Sphinx: ['did you', 0.0043558734433231236, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Ignore
+Sphinx: ['their free though', 9.96179649673999e-05, '']
+Google: ['go through door', 0.7875908, '']
+Select: ['go_through_an_open_door', ['go_through_an_open_door']]
+User Select - go_through_an_open_door
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['this would only', 0.006296335883450782, '']
+Google: ['go through door', 0.93813878, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['if we are though', 6.736431088649647e-06, '']
+Google: ['go through the oven door', 0.8553586, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['and relief', 0.00020176917147064882, '']
+Google: ['repeat', 0.90355825, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['if it if and hit a', 3.943319114039517e-09, '']
+Google: ['we should be', 0.75180429, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['the', 0.03412273065261877, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Ignore
+Sphinx: ['true goal', 0.09407396168374081, '']
+Google: ['truedor', 0.76232445, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['their free though', 0.0001904934218049931, '']
+Google: ['go through door', 0.92262608, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['try another door', 1.819133573072116e-05, '']
+Google: ['try another door', 0.91806823, '']
+Select: ['try_another_door', ['try_another_door']]
+User Select - try_another_door
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['tried yet though', 6.984913895249623e-07, '']
+Google: ['try the other door', 0.89571875, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['try another film', 2.9200921827059434e-05, '']
+Google: ['try another door', 0.62984097, '']
+Select: ['try_another_door', ['try_another_door']]
+User Select - try_another_door
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['try another though', 0.0019447465887909442, '']
+Google: ['train of a door', 0.73482978, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['try another though', 0.002321125476819489, '']
+Google: ['try another door', 0.69201827, '']
+Select: ['try_another_door', ['try_another_door']]
+User Select - try_another_door
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['try know though', 0.0019983759650733907, '']
+Google: ['try another door', 0.76537824, '']
+Select: ['try_another_door', ['try_another_door']]
+User Select - try_another_door
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['the the idea of time if', 1.3009019762667137e-07, '']
+Google: ['go back into the phone Booth', 0.93461674, '']
+Select: ['go_back', ['go_back', 'go_back_into_the_phone_booth']]
+User Select - go_back
+Sphinx: ['that they did but it is', 1.2270745051674716e-06, '']
+Google: ['go into phone Booth', 0.80032891, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['i believe', 0.005503323897792482, '']
+Google: ['repeat', 0.97110075, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['as a thumb is', 1.998884841136501e-06, '']
+Google: ['enter phone Booth', 0.79515076, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['good that', 0.004801058578756657, '']
+Google: ['go back', 0.94548148, '']
+Select: ['go_back', ['go_back', 'go_back_into_the_phone_booth']]
+User Select - go_back
+Auto Select - auto
+Auto Select - auto
+Sphinx: ['the land', 0.0006483039375580362, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Ignore
+Sphinx: ['they did it er', 0.0012256583994718839, '']
+Google: ['dig', 0.80400848, '']
+Select: ['dig', ['dig']]
+User Select - dig
+Auto Select - auto
+Sphinx: ['those surroundings', 0.0006144044352256091, '']
+Google: ['jewel surroundings', 0.76342392, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['those surroundings', 0.004129345669067724, '']
+Google: ['feel the surroundings', 0.86619329, '']
+Select: ['feel_surroundings', ['feel_surroundings']]
+User Select - feel_surroundings
+Sphinx: ['fail of your surroundings', 5.510684247237437e-05, '']
+Google: ['feel the fear surroundings', 0.6977495, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['their surroundings', 0.01280774627876625, '']
+Google: ['field surroundings', 0.91543663, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['feel surroundings', 0.0001229117816332819, '']
+Google: ['feels surroundings', 0.75601006, '']
+Select: ['feel_surroundings', ['feel_surroundings']]
+User Select - feel_surroundings
+Sphinx: ['it is around and face', 0.0031628959724351673, '']
+Google: ['seal surroundings', 0.71054906, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['two surroundings', 3.1849718286801e-06, '']
+Google: ['your surroundings', 0.8163535, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: [None, 0.1417448793447661, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Ignore
+Sphinx: ['data', 0.0032267981908356037, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Ignore
+Sphinx: ['they', 5.1881740160140955e-05, '']
+Google: ['dig', 0.80653524, '']
+Select: ['dig', ['dig']]
+User Select - dig
+Auto Select - auto
+Sphinx: ['they', 0.08929765784141995, '']
+Google: ['dig', 0.68627858, '']
+Select: ['pry_rock', ['pry_rock']]
+User Select - pry_rock
+Auto Select - auto
+Sphinx: ['you surroundings', 0.003035218085408788, '']
+Google: ['feel surroundings', 0.72091562, '']
+Select: ['feel_surroundings', ['feel_surroundings']]
+User Select - feel_surroundings
+Sphinx: ['the say hello', 0.0005549852911249777, '']
+Google: ['say hello', 0.93386668, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['fuck cool learning', 2.6580806126744143e-05, '']
+Google: ['call back', 0.88115531, '']
+Select: ['sit_in_despair', ['sit_in_despair']]
+User Select - sit_in_despair
+Auto Select - auto
+Sphinx: ['no', 0.06643612636026798, '']
+Google: ['no', 0.95613575, '']
+Select: ['quit', ['quit']]
+User Select - quit
+Program Error - name 'quit' is not defined

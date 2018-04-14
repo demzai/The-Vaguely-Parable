@@ -4,10 +4,10 @@
 4/02,	4/98,	auto // wake_up
 4/03,	#&(#prev),  auto // do_nothing
 4/04,	0/00c,	auto // restart
-4/05,   #&(#prev),  auto // user_error
-4/06,   #&(#prev),  auto // creator_error
-4/07,   #&(#prev),  auto // silence or repeat?
-4/08,   #&(#prev),  auto // ignore / couldn't hear properly
+4/05,   #prev,  auto // user_error
+4/06,   #prev,  auto // creator_error
+4/07,   #prev,  auto // silence or repeat?
+4/08,   #prev,  auto // ignore / couldn't hear properly
 4/98,	0/00a,	continue
 4/98,	4/99,	quit
 4/99,   #quit,  auto

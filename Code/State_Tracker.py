@@ -146,8 +146,12 @@ def updateAddresses(selection, is_direct_entry=False):
     if is_direct_entry is False:
         if selection not in glbl.next_addresses:
             return False
+        elif selection == 'repeat':
+            return True
         else:
             glbl.address_stack.append(glbl.next_addresses[selection])
+            with open("log_file.txt", "a") as log_file:
+                log_file.write('Next Address: - ' + str(glbl.next_addresses[selection]) + '\n\n')
         return True
     else:
         for i in glbl.next_addresses:
@@ -155,26 +159,12 @@ def updateAddresses(selection, is_direct_entry=False):
                 continue
             else:
                 glbl.address_stack.append(i[0])
+                with open("log_file.txt", "a") as log_file:
+                    log_file.write('Next Address: - ' + str(i[0]) + '\n\n')
                 return True
     return False
 
 
-# def readNarrative():
-#     """
-#     # Reads the narrative pointed to by the current address
-#     """
-#     narrative_file = ff.getFileFromCode(glbl.address_stack[-1], glbl.file_locales)
-#     narrative_text = en.getFileContents(narrative_file)
-#     for text in narrative_text:
-#         if text[0] == 'Text':
-#             print(str(text[1]))
-#         elif text[0] == 'Container':
-#             print(str(ci.parseContainerCode(text[1], text[2])))
-#         elif text[0] == 'Code' or text[0] == 'Variable':
-#             ci.interpretCode(text[2][0])
-#         elif text[0] == 'Segment':
-#             ci.interpretCode(text[2][0])
-#     print('')
 def readNarrative(reader):
     """
     # Reads the narrative pointed to by the current address
@@ -195,8 +185,6 @@ def getSelection(preselect=None):
     """
     # Get the users selection
     if glbl.do_auto_select is False:
-        # print(pc.ICyan + '\nPlease select your narrative:\n' + pc.Reset + str(list(glbl.next_addresses)))
-        # print('\nPlease select your narrative:\n' + str(list(glbl.next_addresses)))
         if preselect is not None:
             string = preselect
             print(string)

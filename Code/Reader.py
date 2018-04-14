@@ -10,6 +10,7 @@ import multiprocessing as mp
 import win32com.client
 import time
 import Code_Interpreter as ci
+import traceback as t
 # import winsound
 
 
@@ -38,14 +39,16 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
                 with lock_to_be_read:
                     string = to_be_read[0]
                 print(string)
-                speaker.Speak(string)
+                # speaker.Speak(string)
                 # winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
                 with lock_to_be_read:
                     to_be_read[1] = False
             else:
                 time.sleep(0.1)
     except Exception as e:
-        print('Reader has failed unexpectedly. {0}'.format(e))
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('Reader has failed unexpectedly. {0}\n'.format(e))
     finally:
         is_faulty[0] = True
 
@@ -116,7 +119,6 @@ class ReaderObj:
                 self.__stopReader()
                 return True
             else:
-                print('Cannot stop the Reader, it is uninterruptable!')
                 return False
 
     def __stopReader(self):

@@ -1,0 +1,64 @@
+NEW GAME START!
+Sphinx: ['the a state in the front of', 0.0001291110102803699, '']
+Google: ['vaguely stayed in the phonebook', 0.8905915, '']
+Select: ['$Creator_Error', ['stay_in_phone_booth', 'do_nothing']]
+User Select - $Creator_Error
+
+
+Sphinx: ['making bend down the phone too', 6.609091854761463e-07, '']
+Google: ['vaguely burnt down the phone Booth', 0.81900388, '']
+Select: ['$Creator_Error', ['stay_in_phone_booth', 'do_nothing']]
+User Select - $Creator_Error
+Sphinx: ['thing he state in the phone booth', 2.2172845483059087e-05, '']
+Google: ['vaguely stayed in the phone Booth', 0.92702895, '']
+Select: ['$Creator_Error', ['do_nothing', 'stay_in_phone_booth']]
+User Select - $Creator_Error
+Sphinx: ['stay', 0.16229968177429357, '']
+Google: ['stay', 0.86396974, '']
+Select: ['$Creator_Error', ['do_nothing', 'stay_in_phone_booth']]
+User Select - $Creator_Error
+Sphinx: ['fairly', 0.019552422711896614, '']
+Google: ['silly', 0.87129593, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['it do not leave', 0.005453465072815378, '']
+Google: ['do not leave', 0.96707994, '']
+Select: ['$Creator_Error', ['leave_phone_booth', 'do_nothing', 'stay_in_phone_booth']]
+User Select - $Creator_Error
+Sphinx: ['the leave him a out at the', 0.000161644362317088, '']
+Google: ['leave', 0.61921489, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Auto Select - auto
+Sphinx: ['take it and find anyone', 0.00016260099422927386, '']
+Google: ["vaguely didn't find anyone", 0.86910069, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['waiting to find anyone', 0.0004797785926058554, '']
+Google: ["Feedly didn't find anyone", 0.86214191, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['it up that show', 7.651831581461848e-06, '']
+Google: ['', 0, 'Bad Recognition']
+Select: ['$Ignore', []]
+User Select - $Silent
+Sphinx: ['so is the thing he designed it to', 1.2084630045924702e-07, '']
+Google: ['send vaguely decided to', 0.7664755, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['no almost a sudden', 4.3956577409246075e-08, '']
+Google: ['no I will not say that again', 0.96722072, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['this is a very pro safe if the life of a and very dial up in', 1.7926991352345968e-14, '']
+Google: ["if you've got that face", 0.77420974, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Sphinx: ['the thing leave the line of order that look for office', 9.81293325617806e-13, '']
+Google: ["leave right now I've already left look for others", 0.79332483, '']
+Select: ['look_for_others', ['look_for_others']]
+User Select - look_for_others
+Sphinx: ['and floating result of thing through more moderate', 2.4188090650508434e-15, '']
+Google: ['including results that stinks Google and one up here', 0.79691559, '']
+Select: ['run_toward_the_light', ['run_toward_the_light']]
+User Select - run_toward_the_light

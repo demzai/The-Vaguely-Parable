@@ -2,7 +2,11 @@ Welcome to "The Vaguely Parable".
 This is a somewhat satirical game, where your voice is the controller!
 Story segments are narrated, with the last sentence always containing the phrase, "Vaguely decided to".
 This last sentence will guide you on what you can do next.
-And with that, you can guide Vaguely on her journey!
+#delay(0.5)
+For example, "When presented with a red and a blue pill, Vaguely decided to take the blue pill."
+From here, you could say "Vaguely takes the red pill", or you could say, "blue pill", or even, "ignore both pills".
+#delay(0.5)
+With that, you can now guide Vaguely on her journey!
 Good luck!
 
 #NarratorInterrupt(0)

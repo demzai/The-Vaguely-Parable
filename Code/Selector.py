@@ -11,6 +11,7 @@ import Sentence_Converter as sc
 import speech_recognition as sr
 import multiprocessing as mp
 import pocketsphinx as ps
+import traceback as t
 import os
 import re
 
@@ -29,11 +30,12 @@ def recognise_sphinx(audio, dictionary=None):
 
     # Create decoder object
     config = ps.Decoder.default_config()
-    print(str(dictionary))
     if dictionary is not None and os.path.isfile(dictionary):
         config.set_string("-dict", dictionary)
     elif dictionary is not None:
-        print('WARNING: "{0}" WAS NOT FOUND'.format(dictionary))
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('WARNING: "{0}" WAS NOT FOUND'.format(dictionary))
         config.set_string("-dict", ps.get_model_path() + '\cmudict-en-us.dict')
     config.set_string("-hmm", ps.get_model_path() + '\en-us')
     config.set_string("-lm", ps.get_model_path() + '\en-us.lm.bin')
@@ -150,6 +152,53 @@ def getGoogleTranslation(audio, result):
         return result
 
 
+# noinspection PyUnusedLocal, PyBroadException
+def getWitApiTranslation(audio, result):
+    """
+    Given an audio snippet, and maybe some grammar, convert the speech into text using the Wit API
+    :param audio:
+    :param result:
+    :type result: mp.Manager().list
+    :return:
+    """
+    converter = sr.Recognizer()
+    translation = ''
+    error = ''
+    try:
+        # Translate the audio into text
+        # noinspection SpellCheckingInspection
+        translation = converter.recognize_wit(audio, key='2TW66CQWYNXUD3NE5B3BEGAJNDCZW27I')
+        if not bool(translation):
+            error = 'Bad Recognition'
+    except sr.UnknownValueError:
+        error = 'Bad Recognition'
+    except Exception:
+        error = 'Failed Server Request'
+    finally:
+        # Return only the information of interest
+        translation = [translation, 0.5, error]
+        for i in range(3):
+            result[i] = translation[i]
+        return result
+
+
+def matchRegex(text, regex_map):
+    """
+    Given a textual input and a set of regular expressions, find results within the text
+    :param text:
+    :param regex_map:
+    :return:
+    """
+    matches = []
+    if text[1] > sc.confidence_threshold:
+        # Use regex's to select a narrative
+        for regex in regex_map:
+            # Search for the regex within the resulting file to ID which grammar found it
+            if len(re.findall(regex_map[regex], text[0])) is not 0:
+                matches += [regex]
+    return matches
+
+
 # noinspection PyBroadException,PyUnusedLocal
 def selector(inputs, outputs, lock_outputs, is_faulty):
     """
@@ -174,6 +223,7 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
     regex_map = {}  # @todo double check if needed
     result_sphinx = ['', 0, '']
     result_google = ['', 0, '']
+    result_witapi = ['', 0, '']
     # Throw everything inside of a try except loop to call all errors
     try:
         # If the admin made a boo boo, then give him a firm warning
@@ -187,20 +237,25 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             [grammar_file, regex_map] = sc.genGrammarForSelectionSet(narrative_names, process_id)
             dictionary_file = gd.genDictionaryForSelectionSet(narrative_names, process_id)
 
-        # Convert the audio using CMUsphinx (offline) and Google (online)
+        # Convert the audio using CMUsphinx (offline), Google, and WitAPI (online)
         if True:
             # @todo return to using google as a benchmark
             result_sphinx = mp.Manager().list(['', 0, ''])
             result_google = mp.Manager().list(['', 0, ''])
+            result_witapi = mp.Manager().list(['', 0, ''])
             process_sphinx = mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, dictionary_file))
             process_google = mp.Process(target=getGoogleTranslation, args=(audio, result_google))
+            process_witapi = mp.Process(target=getWitApiTranslation, args=(audio, result_witapi))
             process_sphinx.start()
             process_google.start()
+            process_witapi.start()
             process_sphinx.join()
             process_google.join()
+            process_witapi.join()
             with lock_outputs:
-                outputs[0] = [x for x in result_sphinx]
-                outputs[1] = [x for x in result_google]
+                outputs[0] = [x for x in result_google]
+                outputs[1] = [x for x in result_witapi]
+                outputs[2] = [x for x in result_sphinx]
 
         # If the Google result gave a bad recognition error then ignore the whole thing
         if result_google[2] == 'Bad Recognition' or result_google[1] < sc.confidence_threshold:
@@ -209,45 +264,39 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
                 outputs[-1] = True
             return
 
-        # Deduce if its worth running regex's
-        matches = []
-        if result_sphinx[1] > sc.confidence_threshold:
-            # Use regex's to select a narrative
-            for regex in regex_map:
-                # Search for the regex within the resulting file to ID which grammar found it
-                print(str(regex))
-                if len(re.findall(regex_map[regex], result_sphinx[0])) is not 0:
-                    matches += [regex]
-                    # @todo insert break when not testing?
-
-        # Attempt (in vein) to resolve via a language model if the grammar model failed
-        if len(matches) is 0:
-            for regex in regex_map:
-                # Search for the regex within the resulting file to ID which grammar found it
-                if len(re.findall(regex_map[regex], result_google[0])) is not 0:
-                    matches += [regex]
-                    # @todo insert break when not testing?
+        # Find matching regular expressions within the translated texts
+        match_sphinx = matchRegex(result_sphinx, regex_map)
+        match_google = matchRegex(result_google, regex_map)
+        match_witapi = matchRegex(result_witapi, regex_map)
 
         # Determine which narrative to select
         with lock_outputs:
-            # Check for a "user error" - speech to text failed or user said something incorrect
-            if len(matches) is 0:
-                outputs[2] = ['$User_Error', matches]
+            # Check for successful results first:
+            if len(match_google) is 1:
+                outputs[-2] = [match_google[0], match_google]
                 outputs[-1] = True
-            # Check for creator error - creator has specified a similar sentence (inc. synonyms) for two selections
-            elif len(matches) >= 2:
-                outputs[2] = ['$Creator_Error', matches]
+            elif len(match_witapi) is 1:
+                outputs[-2] = [match_witapi[0], match_witapi]
                 outputs[-1] = True
-            # Return the users selection
+            elif len(match_sphinx) is 1:
+                outputs[-2] = [match_sphinx[0], match_sphinx]
+                outputs[-1] = True
+            # Assume creator error if any have more than 1 match
+            elif len(match_google) >= 2 or len(match_witapi) >= 2 or len(match_sphinx) >= 2:
+                outputs[-2] = ['$Creator_Error', [match_google, match_witapi, match_sphinx]]
+                outputs[-1] = True
+            # Else assume that the user has made an error
             else:
-                outputs[2] = [matches[0], matches]
+                outputs[-2] = ['$User_Error', []]
                 outputs[-1] = True
         return
 
     # On exception: print cause, or skip entirely
     except Exception as e:
-        print('Selector Error: {0}'.format(e))
-        pass
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('Selector Error: {0}\n'.format(e))
+
     # Ensure the faulty flag is raised on an error, no matter what
     finally:
         sc.cleanupGrammarFile(process_id)  # Remove excess file baggage
@@ -267,20 +316,21 @@ class SelectorObj:
 
         # Initialise the outputs
         self.is_finished = False
-        self.result_sphinx = None
-        self.result_google = None
-        self.selected_narrative = None
+        self.result_google = ['', 0, '']
+        self.result_witapi = ['', 0, '']
+        self.result_sphinx = ['', 0, '']
+        self.selected_narrative = ['', []]
         self.__outputs = mp.Manager().list(
-            ['', '', [], False])  # sphinx results, google results, selected narrative, is_finished
+            [[], [], [], [], False])  # Google, witapi, and sphinx results, selected narrative, is_finished
         self.__lock_outputs = mp.Lock()
+        self.is_faulty = mp.Manager().list([False])
 
         # Initialise the selector
-        self.__is_faulty = mp.Manager().list([False])
         self.__process = mp.Process(
             target=selector,
             args=(self.__inputs,
                   self.__outputs, self.__lock_outputs,
-                  self.__is_faulty))
+                  self.is_faulty))
 
         # Begin processing
         self.__process.start()
@@ -301,16 +351,17 @@ class SelectorObj:
         """
         if self.is_finished is False:
             # If dead, then kill and forget
-            if self.__is_faulty is True:
+            if self.is_faulty is True:
                 self.stopSelector()
 
             # If not, check if it has completed
             else:
                 with self.__lock_outputs:
                     if self.__outputs[-1] is True:
-                        self.result_sphinx = self.__outputs[0]
-                        self.result_google = self.__outputs[1]
-                        self.selected_narrative = self.__outputs[2]
+                        self.result_google = self.__outputs[0]
+                        self.result_witapi = self.__outputs[1]
+                        self.result_sphinx = self.__outputs[2]
+                        self.selected_narrative = self.__outputs[-2]
                         self.stopSelector()
 
 

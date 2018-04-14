@@ -10,6 +10,7 @@ import speech_recognition as sr
 import Code_Interpreter as ci
 import multiprocessing as mp
 import State_Tracker as st
+import traceback as t
 import Selector
 import time
 
@@ -47,7 +48,9 @@ def listener(user_input, lock_user_input, is_faulty):
                 else:
                     time.sleep(0.5)
     except Exception as e:
-        print('Listener has failed unexpectedly. {0}'.format(e))
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()) + '\n')
+            log_file.write('Listener has failed unexpectedly. {0}\n'.format(e))
     finally:
         is_faulty[0] = True
 
@@ -161,11 +164,19 @@ class ListenerObj:
 
         # Check the status of each selector & retrieve user inputs if available
         to_be_removed = []
+        broken = []
         for selector in self.__stack_selector:
             # Have it perform a self-check
             self.__stack_selector[selector].checkSelectorStatus()
+
+            # Check for broken selectors
+            if self.__stack_selector[selector].is_faulty == False:
+                broken += [selector]
+                continue
+
             # If its finished then return its results if they're non-empty
-            if self.__stack_selector[selector].is_finished is True and \
+            elif self.__stack_selector[selector].is_finished is True and \
+                    self.__stack_selector[selector].selected_narrative != [] and \
                     self.__stack_selector[selector].selected_narrative[0] != '':
                 to_be_removed += [selector]
 
@@ -175,25 +186,34 @@ class ListenerObj:
                     if self.__stack_selector[selector].selected_narrative[0] == '$User_Error':
                         if self.__stack_selector[selector].result_google != '':
                             ci.interpretCode('#IHeard("{0}")'.format(
-                                str(self.__stack_selector[selector].result_google)
+                                str(self.__stack_selector[selector].result_google[0])
                             ))
                         else:
                             ci.interpretCode('#IHeard("{0}")'.format(
-                                str(self.__stack_selector[selector].result_sphinx)
+                                str(self.__stack_selector[selector].result_sphinx[0])
                             ))
                 # Make an exception if there's nothing else being processed
                 elif len(self.__stack_selector) is 1:
                     self.stack_user_input += [self.__stack_selector[selector].selected_narrative]
+            elif self.__stack_selector[selector].is_finished is True:
+                broken += [selector]
 
         # Remove completed selectors
         for selector in to_be_removed:
             with open("log_file.txt", "a") as log_file:
-                log_file.write('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx) + '\n')
                 log_file.write('Google: ' + str(self.__stack_selector[selector].result_google) + '\n')
+                log_file.write('WitAPI: ' + str(self.__stack_selector[selector].result_witapi) + '\n')
+                log_file.write('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx) + '\n')
                 log_file.write('Select: ' + str(self.__stack_selector[selector].selected_narrative) + '\n')
-            print('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx))
+            print('')
             print('Google: ' + str(self.__stack_selector[selector].result_google))
+            print('WitAPI: ' + str(self.__stack_selector[selector].result_witapi))
+            print('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx))
             print('Select: ' + str(self.__stack_selector[selector].selected_narrative))
+            print('')
+            self.__stack_selector.pop(selector, None)
+
+        for selector in broken:
             self.__stack_selector.pop(selector, None)
 
     def dumpStackSelector(self):

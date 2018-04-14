@@ -3,7 +3,7 @@ Generates dictionary files
 """
 
 # Dependencies
-import lxml.html as lh
+# import lxml.html as lh
 import requests as req
 import re
 import num2words as nw
@@ -104,6 +104,7 @@ def getUniqueWords(sentence_sets):
         # For each sentence within that set
         for j in range(1, len(sentences)):
             sentence = sentences[j]
+            words.update({sentence.replace(' ', '_'): []})
             # For each word within the sentence
             for word in sentence.replace('-', ' ').replace('_', ' ').split(' '):
                 # Add to a map to remove duplicates
@@ -121,6 +122,7 @@ def formatWordsList(words):
     """
     return_list = []
     for word in words:
+        word = word.replace('%27', "'")
         # If '%' is contained, then the word is probably not a word!
         if '%' not in word:
             # Convert numbers to words
@@ -128,7 +130,7 @@ def formatWordsList(words):
             for num in numbers:
                 word.replace(num, nw.num2words(num), 1)
             # Remove underscores, dashes and apostrophes
-            word = str(word).replace('_', ' ').replace('-', ' ')
+            # word = str(word).replace('_', ' ').replace('-', ' ')
             return_list += [word]
     return return_list
 
@@ -142,21 +144,31 @@ def getSynonyms(word, word_set):
     # Add the current word to the synonyms list
     word_set.update({formatWordsList([word])[0]: 0})
 
-    # Get synonyms from http://thesaurus.com
+    # Get "narrower" words from http://powerthesaurus.org
     try:
-        site1 = lh.parse('http://thesaurus.com/browse/' + word)
-        for i in range(10):
-            discovered = site1.xpath('//div[' + str(i) + ']/div[2]/div[3]/div/ul/li/a/span[1]/text()')
-            for j in formatWordsList(discovered):
-                for k in j.split(' '):
-                    word_set.update({k: 0})
+        site = req.get('http://powerthesaurus.org/' + word + '/narrower').text
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/narrower"', site)
+        for i in formatWordsList(discovered):
+            for k in i.split(' '):
+                word_set.update({k: 0})
     except OSError as e:
-        print('Failed to load site 1 HTTP resource, {0}'.format(e))
+        print('Failed to load site 2 HTTP resource, {0}'.format(e))
 
     # Get synonyms from http://powerthesaurus.org
+    if len(word_set) is 0:
+        try:
+            site = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
+            discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site)
+            for i in formatWordsList(discovered):
+                for k in i.split(' '):
+                    word_set.update({k: 0})
+        except OSError as e:
+            print('Failed to load site 2 HTTP resource, {0}'.format(e))
+
+    # Get related words from http://powerthesaurus.org
     try:
-        site2 = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
-        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site2)
+        site = req.get('http://powerthesaurus.org/' + word + '/related').text
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/related"', site)
         for i in formatWordsList(discovered):
             for k in i.split(' '):
                 word_set.update({k: 0})
@@ -170,24 +182,28 @@ def genSubDictionary(words_list, full_dictionary, file_location):
     # Generate a full words list
     words = inflexions
     for word in words_list:
-        print('\t' + word)
+        if __name__ == '__main__':
+            print('\t' + word)
         words = getSynonyms(word, words)
     words = sorted(list(words.keys()))
-    print('\t\t' + str(words))
+    if __name__ == '__main__':
+        print('\t\t' + str(words))
 
     # Generate a new dictionary based on the the words list and full dictionary
     with open(file_location, 'w') as dictionary_file:
-        for word in words:
-            if word in full_dictionary:
-                i = 2
-                # Add the word
-                dictionary_file.write(word + ' ' + full_dictionary[word] + '\n')
-                # Add other phonetic variations, if they exist
-                while word + '({0})'.format(i) in full_dictionary:
-                    dictionary_file.write(word + '({0})'.format(i) + ' ' + full_dictionary[word] + '\n')
-                    i += 1
-            else:
-                print("\t\tWARNING: {0} was ignored as it was not found within the master dictionary!".format(word))
+        for phrase in words:
+            phrase = phrase.replace('_', ' ').replace('-', ' ')
+            for word in phrase.split(' '):
+                if word in full_dictionary:
+                    i = 2
+                    # Add the word
+                    dictionary_file.write(word + ' ' + full_dictionary[word] + '\n')
+                    # Add other phonetic variations, if they exist
+                    while word + '({0})'.format(i) in full_dictionary:
+                        dictionary_file.write(word + '({0})'.format(i) + ' ' + full_dictionary[word] + '\n')
+                        i += 1
+                else:
+                    print("\t\tWARNING: {0} was ignored as it was not found within the master dictionary!".format(word))
 
 
 # noinspection PyBroadException
@@ -229,7 +245,8 @@ def main():
     unique_words = getUniqueWords(sentence_set)
 
     for sub_list in unique_words:
-        print(sub_list + ':')
+        if __name__ == '__main__':
+            print(sub_list + ':')
         genSubDictionary(unique_words[sub_list], full_dictionary,
                          str(dictionary_directory) + str(sub_list).replace(' ', '') + '.dict')
 

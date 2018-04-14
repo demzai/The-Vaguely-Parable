@@ -3,7 +3,7 @@
 0, "Sorry, I didn't catch that."
 1, "Once more?"
 2, "Come again?"
-3, "Could you repeat that sorry?"
+3, "Could you repeat that sorry? If you need me to repeat that last bit of narrative again, just say repeat and I'll be happy to do so."
 4, "Pardon?."
 5, "Once again?"
 else, 0, "I do apologise, I'm not very good at this. Could you repeat that once more please."
@@ -11,5 +11,6 @@ else, 0, "I do apologise, I'm not very good at this. Could you repeat that once 
 _#code
 
 #NumIgnores(#+(#NumIgnores, 1))
-#auto
+// #auto
 #&(#prev)
+#forget

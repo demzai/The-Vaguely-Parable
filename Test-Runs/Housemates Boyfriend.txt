@@ -1,0 +1,48 @@
+NEW GAME START!
+Auto Select - auto
+Next Address: - 0/00b
+Auto Select - auto
+Next Address: - 0/01a
+User Select - auto
+Next Address: - 0/01b
+Program Error - list index out of range
+NEW GAME START!
+Auto Select - auto
+Next Address: - 0/00b
+Auto Select - auto
+Next Address: - 0/01a
+User Select - auto
+Next Address: - 0/01b
+Google: ['living room', 0.85674936, '']
+WitAPI: ['living room', 0.5, '']
+Sphinx: ['neither room', 5.269226643223878e-05, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Next Address: - 4/05
+Google: ['leaves the room', 0.89966041, '']
+WitAPI: ['please the room', 0.5, '']
+Sphinx: ['please learn', 0.025174422455596226, '']
+Select: ['leave_phone_booth', ['leave_phone_booth']]
+User Select - leave_phone_booth
+Next Address: - 0/02b1
+Auto Select - auto
+Next Address: - 0/02b2
+Google: ['leaves the building', 0.82921058, '']
+WitAPI: ['leaves the building', 0.5, '']
+Sphinx: ['leave stability', 5.050227375455846e-08, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Next Address: - 4/05
+Google: ['go to the shops', 0.92908084, '']
+WitAPI: ['does the shops', 0.5, '']
+Sphinx: ['due to push out', 1.0756223469140546e-05, '']
+Select: ['look_for_others', ['look_for_others']]
+User Select - look_for_others
+Next Address: - 0/03b
+Google: ['carry on running', 0.9507038, '']
+WitAPI: ["terry i'm running", 0.5, '']
+Sphinx: ['good how are you running i a a a a a the', 0.00011220822698490608, '']
+Select: ['$Creator_Error', [['do_not_go_anywhere', 'run_toward_the_light'], ['do_not_go_anywhere', 'run_toward_the_light'], ['do_not_go_anywhere', 'run_toward_the_light']]]
+User Select - $Creator_Error
+Next Address: - 4/06
+Program Error - list index out of range

@@ -1,25 +1,24 @@
 break the door down
-break the door down
-check if locked
-use door handle
-open the door
-break open
+break the door
 break door
-use door
+break open
+break
+open the door
+open door
 
 climb up
-climb around
-move around
-climb up
+climbing
+climb
+sure
+yes
+ok
+
+climb out
+climbing
 climb
 
-climb out
-drag yourself up
-climb out
-climb up
-
 continue
-I suppose so
+I suppose
 go on then
 continue
 uh-huh
@@ -30,91 +29,77 @@ yup
 ok
 
 dig
-look for another way out
+look for another way
 examine the floor
+examine floor
 dig
 
 do not give up
 pull yourself together
 don't give up
+no
 
 do not go anywhere
-don't do anything
-don't go anywhere
-wait around
-do nothing
-don't move
-stay put
+don't do
+don't go
+nowhere
+nothing
 remain
 wait
 stay
 
 do nothing
-don't do anything
-wait around
-don't move
-do nothing
-stay put
-stay
-wait
+don't do
+nothing
 
 examine rock
-pry the rock out
+pry the rock
+pry rock
 pull the rock
+pull rock
 move the rock
+move rock
+examine the rock
 examine rock
+look at the rock
 look at rock
-pull it out
-pry it out
-look at it
-examine it
-move it
+rock
 dig
 
 feel surroundings
-look at surroundings
-feel surroundings
-feel area around
+surroundings
+feel
 attempt to move
-look around
+explore
 
 go back
-return from whence you came
-leave the way you came in
-go back
+return
+leave
 
 go back into the phone booth
-go back into the telephone box
-go back into the phone booth
-return to the telephone box
-return to the phone booth
-get back in
-go back
+telephone booth
+enter
+go into
+go back into
 
 go through an open door
-go through an open door
-walk towards the door
-go through the door
-run through door
-try another door
-go through door
-try the door
-open a door
+through
+towards
+door number
+open door
+use a door
+use door
+try another
+try a different
 try a door
 try door
 
 go up stairs
-traverse the stairs
-climb the stairs
-go up the stairs
-climb stairs
-go upstairs
+head up
 stairs
+upstairs
+climb
 
-leave phone booth
-leave the telephone box
-leave the phone booth
-leave telephone box
 leave phone booth
 step out
 get out
@@ -122,33 +107,34 @@ leave
 exit
 
 look around
-scope out the situation
 search the place
 look for others
 look around
 explore
 
 look back
-look behind you
-look back
+look behind
 
 look for others
-check the other telephone boxes
-check the other phone booths
-see if anyone else is around
-look for others
+others
+anyone else
+look for
+explore
 search
 look
 
 pry rock
-pull the rock out
+pry the rock
 pry rock
+pull the rock
+pull rock
+move the rock
+move rock
+rock
 dig
 
 pull string
-check out the string
-examine string
-pull string
+string
 
 quit
 sod off
@@ -157,91 +143,87 @@ not now
 later
 quit
 no
+nine
 
 reply
-ask for help
-shout down
-call back
+ask
+shout
+call
 reply
+say
 
 run away from the light
-run away from the light
-go around the light 
-avoid the light
-run away
-go hide
+move away
+go around
+avoid
 hide
+dark
 
 run toward the light
-go towards the light
-run toward the light
-walk into the light
-enter the light
-go to light
-run toward
+towards
+toward
+into
+enter
 light
 
 sit in despair
-don't care any more
-sit in despair
+don't care
+sit
+despair
 do nothing
 give up
 sleep
 
 stay in phone booth
-don't leave the telephone box
-don't leave the phone booth
-stayed in the telephone box
-stays in the telephone box
-stayed in the phone booth
-stay in the telephone box
-stays in the phone booth
-stay in the phone booth
-stay in telephone box
-stayed in phone booth
-stay in phone booth
-stay where you are
-don't do anything
-don't go anywhere
 don't leave
+stayed
+stays
+stay
+don't do
+don't go
 do nothing
 close door
 don't move
-stay put
 remain
 wait
-stay
 
 stay in room
-don't go anywhere
-stay in room
+don't go
+stay
 don't move
 remain
+don't leave
 
 stop climbing
-stop climbing
+stop
 do nothing
 give up
 fall
 jump
-stop
+
 try another door
-use a different door
-go through open door
-try another door
+through
+towards
+door number
+open door
+use a door
+use door
+try another
+try a different
+try a door
+try door
+other door
 
 wait around
 don't do anything
 time passes
-wait around
+wait
 
 repeat
 say that again
 repeat
 
 restart
-start again from the beginning
-start again
 restart
 reset
 

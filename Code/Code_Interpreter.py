@@ -67,7 +67,6 @@ def interpretParameters(parameters, is_segment=False):
     :param is_segment: bool
     :return:
     """
-    # print('\t\t' + str(parameters))  # -----------------------------------------------------------------------------
     # If nothing to do, do nothing
     if parameters is None or parameters.__len__() is 0:
         return None
@@ -111,12 +110,10 @@ def interpretCode(code):
     :param code:
     :return:
     """
-    # print(str(code) + ' - ' + str(type(code)))  # ------------------------------------------------------------------
     if isinstance(code, str):
         code = bt.convertCodeToList(code)
     elif not isinstance(code, list):
         raise ValueError("ERROR - INVALID CODE: " + str(code))
-    # print('\t' + str(code))  # -------------------------------------------------------------------------------------
     # If the code is poorly formatted, then raise an exception
     """
     # Interprets the code and throws errors when something obvious is wrong
@@ -132,7 +129,6 @@ def interpretCode(code):
 
     # Interpret parameters first
     parameters = interpretParameters(code[1], code[0] == '#segment')
-    # print('\t\t\t' + str(parameters))  # ---------------------------------------------------------------------------
 
     # Then perform the function
     # If code name starts with a capital letter, then it refers to a variable
@@ -179,7 +175,6 @@ def interpretCode(code):
         # Otherwise, get the function and perform it
         else:
             result = glbl.callFunction(code[0], parameters)
-            # print('\t\t\t' + str(code) + ' - ' + str(parameters) + ' - ' + str(result))  # -------------------------
             return result
 
 

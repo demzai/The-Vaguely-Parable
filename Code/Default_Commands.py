@@ -9,6 +9,7 @@ import Globals as glbl
 import Database_Management as dm
 import Code_Interpreter as ci
 import Extract_Narrative as en
+import traceback as t
 
 
 # ///////////////////////////////////////////////////////
@@ -32,6 +33,7 @@ def addFunctionsToMap():
         '#/': [division, False],
         '#%': [remainder, False],
         '#prev': [getPreviousAddress, False],
+        '#curr': [getCurrentAddress, False],
         '#&': [reference, False],
         '#forget': [popAddressStack, False],
         '#code': [getLastResult, False],
@@ -134,7 +136,9 @@ def listSelect(line_contents):
 
         # Ignore faulty cases
         if len(case) is not 2 and len(case) is not 3:
-            print("WARNING - FAULTY CASE: " + str(case))
+            with open("log_file.txt", "a") as log_file:
+                log_file.write(str(t.format_exc()))
+                log_file.write("WARNING - FAULTY CASE: " + str(case) + '\n')
             continue
 
         # If a default case has been presented at the end:
@@ -160,10 +164,14 @@ def listSelect(line_contents):
 
     # Resolve based on the selection, defaulting to None if no valid selection was made
     if selected_case is -1:
-        print('WARNING - NO VALID CASES FOUND')
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('WARNING - NO VALID CASES FOUND\n')
         return None
     elif len(listSelect.stack[selected_case]) is 3 and code_type != 'Variable':
-        print('WARNING - INVALID CASE DETECTED: ' + str(listSelect.stack[selected_case]))
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('WARNING - INVALID CASE DETECTED: ' + str(listSelect.stack[selected_case]) + '\n')
         return None
     else:
         # If a valid triplet found, replace the variable with the presented contents
@@ -334,6 +342,15 @@ def remainder(variable1, variable2):
 def getPreviousAddress():
     """
     Gets the address of the last narrative element visited
+    :return:
+    """
+    return glbl.address_stack[-getPreviousAddress.count-1]
+
+
+# #curr
+def getCurrentAddress():
+    """
+    Gets the address of the current narrative element
     :return:
     """
     return glbl.address_stack[-getPreviousAddress.count-1]

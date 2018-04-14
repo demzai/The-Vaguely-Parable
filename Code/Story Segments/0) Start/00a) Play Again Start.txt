@@ -1,4 +1,5 @@
 // Play Again Start:
 As the mists of time disperse, we find ourselves observing a telephone booth. A telephone booth with the number 4 2 7 etched on the outside...
 
+#delay(1)
 #auto

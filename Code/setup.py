@@ -28,6 +28,6 @@ setup(
     author_email='',
     description='',
     executables=executables,
-    requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'lxml', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32',
+    requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32',
               'num2words', 'requests']
 )

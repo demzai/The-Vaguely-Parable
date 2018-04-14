@@ -3,3 +3,4 @@ She looked up and, slightly perplexed, couldn't see the top either.
 Indeed, no matter where Vaguely looked, all she could see was more mountain to climb.
 
 Undeterred, Vaguely decided to continue to climb.
+#ignore("do_nothing")

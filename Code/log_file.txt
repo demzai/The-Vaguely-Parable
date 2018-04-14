@@ -1,402 +1,48 @@
+
+
 NEW GAME START!
 Auto Select - auto
+Next Address: - 0/00b
+
 Auto Select - auto
-Sphinx: ['stay in the phone booth', 0.0020348801676677037, '']
-Google: ['stay in the phone Booth', 0.94892138, '']
-Select: ['$Creator_Error', ['stay_in_phone_booth', 'do_nothing']]
-User Select - $Creator_Error
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
+Next Address: - 0/01a
+
 User Select - auto
-Sphinx: ['stay in', 0.008746957829584944, '']
-Google: ['stay', 0.8629508, '']
-Select: ['$Creator_Error', ['do_nothing', 'stay_in_phone_booth']]
-User Select - $Creator_Error
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['stay home a a', 0.050069307535949556, '']
-Google: ['stay', 0.86269623, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.09725001610014058, '']
-Google: ['sure', 0.78637993, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['sure the oh oh oh', 0.04821662245972816, '']
-Google: ['sure', 0.79782057, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['sure', 0.16904234268693433, '']
-Google: ['sure', 0.85419762, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['remain if', 0.006009024632735051, '']
-Google: ['remain', 0.88978463, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure the', 0.04465627943984313, '']
-Google: ['sure', 0.70457703, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['do nothing', 0.018544867574428456, '']
-Google: ['do nothing', 0.97110075, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure and i i i i the', 0.11500833325842996, '']
-Google: ['sure', 0.77876258, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['remain in', 0.0016807073835476115, '']
-Google: ['remain', 0.83251047, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure the oh oh oh', 0.06247296172674184, '']
-Google: ['sure', 0.85342079, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['do nothing', 0.03313732708972711, '']
-Google: ['do nothing', 0.97110075, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['show', 0.05812090913189787, '']
-Google: ['sure', 0.83794439, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['do nothing', 0.06074778403933024, '']
-Google: ['do nothing', 0.97110075, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.12990698685595498, '']
-Google: ['sure', 0.88757896, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['stay', 0.04967030496476615, '']
-Google: ['stay', 0.85370517, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['shore of a a you a', 0.10664396287638195, '']
-Google: ['sure', 0.789487, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['vaguely decide to stay inside of a telephone booth', 2.9043643651968725e-05, '']
-Google: ['vaguely decides to stay inside of her telephone Booth', 0.90952194, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.4939199780555167, '']
-Google: ['sure', 0.91303545, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['them but stay inside', 0.0008409143217935549, '']
-Google: ['stay inside', 0.92917567, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['short i i oh i oh', 0.061401351434544664, '']
-Google: ['sure', 0.8594718, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['may be stay indoors', 0.12706720842570343, '']
-Google: ['maybe stay indoors', 0.90394902, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.060596086696290415, '']
-Google: ['sure', 0.85070521, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['sure', 0.12078477819387652, '']
-Google: ['sure', 0.72608006, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['sure', 0.05433223338506398, '']
-Google: ['sure', 0.91217685, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-Sphinx: ['short of a no oh oh oh i', 0.048255215666360256, '']
-Google: ['sure', 0.81335592, '']
-Select: ['quit', ['quit']]
-User Select - quit
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ["don't go anywhere", 0.003254671569870772, '']
-Google: ["don't go anywhere", 0.95397639, '']
-Select: ['$Creator_Error', ['stay_in_phone_booth', 'leave_phone_booth']]
-User Select - $Creator_Error
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-Sphinx: ["don't go anywhere", 0.0016693160274478926, '']
-Google: ["don't go anywhere", 0.97110075, '']
-Select: ['$Creator_Error', ['leave_phone_booth', 'stay_in_phone_booth']]
-User Select - $Creator_Error
-Auto Select - auto
-Sphinx: ['stay', 0.004203094386358479, '']
-Google: ['stay', 0.86052215, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.08749423405403965, '']
-Google: ['sure', 0.839329, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Sphinx: ['sure', 0.11040990610958258, '']
-Google: ['sure', 0.84328127, '']
-Select: ['$User_Error', []]
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['stay in', 0.01714461225366607, '']
-Google: ['stay', 0.86190498, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure', 0.06888546354574064, '']
-Google: ['sure', 0.84733737, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['short a', 0.09341766758868664, '']
-Google: ['sure', 0.90523553, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['sure', 0.03487486180175577, '']
-Google: ['sure', 0.87389207, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ["don't go anywhere", 0.0007403884795484735, '']
-Google: ["don't go anywhere", 0.96166325, '']
-Select: ['$Creator_Error', ['leave_phone_booth', 'stay_in_phone_booth']]
-User Select - $Creator_Error
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-Sphinx: [None, 0.15048083739188095, '']
-Google: ['stay', 0.81682765, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-Sphinx: ['thing', 0.05433223338506398, '']
-Google: ['stay', 0.77564633, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-User Select - $Silence
-Auto Select - $Ignore
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['we remain', 0.0030807867603416593, '']
-Google: ['remain', 0.85796016, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['short of', 0.002340005140976733, '']
-Google: ['sure', 0.78884834, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-User Select - $Silence
-Auto Select - auto
-Sphinx: ['sure and you oh', 0.05072453422764444, '']
-Google: ['sure', 0.73478585, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['ooh', 0.0006333080237317126, '']
-Google: ['', 0, 'Bad Recognition']
-Select: ['$Ignore', []]
-User Select - $Ignore
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['so', 0.13034947370240804, '']
-Google: ['', 0, 'Bad Recognition']
-Select: ['$Ignore', []]
-User Select - $Ignore
-Auto Select - auto
-Sphinx: ['oh oh it a the day you', 0.011713474123981847, '']
-Google: ['stay', 0.86203194, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['stay in', 0.031232321084842207, '']
-Google: ['stay', 0.76707739, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['the day', 0.0023616350404093464, '']
-Google: ['ok', 0.97110075, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['then', 0.003750569925970348, '']
-Google: ['ok', 0.97110075, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-Sphinx: ['yet', 0.022486506295364972, '']
-Google: ['yes', 0.97110075, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['leave', 0.012049740138296213, '']
-Google: ['leave', 0.91555518, '']
+Next Address: - 0/01b
+
+Cleaning up: 6304
+Google: ['leaving room', 0.86435413, '']
+WitAPI: ['living room', 0.5, '']
+Sphinx: ['leading room', 0.0045033835379780195, '']
 Select: ['leave_phone_booth', ['leave_phone_booth']]
 User Select - leave_phone_booth
+Next Address: - 0/02b1
+
 Auto Select - auto
-Sphinx: ['get back into the fund is', 1.975002883018396e-05, '']
-Google: ['get back into the phone Booth', 0.94017929, '']
-Select: ['go_back_into_the_phone_booth', ['go_back_into_the_phone_booth']]
-User Select - go_back_into_the_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['the pay yes', 0.0001570862962863772, '']
-Google: ['ok yes', 0.97110075, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ['the leave', 0.021251104261711624, '']
-Google: ['leave', 0.92073798, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Auto Select - auto
-Sphinx: ['wake up to', 0.000558884270609361, '']
-Google: ['wake up', 0.93673682, '']
+Next Address: - 0/02b2
+
+Cleaning up: 832
+Google: ['go outside', 0.9210453, '']
+WitAPI: ['go outside', 0.5, '']
+Sphinx: ['go outside', 0.03369543235022638, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Next Address: - 4/05
+
+Cleaning up: 6460
+Google: ['check the market', 0.95069981, '']
+WitAPI: ['check the market', 0.5, '']
+Sphinx: ['check the market', 0.0010928236725052402, '']
 Select: ['look_for_others', ['look_for_others']]
 User Select - look_for_others
-Sphinx: ['wait and while the', 1.2674875593136472e-06, '']
-Google: ['wake up', 0.96833903, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Auto Select - auto
-User Select - auto
-NEW GAME START!
-Auto Select - auto
-Auto Select - auto
-User Select - auto
-Sphinx: ["don't go anywhere", 0.0003049879347328236, '']
-Google: ["don't go anywhere", 0.97110075, '']
-Select: ['$Creator_Error', ['stay_in_phone_booth', 'leave_phone_booth']]
+Next Address: - 0/03b
+
+Cleaning up: 6632
+Cleaning up: 9492
+Google: ['keep running', 0.93281442, '']
+WitAPI: ['keep running', 0.5, '']
+Sphinx: ['if you run a move thing', 1.638282097871937e-05, '']
+Select: ['$Creator_Error', [['do_not_go_anywhere', 'run_toward_the_light'], ['do_not_go_anywhere', 'run_toward_the_light'], ['do_not_go_anywhere', 'run_toward_the_light']]]
 User Select - $Creator_Error
-Auto Select - auto
-Sphinx: ['stay in the phone booth', 0.018130406577977175, '']
-Google: ['stay in the phone Booth', 0.82215995, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Auto Select - auto
-Auto Select - auto
-Sphinx: ['sure and i', 0.048028922128878465, '']
-Google: ['sure', 0.83981073, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Auto Select - auto
-Auto Select - auto
-User Select - auto
+Next Address: - 4/06
+

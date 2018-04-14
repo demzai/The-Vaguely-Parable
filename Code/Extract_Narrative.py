@@ -60,7 +60,6 @@ def cleanFileContents(text):
     for i in range(0, len(lines)):
         # Remove comments and excess whitespace...
         # If a code
-        # print(pc.IYellow + str(isCode[i]) + ' - ' + str(lines[i]) + pc.Reset)  # -----------------------------------
         if isCode[i] == 'Code' or isCode[i] == 'Variable' or \
                 (isCode == 'Segment' and len(lines[i]) >= 2 and lines[i][:2] == '//'):
             lines[i] = re.sub("\s*//.*", "", lines[i])
@@ -101,7 +100,6 @@ def cleanFileContents(text):
         # Ignore empty lines
         if lines[i].strip() is not "":
             sentence = sentence + [[isCode[i], lines[i]]]
-        # print(pc.IGreen + str(isCode[i]) + ' - ' + str(lines[i]) + pc.Reset)  # ------------------------------------
     return sentence
 
 

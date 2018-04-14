@@ -3,10 +3,13 @@
 """
 
 # Dependencies
+import multiprocessing as mp
+mp.freeze_support()
 import Database_Management as dm
 import State_Tracker as st
 import Find_Files as ff
 import Globals as glbl
+import traceback as t
 import Listener
 import Reader
 import time
@@ -45,7 +48,7 @@ def main():
     :return:
     """
     with open("log_file.txt", "a") as log_file:
-        log_file.write('NEW GAME START!' + '\n')
+        log_file.write('\n\nNEW GAME START!' + '\n')
     # Begin the game
     initialise()
     listener = Listener.ListenerObj()
@@ -72,7 +75,7 @@ def main():
 
             # Get the users narrative options
             types = st.getNarrativeOptions()
-            print(str(list(glbl.next_addresses.keys())))
+            # print(str(list(glbl.next_addresses.keys())))
 
             # If the reader is reading, then ignore 'auto' preferences
             # Otherwise, default to auto if it is available
@@ -127,10 +130,10 @@ def main():
             reader.checkReaderStatus()
     except Exception as e:
         with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
             log_file.write('Program Error - {0}'.format(e) + '\n')
-        print('{0}'.format(e))
     finally:
-        print('AN ERROR HAS OCCURRED! THIS GAME IS NOW CLOSING!')
+        print('\n\nAN ERROR HAS OCCURRED! THIS GAME IS NOW CLOSING!\n\n')
         time.sleep(5)
 
 

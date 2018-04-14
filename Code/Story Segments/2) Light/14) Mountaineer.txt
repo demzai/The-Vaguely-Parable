@@ -2,3 +2,5 @@ Stepping through the door, Vaguely snapped to attention!
 For some inexplicable reason, she found herself clinging on for dear life onto the side of a sheer cliff face.
 
 Determined to continue fighting, Vaguely decided to continue the climb.
+
+#ignore("do_nothing")

@@ -81,7 +81,6 @@ def getStoryDatabase(files, folders):
 
         # Format addresses appropriately
         for entry in csv_lines:
-            # print(csv_lines)  # ------------------------------------------------------------------------------------
             entry[0] = convertToGlobalAddress(entry[0], database[0])
             entry[1] = convertToGlobalAddress(entry[1], database[0])
         lines = lines + csv_lines
@@ -111,7 +110,6 @@ def parseDatabaseEntry(entry):
     """
     # Treat as any other text; clean it and deduce what type of input it is
     assessed = en.cleanFileContents(entry[0])[0]
-    # print('\t' + str(entry) + ' - ' + str(assessed))  # ------------------------------------------------------------
 
     # If text-only, then assume it is an address and return it
     if assessed[0] == 'Text':
@@ -120,7 +118,6 @@ def parseDatabaseEntry(entry):
     # If code-only, then interpret it and return the result as a string
     elif assessed[0] == 'Variable' or assessed[0] == 'Code':
         code_results = ci.interpretCode(assessed[1])
-        # print('\t\t' + str(code_results))  # -----------------------------------------------------------------------
         if isinstance(code_results, list):
             return_map = {}
             for result in code_results:

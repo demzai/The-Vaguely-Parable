@@ -4,11 +4,11 @@ The grammar file is also constructed by finding a list of synonyms for each uniq
 """
 
 # Dependencies:
-# import lxml.html as lh
 import requests as req
 import re
 import num2words as nw
 import os
+import traceback as t
 # import pocketsphinx
 
 
@@ -60,7 +60,7 @@ def formatWordsList(words):
             for num in numbers:
                 word.replace(num, nw.num2words(num))
             # Remove underscores, dashes and apostrophes
-            word = str(word).replace('_', ' ').replace('-', ' ').replace('\'', '')
+            # word = str(word).replace('_', ' ').replace('-', ' ').replace('\'', '')
             return_list += [word]
     return return_list
 
@@ -72,16 +72,6 @@ def getSynonyms(word):
     :return:
     """
     word_set = {formatWordsList([word])[0]: 0}
-
-    # # Get synonyms from http://thesaurus.com
-    # try:
-    #     site = lh.parse('http://thesaurus.com/browse/' + word)
-    #     for i in range(10):
-    #         discovered = site.xpath('//div[' + str(i) + ']/div[2]/div[3]/div/ul/li/a/span[1]/text()')
-    #         for j in formatWordsList(discovered):
-    #             word_set.update({j: 0})
-    # except OSError as e:
-    #     print('Failed to load site 1 HTTP resource, {0}'.format(e))
 
     # Get "narrower" words from http://powerthesaurus.org
     try:
@@ -190,6 +180,8 @@ def getUniqueWords(sentence_sets):
     unique_words = {}
     for sentences in sentence_sets:
         for sentence in sentences:
+            # Include phrases
+            unique_words.update({sentence.replace(' ', '_'): []})
             for word in sentence.split(' '):
                 unique_words.update({word: []})
     return unique_words
@@ -207,17 +199,15 @@ def getSynonymsForAllWords(unique_words):
         if word is '':
             continue
         # Get synonyms
-        print(word)
+        if __name__ == '__main__':
+            print(word)
         # Odd error where the site formatting changes and gives 0 results back... just try it a second time to be sure
-        try1 = getSynonyms(word)
-        # try2 = getSynonyms(word)
-        # if len(try2) > len(try1):
-        #     try1 = try2
+        synonyms = getSynonyms(word)
 
         # Determine if each synonym / phrase is fully described from the dictionary, if not then ignore it
         word_list = []
         dictionary = getDictionary()
-        for phrase in try1:
+        for phrase in synonyms:
             is_good = True
             for phrase_word in phrase.split(' '):
                 if phrase_word not in dictionary:
@@ -229,7 +219,8 @@ def getSynonymsForAllWords(unique_words):
                 word_list += [phrase]
 
         # Store the result
-        print(str(word_list))
+        if __name__ == '__main__':
+            print(str(word_list))
         unique_words[word] += word_list
     return unique_words
 
@@ -255,6 +246,7 @@ def genGrammarsForWords(unique_words):
         rule = '<' + word + '> = ( '
         regex = '('
         for synonym in synonyms:
+            synonym = synonym.replace('_', ' ')
             rule += str(synonym) + ' | '
             regex += str(synonym) + '|'
         rule = rule[:-3] + ' );'
@@ -358,7 +350,8 @@ def cleanupGrammarFile(grammar_name):
     :param grammar_name:
     :return:
     """
-    print('Cleaning up: ' + str(grammar_name))
+    with open("log_file.txt", "a") as log_file:
+        log_file.write('Cleaning up: ' + str(grammar_name) + '\n')
     # Remove the grammar file (.gram)
     try:
         os.remove(grammar_directory + str(grammar_name) + '.gram')
@@ -388,7 +381,8 @@ def main():
     inflexion_rules['inflexions'][0] = inflexion_rules['inflexions'][0].replace('( ', '').replace(' )', '')
     inflexion_rules['inflexions'][1] = inflexion_rules['inflexions'][1].replace('((', '').replace('))', '')
     inflexion_rules['inflexions'][1] = '[{0}]? ?'.format(inflexion_rules['inflexions'][1])
-    print(inflexion_rules)
+    if __name__ == '__main__':
+        print(inflexion_rules)
 
     sentence_sets = getSentences(grammar_directory + "Selection Texts.txt")
     unique_words = getUniqueWords(sentence_sets)
@@ -401,7 +395,8 @@ def main():
     for rule in sentence_set_grammar_rules:
         if rule == '':
             continue
-        print('Generating: ' + str(rule) + '.gram')
+        if __name__ == '__main__':
+            print('Generating: ' + str(rule) + '.gram')
         sentence_rule = {rule: sentence_set_grammar_rules[rule]}
         writeGrammarFile(grammar_directory + str(rule) + ".gram", str(rule), sentence_rule, ['words'])
 

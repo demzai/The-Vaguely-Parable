@@ -2,9 +2,9 @@
 ###
 #CreatorBugs
 
-0, "I'm terribly sorry old bean, but you've discovered a bug! I'm not sure what its exact species it is, but its of the "lazy creator us didn't test enough us" family. If you try saying your option again differently then it may go away. Apologies for that!"
+0, "I'm terribly sorry old bean, but you've discovered a bug! I'm not sure what its exact species it is, but its of the lazycreator-us-didn'ttest-enough-us family. If you try saying your option again differently then it may go away. Apologies for that!"
 
-1, "By jove! Thats another bug! Try saying your option in a different way again."
+1, "By jove! Thats another bug! Try saying your option in a different way again. If you're unsure of where you are in the story, just say repeat and I'll repeat the last bit."
 
 2, "Well this is just unacceptable! Please inform the game creator just how sloppy this entrail of a game is. You can also try saying your option again in a different manner."
 
@@ -14,5 +14,6 @@ else, "Could you say that again, but using different words? The creator apologis
 _#code
 
 #CreatorBugs(#+(#CreatorBugs, 1))
-#auto
+// #auto
 #&(#prev)
+#forget

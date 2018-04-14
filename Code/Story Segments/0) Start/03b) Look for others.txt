@@ -6,5 +6,5 @@ Perhaps someone had just opened a door?
 
 Overjoyed at the possible sign of life, Vaguely decided to run towards the light.
 
-
+#ignore("do_nothing")
 // Going around the light?
