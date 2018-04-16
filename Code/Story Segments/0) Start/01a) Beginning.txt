@@ -9,5 +9,6 @@ No one had shown up to give her instructions, call a meeting, or even to give a 
 Never in all her years at the company had this happened, this... complete isolation.
 Something was very clearly wrong.
 Shocked, frozen solid, Vaguely found herself unable to speak for the longest time.
-#delay(1)
 But as she regained her senses, her door creaked open as though inviting her outside.
+
+#auto

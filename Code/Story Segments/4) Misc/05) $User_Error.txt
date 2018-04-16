@@ -2,12 +2,12 @@ I'm afraid I don't know how to respond to #IHeard
 
 ###
 "#NumErrors"
-0, "When I say 'Vaguely decides to', I am suggesting an available option. Have you tried using that?"
-1, "meaning I unfortunately don't know which path to select. Try again perhaps?"
-2, "Apologies if I am mishearing you. We machines find conversation quite the troublesome task. If you say, 'repeat', then I can repeat the last bit of the narrative."
-3, "if you could tell me what Vaguely might decides to do, based on the suggestion I mentioned, then I might be able to select a narrative."
+0, "meaning I unfortunately don't know which path to select. Try again perhaps?"
+1, "I suggest an available option after saying 'Vaguely decides to'. Have you tried using that?"
+2, "Apologies if I am mis-hearing you. We machines find conversation quite the troublesome task. If you say, 'repeat', then I can repeat the last bit of the narrative."
+3, "if you could tell me what Vaguely decides to do, based on the suggestion I mentioned, then I might be able to select a narrative."
 4, "as it isn't on my list of available path choices. What does Vaguely decide to do?"
-else, 0, "I must beg for your forgiveness. I'm sure that my creator must have a hand in my incompetence. However, I'm sure that if you think about what Vaguely would do in this situation, we can resolve this impass?"
+else, 0, "I must beg for your forgiveness. I'm sure that my creator must have a hand in my incompetence. However, I'm sure that if you think about what Vaguely would do in this situation, we might be able to resolve this impass."
 ###
 _#code
 

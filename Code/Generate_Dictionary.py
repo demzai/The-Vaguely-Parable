@@ -73,7 +73,7 @@ def getDictionary(dictionary_path=ps.get_model_path()+'\\cmudict-en-us.dict', di
         dictionary = dict(word_list)
     else:
         dictionary.update(dict(word_list))
-    print(len(dictionary))
+    # print(len(dictionary))
     return dictionary
 
 

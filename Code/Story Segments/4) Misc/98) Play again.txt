@@ -2,3 +2,6 @@
 // Ending narrator voice "play again?"
 
 Would you like to play again?
+#ignore("restart")
+#ignore("wake_up")
+#ignore("do_nothing")

@@ -18,8 +18,8 @@ climbing
 climb
 
 continue
-I suppose
-go on then
+suppose
+go on
 continue
 uh-huh
 indeed
@@ -40,16 +40,14 @@ don't give up
 no
 
 do not go anywhere
-don't do
-don't go
+don't
 nowhere
 nothing
 remain
 wait
-stay
 
 do nothing
-don't do
+don't
 nothing
 
 examine rock
@@ -107,18 +105,14 @@ leave
 exit
 
 look around
-search the place
-look for others
-look around
+search
+look
 explore
 
 look back
 look behind
 
 look for others
-others
-anyone else
-look for
 explore
 search
 look
@@ -135,6 +129,10 @@ dig
 
 pull string
 string
+rope
+cord
+cable
+pull
 
 quit
 sod off
@@ -153,9 +151,9 @@ reply
 say
 
 run away from the light
-move away
+leave
+away
 go around
-avoid
 hide
 dark
 
@@ -164,10 +162,8 @@ towards
 toward
 into
 enter
-light
 
 sit in despair
-don't care
 sit
 despair
 do nothing
@@ -175,24 +171,19 @@ give up
 sleep
 
 stay in phone booth
-don't leave
+don't
 stayed
 stays
 stay
-don't do
-don't go
 do nothing
 close door
-don't move
 remain
 wait
 
 stay in room
-don't go
+don't
 stay
-don't move
 remain
-don't leave
 
 stop climbing
 stop
@@ -205,11 +196,10 @@ try another door
 through
 towards
 door number
-open door
+another door
+different door
 use a door
 use door
-try another
-try a different
 try a door
 try door
 other door
@@ -223,7 +213,6 @@ repeat
 say that again
 repeat
 
-restart
 restart
 reset
 

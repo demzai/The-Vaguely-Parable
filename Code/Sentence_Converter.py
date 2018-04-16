@@ -8,8 +8,8 @@ import requests as req
 import re
 import num2words as nw
 import os
-import traceback as t
-# import pocketsphinx
+import pocketsphinx
+import time as t
 
 
 # Global Values
@@ -83,23 +83,23 @@ def getSynonyms(word):
         print('Failed to load site 2 HTTP resource, {0}'.format(e))
 
     # Get synonyms from http://powerthesaurus.org
-    if len(word_set) is 0:
-        try:
-            site = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
-            discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site)
-            for i in formatWordsList(discovered):
-                word_set.update({i: 0})
-        except OSError as e:
-            print('Failed to load site 2 HTTP resource, {0}'.format(e))
-
-    # Get related words from http://powerthesaurus.org
+    # if len(word_set) is 0:
     try:
-        site = req.get('http://powerthesaurus.org/' + word + '/related').text
-        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/related"', site)
+        site = req.get('http://powerthesaurus.org/' + word + '/synonyms').text
+        discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/synonyms"', site)
         for i in formatWordsList(discovered):
             word_set.update({i: 0})
     except OSError as e:
         print('Failed to load site 2 HTTP resource, {0}'.format(e))
+
+    # # Get related words from http://powerthesaurus.org
+    # try:
+    #     site = req.get('http://powerthesaurus.org/' + word + '/related').text
+    #     discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/related"', site)
+    #     for i in formatWordsList(discovered):
+    #         word_set.update({i: 0})
+    # except OSError as e:
+    #     print('Failed to load site 2 HTTP resource, {0}'.format(e))
 
     return list(word_set.keys())
 
@@ -151,10 +151,9 @@ def getDictionary():
     Extracts the model dictionary, allowing testing for word inclusion
     :return:
     """
-    # dictionary = readFile(pocketsphinx.get_model_path() + '/cmudict-en-us.dict')
-    dictionary = readFile('C:/Program Files/Python35/Lib/site-packages/speech_recognition/pocketsphinx-data/en-US' + \
-                          '/pronounciation-dictionary.dict')
+    dictionary = readFile(pocketsphinx.get_model_path() + '/cmudict-en-us.dict')
     return re.sub(' .*\n', '\n', dictionary).split('\n')
+dictionary = getDictionary()
 
 
 def getSentences(file_locale):
@@ -179,7 +178,7 @@ def getUniqueWords(sentence_sets):
     """
     unique_words = {}
     for sentences in sentence_sets:
-        for sentence in sentences:
+        for sentence in sentences[1:]:
             # Include phrases
             unique_words.update({sentence.replace(' ', '_'): []})
             for word in sentence.split(' '):
@@ -194,34 +193,39 @@ def getSynonymsForAllWords(unique_words):
     :param unique_words:
     :return:
     """
-    # Get synonyms for each word
+
+    list_of_words = list(unique_words.keys())
     for word in unique_words:
-        if word is '':
-            continue
+        if word is '' or word is 'go' or word is 'do':
+            return []
         # Get synonyms
         if __name__ == '__main__':
             print(word)
         # Odd error where the site formatting changes and gives 0 results back... just try it a second time to be sure
         synonyms = getSynonyms(word)
 
+    for word in unique_words:
+        synonyms = unique_words[word]
         # Determine if each synonym / phrase is fully described from the dictionary, if not then ignore it
         word_list = []
-        dictionary = getDictionary()
+        # dictionary = getDictionary()
         for phrase in synonyms:
+            if phrase == 'go' or phrase == 'do' or phrase == 'to':
+                continue
             is_good = True
-            for phrase_word in phrase.split(' '):
+            for phrase_word in phrase.replace('_', ' ').replace('-', ' ').split(' '):
                 if phrase_word not in dictionary:
                     is_good = False
                     print('WARNING: "{0}" has been ignored, '.format(phrase) + \
                           '"{0}" was not found in the word model.'.format(phrase_word))
                     break
             if is_good is True:
-                word_list += [phrase]
+                word_list += [phrase.replace('_', ' ').replace('-', ' ')]
 
         # Store the result
+        unique_words[word] += word_list
         if __name__ == '__main__':
             print(str(word_list))
-        unique_words[word] += word_list
     return unique_words
 
 
@@ -233,25 +237,24 @@ def genGrammarsForWords(unique_words):
     """
     word_grammar_rules = {}
     for word in unique_words:
-        # Create a single, unified list of synonyms
-        synonyms = []
-
-        for i in unique_words[word]:
-            synonyms += [i]
+        # Get the synonyms list
+        synonyms = unique_words[word]
 
         if len(synonyms) is 0:
             continue
 
+        print('\t' + str(word))
         # Create a grammar rule
         rule = '<' + word + '> = ( '
-        regex = '('
+        regex = '((^| )'
         for synonym in synonyms:
-            synonym = synonym.replace('_', ' ')
+            synonym = synonym.replace('_', ' ').replace('-', ' ')
             rule += str(synonym) + ' | '
-            regex += str(synonym) + '|'
+            regex += str(synonym) + '|(^| )'
         rule = rule[:-3] + ' );'
-        regex = regex[:-1] + ')'
+        regex = regex[:-6] + ')'
         word_grammar_rules.update({word: [rule, regex]})
+        print('\t\t' + str(regex))
     return word_grammar_rules
 
 
@@ -364,7 +367,7 @@ def cleanupGrammarFile(grammar_name):
         pass
     # Remove the dictionary file (.dict)
     try:
-        os.remove(dictionary_directory + str(grammar_name) + '.fsg')
+        os.remove(dictionary_directory + str(grammar_name) + '.dict')
     except Exception:
         pass
 
@@ -374,6 +377,7 @@ def main():
     Main process for generating grammar files
     :return:
     """
+    t1 = t.time()
     inflexion_sets = getSentences(grammar_directory + "Inflexions.txt")
     inflexion_grammar = genGrammarsForWords(inflexions)
     inflexion_rules = genGrammarsForSentenceSets(inflexion_sets, inflexion_grammar)
@@ -399,6 +403,9 @@ def main():
             print('Generating: ' + str(rule) + '.gram')
         sentence_rule = {rule: sentence_set_grammar_rules[rule]}
         writeGrammarFile(grammar_directory + str(rule) + ".gram", str(rule), sentence_rule, ['words'])
+
+    # Time how long the pain lasts for
+    print(str(t.time()-t1))
 
 
 if __name__ == '__main__':
