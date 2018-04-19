@@ -17,7 +17,7 @@ import pocketsphinx as ps
 # Globals:
 grammar_directory = "Grammars/"
 dictionary_directory = "Dictionaries/"
-confidence_threshold = 1*10**-5
+confidence_threshold = 0.0
 inflexions = {
     "huh": ["huh"],
     "like": ["like"],
@@ -69,13 +69,25 @@ def writeFile(file_location, file_contents):
     return
 
 
-def getDictionary():
+# noinspection SpellCheckingInspection,PyTypeChecker
+def getDictionary(dictionary_path=ps.get_model_path()+'\\cmudict-en-us.dict', dictionary=None):
     """
-    Extracts the model dictionary, allowing testing for word inclusion
+    Reads a given dictionary file and generates a map of words to their phonemes
+    :param dictionary_path:
+    :param dictionary
     :return:
     """
-    dictionary = readFile(ps.get_model_path() + '/cmudict-en-us.dict')
-    return re.sub(' .*\n', '\n', dictionary).split('\n')
+    dictionary_contents = readFile(dictionary_path)
+    word_list = re.findall('(^|\n)([-a-zA-Z.\'()0-9]+) (.*)', dictionary_contents)
+    for i in range(len(word_list)):
+        word_list[i] = word_list[i][1:]
+
+    if dictionary is None:
+        dictionary = dict(word_list)
+    else:
+        dictionary.update(dict(word_list))
+    # print(len(dictionary))
+    return dictionary
 
 
 def getSentences(file_locale):
@@ -149,12 +161,13 @@ def getSynonyms(word, search_type='synonyms'):
         print('Failed to load site HTTP resource, {0}'.format(e))
 
     # Return a list of unique words and phrases associated with the provided word
-    return word_set.keys()
+    return list(word_set.keys())
 
 
-def genPhraseRegularExpression(phrase):
+def genPhraseRegularExpression(phrase, is_whole_only=False):
     """
     Given a textual phrase, generate a regular expression for it
+    :param is_whole_only:
     :type phrase: str
     :param phrase:
     :return:
@@ -164,9 +177,13 @@ def genPhraseRegularExpression(phrase):
         return ''
 
     regex = '((^| )'
-    for word in phrase.strip().split(' '):
-        regex += str(word) + '|(^| )'
-    regex = regex[:-6] + ')'
+    # If searching for the whole phrase only then don't split for each word
+    if is_whole_only is True:
+        regex += str(phrase.strip()) + ')'
+    else:
+        for word in phrase.strip().split(' '):
+            regex += str(word) + '|(^| )'
+        regex = regex[:-6] + ')'
 
     return regex
 
@@ -203,25 +220,25 @@ def genSentenceGrammarRule(sentence_set):
     rule = '<' + sentence_set[0].replace(' ', '') + '> = '
     # Make each word reference another grammar rule, and consider each sentence via an OR statement
     for sentence in sentence_set[1:]:
-        rule += '( < {0} > ) | '.format(str(sentence).strip().replace(' ', ' > < '))
+        rule += '( <{0}> ) | '.format(str(sentence).strip().replace(' ', '> <'))
     rule = rule[:-2]
 
     return rule
 
 
-def filterWordsList(words_list, dictionary):
+def filterWordsList(sentence_set, dictionary):
     """
     Ensures that only words or phrases present within the dictionary are allowed
-    :type words_list: list
+    :type sentence_set: list
     :type dictionary: dict
-    :param words_list:
+    :param sentence_set:
     :param dictionary:
     :return:
     """
     words = {}
     phrases = {}
 
-    for phrase in words_list:
+    for phrase in sentence_set:
         is_good = True
 
         # Add words to the dictionary
@@ -239,6 +256,24 @@ def filterWordsList(words_list, dictionary):
             phrases.update({phrase: [regex, grammar]})
 
     return [words, phrases]
+
+
+def mergeThesauri(list_of_thesauri):
+    """
+    Given a list of thesauri, merge them into a single thesaurus
+    :type list_of_thesauri: list(dict)
+    :param list_of_thesauri:
+    :return:
+    """
+    full_thesaurus = list_of_thesauri[0]
+    for thesaurus in list_of_thesauri[1:]:
+        for entry in thesaurus:
+            if entry in full_thesaurus:
+                # Ensure uniqueness
+                full_thesaurus[entry] = list(set(thesaurus[entry] + full_thesaurus[entry]))
+            else:
+                full_thesaurus.update({entry: thesaurus[entry]})
+    return full_thesaurus
 
 
 def genFileThesaurus(sentences_list_location='Selection Texts.txt',
@@ -264,9 +299,9 @@ def genFileThesaurus(sentences_list_location='Selection Texts.txt',
 
     # For each sentence
     for sentence in sentence_list:
-        sentence = str(formatWordsList(sentence))
+        sentence = str(formatWordsList([sentence])[0])
         # Only add if not already within the thesaurus
-        if sentence.replace(' ', '_') not in thesaurus:
+        if sentence not in thesaurus:
             synonyms = getSynonyms(sentence.replace(' ', '_'), thesaurus_type)
             thesaurus.update({sentence: synonyms})
 
@@ -277,7 +312,7 @@ def genFileThesaurus(sentences_list_location='Selection Texts.txt',
                 thesaurus.update({word: synonyms})
 
     # Store the results
-    writeFile(thesaurus_location, str(thesaurus).replace(',', ',\n').replace('{', '{\n').replace('}', '}\n'))
+    writeFile(thesaurus_location, str(thesaurus).replace('],', '],\n').replace('{', '{\n').replace('}', '}\n'))
 
     # Return the thesaurus for further processing
     return thesaurus
@@ -295,10 +330,13 @@ def genFileSubDictionary(full_dictionary, dictionary_list, file_location='Dictio
     """
     # Generate dictionary contents
     dictionary = ''
-    for word in dictionary_list:
+    for word in sorted(list(dictionary_list.keys())):
         i = 2
-        # Add the word
-        dictionary += str(word) + ' ' + str(dictionary_list[word]) + '\n'
+        # Add the word if it exists within the full dictionary
+        if word not in full_dictionary:
+            continue
+
+        dictionary += str(word) + ' ' + str(full_dictionary[word]) + '\n'
 
         # Add other phonetic variations, if they exist
         while word + '({0})'.format(i) in full_dictionary:
@@ -348,6 +386,13 @@ def getSentenceSetSynonyms(sentence_set, full_thesaurus):
     words_list = {}
     # For each sentence
     for sentence in sentence_set:
+        # If a sentence doesn't exist within the thesaurus then add its word and skip the synonyms
+        if sentence not in full_thesaurus:
+            if sentence in words_list:
+                words_list[sentence] += 1
+            else:
+                words_list.update({sentence: 1})
+            continue
 
         # For each synonym within the sentence phrase
         for synonym in full_thesaurus[sentence]:
@@ -407,7 +452,7 @@ def getRelevantSentenceSets(sentences_list, sentence_set_selections):
     for sentence_set in sentences_list:
         for selection in sentence_set_selections:
             if sentence_set[0] == selection:
-                sentences_sub_list += sentence_set
+                sentences_sub_list += [sentence_set]
                 break
 
     return sentences_sub_list
@@ -428,7 +473,7 @@ def getTextWeighting(text, word_weights, confidence):
 
     for search_term in word_weights[-1]:
         # Generate the regular expression
-        regex = genPhraseRegularExpression(search_term)
+        regex = genPhraseRegularExpression(search_term, True)
 
         # Search for the search term within the text
         if bool(re.findall(regex, text)) is True:
@@ -436,11 +481,11 @@ def getTextWeighting(text, word_weights, confidence):
             for i in range(len(word_weights[:-1])):
                 selection = word_weights[i]
                 if search_term in selection:
-                    selection_weighting += 1.0 / word_weights[-1][search_term]
+                    selection_weighting[i] += 1.0 / word_weights[-1][search_term]
 
     # Finally, multiply the weightings by the confidence of the speech to text translation
     for i in range(len(selection_weighting)):
-        selection_weighting /= confidence
+        selection_weighting[i] /= confidence
     return selection_weighting
 
 
@@ -457,8 +502,29 @@ def getTextWeighting(text, word_weights, confidence):
 
 
 if __name__ == '__main__':
-    dictionary_ = getDictionary()[:-1]
-    print(str(dictionary_).replace(',', '\n'))
+    test_text_ = "i erm i think vaguely should go break through a uh fucking door or something dude"
+
+    dictionary_ = getDictionary()
+    sentences_list_ = getSentences("Grammars/Selection Texts.txt")
+    grammar_sentence_ = genSentenceGrammarRule(sentences_list_[0])
+    thesaurus_ = {}
+    thesaurus_ = mergeThesauri(
+        [thesaurus_,
+         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Synonyms.the", 'synonyms'),
+         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Narrower.the", 'narrower'),
+         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Related.the", 'related')]
+    )
+    # genFileSubDictionary(dictionary_, thesaurus_, 'Dictionaries/_master.dict')
+    # genFileGrammar('Grammars/_test.gram', {'_test_': [grammar_sentence_]}, 'Grammars/_test.gram', ['words'])
+    weightings_ = getWordWeightings(sentences_list_, thesaurus_)
+    sentences_sub_list_ = getRelevantSentenceSets(sentences_list_, ['break the door down', 'continue', 'wake up'])
+
+    weights_ = getTextWeighting(test_text_, weightings_, 1.0)
+
+    selections_ = [selection[0] for selection in sentences_list_]
+    selected_ = dict(zip(selections_, weights_))
+    selected_ = [(k, selected_[k]) for k in sorted(selected_, key=selected_.get, reverse=True)]
+    print(str(selected_).replace('),', '),\n'))
 
 
 # Do for all text strings presented, and sum their values up respectively
