@@ -52,7 +52,10 @@ def listener(user_input, lock_user_input, is_faulty):
             log_file.write(str(t.format_exc()) + '\n')
             log_file.write('Listener has failed unexpectedly. {0}\n'.format(e))
     finally:
-        is_faulty[0] = True
+        try:
+            is_faulty[0] = True
+        except FileNotFoundError:
+            pass
 
 
 class ListenerObj:
@@ -73,7 +76,10 @@ class ListenerObj:
         self.__user_input = mp.Manager().list([{}, False])  # [map of {timestamp: audio}, has_new_input]
         self.__is_faulty = mp.Manager().list([False])
         self.__lock_user_input = mp.Lock()
-        self.__process = None
+        self.__process = mp.Process(
+            target=listener,
+            args=(self.__user_input, self.__lock_user_input, self.__is_faulty)
+        )
 
     def startListener(self):
         """
@@ -117,6 +123,7 @@ class ListenerObj:
         self.num_selectors = len(self.__stack_selector)
 
         # Check whether the listener has crashed
+        self.alive = self.__process.is_alive()
         if self.alive is True and self.__is_faulty[0] is True:
             self.__restartListener()
 
@@ -170,14 +177,13 @@ class ListenerObj:
             self.__stack_selector[selector].checkSelectorStatus()
 
             # Check for broken selectors
-            if self.__stack_selector[selector].is_faulty == False:
+            if self.__stack_selector[selector].is_faulty is False:
                 broken += [selector]
                 continue
 
             # If its finished then return its results if they're non-empty
             elif self.__stack_selector[selector].is_finished is True and \
-                    self.__stack_selector[selector].selected_narrative != [] and \
-                    self.__stack_selector[selector].selected_narrative[0] != '':
+                    bool(self.__stack_selector[selector].selected_narrative) is True:
                 to_be_removed += [selector]
 
                 # If its an ignore, then don't show / add to the user input stack
@@ -209,7 +215,7 @@ class ListenerObj:
             print('Google: ' + str(self.__stack_selector[selector].result_google))
             print('WitAPI: ' + str(self.__stack_selector[selector].result_witapi))
             print('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx))
-            print('Select: ' + str(self.__stack_selector[selector].selected_narrative))
+            print('Select: ' + str(self.__stack_selector[selector].selected_narrative[1][0]))
             print('')
             self.__stack_selector.pop(selector, None)
 

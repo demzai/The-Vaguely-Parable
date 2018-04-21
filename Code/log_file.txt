@@ -10,17 +10,12 @@ Next Address: - 0/01a
 Auto Select - auto
 Next Address: - 0/01b
 
-Cleaning up: 1236
-Google: ['Leeds telephone box', 0.81060141, '']
-WitAPI: ['leave telephone box', 0.5, '']
-Sphinx: ['leave the telephone box', 0.0015689502901048335, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
+Cleaning up: 9568
+Google: ['vacate the premises', 0.97110075, '']
+WitAPI: ['vacate the premises', 0.7, '']
+Sphinx: ['vacate the premises', 0.20327333932635142, '']
+Select: ['repeat', [('repeat', 0.6247913631087838), ('leave phone booth', 0.3123956815543919), ('restart', 0.0), ('stay in phone booth', 0.0), ('wake up', 0.0)]]
+User Select - repeat
 
 
 NEW GAME START!
@@ -33,10 +28,16 @@ Next Address: - 0/01a
 Auto Select - auto
 Next Address: - 0/01b
 
-Cleaning up: 6956
-Google: ['leave phone Booth', 0.90977794, '']
-WitAPI: ['leave fundraise', 0.5, '']
-Sphinx: ['leave and if', 0.000687159457809075, '']
+Cleaning up: 20668
+Google: ['Exeter', 0.78093302, '']
+WitAPI: ['thanks', 0.7, '']
+Sphinx: ['they said', 0.4491698737664285, '']
+Select: ['repeat', [('repeat', 0.04491698737664285), ('restart', 0.0), ('wake up', 0.0), ('leave phone booth', 0.0), ('stay in phone booth', 0.0)]]
+User Select - repeat
+Cleaning up: 13236
+Google: ['exert', 0.79283333, '']
+WitAPI: ['exit', 0.7, '']
+Sphinx: ['they said', 0.37501203251413967, '']
 Select: ['leave_phone_booth', ['leave_phone_booth']]
 User Select - leave_phone_booth
 Next Address: - 0/02b1
@@ -44,30 +45,38 @@ Next Address: - 0/02b1
 Auto Select - auto
 Next Address: - 0/02b2
 
-Cleaning up: 8148
-Google: ['look for others', 0.97110075, '']
-WitAPI: ['look at those', 0.5, '']
-Sphinx: ['look the office', 0.000758374861046347, '']
-Select: ['look_for_others', ['look_for_others']]
+Cleaning up: 13884
+Google: ['look for others', 0.95834178, '']
+WitAPI: ['look for those', 0.7, '']
+Sphinx: ['the and', 0.40959823906180326, '']
+Select: ['look_for_others', [('look for others', 1.8544691584651782), ('repeat', 0.4722817356874005), ('wait around', 0.18426019777777775), ('go back into the phone booth', 0.18184238870725333), ('wake up', 0.10364636125), ('restart', 0.0), ('do nothing', 0.0)]]
 User Select - look_for_others
 Next Address: - 0/03b
 
-Cleaning up: 7860
-Google: ['run towards the light', 0.94419974, '']
-WitAPI: ['run two walls from light', 0.5, '']
-Sphinx: ['run to hold the light', 5.856862522879337e-06, '']
-Select: ['run_toward_the_light', ['run_toward_the_light']]
+Cleaning up: 14092
+Google: ['stroll toward the light', 0.86457956, '']
+WitAPI: ['stroll to hold the line', 0.7, '']
+Sphinx: ['first rule old fool my', 0.11982679099439733, '']
+Select: ['$Creator_Error', [['run_away_from_the_light', 'run_toward_the_light'], ['restart', 'do_not_go_anywhere', 'run_away_from_the_light', 'run_toward_the_light'], []]]
+User Select - $Creator_Error
+Next Address: - 4/06
+
+Cleaning up: 3428
+Google: ['run toward the light', 0.8225956, '']
+WitAPI: ['run to hold the light', 0.7, '']
+Sphinx: ['running toward the light', 0.1354574285292739, '']
+Select: ['run_toward_the_light', [('run toward the light', 1.399097592196313), ('run away from the light', 0.5765019921963128), ('repeat', 0.20936167873625938), ('wake up', 0.15343235918066242), ('do not go anywhere', 0.1179026514264637), ('restart', 0.034999999999999996), ('do nothing', 0.0)]]
 User Select - run_toward_the_light
 Next Address: - 2/01a
 
 Auto Select - auto
 Next Address: - 2/01c
 
-Cleaning up: 528
-Google: ['go through one of the Open Doors', 0.95152247, '']
-WitAPI: ['go through one of the open door plz', 0.5, '']
-Sphinx: ['go through one of the of the new walls', 8.219338432070936e-08, '']
-Select: ['go_through_an_open_door', ['go_through_an_open_door']]
+Cleaning up: 7436
+Google: ['triad or', 0.69731182, '']
+WitAPI: ['trying to', 0.7, '']
+Sphinx: ['try though', 0.313346375389871, '']
+Select: ['go_through_an_open_door', [('go through an open door', 0.18160587317599658), ('repeat', 0.15306074192982455), ('look around', 0.1447637679128387), ('look back', 0.03684210526315789), ('do nothing', 0.0), ('go back', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
 User Select - go_through_an_open_door
 Next Address: - 2/02a
 
@@ -77,394 +86,19 @@ Next Address: - 2/02a1
 Auto Select - auto
 Next Address: - 2/02a5
 
-Cleaning up: 7500
-Google: ['break down the door', 0.85069638, '']
-WitAPI: ['break down the door', 0.5, '']
-Sphinx: ['break down little', 0.0001582690102327025, '']
-Select: ['break_the_door_down', ['break_the_door_down']]
-User Select - break_the_door_down
-Next Address: - 2/13
-
-Auto Select - auto
-Next Address: - 2/13a
-
-Auto Select - auto
-Next Address: - 2/01c
-
-Cleaning up: 1484
-Google: ['go through door', 0.93309355, '']
-WitAPI: ['go through the whole', 0.5, '']
-Sphinx: ['this riddle', 0.0027637056788550364, '']
-Select: ['go_through_an_open_door', ['go_through_an_open_door']]
-User Select - go_through_an_open_door
-Next Address: - 2/02a
-
-Auto Select - auto
-Next Address: - 2/02a1
-
-Auto Select - auto
-Next Address: - 2/02a5
-
-Cleaning up: 2032
-Google: ['go through door', 0.94082004, '']
-WitAPI: ['go through dual', 0.5, '']
-Sphinx: ['this riddle', 0.007962118170240562, '']
-Select: ['try_another_door', ['try_another_door']]
-User Select - try_another_door
-Next Address: - 2/02a
-
-Auto Select - auto
-Next Address: - 2/02a2
-
-Auto Select - auto
-Next Address: - 2/02a5
-
-Cleaning up: 5272
-Google: ['used or', 0.77059764, '']
-WitAPI: ['use door', 0.5, '']
-Sphinx: ['use the door', 0.00045578389607870166, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 5280
-Google: ['open door', 0.8533991, '']
-WitAPI: ['open door', 0.5, '']
-Sphinx: ['but and all', 0.004450549820186383, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 8308
-Google: ['break the Door Down', 0.97110069, '']
-WitAPI: ['breaks the door down', 0.5, '']
-Sphinx: ['break the door down', 0.018808233097759013, '']
-Select: ['break_the_door_down', ['break_the_door_down']]
-User Select - break_the_door_down
-Next Address: - 2/13
-
-Auto Select - auto
-Next Address: - 2/13b
-
-Auto Select - auto
-Next Address: - 2/01c
-
-Cleaning up: 2284
-Google: ['look around', 0.92997408, '']
-WitAPI: ['look around', 0.5, '']
-Sphinx: ['look around', 0.04134229204536603, '']
-Select: ['look_around', ['look_around']]
-User Select - look_around
-Next Address: - 2/02d
-
-Cleaning up: 5828
-Google: ['pull string', 0.91685438, '']
-WitAPI: ['pull string', 0.5, '']
-Sphinx: ['pull strain of', 0.0005619107606469629, '']
-Select: ['pull_string', ['pull_string']]
-User Select - pull_string
-Next Address: - 2/23
-
-Cleaning up: 4732
-Google: ['walk up the stairs', 0.95016211, '']
-WitAPI: ["what's the status", 0.5, '']
-Sphinx: ['what this this', 0.001552250091650442, '']
-Select: ['go_up_stairs', ['go_up_stairs']]
-User Select - go_up_stairs
-Next Address: - 2/24
-
-Auto Select - auto
-Next Address: - 2/24a
-
-Cleaning up: 8092
-Cleaning up: 5884
-Cleaning up: 7736
-Cleaning up: 4532
+Cleaning up: 21508
+Cleaning up: 13464
+Cleaning up: 2064
 User Select - $Silence
 Next Address: - 4/07
 
-Cleaning up: 5804
-Google: ["stay don't leave", 0.95273668, '']
-WitAPI: ["stay don't leave", 0.5, '']
-Sphinx: ["stay don't leave", 0.0024040534648254873, '']
-Select: ['$Creator_Error', [['do_nothing', 'stay_in_room', 'go_back'], ['do_nothing', 'stay_in_room', 'go_back'], ['do_nothing', 'stay_in_room', 'go_back']]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-Cleaning up: 6672
-Google: ['stay in room', 0.93580705, '']
-WitAPI: ['stay in room', 0.5, '']
-Sphinx: ['stay in a room', 0.00128220774997793, '']
-Select: ['stay_in_room', ['stay_in_room']]
-User Select - stay_in_room
-Next Address: - 2/25
-
-Auto Select - auto
-Next Address: - 2/25a
-
-Auto Select - auto
-Next Address: - 2/26
-
-Auto Select - auto
-Next Address: - 4/98
-
-Cleaning up: 1016
-Google: ['go on then', 0.97110075, '']
-WitAPI: ['going on', 0.5, '']
-Sphinx: ['go on', 0.025134170923819643, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 4652
-Google: ['yes', 0.97110075, '']
-WitAPI: ['yes', 0.5, '']
-Sphinx: ['yes', 0.0759637698644691, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Next Address: - 0/00a
-
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 9204
-Google: ['staying', 0.83142531, '']
-WitAPI: ['stay in', 0.5, '']
-Sphinx: ['stay in', 0.1699237547206393, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Next Address: - 0/02a1
-
-Auto Select - auto
-Next Address: - 0/02a2
-
-Auto Select - auto
-Next Address: - 4/98
-
-Cleaning up: 1724
-Google: ['suppose so', 0.9471373, '']
-WitAPI: ['suppose', 0.5, '']
-Sphinx: ['to have fun', 4.974759058669025e-05, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 6476
-Google: ['yes please', 0.97110075, '']
-WitAPI: ['yes please', 0.5, '']
-Sphinx: ['and yes please', 0.00479050663817126, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Next Address: - 0/00a
-
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 1276
-Cleaning up: 9036
-Google: ['leave', 0.91715693, '']
-WitAPI: ['please', 0.5, '']
-Sphinx: ['leave', 0.06851444169715257, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
-Cleaning up: 6612
-Cleaning up: 6716
-User Select - $Silence
-Next Address: - 4/07
-
-Cleaning up: 412
-Google: ['explore', 0.92541552, '']
-WitAPI: ['explore', 0.5, '']
-Sphinx: ['x fool', 0.004577398854846301, '']
-Select: ['look_for_others', ['look_for_others']]
-User Select - look_for_others
-Next Address: - 0/03b
-
-Cleaning up: 5532
-Google: ['keep running', 0.93846577, '']
-WitAPI: ['keep running', 0.5, '']
-Sphinx: ['keep running at', 0.0016530347517436888, '']
-Select: ['do_not_go_anywhere', ['do_not_go_anywhere']]
-User Select - do_not_go_anywhere
-Next Address: - 1/01a
-
-Auto Select - auto
-Next Address: - 1/01c
-
-Cleaning up: 5272
-Cleaning up: 5308
-Google: ['keep', 0.89889824, '']
-WitAPI: ['t', 0.5, '']
-Sphinx: ['see the', 0.005173994920926186, '']
-Select: ['do_not_go_anywhere', ['do_not_go_anywhere']]
-User Select - do_not_go_anywhere
-Next Address: - 1/02a
-
-Auto Select - auto
-Next Address: - 4/98
-
-Cleaning up: 5536
-Google: ['yes', 0.97110075, '']
-WitAPI: ['yes', 0.5, '']
-Sphinx: ['yes', 0.3072981685797329, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Next Address: - 0/00a
-
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 5416
-Google: ['leave', 0.90613413, '']
-WitAPI: ['leave', 0.5, '']
-Sphinx: ['leave', 0.14130609981840284, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
-Cleaning up: 3368
-Google: ['explore', 0.88121057, '']
-WitAPI: ['explore', 0.5, '']
-Sphinx: ['big bold', 0.0006238782107673451, '']
-Select: ['look_for_others', ['look_for_others']]
-User Select - look_for_others
-Next Address: - 0/03b
-
-Cleaning up: 2040
-Google: ['Runaway', 0.87092376, '']
-WitAPI: ['run away', 0.5, '']
-Sphinx: ['run away', 0.02730959029982305, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 3368
-Google: ['go around', 0.90719324, '']
-WitAPI: ['go around', 0.5, '']
-Sphinx: ['goes around', 0.004010498612026869, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-
-
-NEW GAME START!
-Auto Select - auto
-Next Address: - 0/00b
-
-
-
-NEW GAME START!
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 5564
-Google: ['leave', 0.9158802, '']
-WitAPI: ['leave', 0.5, '']
-Sphinx: ['leave', 0.0009224198617057544, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
-Cleaning up: 8632
-Google: ['go outside', 0.97110075, '']
-WitAPI: ['go outside', 0.5, '']
-Sphinx: ['go outside', 0.07784030396825688, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 5568
-Cleaning up: 6848
-Cleaning up: 5828
-Google: ['look for others', 0.97110075, '']
-WitAPI: ['look for clues', 0.5, '']
-Sphinx: ['look the office', 4.0753385514855764e-05, '']
-Select: ['look_for_others', ['look_for_others']]
-User Select - look_for_others
-Next Address: - 0/03b
-
-Cleaning up: 3068
-Google: ['keep running', 0.84477061, '']
-WitAPI: ['keep running', 0.5, '']
-Sphinx: ['keep running', 0.1908262412328177, '']
-Select: ['$Creator_Error', [['do_not_go_anywhere', 'restart'], ['do_not_go_anywhere', 'restart'], ['do_not_go_anywhere', 'restart']]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-
-
-NEW GAME START!
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 4868
-Google: ['leave phone Booth', 0.92818999, '']
-WitAPI: ['leave fungus', 0.5, '']
-Sphinx: ['leave and this', 0.0011981462096709106, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
-Cleaning up: 7264
-Google: ['look for others', 0.97110075, '']
-WitAPI: ["look who's", 0.5, '']
-Sphinx: ['look the office', 4.07289379847618e-05, '']
-Select: ['look_for_others', ['look_for_others']]
-User Select - look_for_others
-Next Address: - 0/03b
-
-Cleaning up: 2708
-Google: ['keep running', 0.97110075, '']
-WitAPI: ['keke running', 0.5, '']
-Sphinx: ['keep running', 2.380974174833036e-06, '']
-Select: ['run_away_from_the_light', ['run_away_from_the_light']]
-User Select - run_away_from_the_light
-Next Address: - 0/04
+Cleaning up: 10844
+Google: ['search', 0.97110075, '']
+WitAPI: ['search', 0.7, '']
+Sphinx: ['said okay', 0.23443003482410793, '']
+Select: ['go_back', [('go back', 0.5570335833333333), ('look around', 0.26217168205383934), ('look back', 0.26217168205383934), ('repeat', 0.023443003482410796), ('break the door down', 0.0), ('do nothing', 0.0), ('try another door', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+User Select - go_back
+Next Address: - 2/02c
 
 Auto Select - auto
 Next Address: - 3/01
@@ -472,230 +106,11 @@ Next Address: - 3/01
 Auto Select - auto
 Next Address: - 3/01a
 
-Cleaning up: 1696
-Cleaning up: 7408
-Google: ['explore', 0.92245197, '']
-WitAPI: ['explore', 0.5, '']
-Sphinx: ['explore', 0.013637964977205102, '']
-Select: ['$Creator_Error', [['feel_surroundings', 'dig'], ['feel_surroundings', 'dig'], ['feel_surroundings', 'dig']]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-Cleaning up: 5504
-Google: ['field surroundings', 0.78575963, '']
-WitAPI: ['feels around things', 0.5, '']
-Sphinx: ['feel surroundings', 0.21926463610635064, '']
-Select: ['feel_surroundings', ['feel_surroundings']]
+Cleaning up: 19148
+Google: ['feel surroundings', 0.82412571, '']
+WitAPI: ['feels around things', 0.7, '']
+Sphinx: ['feel surroundings', 0.3574407618125632, '']
+Select: ['feel_surroundings', [('feel surroundings', 3.4008728337244545), ('sit in despair', 0.6810349777836748), ('do not give up', 0.6271888239375211), ('dig', 0.2981433598305341), ('wake up', 0.0), ('repeat', 0.0), ('climb out', 0.0), ('do nothing', 0.0), ('restart', 0.0)]]
 User Select - feel_surroundings
 Next Address: - 3/02
-
-Cleaning up: 5192
-Google: ["don't give up", 0.97110075, '']
-WitAPI: ["don't give up", 0.5, '']
-Sphinx: ['give up', 8.100709491460437e-06, '']
-Select: ['$Creator_Error', [['sit_in_despair', 'do_nothing'], ['sit_in_despair', 'do_nothing'], []]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-Cleaning up: 4464
-Cleaning up: 8824
-Google: ['determination', 0.97110075, '']
-WitAPI: ['determination', 0.5, '']
-Sphinx: ['if they', 9.906159915217555e-05, '']
-Select: ['$User_Error', []]
-User Select - $User_Error
-Next Address: - 4/05
-
-Cleaning up: 6700
-Cleaning up: 9148
-Google: ['dig', 0.80735898, '']
-WitAPI: ['big', 0.5, '']
-Sphinx: ['the big that up the', 3.5422275013490918e-06, '']
-Select: ['$Creator_Error', [['feel_surroundings', 'dig'], [], []]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-Cleaning up: 5192
-Cleaning up: 412
-User Select - $Silence
-Next Address: - 4/07
-
-Cleaning up: 3712
-Cleaning up: 6056
-Cleaning up: 8320
-Google: ['repeat repeat repeat', 0.97110075, '']
-WitAPI: ['repeat repeat repeat', 0.5, '']
-Sphinx: ['repeat repeat repeat', 0.0003262226159721219, '']
-Select: ['repeat', ['repeat']]
-User Select - repeat
-Cleaning up: 2948
-Cleaning up: 7132
-Cleaning up: 3872
-Cleaning up: 7608
-User Select - $Silence
-Next Address: - 4/07
-
-Cleaning up: 2756
-Cleaning up: 4848
-Cleaning up: 4916
-Cleaning up: 1140
-Google: ["I'm climb climb climb climb climb climb climb climb climb climb climb", 0.95828468, '']
-WitAPI: ['climb climb climb climb climb climb climb climb climb climb climb climb', 0.5, '']
-Sphinx: ["i'm flying flying flying flying flying flying flying climb climb people and climb", 2.7230747677544867e-08, '']
-Select: ['climb_out', ['climb_out']]
-User Select - climb_out
-Next Address: - 3/04
-
-Auto Select - auto
-Next Address: - 3/04a
-
-Auto Select - auto
-Next Address: - 1/01b
-
-Auto Select - auto
-Next Address: - 1/01c
-
-Cleaning up: 7032
-Cleaning up: 6560
-User Select - $Silence
-Next Address: - 4/07
-
-Cleaning up: 8196
-Cleaning up: 5536
-Google: ['do nothing do nothing do nothing do nothing do nothing do nothing', 0.94709712, '']
-WitAPI: ['do nothing do nothing do nothing do nothing be nothing do nothing', 0.5, '']
-Sphinx: ['do nothing to nothing to nothing to nothing to nothing do nothing', 1.2980900470218134e-09, '']
-Select: ['$Creator_Error', [['do_not_go_anywhere', 'do_nothing'], ['do_not_go_anywhere', 'do_nothing'], []]]
-User Select - $Creator_Error
-Next Address: - 4/06
-
-Cleaning up: 6056
-Cleaning up: 7132
-Cleaning up: 1400
-Cleaning up: 8744
-Cleaning up: 9204
-Google: ['repeat repeat repeat', 0.96755546, '']
-WitAPI: ['it repeat repeat repeat', 0.5, '']
-Sphinx: ['peter peter peter heat', 6.086665052538779e-05, '']
-Select: ['repeat', ['repeat']]
-User Select - repeat
-Cleaning up: 1696
-Google: ['do nothing', 0.97110075, '']
-WitAPI: ['do nothing', 0.5, '']
-Sphinx: ['do nothing', 0.007758523641891446, '']
-Select: ['do_not_go_anywhere', ['do_not_go_anywhere']]
-User Select - do_not_go_anywhere
-Next Address: - 1/02a
-
-Auto Select - auto
-Next Address: - 4/98
-
-Cleaning up: 8548
-Google: ['f*** off', 0.97110075, '']
-WitAPI: ['fuck off', 0.5, '']
-Sphinx: ['but go ahead', 0.02856674131927211, '']
-Select: ['continue', ['continue']]
-User Select - continue
-Next Address: - 0/00a
-
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 4932
-Google: ['wake up', 0.95617086, '']
-WitAPI: ['wake up', 0.5, '']
-Sphinx: ['wait oh huh', 4.0066354635848566e-05, '']
-Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
-User Select - stay_in_phone_booth
-Next Address: - 0/02a1
-
-Auto Select - auto
-Next Address: - 0/02a2
-
-Auto Select - auto
-Next Address: - 4/98
-
-Cleaning up: 9068
-Google: ['no', 0.93200028, '']
-WitAPI: ['no', 0.5, '']
-Sphinx: ['no', 0.003810306531351009, '']
-Select: ['quit', ['quit']]
-User Select - quit
-Next Address: - 4/99
-
-Traceback (most recent call last):
-  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 35, in reader
-    has_changed = to_be_read[1]
-  File "<string>", line 2, in __getitem__
-  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
-    conn.send((self._id, methodname, args, kwds))
-  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
-    self._send_bytes(ForkingPickler.dumps(obj))
-  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
-    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
-BrokenPipeError: [WinError 232] The pipe is being closed
-Reader has failed unexpectedly. [WinError 232] The pipe is being closed
-Traceback (most recent call last):
-  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Listener.py", line 43, in listener
-    temp = user_input[0]
-  File "<string>", line 2, in __getitem__
-  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
-    conn.send((self._id, methodname, args, kwds))
-  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
-    self._send_bytes(ForkingPickler.dumps(obj))
-  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
-    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
-BrokenPipeError: [WinError 232] The pipe is being closed
-
-Listener has failed unexpectedly. [WinError 232] The pipe is being closed
-
-
-NEW GAME START!
-Auto Select - auto
-Next Address: - 0/00b
-
-Auto Select - auto
-Next Address: - 0/01a
-
-Auto Select - auto
-Next Address: - 0/01b
-
-Cleaning up: 5568
-Google: ['exit', 0.86402559, '']
-WitAPI: ['exit', 0.5, '']
-Sphinx: ['exit', 0.125802722738601, '']
-Select: ['leave_phone_booth', ['leave_phone_booth']]
-User Select - leave_phone_booth
-Next Address: - 0/02b1
-
-Auto Select - auto
-Next Address: - 0/02b2
-
-Cleaning up: 3264
-Google: ['look for others', 0.97110075, '']
-WitAPI: ["look who's", 0.5, '']
-Sphinx: ['look those', 6.953295717037658e-05, '']
-Select: ['look_for_others', ['look_for_others']]
-User Select - look_for_others
-Next Address: - 0/03b
-
-Cleaning up: 1808
-Cleaning up: 2848
-Cleaning up: 3396
-User Select - $Silence
-Next Address: - 4/07
-
-Cleaning up: 8688
-Google: ['run towards the light run towards the light run towards the light', 0.94757396, '']
-WitAPI: ['run to one of the line run two wolves the line round will the line', 0.5, '']
-Sphinx: ['run towards the line and wrong tool of the line wrong towards the light', 6.296508173839049e-10, '']
-Select: ['$Creator_Error', [['run_away_from_the_light', 'run_toward_the_light'], ['run_away_from_the_light', 'run_toward_the_light'], []]]
-User Select - $Creator_Error
-Next Address: - 4/06
 

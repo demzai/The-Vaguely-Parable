@@ -13,6 +13,8 @@ import traceback as t
 import Listener
 import Reader
 import time
+# import sys
+# sys.stderr = sys.__stderr__
 
 
 def initialise():
@@ -100,7 +102,7 @@ def main():
                     # If so, then hmm and um until processing has finished
                     if listener.num_selectors is not 0 and reader.alive is False:
                         reader.interruptable = True
-                        read(reader, "Hmm hmm hmm... Um... Uhh..."*5)
+                        read(reader, "Hmm hmm hmm... Um... Uhh... "*5)
 
                     # Check whether a selection has been made
                     if len(listener.stack_user_input) > 0:

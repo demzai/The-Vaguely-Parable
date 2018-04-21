@@ -3,7 +3,6 @@ The code in this file is dedicated to taking textual data in and providing
     a metric for how closely that text matches a given story option
 """
 
-
 # Dependencies:
 import os
 import re
@@ -17,6 +16,7 @@ import pocketsphinx as ps
 # Globals:
 grammar_directory = "Grammars/"
 dictionary_directory = "Dictionaries/"
+thesaurus_directory = "Thesauri/"
 confidence_threshold = 0.0
 inflexions = {
     "huh": ["huh"],
@@ -39,6 +39,7 @@ inflexions = {
     "thanks": ["thanks"],
     "thank": ["thank"],
     "ta": ["ta"],
+    "tah": ["tah"],
     "could": ["could"],
     "vaguely": ["vaguely"],
     "I'd": ["I'd"],
@@ -164,7 +165,26 @@ def getSynonyms(word, search_type='synonyms'):
     return list(word_set.keys())
 
 
-def genPhraseRegularExpression(phrase, is_whole_only=False):
+def validDictionary(list_of_phrases, full_dictionary):
+    """
+    Given some words, test if they're in the dictionary or not and return only the valid ones
+    :param list_of_phrases:
+    :param full_dictionary:
+    :return:
+    """
+    valid = []
+    for phrase in list_of_phrases:
+        is_good = True
+        for word in phrase.split(' '):
+            if word not in full_dictionary:
+                is_good = False
+                break
+        if is_good is True:
+            valid += [phrase]
+    return valid
+
+
+def genPhraseRegularExpression(phrase, is_whole_only=True):
     """
     Given a textual phrase, generate a regular expression for it
     :param is_whole_only:
@@ -188,23 +208,59 @@ def genPhraseRegularExpression(phrase, is_whole_only=False):
     return regex
 
 
-def genPhraseGrammarRule(phrase):
+def genPhraseGrammarRule(phrase, full_dictionary, thesaurus, add_inflexions=True):
     """
     Given a textual phrase, generate a grammar rule for it
+    :param thesaurus:
+    :param full_dictionary:
+    :param add_inflexions:
     :type phrase: str
     :param phrase:
     :return:
     """
+    # Check for an empty condition
     phrase = phrase.strip()
     if bool(phrase) is False:
-        return ''
+        return {}
 
-    rule = '<' + phrase.replace(' ', '') + '> = ( [<inflexions>] '
-    for word in phrase.strip().split(' '):
-        rule += str(word) + ' [<inflexions>] '
-    rule += ')'
+    # Create a sub-thesaurus containing only words existing within the dictionary related to words in the phrase
+    phrase_list = []
+    if phrase in thesaurus:
+        phrase_list = validDictionary(thesaurus[phrase], full_dictionary)
+    elif phrase in inflexions:
+        phrase_list = inflexions[phrase]
+    if bool(phrase_list) is False:
+        return {}
 
-    return rule
+    # Determine the appender, which can add inflexions in before and after every word if so desired
+    appender = ['', '']
+    if add_inflexions is True:
+        appender[0] = '(<inflexions>)* '
+        appender[1] = '('
+        for inflexion in inflexions:
+            appender[1] += inflexion + '|'
+        appender[1] = appender[1][:-1] + ')* ?'
+
+    # Create rule title and beginning gumph
+    name = phrase.replace('_', '').replace('-', '').replace(' ', '')
+    rule = 'public <{0}> = ( {1}'.format(name, appender[0])
+    regex = '('
+
+    # Add each valid variant of the phrase to te grammar rule
+    for sub_phrase in phrase_list:
+        rule += '( '
+        regex += '('
+        for word in sub_phrase.strip().split(' '):
+            rule += '{0} {1}'.format(str(word), appender[0])
+            regex += '{0} ?{1} '.format(str(word), appender[1])
+        rule += ') | '
+        regex = regex[:-1] + ')|'
+
+    # Close off the rule and return it
+    rule = rule[:-2] + ')'
+    regex = regex[:-1] + ')'
+
+    return {phrase: [rule, regex]}
 
 
 def genSentenceGrammarRule(sentence_set):
@@ -217,7 +273,7 @@ def genSentenceGrammarRule(sentence_set):
     if bool(sentence_set) is False:
         return ''
 
-    rule = '<' + sentence_set[0].replace(' ', '') + '> = '
+    rule = 'public <' + sentence_set[0].replace(' ', '') + '> = '
     # Make each word reference another grammar rule, and consider each sentence via an OR statement
     for sentence in sentence_set[1:]:
         rule += '( <{0}> ) | '.format(str(sentence).strip().replace(' ', '> <'))
@@ -226,36 +282,31 @@ def genSentenceGrammarRule(sentence_set):
     return rule
 
 
-def filterWordsList(sentence_set, dictionary):
+def genSentenceGrammarRegex(sentence_set, word_rules):
     """
-    Ensures that only words or phrases present within the dictionary are allowed
-    :type sentence_set: list
-    :type dictionary: dict
+    Generates a regular expression for the given sentence set
+    Based on the words used and their regular expressions
     :param sentence_set:
-    :param dictionary:
+    :param word_rules:
     :return:
     """
-    words = {}
-    phrases = {}
-
-    for phrase in sentence_set:
-        is_good = True
-
-        # Add words to the dictionary
-        for word in str(phrase).split(' '):
-            if word in dictionary:
-                phoneme = dictionary[word]
-                words.update({word: phoneme})
+    # Open the regex
+    regex = '('
+    for sentence in sentence_set:
+        # Create a new search group for each sentence
+        regex += '('
+        # Add the word rules instead of the actual words if possible
+        for word in sentence.strip().split(' '):
+            if word in word_rules:
+                regex += word_rules[word][1]
             else:
-                is_good = False
-
-        # If all words were good, then add the word or phrase to the phrases list
-        if is_good is True:
-            regex = genPhraseRegularExpression(phrase)
-            grammar = genPhraseGrammarRule(phrase)
-            phrases.update({phrase: [regex, grammar]})
-
-    return [words, phrases]
+                regex += str(word)
+            regex += ' '
+        # Prepare for another sentence
+        regex = regex[:-1] + ')|'
+    # Close off the regex
+    regex = regex[:-1] + ')'
+    return regex
 
 
 def mergeThesauri(list_of_thesauri):
@@ -318,19 +369,26 @@ def genFileThesaurus(sentences_list_location='Selection Texts.txt',
     return thesaurus
 
 
-def genFileSubDictionary(full_dictionary, dictionary_list, file_location='Dictionary.dict'):
+def genFileSubDictionary(full_dictionary, thesaurus, file_location='Dictionary.dict'):
     """
     Given a list of words and their phonemes, generate a file that can be referred back to later
     :type full_dictionary: dict
     :param full_dictionary:
-    :type dictionary_list: dict
-    :param dictionary_list:
+    :type thesaurus: dict
+    :param thesaurus:
     :param file_location:
     :return:
     """
+    # Generate a words list
+    words_list = {}
+    for keyword in thesaurus:
+        for phrase in thesaurus[keyword]:
+            for word in phrase.split(' '):
+                words_list.update({word: 0})
+
     # Generate dictionary contents
     dictionary = ''
-    for word in sorted(list(dictionary_list.keys())):
+    for word in sorted(list(words_list.keys())):
         i = 2
         # Add the word if it exists within the full dictionary
         if word not in full_dictionary:
@@ -366,13 +424,39 @@ def genFileGrammar(grammar_name, grammar_rules, file_location, imports=None):
         grammar_file += '\n'
 
     # Add grammar rules
-    for rule in grammar_rules:
+    rule_set = sorted(list(grammar_rules.keys()))
+    for rule in rule_set:
         if bool(rule) is True:
-            grammar_file += 'public ' + str(grammar_rules[rule][0]) + '\n'
-    grammar_file += '\n'
+            grammar_file += '{0} // {1}\n'.format(str(grammar_rules[rule][0]), str(grammar_rules[rule][1]))
 
     # Create the grammar file
     writeFile(file_location, grammar_file)
+
+
+# noinspection PyBroadException
+def cleanupExcessFiles(file_id):
+    """
+    Delete extraneous files to prevent file spamming
+    :param file_id:
+    :return:
+    """
+    with open("log_file.txt", "a") as log_file:
+        log_file.write('Cleaning up: ' + str(file_id) + '\n')
+    # Remove the grammar file (.gram)
+    try:
+        os.remove(grammar_directory + str(file_id) + '.gram')
+    except Exception:
+        pass
+    # Remove the phoneme file (.fsg)
+    try:
+        os.remove(grammar_directory + str(file_id) + '.fsg')
+    except Exception:
+        pass
+    # Remove the dictionary file (.dict)
+    try:
+        os.remove(thesaurus_directory + str(file_id) + '.dict')
+    except Exception:
+        pass
 
 
 def getSentenceSetSynonyms(sentence_set, full_thesaurus):
@@ -423,10 +507,12 @@ def getWordWeightings(sentences_list, full_thesaurus):
     :return:
     """
     words_list = []
+    sentences_titles = []
 
     # For each sentence set, generate a list of relevant words
     for sentence_set in sentences_list:
         words_list += [dict(getSentenceSetSynonyms(sentence_set, full_thesaurus))]
+        sentences_titles += [sentence_set[0]]
 
     word_tally = {}
     # For each word set, tally how often a word occurs
@@ -438,7 +524,7 @@ def getWordWeightings(sentences_list, full_thesaurus):
                 word_tally.update({word: 1})
 
     # Return the words_list and tally
-    return words_list + [word_tally]
+    return dict(zip(sentences_titles + ['__all__'], words_list + [word_tally]))
 
 
 def getRelevantSentenceSets(sentences_list, sentence_set_selections):
@@ -458,80 +544,302 @@ def getRelevantSentenceSets(sentences_list, sentence_set_selections):
     return sentences_sub_list
 
 
-def getTextWeighting(text, word_weights, confidence):
+def getTextWeighting(text, word_weightings, confidence):
     """
     Find relevant words within the text and sum
     :param text:
-    :param word_weights:
+    :param word_weightings:
     :param confidence:
     :return:
     """
     # For each interesting word, generate a regular expression to find it
     # If found, add the words weighting to a tally for each sentence set the word is in
-    # noinspection PyUnusedLocal
-    selection_weighting = [0 for selection in word_weights[:-1]]
+    selection_weighting = dict(zip(list(word_weightings.keys()), [0 for _ in range(len(word_weightings))]))
+    selection_weighting.pop('__all__', None)
 
-    for search_term in word_weights[-1]:
+    for search_term in word_weightings['__all__']:
         # Generate the regular expression
         regex = genPhraseRegularExpression(search_term, True)
 
         # Search for the search term within the text
         if bool(re.findall(regex, text)) is True:
             # If it exists, add the weighting to the relevant selections
-            for i in range(len(word_weights[:-1])):
-                selection = word_weights[i]
-                if search_term in selection:
-                    selection_weighting[i] += 1.0 / word_weights[-1][search_term]
+            for i in word_weightings:
+                if i == '__all__':
+                    continue
+                if search_term in word_weightings[i]:
+                    selection_weighting[i] += 1.0 / word_weightings['__all__'][search_term]
 
     # Finally, multiply the weightings by the confidence of the speech to text translation
-    for i in range(len(selection_weighting)):
-        selection_weighting[i] /= confidence
+    for i in selection_weighting:
+        selection_weighting[i] *= confidence
     return selection_weighting
 
 
-# def makeSelection(text_confidence_pairs):
-#     """
-#     Given a set of textual inputs and their corresponding speech to text confidences, pick one
-#     :param text_confidence_pairs:
-#     :return:
-#     """
-    # a = text_confidence_pairs
+weightings = getWordWeightings(
+    getSentences(thesaurus_directory + "Selection Texts.txt"),
+    mergeThesauri(
+        [genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Synonyms.the", 'synonyms'),
+         genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Narrower.the", 'narrower'),
+         genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Related.the",  'related')]
+    ))
 
-    # Get the thesaurus
-    # Get the text weightings
+
+def makeSubDictionary(narrative_selections, file_location):
+    """
+    Given a selection set, generate a dictionary of all words included within those sentence sets
+    :param narrative_selections:
+    :param file_location:
+    :return:
+    """
+    # Get the words list
+    global weightings
+    thesaurus = {}
+    for key_ in weightings:
+        if key_ == '__all__':
+            continue
+        for selection in narrative_selections:
+            if selection == key_:
+                thesaurus.update(weightings[key_])
+    thesaurus = {0: list(thesaurus.keys())}
+
+    # Generate the mini-dictionary
+    genFileSubDictionary(getDictionary(), thesaurus, file_location)
+
+
+def matchRegex(text, regex_map):
+    """
+    Given a textual input and a set of regular expressions, find results within the text
+    :param text:
+    :param regex_map:
+    :return:
+    """
+    matches = []
+    if text[1] > confidence_threshold:
+        # Use regex's to select a narrative
+        for regex in regex_map:
+            # Search for the regex within the resulting file to ID which grammar found it
+            if len(re.findall(regex_map[regex], text[0])) is not 0:
+                matches += [regex]
+    return matches
+
+
+def makeSelectionRegex(texts, regex):
+    """
+    Makes the selection via the use of regular expressions made via grammars
+    :param texts:
+    :param regex:
+    :return:
+    """
+    # Find matching regular expressions within the translated texts
+    matches = []
+    for i in range(len(texts)):
+        matches += [matchRegex(texts[i], regex)]
+
+    # Determine which narrative to select
+    # Check for successful results first:
+    if len(matches[0]) is 1:
+        output = [matches[0][0], matches[0]]
+    elif len(matches[1]) is 1:
+        output = [matches[1][0], matches[1]]
+    elif len(matches[2]) is 1:
+        output = [matches[2][0], matches[2]]
+    # Assume creator error if any have more than 1 match
+    elif len(matches[0]) >= 2 or len(matches[1]) >= 2 or len(matches[2]) >= 2:
+        output = ['$Creator_Error', [matches[0], matches[1], matches[2]]]
+    # Else assume that the user has made an error
+    else:
+        output = ['$User_Error', []]
+    return output
+
+
+def makeSelectionMetric(text_confidence_pairs, selection_set):
+    """
+    Given a set of textual inputs and their corresponding speech to text confidences, pick one
+    :param text_confidence_pairs:
+    :param selection_set:
+    :return:
+    """
+    # Pick out the relevant selections
+    global weightings
+    sub_weightings = {}
+    for key_ in weightings:
+        if key_ == '__all__':
+            continue
+        for selection in formatWordsList(selection_set):
+            if selection == key_:
+                sub_weightings.update({selection: 0})
+    # print(str(selection_set) + '\n' + str(sub_weightings))
+
+    # Get the weightings for each word, confidence pair
+    for pair in text_confidence_pairs:
+        word_weights = getTextWeighting(pair[0], weightings, pair[1])
+        for i in sub_weightings:
+            sub_weightings[i] += word_weights[i]
+
+    # Sort the results based on their selection metric and return the selection priority list
+    selected = [(k, sub_weightings[k]) for k in sorted(sub_weightings, key=sub_weightings.get, reverse=True)]
+    return [str(selected[0][0]).replace(' ', '_'), selected]
+
+
+def makeSelection(text_confidence_pairs, selection_set, regex):
+    """
+    Attempt to make a selection via a metric based on the words used
+    If that fails, default to the regular expression approach, assuming an underlying grammar is present
+    :param text_confidence_pairs:
+    :param selection_set:
+    :param regex:
+    :return:
+    """
+    # Get both for debugging purposes
+    metric = makeSelectionMetric(text_confidence_pairs, selection_set)
+    weighted_results = metric[1]
+
+    # If the metric-based approach fails, then attempt to select via regular expressions
+    if float(weighted_results[0][1]) * 0.9 < float(weighted_results[1][1]) or float(weighted_results[0][1]) < 0.01:
+        return makeSelectionRegex(text_confidence_pairs, regex)
+    # Otherwise, return the find as is
+    else:
+        return metric
+
+
+def getUniqueWords(sentences_list):
+    """
+    Given a set of sentences, generate a list of unique words used within them
+    :param sentences_list:
+    :return:
+    """
+    unique_words = {}
+    # For each set of sentences
+    for sentence_set in sentences_list:
+        words = {}
+        # For each sentence within that set
+        for j in range(1, len(sentence_set)):
+            sentence = sentence_set[j]
+            words.update({sentence.replace(' ', '_'): []})
+            # For each word within the sentence
+            for word in sentence.replace('-', ' ').replace('_', ' ').split(' '):
+                # Add to a map to remove duplicates
+                words.update({word: []})
+        # Store the result
+        unique_words.update({sentence_set[0]: list(words.keys())})
+    return unique_words
+
+
+# noinspection PyBroadException
+def genGrammarForSelectionSet(selections, grammar_name):
+    """
+    Given a list of narrative selections, find their corresponding grammars and generate
+        a meta-grammar to search for all of them
+    :param selections:
+    :param grammar_name:
+    :return:
+    """
+    # Find valid selections
+    valid = []
+    regex_map = {}
+    for selection in selections:
+        shorthand = str(selection).replace('_', '')
+        file = grammar_directory + shorthand + '.gram'
+        try:
+            if os.path.isfile(file) is True:
+                grammar = readFile(file)
+                regex_map.update({selection: '(' + re.findall('// (.+)\n', grammar)[0] + ')'})  # Crash if none found
+                valid += [shorthand]
+        except Exception:
+            continue
+
+    # Create a grammar using the valid selections
+    grammar_rule = '<' + str(grammar_name) + '> = ( <'
+    for selection in valid:
+        grammar_rule += str(selection) + '> | <'
+    grammar_rule = grammar_rule[:-4] + ' );'
+
+    # Create grammar file for the grammar
+    genFileGrammar(grammar_name, {str(grammar_name): [grammar_rule, 'N/A']},
+                   grammar_directory + str(grammar_name) + '.gram', valid)
+
+    # Return the file directory and name, as well as the respective parent grammar files
+    return [grammar_directory + str(grammar_name) + '.gram', regex_map]
+
+
+def main():
+    """
+    Function to be run to generate preliminary files, such as dictionaries and grammars
+    :return:
+    """
+    # #################### DICTIONARIES #####################
+    # Initialise by generating a thesaurus, dictionary and words-list
+    selection_list_location = thesaurus_directory + "Selection Texts.txt"
+    thesaurus = mergeThesauri(
+        [genFileThesaurus(selection_list_location, "Thesauri/Synonyms.the", 'synonyms'),
+         genFileThesaurus(selection_list_location, "Thesauri/Narrower.the", 'narrower'),
+         genFileThesaurus(selection_list_location, "Thesauri/Related.the", 'related')]
+    )
+    full_dictionary = getDictionary()
+    sentences_list = getSentences(selection_list_location)
+    unique_words = getUniqueWords(sentences_list)
+
+    # For each set of unique words, generate a sub-dictionary file
+    for sub_list in unique_words:
+        # print(sub_list + ':')
+
+        # Generate a temporary thesaurus that is a subset of the original
+        sub_thesaurus = {}
+        sub_thesaurus.update(inflexions)
+        for word in unique_words[sub_list]:
+            sub_thesaurus.update({word: thesaurus[formatWordsList([word])[0]]})
+
+        # Generate the dictionary file
+        genFileSubDictionary(full_dictionary, sub_thesaurus,
+                             str(dictionary_directory) + str(sub_list).replace(' ', '') + '.dict')
+
+    # #################### GRAMMARS #####################
+    # Create grammar rules for each of the thesaurus entries
+    grammar_word_rules = {}
+    for inflexion in inflexions:
+        grammar_word_rules.update(genPhraseGrammarRule(inflexion, full_dictionary, thesaurus, False))
+    for word in thesaurus:
+        grammar_word_rules.update(genPhraseGrammarRule(word, full_dictionary, thesaurus, True))
+
+    # Add the rule for inflexions to the words grammar rules list
+    inflexion_setup = ['inflexions'] + list(inflexions.keys())
+    grammar_word_rules.update({str(inflexion_setup).replace(' ', '').replace('_', '').replace('-', ''): [
+        genSentenceGrammarRule(inflexion_setup), genSentenceGrammarRegex(inflexion_setup, grammar_word_rules)]})
+
+    # Generate rules for each sentence set
+    grammar_rules = {}
+    for sentence_set in sentences_list:
+        grammar_rules.update({str(sentence_set[0]).replace(' ', '').replace('_', '').replace('-', ''): [
+            genSentenceGrammarRule(sentence_set), genSentenceGrammarRegex(sentence_set, grammar_word_rules)]})
+
+    # Create grammar rules files, one for all the thesaurus entries and one per sentence grammar
+    genFileGrammar('words', grammar_word_rules, grammar_directory + 'words.gram')
+    for rule in grammar_rules:
+        genFileGrammar(rule, {rule: grammar_rules[rule]}, grammar_directory + rule + '.gram', ['words'])
 
 
 if __name__ == '__main__':
-    test_text_ = "i erm i think vaguely should go break through a uh fucking door or something dude"
-
-    dictionary_ = getDictionary()
-    sentences_list_ = getSentences("Grammars/Selection Texts.txt")
-    grammar_sentence_ = genSentenceGrammarRule(sentences_list_[0])
-    thesaurus_ = {}
-    thesaurus_ = mergeThesauri(
-        [thesaurus_,
-         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Synonyms.the", 'synonyms'),
-         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Narrower.the", 'narrower'),
-         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Related.the", 'related')]
-    )
-    # genFileSubDictionary(dictionary_, thesaurus_, 'Dictionaries/_master.dict')
-    # genFileGrammar('Grammars/_test.gram', {'_test_': [grammar_sentence_]}, 'Grammars/_test.gram', ['words'])
-    weightings_ = getWordWeightings(sentences_list_, thesaurus_)
-    sentences_sub_list_ = getRelevantSentenceSets(sentences_list_, ['break the door down', 'continue', 'wake up'])
-
-    weights_ = getTextWeighting(test_text_, weightings_, 1.0)
-
-    selections_ = [selection[0] for selection in sentences_list_]
-    selected_ = dict(zip(selections_, weights_))
-    selected_ = [(k, selected_[k]) for k in sorted(selected_, key=selected_.get, reverse=True)]
-    print(str(selected_).replace('),', '),\n'))
-
-
-# Do for all text strings presented, and sum their values up respectively
-# Select the max, or generate an error if:
-#   Resultant coefficient has a small magnitude
-#   0 or 2+ options are selected (still)
-
-
-
+    main()
+    # test_text_ = [
+    #     ['look for others', 0.97110075, ''],
+    #     ['look for others', 0.7, ''],
+    #     ['look full of those', 0.2104472870771945, '']
+    # ]
+    #
+    # # Grab real-world data to fill these slots! (Can be obtained from Selector.py lines 288 and 289)
+    # regex_map_ = {}
+    # options_ = []
+    #
+    # sentences_list_ = getSentences(grammar_directory + "Selection Texts.txt")
+    # thesaurus_ = mergeThesauri(
+    #     [
+    #         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Synonyms.the", 'synonyms'),
+    #         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Narrower.the", 'narrower'),
+    #         genFileThesaurus("Grammars/Selection Texts.txt", "Thesauri/Related.the", 'related')
+    #     ]
+    # )
+    #
+    # selected_ = makeSelection(test_text_, options_, regex_map_)
+    # print(str(selected_).replace('),', '),\n').replace('},', '},\n').replace('],', '],\n'))
 

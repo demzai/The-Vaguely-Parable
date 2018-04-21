@@ -2,7 +2,6 @@
 # Global values used throughout the program
 """
 
-
 # Location of the start directory of the narrative and database files
 start_directory = "Story Segments/"
 

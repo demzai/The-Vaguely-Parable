@@ -90,7 +90,10 @@ class ReaderObj:
         self.__to_be_read = mp.Manager().list(['', False])
         self.__is_faulty = mp.Manager().list([False])
         self.__lock_to_be_read = mp.Lock()
-        self.__process = None
+        self.__process = self.__process = mp.Process(
+                target=reader,
+                args=(self.__to_be_read, self.__lock_to_be_read, self.__is_faulty)
+            )
 
     def startReader(self):
         """
@@ -143,6 +146,7 @@ class ReaderObj:
         Checks whether there's been an error within the reader and rectifies it if possible
         :return:
         """
+        self.alive = self.__process.is_alive()
         # Check whether the reader has crashed
         if self.alive is True and self.__is_faulty[0] is True:
             self.__restartReader()
