@@ -1,4 +1,7 @@
 ###
+4/00a,  4/00b,  continue // yes
+4/00a,  4/00c,  quit // no
+4/00b,  0/00b,  auto // time to play!
 4/00,	0/00b,	auto // start
 4/01,   #&(#prev),  auto // interrupt_narrator
 4/02,	4/98,	auto // wake_up
@@ -8,6 +11,8 @@
 4/06,   #prev,  auto // creator_error
 4/07,   #prev,  auto // silence or repeat?
 4/08,   #prev,  auto // ignore / couldn't hear properly
+4/09,   #prev,  auto // date
+4/10,   #prev,  auto // time
 4/98,	0/00a,	continue
 4/98,	4/99,	quit
 4/99,   #quit,  auto

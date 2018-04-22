@@ -241,9 +241,8 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             # Get a list of narrative names
             narrative_names = list(narratives.keys())
             [grammar_file, regex_map] = sm.genGrammarForSelectionSet(narrative_names, process_id)
-            # dictionary_file = gd.genDictionaryForSelectionSet(narrative_names, process_id)
-            dictionary_file = sm.makeSubDictionary(narrative_names,
-                                                   str(sm.thesaurus_directory) + str(process_id) + '.dict')
+            # dictionary_file = sm.makeSubDictionary(narrative_names,
+            #                                        str(sm.thesaurus_directory) + str(process_id) + '.dict')
 
         # Convert the audio using CMUsphinx (offline), Google, and WitAPI (online)
         if True:

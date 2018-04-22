@@ -138,6 +138,7 @@ boarded B AO R D AH D
 boarded(2) B AO R D AH D
 boardroom B AO R D R UW M
 body B AA D IY
+books B UH K S
 bowl B OW L
 bowling B OW L IH NG
 box B AA K S
@@ -441,7 +442,6 @@ hands HH AE N D Z
 hands(2) HH AE N D Z
 hang HH AE NG
 harshness HH AA R SH N AH S
-he HH IY
 head HH EH D
 hello HH AH L OW
 hello(2) HH AH L OW
@@ -449,6 +449,7 @@ hereby HH IH R B AY
 hierarchy HH AY ER AA R K IY
 hierarchy(2) HH AY ER AA R K IY
 high HH AY
+hit HH IH T
 hm HH M
 hmm HH M
 hold HH OW L D
@@ -619,8 +620,6 @@ operandi(3) AA P ER AE N D IY
 oppose AH P OW Z
 opposite AA P AH Z AH T
 opposite(2) AA P AH Z AH T
-or AO R
-or(2) AO R
 order AO R D ER
 ordinary AO R D AH N EH R IY
 organized AO R G AH N AY Z D
@@ -721,8 +720,6 @@ rake R EY K
 ram R AE M
 rare R EH R
 ray R EY
-re R EY
-re(2) R EY
 read R EH D
 read(2) R EH D
 reception R IH S EH P SH AH N
@@ -1000,8 +997,6 @@ word W ER D
 works W ER K S
 would W UH D
 x EH K S
-ye Y IY
-ye(2) Y IY
 yell Y EH L
 yet Y EH T
 you Y UW

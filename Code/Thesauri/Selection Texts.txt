@@ -28,10 +28,20 @@ yes
 yup
 ok
 
+date
+date
+the date
+what
+date today
+day is it
+
 dig
 look for another way
 examine the floor
 examine floor
+dig
+dig
+dig
 dig
 
 do not give up
@@ -49,6 +59,9 @@ wait
 do nothing
 don't
 nothing
+do nothing
+do nothing
+do nothing
 
 examine rock
 pry the rock
@@ -62,6 +75,12 @@ examine rock
 look at the rock
 look at rock
 rock
+don't ignore
+don't ignore
+don't ignore
+dig
+dig
+dig
 dig
 
 feel surroundings
@@ -73,6 +92,7 @@ explore
 go back
 return
 leave
+give up
 
 go back into the phone booth
 telephone booth
@@ -125,6 +145,13 @@ pull rock
 move the rock
 move rock
 rock
+don't ignore
+don't ignore
+don't ignore
+don't ignore
+dig
+dig
+dig
 dig
 
 pull string
@@ -145,10 +172,17 @@ nine
 
 reply
 ask
-shout
-call
+shout back
+call back
 reply
 say
+
+repeat
+say that again
+repeat
+
+restart
+reset
 
 run away from the light
 leave
@@ -161,7 +195,9 @@ run toward the light
 towards
 toward
 into
+go to
 enter
+light
 
 sit in despair
 sit
@@ -184,6 +220,9 @@ stay in room
 don't
 stay
 remain
+ball pit
+rainbow
+vegetation
 
 stop climbing
 stop
@@ -191,6 +230,13 @@ do nothing
 give up
 fall
 jump
+
+time
+time
+the time
+what
+time now
+current time
 
 try another door
 through
@@ -208,13 +254,6 @@ wait around
 don't do anything
 time passes
 wait
-
-repeat
-say that again
-repeat
-
-restart
-reset
 
 wake up
 stop dreaming

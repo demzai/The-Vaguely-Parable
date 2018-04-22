@@ -1,0 +1,26 @@
+#NarratorInterrupt(0)
+#CreatorBugs(0)
+#NumIgnores(0)
+#NumErrors(0)
+#Stay(0)
+#Dark(0)
+#Time(0)
+#Dig(0)
+#IHeard("Nothing!")
+#datetime
+#delay(0.5)
+
+Welcome to 'The Vaguely Parable'.
+This is a somewhat satirical game, where your voice is the controller!
+Story segments are narrated, with the last sentence always containing the phrase, 'Vaguely decided to'.
+This last sentence will guide you on what you can do next.
+#delay(0.5)
+For example, 'After leaving her bedroom, Vaguely decided to look for her friends.'
+From here, you could say 'Vaguely looked around', or you might try, 'do nothing'.
+Or, if you're feeling particularly adventurous you could say, 'go back into the bedroom'.
+#delay(0.5)
+Lets give it a try, shall we?
+When the narrator asked Vaguely if she was ready to play, Vaguely decided to say 'yes'.
+
+#ignore("restart")
+#ignore("wake_up")

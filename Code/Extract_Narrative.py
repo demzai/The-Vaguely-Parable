@@ -12,7 +12,7 @@ def getDynamicText(sentence):
     :param sentence:
     :return:
     """
-    codes = re.findall("(^|\\\{2,}|[^\\\])(#\S+)", sentence)
+    codes = re.findall("(^|\\\{2,}|[^\\\])(#\w+)", sentence)
     return codes
 
 

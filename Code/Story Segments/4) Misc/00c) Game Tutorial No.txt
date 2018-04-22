@@ -1,0 +1,6 @@
+Odd.
+I could have sworn you wanted to play this game.
+But... if you insist.
+
+#delay(1)
+#quit

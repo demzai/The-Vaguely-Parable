@@ -1,0 +1,19 @@
+#datetime
+
+###
+"#Time"
+0, "Would you like to go on one? Oh, you just wanted to know the time of year."
+1, "Ah, a timeless classic."
+2, "Where did you find the time for this question?"
+3, "I ask myself that question every day."
+4, "I'll tell you when you're older... ... ... Okay, you're old enough now."
+else, -1, "Christmas isn't for a while yet."
+###
+_#code
+
+It's #WeekDay the #Day of #Month, #Year.
+
+#Time(#+(#Time, 1))
+// #auto
+#&(#prev)
+#forget

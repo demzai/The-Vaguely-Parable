@@ -22,7 +22,9 @@ address_stack = []
 interrupt_addresses = [{'$Interrupt': '4/01'}]
 error_addresses = [{'$User_Error': '4/05'}, {'$Creator_Error': '4/06'},
                    {'$Silence': '4/07'}, {'$Ignore': '4/08'}]
-constant_addresses = [{'restart': '4/04'}, {'do_nothing': '4/03'}, {'wake_up': '4/02'}, {'repeat': '4/03'}]
+constant_addresses = [{'restart': '4/04'}, {'do_nothing': '4/03'},
+                      {'wake_up': '4/02'}, {'repeat': '4/03'},
+                      {'date': '4/09'}, {'time': '4/10'}]
 next_addresses = {}
 ignore_addresses = []
 file_locales = []

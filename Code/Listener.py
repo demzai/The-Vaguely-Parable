@@ -215,7 +215,10 @@ class ListenerObj:
             print('Google: ' + str(self.__stack_selector[selector].result_google))
             print('WitAPI: ' + str(self.__stack_selector[selector].result_witapi))
             print('Sphinx: ' + str(self.__stack_selector[selector].result_sphinx))
-            print('Select: ' + str(self.__stack_selector[selector].selected_narrative[1][0]))
+            if len(self.__stack_selector[selector].selected_narrative[1]) >= 1:
+                print('Select: ' + str(self.__stack_selector[selector].selected_narrative[1][0]))
+            else:
+                print('Select: ' + str(self.__stack_selector[selector].selected_narrative[1]))
             print('')
             self.__stack_selector.pop(selector, None)
 

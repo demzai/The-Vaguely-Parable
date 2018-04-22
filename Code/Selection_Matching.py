@@ -151,7 +151,7 @@ def getSynonyms(word, search_type='synonyms'):
         discovered = re.findall('class="pt-thesaurus-card__term-title"><a href="/(.*)/' + search_type + '"', site)
         for i in formatWordsList(discovered):
             # If the word has a '%' in it after formatting, then it probably isn't a word
-            if '%' in i:
+            if '%' in i or len(i) <= 2:
                 continue
 
             # Add the word or phrase into the thesaurus
@@ -236,10 +236,10 @@ def genPhraseGrammarRule(phrase, full_dictionary, thesaurus, add_inflexions=True
     appender = ['', '']
     if add_inflexions is True:
         appender[0] = '(<inflexions>)* '
-        appender[1] = '('
-        for inflexion in inflexions:
-            appender[1] += inflexion + '|'
-        appender[1] = appender[1][:-1] + ')* ?'
+        appender[1] = '(.*)? ?'
+        # for inflexion in inflexions:
+        #     appender[1] += inflexion + '|'
+        # appender[1] = appender[1][:-1] + ')* ?'
 
     # Create rule title and beginning gumph
     name = phrase.replace('_', '').replace('-', '').replace(' ', '')
@@ -568,7 +568,11 @@ def getTextWeighting(text, word_weightings, confidence):
                 if i == '__all__':
                     continue
                 if search_term in word_weightings[i]:
-                    selection_weighting[i] += 1.0 / word_weightings['__all__'][search_term]
+                    weight = word_weightings[i][search_term] / word_weightings['__all__'][search_term]
+                    with open("log_file.txt", "a") as log_file:
+                        log_file.write('\t{0} : {1} : {2} : {3}\n'.format(
+                            str(text), str(search_term), str(weight), str(i)))
+                    selection_weighting[i] += weight
 
     # Finally, multiply the weightings by the confidence of the speech to text translation
     for i in selection_weighting:
@@ -576,13 +580,7 @@ def getTextWeighting(text, word_weightings, confidence):
     return selection_weighting
 
 
-weightings = getWordWeightings(
-    getSentences(thesaurus_directory + "Selection Texts.txt"),
-    mergeThesauri(
-        [genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Synonyms.the", 'synonyms'),
-         genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Narrower.the", 'narrower'),
-         genFileThesaurus(thesaurus_directory + "Selection Texts.txt", "Thesauri/Related.the",  'related')]
-    ))
+weightings = dict(ast.literal_eval(readFile(thesaurus_directory + 'Weightings.weight')))
 
 
 def makeSubDictionary(narrative_selections, file_location):
@@ -663,22 +661,25 @@ def makeSelectionMetric(text_confidence_pairs, selection_set):
     # Pick out the relevant selections
     global weightings
     sub_weightings = {}
+    metric_weightings = {}
     for key_ in weightings:
         if key_ == '__all__':
             continue
         for selection in formatWordsList(selection_set):
             if selection == key_:
-                sub_weightings.update({selection: 0})
+                sub_weightings.update({selection: weightings[selection]})
+                metric_weightings.update({selection: 0})
+    sub_weightings.update({'__all__': weightings['__all__']})
     # print(str(selection_set) + '\n' + str(sub_weightings))
 
     # Get the weightings for each word, confidence pair
     for pair in text_confidence_pairs:
-        word_weights = getTextWeighting(pair[0], weightings, pair[1])
-        for i in sub_weightings:
-            sub_weightings[i] += word_weights[i]
+        word_weights = getTextWeighting(pair[0], sub_weightings, pair[1])
+        for i in metric_weightings:
+            metric_weightings[i] += word_weights[i]
 
     # Sort the results based on their selection metric and return the selection priority list
-    selected = [(k, sub_weightings[k]) for k in sorted(sub_weightings, key=sub_weightings.get, reverse=True)]
+    selected = [(k, metric_weightings[k]) for k in sorted(metric_weightings, key=metric_weightings.get, reverse=True)]
     return [str(selected[0][0]).replace(' ', '_'), selected]
 
 
@@ -694,9 +695,11 @@ def makeSelection(text_confidence_pairs, selection_set, regex):
     # Get both for debugging purposes
     metric = makeSelectionMetric(text_confidence_pairs, selection_set)
     weighted_results = metric[1]
+    with open("log_file.txt", "a") as log_file:
+        log_file.write(str(metric))
 
     # If the metric-based approach fails, then attempt to select via regular expressions
-    if float(weighted_results[0][1]) * 0.9 < float(weighted_results[1][1]) or float(weighted_results[0][1]) < 0.01:
+    if float(weighted_results[0][1]) * 0.9 < float(weighted_results[1][1]) or float(weighted_results[0][1]) < 0.1:
         return makeSelectionRegex(text_confidence_pairs, regex)
     # Otherwise, return the find as is
     else:
@@ -749,15 +752,15 @@ def genGrammarForSelectionSet(selections, grammar_name):
         except Exception:
             continue
 
-    # Create a grammar using the valid selections
-    grammar_rule = '<' + str(grammar_name) + '> = ( <'
-    for selection in valid:
-        grammar_rule += str(selection) + '> | <'
-    grammar_rule = grammar_rule[:-4] + ' );'
+    # # Create a grammar using the valid selections
+    # grammar_rule = '<' + str(grammar_name) + '> = ( <'
+    # for selection in valid:
+    #     grammar_rule += str(selection) + '> | <'
+    # grammar_rule = grammar_rule[:-4] + ' );'
 
     # Create grammar file for the grammar
-    genFileGrammar(grammar_name, {str(grammar_name): [grammar_rule, 'N/A']},
-                   grammar_directory + str(grammar_name) + '.gram', valid)
+    # genFileGrammar(grammar_name, {str(grammar_name): [grammar_rule, 'N/A']},
+    #                grammar_directory + str(grammar_name) + '.gram', valid)
 
     # Return the file directory and name, as well as the respective parent grammar files
     return [grammar_directory + str(grammar_name) + '.gram', regex_map]
@@ -779,6 +782,11 @@ def main():
     full_dictionary = getDictionary()
     sentences_list = getSentences(selection_list_location)
     unique_words = getUniqueWords(sentences_list)
+
+    # Create a dedicated file for the weightings to prevent accidental changes to the thesaurus files
+    weightings_ = getWordWeightings(getSentences(thesaurus_directory + "Selection Texts.txt"), thesaurus)
+    with open(thesaurus_directory + "Weightings.weight", "w") as log_file:
+        log_file.write(str(weightings_))
 
     # For each set of unique words, generate a sub-dictionary file
     for sub_list in unique_words:

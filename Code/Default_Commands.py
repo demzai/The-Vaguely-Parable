@@ -3,13 +3,15 @@
 """
 
 # Dependencies
-import time
-import functools
-import Globals as glbl
 import Database_Management as dm
-import Code_Interpreter as ci
 import Extract_Narrative as en
+import Code_Interpreter as ci
+import Globals as glbl
+import num2words as nw
 import traceback as t
+import datetime as dt
+import functools
+import time
 
 
 # ///////////////////////////////////////////////////////
@@ -45,7 +47,8 @@ def addFunctionsToMap():
         '#interrupt_start_global': [turnGlobalInterruptsOn, False],
         '#interrupt_stop_global': [turnGlobalInterruptsOff, False],
         '#bracket': [bracketResolution, False],
-        '#ignore': [ignoreNarrativeState, False]
+        '#ignore': [ignoreNarrativeState, False],
+        '#datetime': [updateDateTime, False]
     })
 
     # Provide an output for the doctest
@@ -507,6 +510,38 @@ def ignoreNarrativeState(state_to_be_ignored):
     """
     # @todo ensure that this can run from csv / database files!
     glbl.ignore_addresses += [state_to_be_ignored]
+    return
+
+
+# #datetime
+def updateDateTime():
+    """
+    Update the date and time parameters for usage within the files
+    :return:
+    """
+    date_time = dt.datetime.now()
+    # Resolve phonetic translation of the date
+    phonetic = {0: 'zeroth', 1: 'first', 2: 'second', 3: 'third', 4: 'fourth',
+                5: 'fifth', 6: 'sixth', 7: 'seventh', 8: 'eighth', 9: 'ninth',
+                10: 'tenth', 11: 'eleventh', 12: 'twelfth', 13: 'thirteenth', 14: 'fourteenth',
+                15: 'fifteenth', 16: 'sixteenth', 17: 'seventeenth', 18: 'eighteenth', 19: 'nineteenth',
+                20: 'twentieth', 21: 'twenty first', 22: 'twenty second', 23: 'twenty third', 24: 'twenty fourth',
+                25: 'twenty fifth', 26: 'twenty sixth', 27: 'twenty seventh', 28: 'twenty eighth', 29: 'twenty ninth',
+                30: 'thirtieth', 31: 'thirty first'}
+    year = nw.num2words(int(str(date_time.year)[:2])) + ' ' + nw.num2words(int(str(date_time.year)[2:]))
+    hour = str(date_time.hour)
+    if len(hour) is 1:
+        hour = '0' + hour
+    minute = str(date_time.minute)
+    if len(minute) is 1:
+        minute = '0' + minute
+
+    glbl.map_variable.update({'#Year': year})
+    glbl.map_variable.update({'#Month': date_time.strftime('%B')})
+    glbl.map_variable.update({'#WeekDay': date_time.strftime('%A')})
+    glbl.map_variable.update({'#Day': phonetic[date_time.day]})
+    glbl.map_variable.update({'#Hour': hour})
+    glbl.map_variable.update({'#Minute': minute})
     return
 
 

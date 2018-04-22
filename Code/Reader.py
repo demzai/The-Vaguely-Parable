@@ -39,7 +39,7 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
                 with lock_to_be_read:
                     string = to_be_read[0]
                 print(string)
-                # speaker.Speak(string)
+                speaker.Speak(string)
                 # winsound.PlaySound('wrong.wav', winsound.SND_FILENAME)
                 with lock_to_be_read:
                     to_be_read[1] = False
@@ -50,7 +50,10 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
             log_file.write(str(t.format_exc()))
             log_file.write('Reader has failed unexpectedly. {0}\n'.format(e))
     finally:
-        is_faulty[0] = True
+        try:
+            is_faulty[0] = True
+        except FileNotFoundError:
+            pass
 
 
 def getNextText(stack):
