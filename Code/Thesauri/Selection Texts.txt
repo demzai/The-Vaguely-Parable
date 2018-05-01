@@ -1,42 +1,63 @@
+yes
+suppose
+go on
+continue
+keep going
+uh-huh
+indeed
+sure
+okay
+yes
+yes
+yes
+yup
+ok
+
+no
+sod off
+fuck no
+not now
+later
+quit
+no
+no
+no
+quit
+nine
+don't
+don't
+don't
+
+date
+the date
+today
+
+time
+the time
+the time
+time now
+current time
+
 break the door down
 break the door
 break door
 break open
 break
+break
+break
 open the door
 open door
+close
 
+climb
+climb
+climb
+climb out
 climb up
 climbing
-climb
-sure
-yes
-ok
-
-climb out
-climbing
-climb
-
-continue
-suppose
-go on
-continue
-uh-huh
-indeed
-sure
-yes
-yup
-ok
-
-date
-date
-the date
-what
-date today
-day is it
 
 dig
-look for another way
+another way
 examine the floor
 examine floor
 dig
@@ -46,22 +67,35 @@ dig
 
 do not give up
 pull yourself together
-don't give up
-no
+get up
+get up
+get up
 
 do not go anywhere
-don't
+nowhere
+nowhere
 nowhere
 nothing
+nothing
+nothing
 remain
+remain
+remain
+wait
+wait
 wait
 
 do nothing
 don't
 nothing
+wait
+no
 do nothing
 do nothing
 do nothing
+tumbleweed
+tumbleweed
+tumbleweed
 
 examine rock
 pry the rock
@@ -88,17 +122,22 @@ surroundings
 feel
 attempt to move
 explore
+look around
 
 go back
 return
 leave
 give up
+go back
+go back
+go away
 
 go back into the phone booth
-telephone booth
+phone booth
+phone booth
+phone booth
 enter
 go into
-go back into
 
 go through an open door
 through
@@ -113,8 +152,11 @@ try a door
 try door
 
 go up stairs
+go up
 head up
 stairs
+stairs
+upstairs
 upstairs
 climb
 
@@ -122,8 +164,17 @@ leave phone booth
 step out
 get out
 leave
+leave
+leave
+left the
+left the
+left the
+phone booth
+phone booth
 exit
 
+look around
+look around
 look around
 search
 look
@@ -161,15 +212,6 @@ cord
 cable
 pull
 
-quit
-sod off
-fuck no
-not now
-later
-quit
-no
-nine
-
 reply
 ask
 shout back
@@ -182,10 +224,13 @@ say that again
 repeat
 
 restart
-reset
 
 run away from the light
 leave
+away
+away
+away
+away
 away
 go around
 hide
@@ -198,6 +243,7 @@ into
 go to
 enter
 light
+to the
 
 sit in despair
 sit
@@ -207,36 +253,33 @@ give up
 sleep
 
 stay in phone booth
-don't
 stayed
 stays
 stay
+stay
+stay
+phone booth
+phone booth
 do nothing
 close door
 remain
 wait
 
 stay in room
-don't
 stay
 remain
 ball pit
 rainbow
 vegetation
+pool
 
 stop climbing
+stop
 stop
 do nothing
 give up
 fall
 jump
-
-time
-time
-the time
-what
-time now
-current time
 
 try another door
 through
@@ -249,6 +292,7 @@ use door
 try a door
 try door
 other door
+again
 
 wait around
 don't do anything

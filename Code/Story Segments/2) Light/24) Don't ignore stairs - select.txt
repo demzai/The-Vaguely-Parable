@@ -1,4 +1,7 @@
 #auto
+
+#Stairs(3)
+
 ###
 #Stay
 0, "2/24a"

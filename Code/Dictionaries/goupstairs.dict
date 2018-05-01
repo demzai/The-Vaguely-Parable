@@ -1,10 +1,15 @@
 a AH
 a(2) AH
 abila AA B IY L AH
+aboard AH B AO R D
 about AH B AW T
 above AH B AH V
 abreast AH B R EH S T
+abstract AE B S T R AE K T
+accomplish AH K AA M P L IH SH
+accrue AH K R UW
 acme AE K M IY
+across AH K R AO S
 act AE K T
 administer AH D M IH N AH S T ER
 administration AE D M IH N IH S T R EY SH AH N
@@ -17,32 +22,54 @@ ah AA
 ahead AH HH EH D
 ahh AA
 air EH R
+airlift EH R L IH F T
 aloft AH L AO F T
 along AH L AO NG
 aloof AH L UW F
 altars AO L T ER Z
 ambush AE M B UH SH
+amount AH M AW N T
+amounting AH M AW N T IH NG
+amounting(2) AH M AW N T IH NG
 amplify AE M P L AH F AY
 and AH N D
 and(2) AH N D
+annul AE N AH L
+appearances AH P IH R AH N S AH Z
+appeared AH P IH R D
+appearing AH P IH R IH NG
+approach AH P R OW CH
 arcadia AA R K EY D IY AH
 arch AA R CH
 arise ER AY Z
+arises ER AY Z AH Z
+arises(2) ER AY Z AH Z
+arose ER OW Z
+around ER AW N D
+around(2) ER AW N D
+arrange ER EY N JH
 ascend AH S EH N D
+ascendant AH S EH N D AH N T
+ascended AH S EH N D IH D
 ascending AH S EH N D IH NG
+ascends AH S EH N D Z
 ascension AH S EH N SH AH N
 ascent AH S EH N T
+aspire AH S P AY R
 atmosphere AE T M AH S F IH R
 attic AE T IH K
 augment AO G M EH N T
 authority AH TH AO R AH T IY
 authorization AO TH ER AH Z EY SH AH N
 awake AH W EY K
+away AH W EY
 azure AE ZH ER
 back B AE K
 backstairs B AE K S T EH R Z
 balcony B AE L K AH N IY
+balloon B AH L UW N
 be B IY
+bear B EH R
 bearing B EH R IH NG
 bed B EH D
 before B IH F AO R
@@ -56,9 +83,11 @@ besides(2) B IH S AY D Z
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
+billow B IH L OW
 blast B L AE S T
 blithe B L AY DH
 block B L AA K
+blow B L OW
 board B AO R D
 boom B UW M
 boost B UW S T
@@ -67,8 +96,16 @@ boss(2) B AA S
 braces B R EY S AH Z
 braces(2) B R EY S AH Z
 brain B R EY N
+break B R EY K
+breeze B R IY Z
+bristle B R IH S AH L
+broke B R OW K
 bull B UH L
 buoyant B OY AH N T
+burn B ER N
+by B AY
+cabbage K AE B AH JH
+cabbage(2) K AE B AH JH
 call K AO L
 can K AE N
 can(2) K AE N
@@ -82,6 +119,7 @@ cardinal K AA R D AH N AH L
 cardinal(2) K AA R D AH N AH L
 carry K AE R IY
 carry(2) K AE R IY
+cast K AE S T
 champion CH AE M P IY AH N
 channel CH AE N AH L
 charge CH AA R JH
@@ -91,12 +129,16 @@ chest CH EH S T
 chief CH IY F
 chieftain CH IY F T AH N
 chipper CH IH P ER
+circle S ER K AH L
 clamber K L AE M B ER
 class K L AE S
 cleat K L IY T
 climb K L AY M
 climbing K L AY M IH NG
+close K L OW S
+close(2) K L OW S
 clouds K L AW D Z
+combust K AH M B AH S T
 come K AH M
 command K AH M AE N D
 commander K AH M AE N D ER
@@ -104,6 +146,7 @@ companion K AH M P AE N Y AH N
 companionway K AH M P AE N Y AH N W EY
 conduct K AA N D AH K T
 conn K AA N
+continue K AH N T IH N Y UW
 control K AH N T R OW L
 conversant K AH N V ER S AH N T
 corner K AO R N ER
@@ -111,15 +154,26 @@ could K UH D
 council K AW N S AH L
 course K AO R S
 crab K R AE B
+crack K R AE K
+crash K R AE SH
 crawl K R AO L
 creep K R IY P
 crest K R EH S T
+crowd K R AW D
 crown K R AW N
+cruise K R UW Z
+cuddle K AH D AH L
 cunningham K AH N IH NG HH AE M
 date D EY T
+decamp D AH K AE M P
 decision D IH S IH ZH AH N
+deep D IY P
 degrees D IH G R IY Z
+depart D IH P AA R T
 department D IH P AA R T M AH N T
+descend D IH S EH N D
+develop D IH V EH L AH P
+die D AY
 direct D ER EH K T
 direct(2) D ER EH K T
 direct(3) D ER EH K T
@@ -131,27 +185,43 @@ director D ER EH K T ER
 director(2) D ER EH K T ER
 director(3) D ER EH K T ER
 director(4) D ER EH K T ER
+disappear D IH S AH P IH R
+disappear(2) D IH S AH P IH R
 dock D AA K
 don D AA N
 down D AW N
 downwards D AW N W ER D Z
+drag D R AE G
 dragon D R AE G AH N
+draw D R AO
+drive D R AY V
+ease IY Z
 echelons EH SH AH L AA N Z
 ecstasy EH K S T AH S IY
+edge EH JH
+edit EH D AH T
 ego IY G OW
 eh EH
 elevate EH L AH V EY T
 elevation EH L AH V EY SH AH N
+elevations EH L AH V EY SH AH N Z
 elysium IH L IH Z IY AH M
+emerged IH M ER JH D
+emerged(2) IH M ER JH D
 emergency IH M ER JH AH N S IY
 emergency(2) IH M ER JH AH N S IY
 enchantment EH N CH AE N T M AH N T
 engineer EH N JH AH N IH R
+enlarge EH N L AA R JH
+enlarge(2) EH N L AA R JH
 er ER
 err EH R
 err(2) EH R
 escalade EH S K AH L AA D
 escalate EH S K AH L EY T
+escalated EH S K AH L EY T IH D
+escalates EH S K AH L EY T S
+escalating EH S K AH L EY T IH NG
 escalator EH S K AH L EY T ER
 escape IH S K EY P
 eternal IH T ER N AH L
@@ -162,16 +232,27 @@ executive IH G Z EH K Y AH T IH V
 exit EH G Z IH T
 exit(2) EH G Z IH T
 expand IH K S P AE N D
+expire IH K S P AY R
+extend IH K S T EH N D
 face F EY S
+fail F EY L
 fairyland F EH R IY L AE N D
+fall F AO L
+fall(2) F AO L
+far F AA R
 father F AA DH ER
 felicity F IH L IH S AH T IY
 fire F AY ER
 fire(2) F AY ER
 first F ER S T
+fit F IH T
+flee F L IY
 flight F L AY T
+fling F L IH NG
 floor F L AO R
 fly F L AY
+fold F OW L D
+follow F AA L OW
 footprints F UH T P R IH N T S
 footsteps F UH T S T EH P S
 fore F AO R
@@ -179,9 +260,11 @@ forefront F AO R F R AH N T
 foreman F AO R M AH N
 foremost F AO R M OW S T
 formerly F AO R M ER L IY
+forward F AO R W ER D
 from F R AH M
 front F R AH N T
 froth F R AO TH
+function F AH NG K SH AH N
 gaff G AE F
 gain G EY N
 gasket G AE S K AH T
@@ -189,7 +272,10 @@ gay G EY
 general JH EH N ER AH L
 general(2) JH EH N ER AH L
 genial JH IY N Y AH L
+get G EH T
+get(2) G EH T
 glad G L AE D
+glide G L AY D
 go G OW
 govern G AH V ER N
 governor G AH V ER N ER
@@ -220,6 +306,7 @@ hike HH AY K
 hill HH IH L
 hm HH M
 hmm HH M
+hold HH OW L D
 hole HH OW L
 home HH OW M
 honcho HH AO N CH OW
@@ -227,7 +314,10 @@ horn HH AO R N
 horse HH AO R S
 household HH AW S HH OW L D
 huh HH AH
+hurry HH ER IY
+improve IH M P R UW V
 in IH N
+incinerate IH N S IH N ER EY T
 incline IH N K L AY N
 increase IH N K R IY S
 intimate IH N T AH M AH T
@@ -238,6 +328,7 @@ introduce(2) IH N T R AH D UW S
 jack JH AE K
 jaunty JH AO N T IY
 jolly JH AA L IY
+journey JH ER N IY
 joyful JH OY F AH L
 jump JH AH M P
 jury JH UH R IY
@@ -256,27 +347,33 @@ lead L EH D
 lead(2) L EH D
 leader L IY D ER
 leading L IY D IH NG
+leave L IY V
 levels L EH V AH L Z
 levitate L EH V IH T EY T
 lift L IH F T
 light L AY T
 like L AY K
+live L AY V
+live(2) L AY V
 lively L AY V L IY
 loggia L AA G IY AH
 lurking L ER K IH NG
 main M EY N
 maker M EY K ER
+malfunction M AE L F AH NG K SH AH N
 manage M AE N AH JH
 manage(2) M AE N AH JH
 manager M AE N AH JH ER
 manager(2) M AE N AH JH ER
 maneuver M AH N UW V ER
 manipulate M AH N IH P Y AH L EY T
+march M AA R CH
 mark M AA R K
 martial M AA R SH AH L
 mast M AE S T
 master M AE S T ER
 measures M EH ZH ER Z
+mental M EH N T AH L
 merry M EH R IY
 micromanage M AY K R OW M AE N IH JH
 mind M AY N D
@@ -289,6 +386,7 @@ mounting M AW N T IH NG
 move M UW V
 moving M UW V IH NG
 navigate N AE V AH G EY T
+near N IH R
 never N EH V ER
 of AH V
 off AO F
@@ -298,6 +396,8 @@ oh OW
 on AA N
 on(2) AA N
 ooh UW
+operate AA P ER EY T
+operate(2) AA P ER EY T
 order AO R D ER
 out AW T
 over OW V ER
@@ -308,10 +408,13 @@ paces P EY S IH Z
 par P AA R
 paradise P EH R AH D AY S
 park P AA R K
+pass P AE S
+past P AE S T
 path P AE TH
 peak P IY K
 pelican P EH L AH K AH N
 peppy P EH P IY
+perish P EH R IH SH
 pilot P AY L AH T
 pin P IH N
 pioneer P AY AH N IH R
@@ -329,20 +432,35 @@ preside P R IH Z AY D
 preside(2) P R IH Z AY D
 president P R EH Z AH D EH N T
 president(2) P R EH Z AH D EH N T
+pressure P R EH SH ER
 previously P R IY V IY AH S L IY
 principal P R IH N S AH P AH L
 private P R AY V AH T
+proceed P R AH S IY D
+proceed(2) P R AH S IY D
+proceed(3) P R AH S IY D
+progress P R AA G R EH S
+progress(2) P R AA G R EH S
+progress(3) P R AA G R EH S
 promised P R AA M AH S T
 promoted P R AH M OW T IH D
 pull P UH L
+push P UH SH
 quarterback K W AO R T ER B AE K
+quit K W IH T
 raise R EY Z
 ramp R AE M P
+range R EY N JH
 rank R AE NG K
 ranks R AE NG K S
+rear R IH R
 refuge R EH F Y UW JH
 regulate R EH G Y AH L EY T
+repair R IH P EH R
 rest R EH S T
+retire R IH T AY R
+retire(2) R IH T AY R
+retire(3) R IH T AY R
 retreat R IY T R IY T
 ride R AY D
 rigging R IH G IH NG
@@ -368,15 +486,21 @@ shangri SH AE NG G R IY
 sharply SH AA R P L IY
 sheer SH IH R
 shin SH IH N
+shoot SH UW T
+shot SH AA T
 signals S IH G N AH L Z
 skill S K IH L
 skin S K IH N
 sky S K AY
+skyrocket S K AY R AA K AH T
 skyward S K AY W ER D
+snowball S N OW B AO L
 soar S AO R
 space S P EY S
 speed S P IY D
+spire S P AY R
 spirited S P IH R IH T IH D
+spread S P R EH D
 spreader S P R EH D ER
 sprightly S P R AY T L IY
 sputter S P AH T ER
@@ -394,6 +518,7 @@ stalking S T AO K IH NG
 stand S T AE N D
 starboard S T AA R B ER D
 start S T AA R T
+steam S T IY M
 steer S T IH R
 step S T EH P
 stepladder S T EH P L AE D ER
@@ -406,6 +531,7 @@ stone S T OW N
 stoop S T UW P
 storey S T AO R IY
 straight S T R EY T
+strengthen S T R EH NG TH AH N
 strides S T R AY D Z
 striker S T R AY K ER
 strings S T R IH NG Z
@@ -419,8 +545,10 @@ supervisor S UW P ER V AY Z ER
 support S AH P AO R T
 supports S AH P AO R T S
 supra S UW P R AH
+surface S ER F AH S
 surge S ER JH
 surmount S ER M AW N T
+swell S W EH L
 ta T AA
 take T EY K
 takeoff T EY K AO F
@@ -432,6 +560,7 @@ the DH AH
 the(2) DH AH
 think TH IH NG K
 throat TH R OW T
+through TH R UW
 timely T AY M L IY
 tiptoe T IH P T OW
 title T AY T AH L
@@ -442,12 +571,14 @@ tones T OW N Z
 too T UW
 top T AA P
 top(2) T AA P
+tour T UH R
 tower T AW ER
 trail T R EY L
 travel T R AE V AH L
 treads T R EH D Z
 tree T R IY
 truck T R AH K
+turn T ER N
 uh AH
 uhh AH
 um AH M
@@ -458,19 +589,33 @@ unknown AH N N OW N
 up AH P
 upgrade AH P G R EY D
 uphill AH P HH IH L
+uplift AH P L IH F T
+upon AH P AA N
 upper AH P ER
 uprise AH P R AY Z
 upstairs AH P S T EH R Z
+upswing AH P S W IH NG
 upward AH P W ER D
 upwardly AH P W ER D L IY
 upwards AH P W ER D Z
 usher AH SH ER
+vagabond V AE G AH B AA N D
 vaguely V EY G L IY
 vivacious V AH V EY SH AH S
+walk W AO K
+walk(2) W AO K
+water W AO T ER
 wax W AE K S
 way W EY
 well W EH L
+wend W EH N D
+whirl W ER L
+whirl(2) W ER L
+withdraw W IH DH D R AO
+withdraw(2) W IH DH D R AO
 wizard W IH Z ER D
+work W ER K
 yard Y AA R D
 zion Z AY AH N
 zippy Z IH P IY
+zoom Z UW M

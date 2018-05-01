@@ -48,7 +48,8 @@ def addFunctionsToMap():
         '#interrupt_stop_global': [turnGlobalInterruptsOff, False],
         '#bracket': [bracketResolution, False],
         '#ignore': [ignoreNarrativeState, False],
-        '#datetime': [updateDateTime, False]
+        '#datetime': [updateDateTime, False],
+        '#print': [showNotTell, False]
     })
 
     # Provide an output for the doctest
@@ -542,6 +543,17 @@ def updateDateTime():
     glbl.map_variable.update({'#Day': phonetic[date_time.day]})
     glbl.map_variable.update({'#Hour': hour})
     glbl.map_variable.update({'#Minute': minute})
+    return
+
+
+# #print
+def showNotTell(text):
+    """
+    Print text to the terminal without physically speaking it
+    :param text:
+    :return:
+    """
+    print(str(text))
     return
 
 

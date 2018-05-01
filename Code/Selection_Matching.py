@@ -114,7 +114,7 @@ def formatWordsList(words):
     return_list = []
     for word in words:
         # If '%' is contained, then the word is probably not a word!
-        word = word.replace('%27', "'")
+        word = word.replace('%27', "'").lower()
         if '%' not in word:
             # Convert numbers to words
             numbers = re.findall('[0-9]+', word)
@@ -446,17 +446,21 @@ def cleanupExcessFiles(file_id):
     try:
         os.remove(grammar_directory + str(file_id) + '.gram')
     except Exception:
-        pass
+        with open("log_file.txt", "a") as log_file:
+            log_file.write("File Cleanup - .gram: FileNotFoundError\n")
     # Remove the phoneme file (.fsg)
     try:
         os.remove(grammar_directory + str(file_id) + '.fsg')
     except Exception:
-        pass
+        with open("log_file.txt", "a") as log_file:
+            log_file.write("File Cleanup - .fsg: FileNotFoundError\n")
     # Remove the dictionary file (.dict)
     try:
         os.remove(thesaurus_directory + str(file_id) + '.dict')
     except Exception:
-        pass
+        with open("log_file.txt", "a") as log_file:
+            log_file.write("File Cleanup - .dict: FileNotFoundError\n")
+    return
 
 
 def getSentenceSetSynonyms(sentence_set, full_thesaurus):
@@ -674,6 +678,9 @@ def makeSelectionMetric(text_confidence_pairs, selection_set):
 
     # Get the weightings for each word, confidence pair
     for pair in text_confidence_pairs:
+        # If the input is excessively long then ignore it
+        if len(pair[0]) >= 80:
+            pair[0] = ''
         word_weights = getTextWeighting(pair[0], sub_weightings, pair[1])
         for i in metric_weightings:
             metric_weightings[i] += word_weights[i]
@@ -683,6 +690,7 @@ def makeSelectionMetric(text_confidence_pairs, selection_set):
     return [str(selected[0][0]).replace(' ', '_'), selected]
 
 
+# noinspection PyUnusedLocal
 def makeSelection(text_confidence_pairs, selection_set, regex):
     """
     Attempt to make a selection via a metric based on the words used
@@ -696,11 +704,16 @@ def makeSelection(text_confidence_pairs, selection_set, regex):
     metric = makeSelectionMetric(text_confidence_pairs, selection_set)
     weighted_results = metric[1]
     with open("log_file.txt", "a") as log_file:
-        log_file.write(str(metric))
+        log_file.write(str(metric) + '\n\n')
 
     # If the metric-based approach fails, then attempt to select via regular expressions
-    if float(weighted_results[0][1]) * 0.9 < float(weighted_results[1][1]) or float(weighted_results[0][1]) < 0.1:
-        return makeSelectionRegex(text_confidence_pairs, regex)
+    # output = ['$User_Error', []]
+    # output = ['$Creator_Error', [matches[0], matches[1], matches[2]]]
+    if float(weighted_results[0][1]) < 0.2:
+        return ['$User_Error', []]
+    if float(weighted_results[0][1]) * 0.9 < float(weighted_results[1][1]):
+        # return makeSelectionRegex(text_confidence_pairs, regex)
+        return ['$Creator_Error', [weighted_results[0], weighted_results[1]]]
     # Otherwise, return the find as is
     else:
         return metric

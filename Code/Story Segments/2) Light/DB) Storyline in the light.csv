@@ -3,7 +3,9 @@
 2/01a,	2/01c,	auto
 2/01b,	2/01c,	auto
 2/01c,	2/02a,	go_through_an_open_door
+2/01c,	2/02a,	yes
 2/01c,	2/02b,	look_back
+2/01c,	2/02b,	no
 2/01c,	2/02c,	go_back
 2/01c,	2/02d,	look_around
 2/02a,	#code,	auto							//_Return_value_from_file
@@ -12,19 +14,23 @@
 2/02a3,	2/02a5,	auto
 2/02a4,	2/02a5,	auto
 2/02a5,	2/02a,	try_another_door
+2/02a5,	2/02a,	yes
 2/02a5,	2/02b,	look_back
+2/02a5,	2/02b,	no
 2/02a5,	2/02c,	go_back
 2/02a5,	2/02d,	look_around
 2/02a5, 2/13,   break_the_door_down
-2/02b,	01c,	auto							//_Repeat_call_to_previous_file
+2/02b,	#&(#prev),	auto							// Repeat call to previous file
 2/02c,	3/01,	auto
 2/02d,	2/23,	pull_string
 2/02d,  #&("2/01c"),    auto
 2/03a,	2/03c,	auto
 2/03b,	2/03c,	auto
 2/03c,	2/04a,	go_back_into_the_phone_booth
+2/03c,	2/04a,	yes
 2/03c,	2/04b,	look_back
 2/03c,	2/04c,	go_back
+2/03c,	2/04c,	no
 2/04a,	4/98,	auto                                //_Auto_=_instant,_delay_1000_=_delayed_by_1000ms
 2/04b,	#&("2/03c"),	auto							//_Repeat_options_of_previous_file
 2/04c,	#&("2/03c"),	auto
@@ -37,7 +43,9 @@
 2/13d,	01c,	auto
 2/14,   15a,    look_around
 2/14,   15b,    climb
+2/14,   15b,    yes
 2/14,   15c,    stop_climbing
+2/14,   15c,    no
 2/15a,  #&("2/14"),   auto
 2/15b,  #&("2/14"),   auto
 2/15c,	4/98,	auto

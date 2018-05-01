@@ -15,9 +15,11 @@ ah AA
 ahead AH HH EH D
 ahh AA
 air EH R
-allowed AH L AW D
+ally AE L AY
+ally(2) AE L AY
 alone AH L OW N
 along AH L AO NG
+amalgamate AH M AE L G AH M EY T
 ambush AE M B UH SH
 analytic AE N AH L IH T IH K
 angel EY N JH AH L
@@ -32,17 +34,22 @@ around(2) ER AW N D
 arrest ER EH S T
 arrival ER AY V AH L
 assembly AH S EH M B L IY
+associate AH S OW S IY AH T
+associate(2) AH S OW S IY AH T
+associate(3) AH S OW S IY AH T
+associate(4) AH S OW S IY AH T
 atmosphere AE T M AH S F IH R
 aura AO R AH
 away AH W EY
 backstop B AE K S T AA P
+backwater B AE K W AO T ER
 balance B AE L AH N S
 ball B AO L
 ballade B AH L AA D
 ballet B AE L EY
 balloon B AH L UW N
-ban B AE N
 band B AE N D
+bank B AE NG K
 barbecue B AA R B IH K Y UW
 bartender B AA R T EH N D ER
 base B EY S
@@ -50,6 +57,8 @@ baseball B EY S B AO L
 based B EY S T
 basin B EY S AH N
 basketball B AE S K AH T B AO L
+bath B AE TH
+bay B EY
 be B IY
 beach B IY CH
 beachball B IY CH B AA L
@@ -68,8 +77,10 @@ bide B AY D
 biding B AY D IH NG
 biennial B AY EH N IY AH L
 billiard B IH L Y ER D
+billiards B IH L Y ER D Z
 bitter B IH T ER
 blasting B L AE S T IH NG
+blend B L EH N D
 blob B L AA B
 block B L AA K
 blockhead B L AA K HH EH D
@@ -116,6 +127,7 @@ carol K AE R AH L
 carol(2) K AE R AH L
 carry K AE R IY
 carry(2) K AE R IY
+cartel K AA R T EH L
 castle K AE S AH L
 catcher K AE CH ER
 cavity K AE V AH T IY
@@ -125,6 +137,7 @@ cellar S EH L ER
 chalk CH AA K
 chalk(2) CH AA K
 chameleon K AH M IY L IY AH N
+channel CH AE N AH L
 chaparral SH AE P ER AE L
 charm CH AA R M
 chase CH EY S
@@ -134,6 +147,7 @@ cherry CH EH R IY
 choir K W AY ER
 chunk CH AH NG K
 circle S ER K AH L
+cistern S IH S T ER N
 climate K L AY M AH T
 climate(2) K L AY M AH T
 climax K L AY M AE K S
@@ -147,14 +161,25 @@ colored K AH L ER D
 colour K AH L ER
 coloured K AH L ER D
 colours K AH L ER Z
+combine K AA M B AY N
+combine(2) K AA M B AY N
 community K AH M Y UW N AH T IY
 community(2) K AH M Y UW N AH T IY
 concavity K AA N K AA V AH T IY
 concerto K AH N CH EH R T OW
 condition K AH N D IH SH AH N
+confederate K AH N F EH D ER AH T
+confederate(2) K AH N F EH D ER AH T
+conglomerate K AH N G L AA M ER AH T
+consolidate K AH N S AA L IH D EY T
+consortium K AH N S AO R SH IY AH M
+consortium(2) K AH N S AO R SH IY AH M
 contaminant K AH N T AE M AH N AH N T
 contamination K AH N T AE M AH N EY SH AH N
+context K AA N T EH K S T
 continue K AH N T IH N Y UW
+corporate K AO R P ER AH T
+corporate(2) K AO R P ER AH T
 corruption K ER AH P SH AH N
 could K UH D
 counter K AW N T ER
@@ -167,6 +192,7 @@ crime K R AY M
 crop K R AA P
 crops K R AA P S
 croquet K R OW K EY
+crossing K R AO S IH NG
 crystal K R IH S T AH L
 cup K AH P
 curb K ER B
@@ -181,19 +207,17 @@ de(3) D IY
 deep D IY P
 delay D IH L EY
 dent D EH N T
+deposit D AH P AA Z IH T
+deposit(2) D AH P AA Z IH T
 depression D IH P R EH SH AH N
 depth D EH P TH
 desk D EH S K
 detain D IH T EY N
 deterrent D IH T ER R AH N T
 development D IH V EH L AH P M AH N T
-did D IH D
-didn't D IH D AH N T
-didn't(2) D IH D AH N T
-didn't(3) D IH D AH N T
-didn't(4) D IH D AH N T
 dig D IH G
 digger D IH G ER
+dike D AY K
 dimple D IH M P AH L
 dint D IH N T
 dip D IH P
@@ -202,19 +226,13 @@ direct(2) D ER EH K T
 direct(3) D ER EH K T
 disc D IH S K
 discontinue D IH S K AH N T IH N Y UW
-do D UW
-does D AH Z
-does(2) D AH Z
-doesn't D AH Z AH N T
-doesn't(2) D AH Z AH N T
 doll D AA L
-don't D OW N T
-don't(2) D OW N T
 dormancy D AO R M AH N S IY
 double D AH B AH L
 down D AW N
 dream D R IY M
 dress D R EH S
+drink D R IH NG K
 drug D R AH G
 dwarf D W AO R F
 dwell D W EH L
@@ -228,6 +246,7 @@ elbow EH L B OW
 electronic IH L EH K T R AA N IH K
 elf EH L F
 elfin EH L F IH N
+embayment EH M B EY M AH N T
 emersed IH M ER S T
 endure EH N D Y UH R
 endure(2) EH N D Y UH R
@@ -235,16 +254,19 @@ entertainment EH N T ER T EY N M AH N T
 entertainment(2) EH N T ER T EY N M AH N T
 entire IH N T AY ER
 environment IH N V AY R AH N M AH N T
+equipment IH K W IH P M AH N T
 er ER
 erect IH R EH K T
 err EH R
 err(2) EH R
+estuary EH S CH UW EH R IY
 evil IY V AH L
 excavation EH K S K AH V EY SH AH N
 execution EH K S AH K Y UW SH AH N
 exist IH G Z IH S T
 expired IH K S P AY R D
 fairy F EH R IY
+falls F AO L Z
 fancy F AE N S IY
 fantasy F AE N T AH S IY
 fantasy(2) F AE N T AH S IY
@@ -256,6 +278,7 @@ fire F AY ER
 fire(2) F AY ER
 fireball F AY ER B AO L
 fireball(2) F AY ER B AO L
+fish F IH SH
 flash F L AE SH
 flora F L AO R AH
 flower F L AW ER
@@ -267,6 +290,7 @@ football F UH T B AO L
 for F AO R
 for(2) F AO R
 for(3) F AO R
+ford F AO R D
 forest F AO R AH S T
 forest(2) F AO R AH S T
 free F R IY
@@ -275,11 +299,14 @@ fresh F R EH SH
 frond F R AA N D
 fruit F R UW T
 full F UH L
+fund F AH N D
+funds F AH N D Z
 gala G AE L AH
 gala(2) G AE L AH
 game G EY M
 gametophyte G AH M IY T AH F AY T
 garden G AA R D AH N
+give G IH V
 glass G L AE S
 gleam G L IY M
 glitter G L IH T ER
@@ -305,6 +332,7 @@ green G R IY N
 greenery G R IY N ER IY
 gremlin G R EH M L AH N
 ground G R AW N D
+group G R UW P
 growth G R OW TH
 guard G AA R D
 gulf G AH L F
@@ -324,6 +352,7 @@ herb ER B
 herb(2) ER B
 herbs ER B Z
 hibernation HH AY B ER N EY SH AH N
+high HH AY
 hinder HH IH N D ER
 hindrance HH IH N D R AH N S
 hip HH IH P
@@ -357,28 +386,39 @@ infamy IH N F AH M IY
 inferno IH N F ER N OW
 inhabit IH N HH AE B AH T
 injustice IH N JH AH S T IH S
+inlet IH N L EH T
 insist IH N S IH S T
-interdiction IH N T ER D IH K SH AH N
+international IH N T ER N AE SH AH N AH L
+international(2) IH N T ER N AE SH AH N AH L
 interrupt IH N T ER AH P T
 interruption IH N T ER AH P SH AH N
 iris AY R AH S
 iris(2) AY R AH S
 jack JH AE K
+jackpot JH AE K P AA T
 jazz JH AE Z
 jive JH AY V
+join JH OY N
+jump JH AH M P
 keep K IY P
 kernel K ER N AH L
 kingdom K IH NG D AH M
+kitty K IH T IY
 laced L EY S T
 lacrosse L AH K R AO S
+lagoon L AH G UW N
+lake L EY K
 land L AE N D
 last L AE S T
 last(2) L AE S T
 lawn L AO N
 layover L EY OW V ER
+league L IY G
 leave L IY V
 leaves L IY V Z
 left L EH F T
+leisure L EH ZH ER
+leisure(2) L EH ZH ER
 leprechaun L EH P ER K AW N
 let L EH T
 lethargy L EH TH ER JH IY
@@ -392,6 +432,7 @@ linger L IH NG G ER
 linger(2) L IH NG G ER
 live L AY V
 live(2) L AY V
+loch L AA K
 lodge L AA JH
 logjam L AA G JH AE M
 loiter L OY T ER
@@ -402,6 +443,7 @@ lump L AH M P
 madrigal M AE D R AH G AH L
 madrigal(2) M AE D R AH G AH L
 magic M AE JH IH K
+main M EY N
 make M EY K
 mammal M AE M AH L
 man M AE N
@@ -414,11 +456,15 @@ mass M AE S
 match M AE CH
 matter M AE T ER
 medicine M EH D AH S AH N
+mere M IH R
+merge M ER JH
 meteorology M IY T IY ER AA L AH JH IY
+mid M IH D
 mind M AY N D
 mine M AY N
 mineral M IH N ER AH L
 mineral(2) M IH N ER AH L
+mingle M IH NG G AH L
 mirage M ER AA ZH
 missile M IH S AH L
 mist M IH S T
@@ -426,25 +472,23 @@ mizen M AY Z AH N
 mobilize M OW B AH L AY Z
 modern M AA D ER N
 monochrome M AA N AH K R OW M
+monopoly M AH N AA P AH L IY
 mothball M AO TH B AO L
 motley M AA T L IY
 mount M AW N T
+mud M AH D
 multicolor M AH L T IY K AH L ER
 multicolored M AH L T IY K AH L ER D
 murky M ER K IY
 musical M Y UW Z IH K AH L
 mysticism M IH S T IH S IH Z AH M
 neck N EH K
-neither N IY DH ER
-neither(2) N IY DH ER
 neutrality N UW T R AE L AH T IY
 next N EH K S T
 next(2) N EH K S T
 nimbus N IH M B AH S
 nixie N IH K S IY
 no N OW
-non N AA N
-nope N OW P
 not N AA T
 nut N AH T
 nymph N IH M F
@@ -453,9 +497,11 @@ object AA B JH EH K T
 object(2) AA B JH EH K T
 obstruct AH B S T R AH K T
 obstruction AH B S T R AH K SH AH N
+ocean OW SH AH N
 oceanography OW SH AH N AA G R AH F IY
 of AH V
 off AO F
+offing AO F IH NG
 oh OW
 oil OY L
 on AA N
@@ -476,6 +522,8 @@ outrage AW T R EY JH
 over OW V ER
 overnight OW V ER N AY T
 overstay OW V ER S T EY
+paddling P AE D AH L IH NG
+paddling(2) P AE D AH L IH NG
 pads P AE D Z
 paint P EY N T
 party P AA R T IY
@@ -502,13 +550,17 @@ please P L IY Z
 plumage P L UW M AH JH
 plumage(2) P L UW M AH JH
 pock P AA K
+pocket P AA K AH T
 pockmark P AA K M AA R K
 pokemon P OW K EY M AH N
 polychrome P AA L IY K R OW M
+pond P AA N D
+pool P UW L
 postpone P OW S T P OW N
 postpone(2) P OW S T P OW N
 postponement P OW S T P OW N M AH N T
 postponement(2) P OW S T P OW N M AH N T
+pot P AA T
 pour P AO R
 prelude P R EY L UW D
 preserve P R AH Z ER V
@@ -517,19 +569,19 @@ preserve(3) P R AH Z ER V
 prevail P R IH V EY L
 prevail(2) P R IH V EY L
 primary P R AY M EH R IY
-prohibition P R OW AH B IH SH AH N
 projectile P R AH JH EH K T AH L
 projectile(2) P R AH JH EH K T AH L
 prom P R AA M
 promenade P R AA M AH N EY D
 prop P R AA P
-proscription P R OW S K R IH P SH AH N
 protective P R AH T EH K T IH V
 protuberance P R OW T UW B ER AH N S
 protuberance(2) P R OW T UW B ER AH N S
 puck P AH K
+puddle P AH D AH L
 puppet P AH P AH T
 puppet(2) P AH P AH T
+purse P ER S
 put P UH T
 puzzle P AH Z AH L
 quarry K W AO R IY
@@ -548,6 +600,8 @@ receive(2) R AH S IY V
 receive(3) R AH S IY V
 reception R IH S EH P SH AH N
 reception(2) R IH S EH P SH AH N
+recess R IH S EH S
+recess(2) R IH S EH S
 recreation R EH K R IY EY SH AH N
 red R EH D
 reflected R IH F L EH K T IH D
@@ -557,6 +611,10 @@ reinforcing R IY IH N F AO R S IH NG
 remain R IH M EY N
 remain(2) R IH M EY N
 renew R IH N UW
+reserves R IH Z ER V Z
+reserves(2) R IH Z ER V Z
+reservoir R EH Z AH V W AA R
+reservoir(2) R EH Z AH V W AA R
 reside R IH Z AY D
 reside(2) R IH Z AY D
 respite R EH S P IH T
@@ -564,6 +622,7 @@ rest R EH S T
 retain R IH T EY N
 retain(2) R IH T EY N
 reverie R EH V ER IY
+right R AY T
 rink R IH NG K
 room R UW M
 roost R UW S T
@@ -573,6 +632,8 @@ saplings S AE P L IH NG Z
 satan S EY T AH N
 scar S K AA R
 scrub S K R AH B
+sea S IY
+seas S IY Z
 second S EH K AH N D
 seed S IY D
 seeming S IY M IH NG
@@ -582,6 +643,8 @@ seria S IH R IY AH
 settle S EH T AH L
 seven S EH V AH N
 shaft SH AE F T
+shallow SH AE L OW
+share SH EH R
 shell SH EH L
 shelter SH EH L T ER
 shin SH IH N
@@ -603,10 +666,12 @@ slime S L AY M
 sloping S L OW P IH NG
 slow S L OW
 slug S L AH G
+snooker S N UH K ER
 socks S AA K S
 sojourn S OW JH ER N
 sonata S AH N AA T AH
 soul S OW L
+sound S AW N D
 span S P AE N
 specter S P EH K T ER
 spectrum S P EH K T R AH M
@@ -614,12 +679,14 @@ sphere S F IH R
 spheroid S F IH R OY D
 spirit S P IH R AH T
 spirit(2) S P IH R AH T
+sponge S P AH N JH
 sport S P AO R T
 sprite S P R AY T
 sprouting S P R AW T IH NG
 stage S T EY JH
 stagnate S T AE G N EY T
 stain S T EY N
+stakes S T EY K S
 stand S T AE N D
 station S T EY SH AH N
 stay S T EY
@@ -635,21 +702,32 @@ stoppage S T AA P IH JH
 storm S T AO R M
 straighten S T R EY T AH N
 strait S T R EY T
+stream S T R IY M
 structure S T R AH K CH ER
 subsist S AH B S IH S T
 substance S AH B S T AH N S
 suite S W IY T
 sump S AH M P
+supply S AH P L AY
 support S AH P AO R T
 survival S ER V AY V AH L
 survive S ER V AY V
 suspend S AH S P EH N D
 suspension S AH S P EH N SH AH N
+swimming S W IH M IH NG
 switch S W IH CH
+synchronize S IH NG K R AH N AY Z
+syndicate S IH N D IH K AH T
+syndicate(2) S IH N D IH K AH T
 ta T AA
 take T EY K
+tank T AE NG K
 tar T AA R
 tarry T EH R IY
+team T IY M
+tennis T EH N AH S
+tennis(2) T EH N AH S
+territorial T EH R IH T AO R IY AH L
 testicle T EH S T IH K AH L
 thank TH AE NG K
 thanks TH AE NG K S
@@ -673,14 +751,18 @@ trip T R IH P
 tripod T R AY P AA D
 troll T R OW L
 trough T R AO F
+trust T R AH S T
 tunnel T AH N AH L
+typing T AY P IH NG
 uh AH
 uhh AH
 um AH M
 umbrage AH M B R IH JH
 umm AH M
 undergrowth AH N D ER G R OW TH
+unite Y UW N AY T
 untouched AH N T AH CH T
+up AH P
 vaguely V EY G L IY
 vegetable V EH JH T AH B AH L
 vegetables V EH JH T AH B AH L Z
@@ -693,19 +775,23 @@ violet(2) V AY AH L IH T
 vision V IH ZH AH N
 visit V IH Z IH T
 volleyball V AA L IY B AO L
+wading W EY D IH NG
 wait W EY T
 wall W AO L
 waltz W AO L T S
 waltz(2) W AO L T S
 washing W AA SH IH NG
 water W AO T ER
+waterfall W AO T ER F AO L
 waters W AO T ER Z
+waterway W AO T ER W EY
 weather W EH DH ER
 well W EH L
 wet W EH T
 wetness W EH T N AH S
 wilding W AY L D IH NG
-won't W OW N T
+with W IH DH
+with(2) W IH DH
 wood W UH D
 woods W UH D Z
 woody W UH D IY

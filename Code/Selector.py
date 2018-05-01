@@ -72,8 +72,10 @@ def readSphinxData(sphinx_data, error):
         if confidence > 0:
             confidence = -1.0 / (math.log10(confidence) - 1)
         return_value = [top_10[0][0], confidence, error]  # [Top Result, Confidence, Error]
-    except AttributeError:  # Figure out why this happens!
-        pass
+    except AttributeError as e:  # Figure out why this happens!
+        with open("log_file.txt", "a") as log_file:
+            log_file.write(str(t.format_exc()))
+            log_file.write('Selector Error: {0}\n'.format(e))
     return return_value
 
 
@@ -127,8 +129,10 @@ def getSphinxTranslation(audio, result, dictionary=None):
         for i in range(3):
             try:
                 result[i] = translation[i]
-            except Exception:
-                pass
+            except Exception as e:
+                with open("log_file.txt", "a") as log_file:
+                    log_file.write(str(t.format_exc()))
+                    log_file.write('Selector Error: {0}\n'.format(e))
         return result
 
 
@@ -160,8 +164,10 @@ def getGoogleTranslation(audio, result):
         for i in range(3):
             try:
                 result[i] = translation[i]
-            except Exception:
-                pass
+            except Exception as e:
+                with open("log_file.txt", "a") as log_file:
+                    log_file.write(str(t.format_exc()))
+                    log_file.write('Selector Error: {0}\n'.format(e))
         return result
 
 
@@ -198,8 +204,10 @@ def getWitApiTranslation(audio, result):
         for i in range(3):
             try:
                 result[i] = translation[i]
-            except Exception:
-                pass
+            except Exception as e:
+                with open("log_file.txt", "a") as log_file:
+                    log_file.write(str(t.format_exc()))
+                    log_file.write('Selector Error: {0}\n'.format(e))
         return result
 
 
@@ -262,16 +270,22 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             with lock_outputs:
                 try:
                     outputs[0] = [x for x in result_google]
-                except FileNotFoundError:
-                    pass
+                except FileNotFoundError as e:
+                    with open("log_file.txt", "a") as log_file:
+                        log_file.write(str(t.format_exc()))
+                        log_file.write('Selector Error: {0}\n'.format(e))
                 try:
                     outputs[1] = [x for x in result_witapi]
-                except FileNotFoundError:
-                    pass
+                except FileNotFoundError as e:
+                    with open("log_file.txt", "a") as log_file:
+                        log_file.write(str(t.format_exc()))
+                        log_file.write('Selector Error: {0}\n'.format(e))
                 try:
                     outputs[2] = [x for x in result_sphinx]
-                except FileNotFoundError:
-                    pass
+                except FileNotFoundError as e:
+                    with open("log_file.txt", "a") as log_file:
+                        log_file.write(str(t.format_exc()))
+                        log_file.write('Selector Error: {0}\n'.format(e))
 
         # If the Google result gave a bad recognition error then ignore the whole thing
         if result_google[2] == 'Bad Recognition' or (sm.confidence_threshold > result_google[1] > 0.0):
@@ -292,8 +306,10 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             try:
                 outputs[-2] = selection
                 outputs[-1] = True
-            except FileNotFoundError:
-                pass
+            except FileNotFoundError as e:
+                with open("log_file.txt", "a") as log_file:
+                    log_file.write(str(t.format_exc()))
+                    log_file.write('Selector Error: {0}\n'.format(e))
         return
 
     # On exception: print cause, or skip entirely
@@ -370,7 +386,8 @@ class SelectorObj:
                             self.result_sphinx = self.__outputs[2]
                             self.selected_narrative = self.__outputs[-2]
                         except Exception:
-                            pass
+                            with open("log_file.txt", "a") as log_file:
+                                log_file.write("Selector-checkSelectorStatus: FileNotFoundError\n\n")
                         self.stopSelector()
 
 

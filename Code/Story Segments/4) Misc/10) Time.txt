@@ -4,10 +4,10 @@
 "#Time"
 0, "Thyme is a variety of garden herb. Oh, the time of day!"
 1, "It's about time someone asked that question."
-2, "Did you know that, besides my job as a narrator, I’m also a percussionist. It’s time to play my clockenspiel!"
+2, "Did you know that, besides my job as a narrator, I'm also a percussionist. It's time to play my clockenspiel!"
 3, "Do you have time for another pun?"
 4, "Time flies like an arrow... fruit flies like a banana."
-else, -1, "Ever tried to eat a clock? It’s very time consuming..."
+else, -1, "Ever tried to eat a clock? It's very time consuming..."
 ###
 _#code
 

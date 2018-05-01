@@ -3,7 +3,7 @@
 3/01a,	3/02,	feel_surroundings
 3/01a,	3/03a,	sit_in_despair
 3/01a,	3/03b,	do_not_give_up
-3/01a,	3/04,	climb_out
+3/01a,	3/04,	climb
 3/01a,	3/13,	dig
 3/01b,	#&("3/01a"),	auto
 3/01c,	#&("3/01a"),	auto

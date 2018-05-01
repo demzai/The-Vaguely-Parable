@@ -1,5 +1,6 @@
 #auto
 #Door(0)
+#Stairs(0)
 ###
 //#select_storyline
 "#Break"

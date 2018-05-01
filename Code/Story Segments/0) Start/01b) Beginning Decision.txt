@@ -1,4 +1,8 @@
 Vaguely decided to leave her phone booth.
+#print("__________________________________________________________________________")
+#print("Vaguely is still inside of the phone booth.")
+#print("The narrator is letting you decide whether Vaguely actually leaves or not.")
+#print("__________________________________________________________________________")
 
 #Dark(0)
 #ignore("do_nothing")

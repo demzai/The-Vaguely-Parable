@@ -6,4 +6,5 @@ Tired of the struggling,
 
 #Door(0)
 #Break(0)
+#Stairs(0)
 #auto

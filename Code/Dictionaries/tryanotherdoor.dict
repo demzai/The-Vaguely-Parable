@@ -1,8 +1,10 @@
 a AH
 a(2) AH
 aba EY B IY EY
+aback AH B AE K
 aboard AH B AO R D
 about AH B AW T
+above AH B AH V
 abreast AH B R EH S T
 abridge AH B R IH JH
 absent AE B S AH N T
@@ -50,11 +52,14 @@ affix(2) AE F IH K S
 afflict AH F L IH K T
 affliction AH F L IH K SH AH N
 aforesaid AH F AO R S EH D
+afresh AH F R EH SH
+aft AE F T
 after AE F T ER
 again AH G EH N
 again(2) AH G EH N
 against AH G EH N S T
 against(2) AH G EH N S T
+age EY JH
 agency EY JH AH N S IY
 agnostic AE G N AA S T IH K
 agonize AE G AH N AY Z
@@ -68,6 +73,9 @@ akin AH K IH N
 akin(2) AH K IH N
 alacrity AH L AE K R AH T IY
 alias EY L IY AH S
+alien EY L IY AH N
+alienate EY L Y AH N EY T
+alike AH L AY K
 all AO L
 alley AE L IY
 almost AO L M OW S T
@@ -79,6 +87,7 @@ alternate AO L T ER N AH T
 alternate(2) AO L T ER N AH T
 alternative AO L T ER N AH T IH V
 amateurish AE M AH CH ER IH SH
+amazed AH M EY Z D
 amidst AH M IH D S T
 amongst AH M AH NG S T
 amount AH M AW N T
@@ -94,9 +103,12 @@ angry AE NG G R IY
 annex AE N EH K S
 annex(2) AE N EH K S
 annexation AE N EH K S EY SH AH N
+anon AE N AO N
 another AH N AH DH ER
+answer AE N S ER
 antithetical AE N T AH TH EH T IH K AH L
 anybody EH N IY B AH D IY
+anymore EH N IY M AO R
 apart AH P AA R T
 aperture AE P ER CH ER
 append AH P EH N D
@@ -121,6 +133,7 @@ assay AE S IY
 assign AH S AY N
 assist AH S IH S T
 assorted AH S AO R T IH D
+astonished AH S T AA N IH SH T
 at AE T
 athwart AH TH W AO R T
 attempt AH T EH M P T
@@ -164,6 +177,8 @@ become B IH K AH M
 bee B IY
 before B IH F AO R
 before(2) B IH F AO R
+begin B IH G IH N
+beginning B IH G IH N IH NG
 being B IY IH NG
 benefit B EH N AH F IH T
 beside B IH S AY D
@@ -172,8 +187,12 @@ besides B IH S AY D Z
 besides(2) B IH S AY D Z
 between B IH T W IY N
 between(2) B IH T W IY N
+beyond B IH AA N D
+beyond(2) B IH AA N D
+beyond(3) B IH AA N D
 big B IH G
 bin B IH N
+bis B IH S
 bit B IH T
 biting B AY T IH NG
 bitter B IH T ER
@@ -186,6 +205,7 @@ blues B L UW Z
 board B AO R D
 bold B OW L D
 books B UH K S
+boot B UW T
 border B AO R D ER
 bother B AA DH ER
 brink B R IH NG K
@@ -209,7 +229,9 @@ can(2) K AE N
 cannibalize K AE N AH B AH L AY Z
 canon K AE N AH N
 cantata K AE N T AA T AH
+capo K AA P OW
 caprice K AH P R IY S
+capsize K AE P S AY Z
 car K AA R
 cargo K AA R G OW
 carol K AE R AH L
@@ -299,6 +321,7 @@ corridor(2) K AO R AH D ER
 could K UH D
 count K AW N T
 counter K AW N T ER
+countless K AW N T L AH S
 courage K ER AH JH
 courage(2) K ER AH JH
 covert K OW V ER T
@@ -315,6 +338,8 @@ curbside K ER B S AY D
 curious K Y UH R IY AH S
 custom K AH S T AH M
 cynicism S IH N IH S IH Z AH M
+da D AA
+da(2) D AA
 daily D EY L IY
 dance D AE N S
 dare D EH R
@@ -359,6 +384,7 @@ distinctive D IH S T IH NG K T IH V
 distinguish D IH S T IH NG G W IH SH
 distinguishable D IH S T IH NG G W IH SH AH B AH L
 distress D IH S T R EH S
+ditto D IH T OW
 divergent D AY V ER JH AH N T
 divergent(2) D AY V ER JH AH N T
 divers D AY V ER Z
@@ -389,6 +415,8 @@ edition(2) AH D IH SH AH N
 effort EH F ER T
 egress IH G R EH S
 eh EH
+either IY DH ER
+either(2) IY DH ER
 elite IH L IY T
 elite(2) IH L IY T
 else EH L S
@@ -398,6 +426,7 @@ employ(2) EH M P L OY
 employment EH M P L OY M AH N T
 employment(2) EH M P L OY M AH N T
 en EH N
+encore AA N K AO R
 encourage EH N K ER IH JH
 encourage(2) EH N K ER IH JH
 endeavor IH N D EH V ER
@@ -497,12 +526,15 @@ foyer F OY ER
 free F R IY
 french F R EH N CH
 fresh F R EH SH
+freshly F R EH SH L IY
+from F R AH M
 front F R AH N T
 fruit F R UW T
 fun F AH N
 function F AH NG K SH AH N
 functionality F AH NG K SH AH N AE L IH T IY
 further F ER DH ER
+furthermore F ER DH ER M AO R
 gamble G AE M B AH L
 gap G AE P
 gate G EY T
@@ -554,6 +586,7 @@ hmm HH M
 honest AA N AH S T
 horde HH AO R D
 host HH OW S T
+however HH AW EH V ER
 huh HH AH
 i AY
 identification AY D EH N T AH F AH K EY SH AH N
@@ -597,6 +630,7 @@ irregular IH R EH G Y AH L ER
 irritate IH R IH T EY T
 issue IH SH UW
 it IH T
+item AY T AH M
 itemize AY T AH M AY Z
 its IH T S
 jazz JH AE Z
@@ -615,6 +649,7 @@ lagniappe L AE NG AA P
 last L AE S T
 last(2) L AE S T
 lastly L AE S T L IY
+later L EY T ER
 lay L EY
 leeward L IY W ER D
 less L EH S
@@ -624,6 +659,7 @@ life L AY F
 lifelike L AY F L AY K
 light L AY T
 like L AY K
+likewise L AY K W AY Z
 line L AY N
 lines L AY N Z
 literary L IH T ER EH R IY
@@ -658,6 +694,7 @@ masterpiece M AE S T ER P IY S
 means M IY N Z
 measure M EH ZH ER
 megawatt M EH G AH W AA T
+mend M EH N D
 meta M IY T AH
 middle M IH D AH L
 midnight M IH D N AY T
@@ -701,9 +738,11 @@ near N IH R
 need N IY D
 new N UW
 new(2) N UW
+newly N UW L IY
 nice N AY S
 nice(2) N AY S
 no N OW
+nonetheless N AH N DH AH L EH S
 normal N AO R M AH L
 not N AA T
 novel N AA V AH L
@@ -842,6 +881,7 @@ recur(2) R IH K ER
 recycle R IY S AY K AH L
 recycling R IY S AY K AH L IH NG
 recycling(2) R IY S AY K AH L IH NG
+redo R IY D UW
 redound R IY D AW N D
 regard R IH G AA R D
 regarding R IH G AA R D IH NG
@@ -850,6 +890,9 @@ remaining(2) R IH M EY N IH NG
 removed R IY M UW V D
 renewed R IH N UW D
 renewed(2) R IH N UW D
+repeat R IH P IY T
+repeat(2) R IH P IY T
+repeatedly R IH P IY T IH D L IY
 replacement R IH P L EY S M AH N T
 replenishing R IY P L EH N IH SH IH NG
 reprocess R IY P R AO S EH S
@@ -870,6 +913,7 @@ reuse(2) R IY Y UW S
 revolver R IH V AA L V ER
 revolving R IY V AA L V IH NG
 riding R AY D IH NG
+rigorous R IH G ER AH S
 risk R IH S K
 robot R OW B AA T
 robot(2) R OW B AA T
@@ -935,6 +979,7 @@ spout S P AW T
 squander S K W AA N D ER
 stab S T AE B
 star S T AA R
+still S T IH L
 stopper S T AA P ER
 stops S T AA P S
 storm S T AO R M
@@ -950,6 +995,7 @@ stupid S T UW P AH D
 stupid(2) S T UW P AH D
 substitute S AH B S T AH T UW T
 succeed S AH K S IY D
+such S AH CH
 sugar SH UH G ER
 suite S W IY T
 sum S AH M
@@ -990,6 +1036,8 @@ theatre TH IY AH T ER
 then DH EH N
 there DH EH R
 thereby DH EH R B AY
+therefore DH EH R F AO R
+thirdly TH ER D L IY
 this DH IH S
 thither DH IH TH ER
 those DH OW Z
@@ -1000,6 +1048,7 @@ throughout TH R UW AW T
 thru TH R UW
 till T IH L
 tilt T IH L T
+time T AY M
 tips T IH P S
 to T UW
 to(2) T UW
@@ -1111,6 +1160,8 @@ waste W EY S T
 way W EY
 weird W IH R D
 weirdo W IH R D OW
+well W EH L
+went W EH N T
 wet W EH T
 whack W AE K
 whack(2) W AE K
@@ -1133,4 +1184,5 @@ work W ER K
 worst W ER S T
 worth W ER TH
 would W UH D
+yet Y EH T
 you Y UW

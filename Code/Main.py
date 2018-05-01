@@ -6,6 +6,8 @@
 import multiprocessing as mp
 mp.freeze_support()
 import Database_Management as dm
+import win_unicode_console
+win_unicode_console.enable()
 import State_Tracker as st
 import Find_Files as ff
 import Globals as glbl

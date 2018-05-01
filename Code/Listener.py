@@ -55,7 +55,8 @@ def listener(user_input, lock_user_input, is_faulty):
         try:
             is_faulty[0] = True
         except FileNotFoundError:
-            pass
+            with open("log_file.txt", "a") as log_file:
+                log_file.write("Listener: FileNotFoundError\n\n")
 
 
 class ListenerObj:

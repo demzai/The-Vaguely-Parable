@@ -18,6 +18,8 @@ achieve AH CH IY V
 act AE K T
 actuate AE K CH UW EY T
 adams AE D AH M Z
+address AE D R EH S
+address(2) AE D R EH S
 adhering AH D HH IH R IH NG
 adjacent AH JH EY S AH N T
 adjoining AH JH OY N IH NG
@@ -36,9 +38,11 @@ air EH R
 aisle AY L
 aisle(2) AY L
 alacrity AH L AE K R AH T IY
+alcove AE L K OW V
 all AO L
 alley AE L IY
-allowed AH L AW D
+allophone AE L AH F OW N
+allophonic AE L AH F AA N IH K
 almost AO L M OW S T
 alone AH L OW N
 along AH L AO NG
@@ -56,9 +60,11 @@ anticipation AE N T IH S AH P EY SH AH N
 anybody EH N IY B AH D IY
 anything EH N IY TH IH NG
 aperture AE P ER CH ER
+appeal AH P IY L
 approach AH P R OW CH
 approximate AH P R AA K S AH M AH T
 approximate(2) AH P R AA K S AH M AH T
+area EH R IY AH
 around ER AW N D
 around(2) ER AW N D
 arrange ER EY N JH
@@ -69,8 +75,10 @@ artery AA R T ER IY
 as AE Z
 as(2) AE Z
 aside AH S AY D
+assassin AH S AE S AH N
 at AE T
 attempt AH T EH M P T
+audio AA D IY OW
 aught AO T
 avenue AE V AH N UW
 await AH W EY T
@@ -80,17 +88,22 @@ away AH W EY
 back B AE K
 backdoor B AE K D AO R
 balance B AE L AH N S
-ban B AE N
 band B AE N D
+bandstand B AE N D S T AE N D
 bang B AE NG
+barn B AA R N
+barrack B AE R AH K
+barrack(2) B AE R AH K
 bartender B AA R T EH N D ER
 base B EY S
 bash B AE SH
 basset B AE S IH T
+bath B AE TH
 be B IY
 beads B IY D Z
 bear B EH R
 bears B EH R Z
+beckon B EH K AH N
 been B IH N
 been(2) B IH N
 beer B IH R
@@ -98,12 +111,14 @@ begin B IH G IH N
 behave B IH HH EY V
 being B IY IH NG
 belly B EH L IY
+berth B ER TH
 beside B IH S AY D
 beside(2) B IH S AY D
 best B EH S T
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
+bid B IH D
 bide B AY D
 biding B AY D IH NG
 bilk B IH L K
@@ -123,9 +138,13 @@ boggled B AA G AH L D
 bolster B OW L S T ER
 book B UH K
 boom B UW M
+booth B UW TH
 border B AO R D ER
 boring B AO R IH NG
 bound B AW N D
+bower B AW ER
+box B AA K S
+boxwood B AA K S W UH D
 brace B R EY S
 braces B R EY S AH Z
 braces(2) B R EY S AH Z
@@ -140,12 +159,18 @@ bring B R IH NG
 brink B R IH NG K
 buddy B AH D IY
 bugger B AH G ER
+built B IH L T
 bulkhead B AH L K HH EH D
 bum B AH M
 bung B AH NG
 bushwhack B UH SH W AE K
 buttress B AH T R AH S
+buzz B AH Z
 by B AY
+cab K AE B
+cabana K AH B AE N AH
+cabin K AE B AH N
+cadre K AE D R IY
 call K AO L
 calm K AA M
 calm(2) K AA M
@@ -153,14 +178,20 @@ came K EY M
 can K AE N
 can(2) K AE N
 can't K AE N T
+canal K AH N AE L
 cannot K AE N AA T
 cannot(2) K AE N AA T
 capture K AE P CH ER
 car K AA R
 carefree K EH R F R IY
 cargo K AA R G OW
+carnival K AA R N AH V AH L
+carrel K AE R AH L
+carrell K AA R EY L
 carry K AE R IY
 carry(2) K AE R IY
+cart K AA R T
+carts K AA R T S
 catches K AE CH AH Z
 catches(2) K AE CH AH Z
 cater K EY T ER
@@ -170,15 +201,25 @@ cease S IY S
 ceased S IY S T
 ceases S IY S IH Z
 ceiling S IY L IH NG
+cell S EH L
+celled S EH L D
 chained CH EY N D
+chalet SH AE L EY
+chalet(2) SH AE L EY
+chamber CH EY M B ER
 channel CH AE N AH L
+charcuterie SH AA R K UH T R IY
 cheap CH IY P
 check CH EH K
 checked CH EH K T
 checks CH EH K S
+chime CH AY M
+chirp CH ER P
 chops CH AA P S
 chose CH OW Z
 cipher S AY F ER
+circle S ER K AH L
+circus S ER K AH S
 civil S IH V AH L
 clamber K L AE M B ER
 cleat K L IY T
@@ -188,11 +229,14 @@ closed K L OW Z D
 closing K L OW Z IH NG
 closures K L OW ZH ER Z
 coast K OW S T
+cockpit K AA K P IH T
 coda K OW D AH
 collect K AH L EH K T
 come K AH M
+communicate K AH M Y UW N AH K EY T
 compact K AA M P AE K T
 compact(2) K AA M P AE K T
+compartment K AH M P AA R T M AH N T
 complete K AH M P L IY T
 completion K AH M P L IY SH AH N
 conclude K AH N K L UW D
@@ -201,10 +245,13 @@ conduct K AA N D AH K T
 conduit K AA N D UW IH T
 conduit(2) K AA N D UW IH T
 conduit(3) K AA N D UW IH T
+confessional K AH N F EH SH AH N AH L
 consequence K AA N S AH K W AH N S
+consonant K AA N S AH N AH N T
 consuming K AH N S UW M IH NG
 consummate K AA N S AH M AH T
 consummate(2) K AA N S AH M AH T
+contact K AA N T AE K T
 continuation K AH N T IH N Y UW EY SH AH N
 continue K AH N T IH N Y UW
 continued K AH N T IH N Y UW D
@@ -216,13 +263,22 @@ cool K UW L
 corridor K AO R AH D ER
 corridor(2) K AO R AH D ER
 corset K AO R S AH T
+cote K OW T
+cottage K AA T AH JH
+cottage(2) K AA T AH JH
 could K UH D
+counter K AW N T ER
 cover K AH V ER
 covert K OW V ER T
+cow K AW
 cozy K OW Z IY
 crawl K R AO L
 creep K R IY P
+crib K R IH B
 cross K R AO S
+cubbyhole K AH B IY HH OW L
+cubicle K Y UW B IH K AH L
+cuddy K AH D IY
 cunningham K AH N IH NG HH AE M
 curb K ER B
 curbed K ER B D
@@ -245,6 +301,7 @@ delaying D IH L EY IH NG
 delays D IH L EY Z
 demarche D IH M AA R CH
 demarche(2) D IH M AA R CH
+denominational D IH N AO M AH N EY SH AH N AH L
 dependent D IH P EH N D AH N T
 desist D IH S IH S T
 desist(2) D IH S IH S T
@@ -255,11 +312,11 @@ determine D AH T ER M AH N
 determine(2) D AH T ER M AH N
 deterred D IH T ER D
 deterrent D IH T ER R AH N T
-did D IH D
-didn't D IH D AH N T
-didn't(2) D IH D AH N T
-didn't(3) D IH D AH N T
-didn't(4) D IH D AH N T
+dial D AY AH L
+dial(2) D AY AH L
+dined D AY N D
+dines D AY N Z
+dining D AY N IH NG
 direct D ER EH K T
 direct(2) D ER EH K T
 direct(3) D ER EH K T
@@ -268,16 +325,12 @@ discontinue D IH S K AH N T IH N Y UW
 discontinued D IH S K AH N T IH N Y UW D
 disguising D IH S G AY Z IH NG
 divine D IH V AY N
+division D IH V IH ZH AH N
 do D UW
 doe D OW
-does D AH Z
-does(2) D AH Z
-doesn't D AH Z AH N T
-doesn't(2) D AH Z AH N T
 doing D UW IH NG
-don't D OW N T
-don't(2) D OW N T
 door D AO R
+doorbell D AO R B EH L
 doorsill D AO R S IH L
 doorstep D AO R S T EH P
 doorway D AO R W EY
@@ -291,14 +344,30 @@ drift D R IH F T
 drop D R AA P
 drop(2) D R AA P
 drug D R AH G
+duck D AH K
+dugout D AH G AW T
 dwarf D W AO R F
 dwell D W EH L
 dwelled D W EH L D
+dwelling D W EH L IH NG
 dwells D W EH L Z
 dwelt D W EH L T
 eager IY G ER
 eagerly IY G ER L IY
+earmuff IH R M AH F
+earmuff(2) IH R M AH F
+earphone IH R F OW N
+earphone(2) IH R F OW N
+earphones IH R F OW N Z
+earphones(2) IH R F OW N Z
+earpiece IH R P IY S
+earpiece(2) IH R P IY S
+earpieces IH R P IY S IH Z
+earpieces(2) IH R P IY S IH Z
+earplug IH R P L AH G
+earplug(2) IH R P L AH G
 easy IY Z IY
+echo EH K OW
 edge EH JH
 effect IH F EH K T
 effect(2) IH F EH K T
@@ -310,7 +379,11 @@ egress IH G R EH S
 eh EH
 elegant EH L AH G AH N T
 else EH L S
+emporium EH M P AO R IY AH M
 enact IH N AE K T
+encircle EH N S ER K AH L
+enclosure EH N K L OW ZH ER
+enclosure(2) EH N K L OW ZH ER
 encompassing EH N K AH M P AH S IH NG
 end EH N D
 ended EH N D AH D
@@ -370,9 +443,11 @@ exterior IH K S T IH R IY ER
 extinction IH K S T IH NG K SH AH N
 extinction(2) IH K S T IH NG K SH AH N
 face F EY S
+facebook F EY S B UH K
 faced F EY S T
 facilitate F AH S IH L AH T EY T
 faggot F AE G AH T
+fair F EH R
 faire F EH R
 faithful F EY TH F AH L
 fanny F AE N IY
@@ -390,15 +465,20 @@ firth F ER TH
 fisted F IH S T IH D
 flat F L AE T
 floorboard F L AO R B AO R D
+florist F L AA R IH S T
+florist(2) F L AA R IH S T
 fodder F AA D ER
 fold F OW L D
 follow F AA L OW
+food F UW D
 for F AO R
 for(2) F AO R
 for(3) F AO R
 force F AO R S
 fore F AO R
+forebode F AO R B OW D
 foresees F AO R S IY Z
+foretell F AO R T EH L
 formula F AO R M Y AH L AH
 forth F AO R TH
 forthcoming F AO R TH K AH M IH NG
@@ -427,12 +507,15 @@ gated G EY T IH D
 gatekeeper G EY T K IY P ER
 gates G EY T S
 gateway G EY T W EY
+get G EH T
+get(2) G EH T
 ghost G OW S T
 girdle G ER D AH L
 give G IH V
 given G IH V AH N
 given(2) G IH V AH N
 glass G L AE S
+glide G L AY D
 go G OW
 goal G OW L
 going G OW IH NG
@@ -441,19 +524,24 @@ good G UH D
 good(2) G UH D
 goof G UW F
 goose G UW S
+groove G R UW V
 groundbreaking G R AW N D B R EY K IH NG
 groundbreaking(2) G R AW N D B R EY K IH NG
 grovel G R AA V AH L
 gunter G AH N T ER
 guy G AY
 guys G AY Z
+haberdashery HH AE B ER D AE SH ER IY
 habitation HH AE B AH T EY SH AH N
+hail HH EY L
 half HH AE F
 halt HH AO L T
 halted HH AO L T AH D
 halted(2) HH AO L T AH D
 halts HH AO L T S
 hand HH AE N D
+handset HH AE N D S EH T
+handsets HH AE N D S EH T S
 hang HH AE NG
 harden HH AA R D AH N
 hardly HH AA R D L IY
@@ -462,6 +550,10 @@ hatching HH AE CH IH NG
 hatter HH AE T ER
 hauled HH AO L D
 head HH EH D
+headphone HH EH D F OW N
+headphones HH EH D F OW N Z
+headset HH EH D S EH T
+headsets HH EH D S EH T S
 heels HH IY L Z
 help HH EH L P
 hesitate HH EH Z AH T EY T
@@ -478,10 +570,18 @@ hm HH M
 hmm HH M
 hold HH OW L D
 holds HH OW L D Z
+hole HH OW L
+holler HH AA L ER
 hoped HH OW P T
+horn HH AO R N
 house HH AW S
+hovel HH AH V AH L
 hover HH AH V ER
+how HH AW
 huh HH AH
+hut HH AH T
+hutch HH AH CH
+huts HH AH T S
 idle AY D AH L
 immediate IH M IY D IY AH T
 imminent IH M AH N AH N T
@@ -503,6 +603,8 @@ incite IH N S AY T
 inert IH N ER T
 infiltrate IH N F IH L T R EY T
 influence IH N F L UW AH N S
+information IH N F ER M EY SH AH N
+information(2) IH N F ER M EY SH AH N
 inhabit IH N HH AE B AH T
 inhabited IH N HH AE B AH T AH D
 inhabits IH N HH AE B AH T S
@@ -512,11 +614,14 @@ insinuate IH N S IH N Y UW EY T
 insipid IH N S IH P AH D
 insist IH N S IH S T
 insistence IH N S IH S T AH N S
+instagram IH N S T AH G R AE M
+interact IH N T ER AE K T
+interact(2) IH N T ER AE K T
 intercepted IH N T ER S EH P T AH D
 intercepted(2) IH N T ER S EH P T AH D
 intercepted(3) IH N T ER S EH P T AH D
 intercepted(4) IH N T ER S EH P T AH D
-interdiction IH N T ER D IH K SH AH N
+intercom IH N T ER K AA M
 interior IH N T IH R IY ER
 interlude IH N T ER L UW D
 intermission IH N T ER M IH SH AH N
@@ -536,6 +641,7 @@ jack JH AE K
 jammed JH AE M D
 jams JH AE M Z
 jeff JH EH F
+john JH AA N
 jury JH UH R IY
 juxtaposed JH AH K S T AH P OW Z D
 keel K IY L
@@ -545,10 +651,15 @@ kept(2) K EH P T
 kick K IH K
 kicker K IH K ER
 kind K AY N D
+kiosk K IY AO S K
+knell N EH L
 knit N IH T
+knock N AA K
 lag L AE G
 lagged L AE G D
 land L AE N D
+landline L AE N D L AY N
+large L AA R JH
 last L AE S T
 last(2) L AE S T
 lasted L AE S T AH D
@@ -556,6 +667,7 @@ lasted(2) L AE S T AH D
 lasts L AE S T S
 layover L EY OW V ER
 lazy L EY Z IY
+lean L IY N
 leave L IY V
 left L EH F T
 legged L EH G AH D
@@ -603,6 +715,7 @@ mammal M AE M AH L
 manage M AE N AH JH
 manage(2) M AE N AH JH
 mandate M AE N D EY T
+manger M EY N JH ER
 mark M AA R K
 mast M AE S T
 mean M IY N
@@ -615,6 +728,8 @@ minute(2) M IH N AH T
 minute(3) M IH N AH T
 miserly M AY Z ER L IY
 mizen M AY Z AH N
+mobile M OW B AH L
+mobilize M OW B AH L AY Z
 mold M OW L D
 monotonous M AH N AA T AH N AH S
 moon M UW N
@@ -628,6 +743,7 @@ mouthed M AW DH D
 move M UW V
 mustard M AH S T ER D
 nada N AA D AA
+name N EY M
 narrow N EH R OW
 narrow(2) N EH R OW
 naught N AO T
@@ -637,10 +753,10 @@ negative N EH G AH T IH V
 negotiated N AH G OW SH IY EY T AH D
 negotiated(2) N AH G OW SH IY EY T AH D
 neighbouring N EY B ER IH NG
-neither N IY DH ER
-neither(2) N IY DH ER
 nestled N EH S AH L D
 neutral N UW T R AH L
+newsletter N UW Z L EH T ER
+newsstand N UW Z S T AE N D
 next N EH K S T
 next(2) N EH K S T
 niggardly N IH G ER D L IY
@@ -650,11 +766,9 @@ nix N IH K S
 no N OW
 nobody N OW B AA D IY
 nobody(2) N OW B AA D IY
-non N AA N
 none N AH N
 nonentity N AA N EH N T AH T IY
 nonsense N AA N S EH N S
-nope N OW P
 not N AA T
 nothing N AH TH IH NG
 nothingness N AH TH IH NG N AH S
@@ -697,10 +811,12 @@ overstayed OW V ER S T EY D
 panty P AE N T IY
 paralytic P EH R AH L IH T IH K
 parsimonious P AA R S AH M OW N IY AH S
+part P AA R T
 particle P AA R T AH K AH L
 particle(2) P AA R T AH K AH L
 particular P ER T IH K Y AH L ER
 particular(2) P ER T IH K Y AH L ER
+partition P AA R T IH SH AH N
 passage P AE S AH JH
 passage(2) P AE S AH JH
 passive P AE S IH V
@@ -708,13 +824,17 @@ pause P AO Z
 paused P AO Z D
 pauses P AO Z AH Z
 pauses(2) P AO Z AH Z
+pavilion P AH V IH L Y AH N
+pay P EY
 peace P IY S
 peak P IY K
+peal P IY L
 peasant P EH Z AH N T
 peculiar P AH K Y UW L Y ER
 peculiar(2) P AH K Y UW L Y ER
 peculiarity P IH K Y UW L IY EH R AH T IY
 pelican P EH L AH K AH N
+pen P EH N
 penetrate P EH N AH T R EY T
 penny P EH N IY
 penurious P EH N Y UW R IY AH S
@@ -729,6 +849,12 @@ persisted P ER S IH S T IH D
 persists P ER S IH S T S
 person P ER S AH N
 perverse P ER V ER S
+pew P Y UW
+phone F OW N
+phoneme F OW N IY M
+phones F OW N Z
+phonetic F AH N EH T IH K
+pick P IH K
 pillar P IH L ER
 pin P IH N
 pinching P IH N CH IH NG
@@ -742,6 +868,7 @@ plug P L AH G
 ply P L AY
 poke P OW K
 pole P OW L
+polling P OW L IH NG
 porch P AO R CH
 pore P AO R
 port P AO R T
@@ -778,12 +905,10 @@ procrastinating P R AH K R AE S T AH N EY T IH NG
 procrastination P R AH K R AE S T AH N EY SH AH N
 produce P R AH D UW S
 produce(2) P R AH D UW S
-prohibition P R OW AH B IH SH AH N
 prompt P R AA M P T
 prop P R AA P
 propel P R AH P EH L
 props P R AA P S
-proscription P R OW S K R IH P SH AH N
 provoke P R AH V OW K
 prude P R UW D
 pull P UH L
@@ -799,6 +924,11 @@ reading(2) R IY D IH NG
 receive R AH S IY V
 receive(2) R AH S IY V
 receive(3) R AH S IY V
+receiver R AH S IY V ER
+receiver(2) R AH S IY V ER
+receiver(3) R AH S IY V ER
+recipient R AH S IH P IY AH N T
+recipient(2) R AH S IH P IY AH N T
 reclined R IH K L AY N D
 refrain R IH F R EY N
 regards R IH G AA R D Z
@@ -843,6 +973,7 @@ revolving R IY V AA L V IH NG
 ribbed R IH B D
 rigging R IH G IH NG
 rigorous R IH G ER AH S
+ring R IH NG
 robot R OW B AA T
 robot(2) R OW B AA T
 roe R OW
@@ -853,24 +984,34 @@ round R AW N D
 rum R AH M
 run R AH N
 running R AH N IH NG
+sales S EY L Z
 satisfy S AE T AH S F AY
 satisfy(2) S AE T AH S F AY
+savvy S AE V IY
 scrabble S K R AE B AH L
 screen S K R IY N
 scupper S K AH P ER
 scuttle S K AH T AH L
 seal S IY L
 secretive S IY K R AH T IH V
+section S EH K SH AH N
 secure S IH K Y UH R
 sedate S IH D EY T
 self S EH L F
+selfie S EH L F IY
 serve S ER V
 set S EH T
 settle S EH T AH L
+shack SH AE K
 shakes SH EY K S
+shanty SH AE N T IY
+shed SH EH D
 shelter SH EH L T ER
 shelved SH EH L V D
+shop SH AA P
 short SH AO R T
+show SH OW
+shower SH AW ER
 shrimp SH R IH M P
 shut SH AH T
 shutter SH AH T ER
@@ -892,6 +1033,7 @@ sliding S L AY D IH NG
 slip S L IH P
 slither S L IH DH ER
 sloping S L OW P IH NG
+slot S L AA T
 slouch S L AW CH
 slow S L OW
 slowly S L OW L IY
@@ -904,13 +1046,22 @@ snuggled S N AH G AH L D
 so S OW
 sober S OW B ER
 sojourn S OW JH ER N
+solicitation S AH L IH S IH T EY SH AH N
+some S AH M
+someone S AH M W AH N
 something S AH M TH IH NG
+sort S AO R T
+sound S AW N D
 spare S P EH R
+speakerphone S P IY K ER F OW N
+speaks S P IY K S
+speech S P IY CH
 spout S P AW T
 spreader S P R EH D ER
 squeak S K W IY K
 squirm S K W ER M
 stability S T AH B IH L IH T IY
+stable S T EY B AH L
 stage S T EY JH
 stagnant S T AE G N AH N T
 stagnate S T AE G N EY T
@@ -946,12 +1097,14 @@ strict S T R IH K T
 striker S T R AY K ER
 structure S T R AH K CH ER
 stuffy S T AH F IY
+subdivision S AH B D IH V IH ZH AH N
 subsist S AH B S IH S T
 succeed S AH K S IY D
 such S AH CH
 suffered S AH F ER D
 suffice S AH F AY S
 suit S UW T
+summon S AH M AH N
 super S UW P ER
 superseded S UW P ER S IY D IH D
 support S AH P AO R T
@@ -968,10 +1121,17 @@ swing S W IH NG
 swinging S W IH NG IH NG
 switch S W IH CH
 ta T AA
+table T EY B AH L
 take T EY K
+talk T AO K
 tarry T EH R IY
 teammate T IY M EY T
 teamwork T IY M W ER K
+tech T EH K
+telemarketing T EH L AH M AA R K AH T IH NG
+telephone T EH L AH F OW N
+telephonic T EH L AH F AA N IH K
+telephony T EH L AH F OW N IY
 tend T EH N D
 terminate T ER M AH N EY T
 termination T ER M AH N EY SH AH N
@@ -997,9 +1157,11 @@ to(2) T UW
 to(3) T UW
 together T AH G EH DH ER
 tolerated T AA L ER EY T IH D
+tollbooth T OW L B UW TH
 touch T AH CH
 townhouse T AW N HH AW S
 transact T R AE N Z AE K T
+transmit T R AE N Z M IH T
 trap T R AE P
 traverse T R AE V ER S
 traverse(2) T R AE V ER S
@@ -1025,6 +1187,7 @@ vacuum V AE K Y UW M
 vaguely V EY G L IY
 value V AE L Y UW
 valueless V AE L Y UW L AH S
+vault V AO L T
 vegetable V EH JH T AH B AH L
 vent V EH N T
 verge V ER JH
@@ -1032,7 +1195,11 @@ verified V EH R AH F AY D
 very V EH R IY
 visit V IH Z IH T
 visited V IH Z IH T IH D
+voiced V OY S T
 void V OY D
+volumes V AA L Y UW M Z
+voting V OW T IH NG
+vowel V AW AH L
 wait W EY T
 waited W EY T IH D
 waiting W EY T IH NG
@@ -1047,17 +1214,21 @@ waylay W EY L EY
 well W EH L
 wicket W IH K AH T
 wicket(2) W IH K AH T
+wigwam W IH G W AA M
+wilkes W IH L K S
 wind W AY N D
 wind(2) W AY N D
 winning W IH N IH NG
+wireless W AY R L IH S
 wishes W IH SH IH Z
 withdraw W IH DH D R AO
 withdraw(2) W IH DH D R AO
-won't W OW N T
 work W ER K
+works W ER K S
 worm W ER M
 worthless W ER TH L AH S
 wriggle R IH G AH L
+write R AY T
 writhe R IH TH
 yard Y AA R D
 zero Z IH R OW

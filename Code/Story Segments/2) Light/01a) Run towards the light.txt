@@ -9,4 +9,5 @@ Eager for answers,
 
 #Door(0)
 #Break(0)
+#Stairs(0)
 #auto

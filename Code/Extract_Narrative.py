@@ -62,8 +62,9 @@ def cleanFileContents(text):
         # If a code
         if isCode[i] == 'Code' or isCode[i] == 'Variable' or \
                 (isCode == 'Segment' and len(lines[i]) >= 2 and lines[i][:2] == '//'):
-            lines[i] = re.sub("\s*//.*", "", lines[i])
-            lines[i] = re.sub("\s", "", lines[i])
+            lines[i] = re.sub("\s*//.*", "", lines[i])  # Remove comments
+            lines[i] = re.sub("(\s(?![\w!\"£$%^&*()_+=\-\][{}@~'#<>?,./])|" +
+                              "(?<![\w!\"£$%^&*()_+=\-\][{}@~'#<>?,./])\s)", "", lines[i])  # Remove excess whitespace
         # If a segment then take extra care around textual data
         elif len(lines[i]) is not 0 and isCode[i] == 'Segment':
             # Remove comments

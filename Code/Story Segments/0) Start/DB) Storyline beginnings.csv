@@ -1,21 +1,29 @@
 ###
 0/00a,	0/00b,	auto
 0/00b,	0/01a,	auto
-0/00c,	0/01a,	auto
+0/00c,	0/01b,	auto
 0/01a,  0/01b,  auto
 0/01b,	0/02a1,	stay_in_phone_booth
+0/01b,	0/02a1,	no
 0/01b,	0/02b1,	leave_phone_booth
+0/01b,	0/02b1,	yes
+0/01b,	0/02c,	look_around
 0/02a1,	0/02a2,	auto
 0/02a2,	0/02a3,	leave_phone_booth
 0/02a2,	4/98,	auto
 0/02a3,	0/02b2,	auto
 0/02b1,	0/02b2,	auto
 0/02b2,	4/03,	wait_around
+0/02b2,	4/03,	no
 0/02b2,	0/03a,	go_back_into_the_phone_booth
 0/02b2,	0/03b,	look_for_others
+0/02b2,	0/03b,	yes
+0/02c,  0/01b,  auto
 0/03a,	0/02a2,	auto
 0/03b,	1/01a,	do_not_go_anywhere
 0/03b,	2/01a,	run_toward_the_light
+0/03b,	2/01a,	yes
 0/03b,	0/04,	run_away_from_the_light
+0/03b,	0/04,	no
 0/04,	3/01,	auto
 ###

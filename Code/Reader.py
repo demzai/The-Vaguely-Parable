@@ -11,6 +11,8 @@ import win32com.client
 import time
 import Code_Interpreter as ci
 import traceback as t
+import win_unicode_console
+win_unicode_console.enable()
 # import winsound
 
 
@@ -52,8 +54,10 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
     finally:
         try:
             is_faulty[0] = True
-        except FileNotFoundError:
-            pass
+        except FileNotFoundError as e:
+            with open("log_file.txt", "a") as log_file:
+                log_file.write(str(t.format_exc()))
+                log_file.write('Selector Error: {0}\n'.format(e))
 
 
 def getNextText(stack):

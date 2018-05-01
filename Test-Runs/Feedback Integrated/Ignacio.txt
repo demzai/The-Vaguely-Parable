@@ -1,0 +1,466 @@
+
+
+NEW GAME START!
+Cleaning up: 23856
+	ok I speak quickly : quickly : 1.0 : date
+	ok I speak quickly : speak : 0.3333333333333333 : repeat
+	ok I speak quickly : ok : 1.0 : continue
+	oh okay oh and speaking : and : 0.2 : repeat
+	oh okay oh and speaking : speak : 0.3333333333333333 : repeat
+	oh okay oh and speaking : okay : 0.5 : continue
+	oh okay oh and speaking : ok : 1.0 : continue
+	o. k. well it's the food : it : 1.0 : date
+	o. k. well it's the food : it's : 1.0 : date
+	o. k. well it's the food : well : 1.0 : continue
+	o. k. well it's the food : the : 0.15384615384615385 : date
+	o. k. well it's the food : the : 0.23076923076923078 : time
+['continue', [('continue', 1.930286789464091), ('date', 1.0980965734611194), ('repeat', 0.6038394366666666), ('time', 0.043561956799405666), ('quit', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 3860
+Google: ['ok I speak quickly', 0.69151831, '']
+WitAPI: ['oh okay oh and speaking', 0.7, '']
+Sphinx: ["o. k. well it's the food", 0.1887684794640912, '']
+Select: ['continue', [('continue', 1.930286789464091), ('date', 1.0980965734611194), ('repeat', 0.6038394366666666), ('time', 0.043561956799405666), ('quit', 0.0), ('do nothing', 0.0)]]
+User Select - continue
+Next Address: - 4/00b
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	can you stop that now is still running : run : 0.5652173913043478 : stay in phone booth
+	can you stop that now is still running : run : 0.043478260869565216 : time
+	can you stop that now is still running : run : 0.4782608695652174 : leave phone booth
+	can you stop that now is still running : no : 1.2 : stay in phone booth
+	can you stop that now is still running : still : 0.5 : repeat
+	can you stop that now is still running : you : 0.5 : date
+	can you stop that now is still running : now : 0.125 : date
+	can you stop that now is still running : now : 1.125 : time
+	can you stop that now is still running : stop : 0.047619047619047616 : wake up
+	can you stop that now is still running : stop : 0.7142857142857143 : stay in phone booth
+	can you stop that now is still running : stop : 0.047619047619047616 : repeat
+	can you stop that now is still running : that : 0.13333333333333333 : date
+	can you stop that now is still running : that : 0.2 : time
+	can you stop that now is still running : that : 0.2 : leave phone booth
+	can you stop that now is still running : that : 0.06666666666666667 : repeat
+	can you stop that now is still running : is : 1.0 : date
+	can i still no still running : run : 0.5652173913043478 : stay in phone booth
+	can i still no still running : run : 0.043478260869565216 : time
+	can i still no still running : run : 0.4782608695652174 : leave phone booth
+	can i still no still running : no : 1.2 : stay in phone booth
+	can i still no still running : still : 0.5 : repeat
+	finish the no it's still running : run : 0.5652173913043478 : stay in phone booth
+	finish the no it's still running : run : 0.043478260869565216 : time
+	finish the no it's still running : run : 0.4782608695652174 : leave phone booth
+	finish the no it's still running : no : 1.2 : stay in phone booth
+	finish the no it's still running : finish : 0.125 : wake up
+	finish the no it's still running : finish : 0.25 : stay in phone booth
+	finish the no it's still running : still : 0.5 : repeat
+	finish the no it's still running : the : 0.15384615384615385 : date
+	finish the no it's still running : the : 0.23076923076923078 : time
+	finish the no it's still running : the : 0.23076923076923078 : leave phone booth
+	finish the no it's still running : it : 1.0 : date
+	finish the no it's still running : it's : 1.0 : date
+['stay_in_phone_booth', [('stay in phone booth', 3.6154676286062153), ('date', 1.801345419906485), ('time', 1.2124250996827097), ('leave phone booth', 1.0105267662528596), ('repeat', 0.9397044842342435), ('wake up', 0.05924350129665612), ('restart', 0.0)]]
+
+Cleaning up: 11748
+Google: ['can you stop that now is still running', 0.8322854, '']
+WitAPI: ['can i still no still running', 0.7, '']
+Sphinx: ["finish the no it's still running", 0.15688690561134425, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 3.6154676286062153), ('date', 1.801345419906485), ('time', 1.2124250996827097), ('leave phone booth', 1.0105267662528596), ('repeat', 0.9397044842342435), ('wake up', 0.05924350129665612), ('restart', 0.0)]]
+User Select - stay_in_phone_booth
+Next Address: - 0/02a1
+
+Auto Select - auto
+Next Address: - 0/02a2
+
+Auto Select - auto
+Next Address: - 4/98
+
+	yes : yes : 2.0 : continue
+	yes : yes : 2.0 : continue
+['continue', [('continue', 3.0328001466247763), ('date', 0.0), ('quit', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 12964
+Google: ['yes', 0.97110075, '']
+WitAPI: ['', 0, 'Failed Server Request']
+Sphinx: ['yes', 0.5452993233123882, '']
+Select: ['continue', [('continue', 3.0328001466247763), ('date', 0.0), ('quit', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+User Select - continue
+Next Address: - 0/00a
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	not only : not : 0.8 : stay in phone booth
+	not only : no : 1.2 : stay in phone booth
+	not only : not only : 0.6666666666666666 : stay in phone booth
+	no : no : 1.2 : stay in phone booth
+	though the : the : 0.23076923076923078 : time
+	though the : the : 0.15384615384615385 : date
+	though the : the : 0.23076923076923078 : leave phone booth
+['stay_in_phone_booth', [('stay in phone booth', 3.04093776), ('time', 0.07875352274076505), ('leave phone booth', 0.07875352274076505), ('date', 0.05250234849384337), ('repeat', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+
+Cleaning up: 18808
+Google: ['not only', 0.82535166, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['though the', 0.3412652652099819, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 3.04093776), ('time', 0.07875352274076505), ('leave phone booth', 0.07875352274076505), ('date', 0.05250234849384337), ('repeat', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+User Select - stay_in_phone_booth
+Next Address: - 0/02a1
+
+Auto Select - auto
+Next Address: - 0/02a2
+
+Auto Select - auto
+Next Address: - 4/98
+
+	yes : yes : 2.0 : continue
+	yes yes : yes : 2.0 : continue
+	what yet if : what : 0.5 : date
+	what yet if : yet : 0.6666666666666666 : repeat
+['continue', [('continue', 3.3422015), ('repeat', 0.1591617048126224), ('date', 0.11937127860946681), ('time', 0.0), ('quit', 0.0)]]
+
+Cleaning up: 11872
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes yes', 0.7, '']
+Sphinx: ['what yet if', 0.23874255721893362, '']
+Select: ['continue', [('continue', 3.3422015), ('repeat', 0.1591617048126224), ('date', 0.11937127860946681), ('time', 0.0), ('quit', 0.0)]]
+User Select - continue
+Next Address: - 0/00a
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	yes lease : yes : 3.0 : leave phone booth
+	yes she : yes : 3.0 : leave phone booth
+	yes she : she : 0.5 : date
+	of that a a a fit : that : 0.13333333333333333 : date
+	of that a a a fit : that : 0.06666666666666667 : repeat
+	of that a a a fit : that : 0.2 : time
+	of that a a a fit : that : 0.2 : leave phone booth
+['leave_phone_booth', [('leave phone booth', 4.210956712240651), ('date', 0.380646034827101), ('time', 0.04596905224065161), ('repeat', 0.015323017413550535), ('restart', 0.0), ('wake up', 0.0), ('stay in phone booth', 0.0)]]
+
+Cleaning up: 7724
+Google: ['yes lease', 0.68832922, '']
+WitAPI: ['yes she', 0.7, '']
+Sphinx: ['of that a a a fit', 0.22984526120325804, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.210956712240651), ('date', 0.380646034827101), ('time', 0.04596905224065161), ('repeat', 0.015323017413550535), ('restart', 0.0), ('wake up', 0.0), ('stay in phone booth', 0.0)]]
+User Select - leave_phone_booth
+Next Address: - 0/02b1
+
+Auto Select - auto
+Next Address: - 0/02b2
+
+	look : look : 0.4117647058823529 : look for others
+	look : look : 0.17647058823529413 : wake up
+	look : look : 0.058823529411764705 : go back into the phone booth
+	look : look : 0.058823529411764705 : repeat
+	move up a a a a a a a : move : 0.041666666666666664 : wait around
+	move up a a a a a a a : move : 0.16666666666666666 : do nothing
+	move up a a a a a a a : move : 0.08333333333333333 : wake up
+	move up a a a a a a a : move : 0.20833333333333334 : go back into the phone booth
+	move up a a a a a a a : up : 0.2857142857142857 : wake up
+['look_for_others', [('look for others', 0.28823529411764703), ('wake up', 0.20493196468120936), ('go back into the phone booth', 0.08712952465400339), ('repeat', 0.041176470588235294), ('do nothing', 0.03676244325261448), ('wait around', 0.00919061081315362), ('time', 0.0), ('date', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 24508
+Google: ['Luke', 0.86804259, '']
+WitAPI: ['look', 0.7, '']
+Sphinx: ['move up a a a a a a a', 0.22057465951568686, '']
+Select: ['look_for_others', [('look for others', 0.28823529411764703), ('wake up', 0.20493196468120936), ('go back into the phone booth', 0.08712952465400339), ('repeat', 0.041176470588235294), ('do nothing', 0.03676244325261448), ('wait around', 0.00919061081315362), ('time', 0.0), ('date', 0.0), ('restart', 0.0)]]
+User Select - look_for_others
+Next Address: - 0/03b
+
+	don't run to work : to : 0.5 : run toward the light
+	don't run to work : run : 0.21739130434782608 : run away from the light
+	don't run to work : run : 0.08695652173913043 : run toward the light
+	don't run to work : run : 0.043478260869565216 : time
+	don't run to work : run : 0.043478260869565216 : do not go anywhere
+	don't run to work : do : 0.14285714285714285 : do not go anywhere
+	don't run to work : don't : 0.2222222222222222 : do not go anywhere
+	don't run to work : work : 0.1 : run away from the light
+	don't run to work : work : 0.2 : run toward the light
+	don't run to work : work : 0.1 : do not go anywhere
+	don't run stores : store : 2.0 : run away from the light
+	don't run stores : run : 0.21739130434782608 : run away from the light
+	don't run stores : run : 0.08695652173913043 : run toward the light
+	don't run stores : run : 0.043478260869565216 : time
+	don't run stores : run : 0.043478260869565216 : do not go anywhere
+	don't run stores : do : 0.14285714285714285 : do not go anywhere
+	don't run stores : don't : 0.2222222222222222 : do not go anywhere
+	those around with stores up : store : 2.0 : run away from the light
+	those around with stores up : up : 0.2857142857142857 : wake up
+	those around with stores up : with : 0.08333333333333333 : run away from the light
+	those around with stores up : with : 0.25 : run toward the light
+	those around with stores up : those : 0.25 : date
+	those around with stores up : around : 0.07692307692307693 : run away from the light
+	those around with stores up : around : 0.46153846153846156 : run toward the light
+['run_away_from_the_light', [('run away from the light', 2.170952661417769), ('run toward the light', 0.794053498258491), ('do not go anywhere', 0.6804956931173223), ('time', 0.06416234043478261), ('wake up', 0.04927557600173088), ('date', 0.04311612900151452), ('restart', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 8984
+Google: ["don't run to work", 0.77573383, '']
+WitAPI: ["don't run stores", 0.7, '']
+Sphinx: ['those around with stores up', 0.17246451600605808, '']
+Select: ['run_away_from_the_light', [('run away from the light', 2.170952661417769), ('run toward the light', 0.794053498258491), ('do not go anywhere', 0.6804956931173223), ('time', 0.06416234043478261), ('wake up', 0.04927557600173088), ('date', 0.04311612900151452), ('restart', 0.0), ('repeat', 0.0)]]
+User Select - run_away_from_the_light
+Next Address: - 0/04
+
+Auto Select - auto
+Next Address: - 3/01
+
+Auto Select - auto
+Next Address: - 3/01a
+
+	I feel bad : feel bad : 1.5 : feel surroundings
+	I feel bad : feel bad : 1.5 : sit in despair
+	I feel bad : feel : 0.2 : time
+	I feel bad : feel : 0.2 : feel surroundings
+	I feel bad : feel : 0.06666666666666667 : date
+	I feel bad : feel : 0.13333333333333333 : dig
+	I feel bad : bad : 0.3333333333333333 : do not give up
+	I feel bad : fee : 0.25 : sit in despair
+	I feel bad : fee : 0.5 : do not give up
+	hay fever : hay : 0.5 : time
+	missy event : even : 0.25 : date
+	missy event : even : 0.25 : repeat
+	missy event : eve : 1.0 : date
+	missy event : miss : 0.16666666666666666 : time
+	missy event : event : 0.5 : date
+['sit_in_despair', [('sit in despair', 1.480244465), ('feel surroundings', 1.437951766), ('do not give up', 0.7048783166666666), ('time', 0.5514494631737404), ('date', 0.3953162706576079), ('dig', 0.11278053066666667), ('repeat', 0.04841800076061065), ('do nothing', 0.0), ('climb out', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 1276
+Google: ['I feel bad', 0.84585398, '']
+WitAPI: ['hay fever', 0.7, '']
+Sphinx: ['missy event', 0.1936720030424426, '']
+Select: ['$Creator_Error', [['feel_surroundings', 'sit_in_despair'], [], []]]
+User Select - $Creator_Error
+Next Address: - 4/06
+
+Cleaning up: 19956
+Cleaning up: 17976
+Cleaning up: 16652
+Cleaning up: 7520
+User Select - $Silence
+Next Address: - 4/07
+
+	peeled surroundings on ceiling : surroundings : 3.0 : feel surroundings
+	peeled surroundings on ceiling : surround : 1.5 : feel surroundings
+	peeled surroundings on ceiling : surrounding : 0.6 : feel surroundings
+	feels around ends soon : feel : 0.06666666666666667 : date
+	feels around ends soon : feel : 0.13333333333333333 : dig
+	feels around ends soon : feel : 0.2 : feel surroundings
+	feels around ends soon : feel : 0.2 : time
+	feels around ends soon : soon : 0.5 : time
+	feels around ends soon : end : 0.1111111111111111 : wake up
+	feels around ends soon : end : 0.3333333333333333 : sit in despair
+	feels around ends soon : fee : 0.5 : do not give up
+	feels around ends soon : fee : 0.25 : sit in despair
+	feels around ends soon : around : 0.07692307692307693 : dig
+	feels around ends soon : around : 0.07692307692307693 : feel surroundings
+	feels around ends soon : around : 0.07692307692307693 : sit in despair
+	the hills around and vases : and : 0.2 : dig
+	the hills around and vases : and : 0.2 : repeat
+	the hills around and vases : around : 0.07692307692307693 : dig
+	the hills around and vases : around : 0.07692307692307693 : feel surroundings
+	the hills around and vases : around : 0.07692307692307693 : sit in despair
+	the hills around and vases : hill : 1.0 : climb out
+	the hills around and vases : the : 0.15384615384615385 : date
+	the hills around and vases : the : 0.07692307692307693 : dig
+	the hills around and vases : the : 0.07692307692307693 : feel surroundings
+	the hills around and vases : the : 0.23076923076923078 : time
+['feel_surroundings', [('feel surroundings', 4.273999249275819), ('time', 0.5244217771444989), ('sit in despair', 0.47365341289432), ('do not give up', 0.35), ('dig', 0.1999595454677189), ('climb out', 0.1491610342928288), ('wake up', 0.07777777777777777), ('date', 0.06961451809633262), ('repeat', 0.02983220685856576), ('restart', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 8416
+Google: ['peeled surroundings on ceiling', 0.79553044, '']
+WitAPI: ['feels around ends soon', 0.7, '']
+Sphinx: ['the hills around and vases', 0.1491610342928288, '']
+Select: ['feel_surroundings', [('feel surroundings', 4.273999249275819), ('time', 0.5244217771444989), ('sit in despair', 0.47365341289432), ('do not give up', 0.35), ('dig', 0.1999595454677189), ('climb out', 0.1491610342928288), ('wake up', 0.07777777777777777), ('date', 0.06961451809633262), ('repeat', 0.02983220685856576), ('restart', 0.0), ('do nothing', 0.0)]]
+User Select - feel_surroundings
+Next Address: - 3/02
+
+	sitting is better : sit : 0.8 : do nothing
+	sitting is better : sit : 0.8 : sit in despair
+	sitting is better : is : 1.0 : date
+	sitting is better : better : 0.2 : sit in despair
+	did you share the : share : 0.1111111111111111 : feel surroundings
+	did you share the : did : 0.2222222222222222 : do nothing
+	did you share the : did : 0.1111111111111111 : do not give up
+	did you share the : the : 0.07692307692307693 : dig
+	did you share the : the : 0.15384615384615385 : date
+	did you share the : the : 0.07692307692307693 : feel surroundings
+	did you share the : the : 0.23076923076923078 : time
+	did you share the : you : 0.5 : date
+	did you share the : you : 0.5 : do not give up
+['date', [('date', 0.8024639952087194), ('sit in despair', 0.7), ('do nothing', 0.5948243643846628), ('do not give up', 0.09576700205782272), ('time', 0.03616376301484214), ('feel surroundings', 0.02946676986394545), ('dig', 0.012054587671614048), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('climb out', 0.0)]]
+
+Cleaning up: 24984
+Google: ["Sydenham's Fareham", 0.6918574, '']
+WitAPI: ['sitting is better', 0.7, '']
+Sphinx: ['did you share the', 0.15670963973098262, '']
+Select: ['date', [('date', 0.8024639952087194), ('sit in despair', 0.7), ('do nothing', 0.5948243643846628), ('do not give up', 0.09576700205782272), ('time', 0.03616376301484214), ('feel surroundings', 0.02946676986394545), ('dig', 0.012054587671614048), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('climb out', 0.0)]]
+User Select - date
+Next Address: - 4/09
+
+Cleaning up: 25060
+	same options as last time still have that option : same : 1.0 : date
+	same options as last time still have that option : still : 0.5 : repeat
+	same options as last time still have that option : that : 0.2 : dig
+	same options as last time still have that option : that : 0.2 : time
+	same options as last time still have that option : that : 0.06666666666666667 : repeat
+	same options as last time still have that option : that : 0.13333333333333333 : date
+	same options as last time still have that option : have : 1.0 : feel surroundings
+	same options as last time still have that option : time : 0.7272727272727273 : time
+	same options as last time still have that option : time : 0.18181818181818182 : restart
+	same options as last time still have that option : time : 0.09090909090909091 : wake up
+	same options as last time still have that option : time : 0.18181818181818182 : repeat
+	same options as last time still have that option : time : 0.6363636363636364 : date
+['date', [('date', 1.4109747219393938), ('feel surroundings', 0.79729736), ('time', 0.7393120974545454), ('repeat', 0.5967649936969697), ('dig', 0.159459472), ('restart', 0.14496315636363635), ('wake up', 0.07248157818181818), ('climb out', 0.0), ('do nothing', 0.0), ('do not give up', 0.0), ('sit in despair', 0.0)]]
+
+Cleaning up: 1756
+Google: ['same options as last time still have that option', 0.79729736, '']
+WitAPI: ['to choose last time so yeah and to see you so have that option lever to susan on in the', 0.7, '']
+Sphinx: ["same options lost on to didn't one at point notice the young and so have that option there and lou was using in armed that the other than it far out", 0.024986924804004995, '']
+Select: ['date', [('date', 1.4109747219393938), ('feel surroundings', 0.79729736), ('time', 0.7393120974545454), ('repeat', 0.5967649936969697), ('dig', 0.159459472), ('restart', 0.14496315636363635), ('wake up', 0.07248157818181818), ('climb out', 0.0), ('do nothing', 0.0), ('do not give up', 0.0), ('sit in despair', 0.0)]]
+User Select - date
+Next Address: - 4/09
+
+	when is it safe to go to another place : place : 1.0 : sit in despair
+	when is it safe to go to another place : is : 1.0 : date
+	when is it safe to go to another place : it : 1.0 : date
+	when is it safe to go to another place : to : 0.5 : feel surroundings
+	when is it safe to go to another place : when : 0.3333333333333333 : repeat
+	when is it safe to go to another place : another : 0.16666666666666666 : dig
+	when is it safe to go to another place : another : 0.3333333333333333 : repeat
+	when is it safe to go to another place : another : 0.16666666666666666 : date
+	but is sent to go to another please : is : 1.0 : date
+	but is sent to go to another please : please : 0.1111111111111111 : dig
+	but is sent to go to another please : please : 0.1111111111111111 : wake up
+	but is sent to go to another please : please : 0.1111111111111111 : repeat
+	but is sent to go to another please : but : 0.2857142857142857 : dig
+	but is sent to go to another please : but : 0.14285714285714285 : sit in despair
+	but is sent to go to another please : to : 0.5 : feel surroundings
+	but is sent to go to another please : another : 0.16666666666666666 : dig
+	but is sent to go to another please : another : 0.3333333333333333 : repeat
+	but is sent to go to another please : another : 0.16666666666666666 : date
+	no you said two locomotives : no : 0.4 : do not give up
+	no you said two locomotives : no : 0.4 : do nothing
+	no you said two locomotives : sai : 3.3333333333333335 : dig
+	no you said two locomotives : said : 0.16666666666666666 : do not give up
+	no you said two locomotives : said : 0.08333333333333333 : dig
+	no you said two locomotives : said : 0.08333333333333333 : sit in despair
+	no you said two locomotives : said : 0.08333333333333333 : repeat
+	no you said two locomotives : said : 0.08333333333333333 : time
+	no you said two locomotives : you : 0.5 : do not give up
+	no you said two locomotives : you : 0.5 : date
+['date', [('date', 2.266852871932386), ('dig', 0.9505461782046365), ('sit in despair', 0.749915143099842), ('repeat', 0.7480432408776196), ('feel surroundings', 0.66947452), ('do not give up', 0.14036611967797863), ('wake up', 0.07777777777777777), ('do nothing', 0.05263729487924199), ('time', 0.01096610309984208), ('climb out', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 5940
+Google: ['when is it safe to go to another place', 0.63894904, '']
+WitAPI: ['but is sent to go to another please', 0.7, '']
+Sphinx: ['no you said two locomotives', 0.13159323719810498, '']
+Select: ['date', [('date', 2.266852871932386), ('dig', 0.9505461782046365), ('sit in despair', 0.749915143099842), ('repeat', 0.7480432408776196), ('feel surroundings', 0.66947452), ('do not give up', 0.14036611967797863), ('wake up', 0.07777777777777777), ('do nothing', 0.05263729487924199), ('time', 0.01096610309984208), ('climb out', 0.0), ('restart', 0.0)]]
+User Select - date
+Next Address: - 4/09
+
+	Bermuda time to sit in despair : to : 0.5 : feel surroundings
+	Bermuda time to sit in despair : despair : 3.0 : sit in despair
+	Bermuda time to sit in despair : sit : 0.8 : sit in despair
+	Bermuda time to sit in despair : sit : 0.8 : do nothing
+	Bermuda time to sit in despair : time : 0.6363636363636364 : date
+	Bermuda time to sit in despair : time : 0.7272727272727273 : time
+	Bermuda time to sit in despair : time : 0.18181818181818182 : repeat
+	Bermuda time to sit in despair : time : 0.18181818181818182 : restart
+	Bermuda time to sit in despair : time : 0.09090909090909091 : wake up
+	Bermuda time to sit in despair : in : 0.3333333333333333 : sit in despair
+	Bermuda time to sit in despair : sit in despair : 1.0 : sit in despair
+	Bermuda time to sit in despair : sit in : 1.5 : sit in despair
+	buy zeta to see things for : to : 0.5 : feel surroundings
+	buy zeta to see things for : for : 0.06666666666666667 : dig
+	buy zeta to see things for : for : 0.06666666666666667 : time
+	buy zeta to see things for : for : 0.06666666666666667 : repeat
+	buy zeta to see things for : for : 0.06666666666666667 : feel surroundings
+	buy zeta to see things for : for : 0.06666666666666667 : sit in despair
+	buy zeta to see things for : see : 0.1111111111111111 : date
+	buy zeta to see things for : see : 0.1111111111111111 : dig
+	buy zeta to see things for : see : 0.2222222222222222 : feel surroundings
+	buy zeta to see things for : thing : 0.09090909090909091 : date
+	buy zeta to see things for : thing : 0.09090909090909091 : dig
+	buy zeta to see things for : thing : 0.2727272727272727 : time
+	it no it is a disease there : no : 0.4 : do not give up
+	it no it is a disease there : no : 0.4 : do nothing
+	it no it is a disease there : the : 0.15384615384615385 : date
+	it no it is a disease there : the : 0.07692307692307693 : dig
+	it no it is a disease there : the : 0.23076923076923078 : time
+	it no it is a disease there : the : 0.07692307692307693 : feel surroundings
+	it no it is a disease there : there : 0.5 : date
+	it no it is a disease there : it : 1.0 : date
+	it no it is a disease there : is : 1.0 : date
+['sit_in_despair', [('sit in despair', 4.497540466666666), ('date', 1.1126037078117648), ('feel surroundings', 0.9034890910769623), ('time', 0.772887182321796), ('do nothing', 0.6188129180446483), ('dig', 0.20385467693554812), ('repeat', 0.1686641212121212), ('restart', 0.12199745454545455), ('do not give up', 0.08202411804464839), ('wake up', 0.060998727272727274), ('climb out', 0.0)]]
+
+Cleaning up: 7656
+Google: ['Bermuda time to sit in despair', 0.670986, '']
+WitAPI: ['buy zeta to see things for', 0.7, '']
+Sphinx: ['it no it is a disease there', 0.20506029511162097, '']
+Select: ['sit_in_despair', [('sit in despair', 4.497540466666666), ('date', 1.1126037078117648), ('feel surroundings', 0.9034890910769623), ('time', 0.772887182321796), ('do nothing', 0.6188129180446483), ('dig', 0.20385467693554812), ('repeat', 0.1686641212121212), ('restart', 0.12199745454545455), ('do not give up', 0.08202411804464839), ('wake up', 0.060998727272727274), ('climb out', 0.0)]]
+User Select - sit_in_despair
+Next Address: - 3/03a
+
+Auto Select - auto
+Next Address: - 4/98
+
+	no : no : 0.6 : quit
+	no : no : 0.6 : quit
+	if no : no : 0.6 : quit
+['quit', [('quit', 1.1664323685261597), ('continue', 0.0), ('time', 0.0), ('date', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 9572
+Google: ['no', 0.95502925, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['if no', 0.28902469754359944, '']
+Select: ['quit', [('quit', 1.1664323685261597), ('continue', 0.0), ('time', 0.0), ('date', 0.0), ('repeat', 0.0)]]
+User Select - quit
+Next Address: - 4/99
+
+Traceback (most recent call last):
+  File "Main.py", line 71, in main
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 173, in checkReaderStatus
+    [self.__to_be_read[0], self.stack] = getNextText(self.stack)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 74, in getNextText
+    ci.interpretCode(text[2][0])
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Code_Interpreter.py", line 177, in interpretCode
+    result = glbl.callFunction(code[0], parameters)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Globals.py", line 55, in callFunction
+    last_function_result = map_function[function_code][0]()
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Default_Commands.py", line 430, in endTheProgram
+    quit(0)
+NameError: name 'quit' is not defined
+Program Error - name 'quit' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 35, in reader
+    has_changed = to_be_read[1]
+  File "<string>", line 2, in __getitem__
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(ForkingPickler.dumps(obj))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] The pipe is being closed
+Reader has failed unexpectedly. [WinError 232] The pipe is being closed

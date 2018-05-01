@@ -1,0 +1,452 @@
+
+
+NEW GAME START!
+	yes : yes : 2.0 : continue
+	yes : yes : 2.0 : continue
+	oh yes : yes : 2.0 : continue
+	yes : yes : 2.0 : continue
+	i don't give : do : 0.5714285714285714 : do nothing
+	i don't give : don't : 0.2222222222222222 : do nothing
+	i don't give : give : 0.0625 : repeat
+	i don't give : give : 0.0625 : continue
+	yep : yep : 1.0 : continue
+['continue', [('continue', 3.0584594514148575), ('do nothing', 0.19769258939501758), ('repeat', 0.015568291414857634), ('quit', 0.0), ('date', 0.0), ('time', 0.0)]]
+
+Cleaning up: 2108
+['continue', [('continue', 3.559074088698643), ('date', 0.0), ('quit', 0.0), ('time', 0.0), ('do nothing', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 11092
+Cleaning up: 19884
+Google: ['yes', 0.82144558, '']
+WitAPI: ['oh yes', 0.7, '']
+Sphinx: ["i don't give", 0.24909266263772215, '']
+Select: ['continue', [('continue', 3.0584594514148575), ('do nothing', 0.19769258939501758), ('repeat', 0.015568291414857634), ('quit', 0.0), ('date', 0.0), ('time', 0.0)]]
+Google: ['yes', 0.92509198, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yep', 0.3088901286986428, '']
+Select: ['continue', [('continue', 3.559074088698643), ('date', 0.0), ('quit', 0.0), ('time', 0.0), ('do nothing', 0.0), ('repeat', 0.0)]]
+User Select - continue
+Next Address: - 4/00b
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	leaf : leaf : 2.0 : restart
+	please : please : 0.1111111111111111 : wake up
+	please : please : 0.1111111111111111 : repeat
+	they said : said : 0.08333333333333333 : repeat
+	they said : said : 0.08333333333333333 : time
+	they said : the : 0.23076923076923078 : leave phone booth
+	they said : the : 0.15384615384615385 : date
+	they said : the : 0.23076923076923078 : time
+['restart', [('restart', 1.64131666), ('time', 0.11889025829138483), ('repeat', 0.10932009120202271), ('leave phone booth', 0.08734794486713988), ('wake up', 0.07777777777777777), ('date', 0.058231963244759925), ('stay in phone booth', 0.0)]]
+
+Cleaning up: 18544
+Google: ['leaf', 0.82065833, '']
+WitAPI: ['please', 0.7, '']
+Sphinx: ['they said', 0.3785077610909395, '']
+Select: ['restart', [('restart', 1.64131666), ('time', 0.11889025829138483), ('repeat', 0.10932009120202271), ('leave phone booth', 0.08734794486713988), ('wake up', 0.07777777777777777), ('date', 0.058231963244759925), ('stay in phone booth', 0.0)]]
+User Select - restart
+Next Address: - 4/04
+
+Auto Select - auto
+Next Address: - 0/00c
+
+Auto Select - auto
+Next Address: - 0/01b
+
+Cleaning up: 19348
+	go outside : go out : 0.16666666666666666 : wake up
+	go outside : go out : 1.8333333333333333 : leave phone booth
+	go outside : go out : 0.8333333333333334 : date
+	go outside : outside : 0.5 : leave phone booth
+	go outside : out : 0.125 : stay in phone booth
+	go outside : out : 0.375 : leave phone booth
+	go outside : go out : 0.16666666666666666 : wake up
+	go outside : go out : 1.8333333333333333 : leave phone booth
+	go outside : go out : 0.8333333333333334 : date
+	go outside : outside : 0.5 : leave phone booth
+	go outside : out : 0.125 : stay in phone booth
+	go outside : out : 0.375 : leave phone booth
+['leave_phone_booth', [('leave phone booth', 4.296533041666667), ('date', 1.3220101666666668), ('wake up', 0.2644020333333333), ('stay in phone booth', 0.19830152499999998), ('restart', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 18016
+Google: ['go outside', 0.8864122, '']
+WitAPI: ['go outside', 0.7, '']
+Sphinx: ['god has', 0.17970128745579766, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.296533041666667), ('date', 1.3220101666666668), ('wake up', 0.2644020333333333), ('stay in phone booth', 0.19830152499999998), ('restart', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+User Select - leave_phone_booth
+Next Address: - 0/02b1
+
+Auto Select - auto
+Next Address: - 0/02b2
+
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.4117647058823529 : look for others
+	look around : look : 0.058823529411764705 : go back into the phone booth
+	look around : look : 0.17647058823529413 : wake up
+	look around : look around : 0.6 : look for others
+	look around : around : 0.07692307692307693 : look for others
+	look around : around : 0.07692307692307693 : wait around
+	your aunt : you : 0.5 : date
+	the road : the : 0.15384615384615385 : date
+	the road : the : 0.07692307692307693 : go back into the phone booth
+	the road : the : 0.23076923076923078 : time
+['look_for_others', [('look for others', 0.9726321192217194), ('date', 0.40510038371100465), ('wake up', 0.1576585729411765), ('time', 0.08265057556650705), ('go back into the phone booth', 0.08010304950256117), ('wait around', 0.06872296769230771), ('repeat', 0.052552857647058825), ('restart', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 21468
+Google: ['look around', 0.89339858, '']
+WitAPI: ['your aunt', 0.7, '']
+Sphinx: ['the road', 0.35815249412153055, '']
+Select: ['look_for_others', [('look for others', 0.9726321192217194), ('date', 0.40510038371100465), ('wake up', 0.1576585729411765), ('time', 0.08265057556650705), ('go back into the phone booth', 0.08010304950256117), ('wait around', 0.06872296769230771), ('repeat', 0.052552857647058825), ('restart', 0.0), ('do nothing', 0.0)]]
+User Select - look_for_others
+Next Address: - 0/03b
+
+	look at the lights : look : 0.058823529411764705 : repeat
+	look at the lights : look : 0.17647058823529413 : wake up
+	look at the lights : look : 0.058823529411764705 : run toward the light
+	look at the lights : the : 0.07692307692307693 : run away from the light
+	look at the lights : the : 0.23076923076923078 : time
+	look at the lights : the : 0.15384615384615385 : date
+	look at the lights : the : 0.15384615384615385 : run toward the light
+	look at the lights : light : 0.0625 : run away from the light
+	look at the lights : light : 0.125 : wake up
+	look at the lights : light : 0.0625 : date
+	look at the lights : light : 0.1875 : run toward the light
+	look at the lights : look : 0.058823529411764705 : repeat
+	look at the lights : look : 0.17647058823529413 : wake up
+	look at the lights : look : 0.058823529411764705 : run toward the light
+	look at the lights : the : 0.07692307692307693 : run away from the light
+	look at the lights : the : 0.23076923076923078 : time
+	look at the lights : the : 0.15384615384615385 : date
+	look at the lights : the : 0.15384615384615385 : run toward the light
+	look at the lights : light : 0.0625 : run away from the light
+	look at the lights : light : 0.125 : wake up
+	look at the lights : light : 0.0625 : date
+	look at the lights : light : 0.1875 : run toward the light
+	the night : nigh : 0.2 : run away from the light
+	the night : night : 0.5 : run away from the light
+	the night : night : 0.25 : wake up
+	the night : night : 0.25 : date
+	the night : the : 0.07692307692307693 : run away from the light
+	the night : the : 0.23076923076923078 : time
+	the night : the : 0.15384615384615385 : date
+	the night : the : 0.15384615384615385 : run toward the light
+['run_toward_the_light', [('run toward the light', 0.6748603509016977), ('wake up', 0.5334236965709575), ('date', 0.4246675276197139), ('time', 0.4156734032826937), ('run away from the light', 0.3700466354267353), ('repeat', 0.09498382058823529), ('do not go anywhere', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 25392
+Google: ['look at the lights', 0.91472495, '']
+WitAPI: ['look at the lights', 0.7, '']
+Sphinx: ['the night', 0.18652646422500585, '']
+Select: ['run_toward_the_light', [('run toward the light', 0.6748603509016977), ('wake up', 0.5334236965709575), ('date', 0.4246675276197139), ('time', 0.4156734032826937), ('run away from the light', 0.3700466354267353), ('repeat', 0.09498382058823529), ('do not go anywhere', 0.0), ('restart', 0.0)]]
+User Select - run_toward_the_light
+Next Address: - 2/01a
+
+Auto Select - auto
+Next Address: - 2/01c
+
+	take door number 4 : door number : 0.5 : go through an open door
+	take door number 4 : number : 0.14285714285714285 : go through an open door
+	take door number 4 : number : 0.8571428571428571 : do nothing
+	take door number 4 : door : 1.4 : go through an open door
+	take door number 4 : do : 0.5714285714285714 : do nothing
+	take door number 4 : take : 0.2222222222222222 : go through an open door
+	take door number 4 : take : 0.4444444444444444 : go back
+	take down my number for : for : 0.06666666666666667 : repeat
+	take down my number for : for : 0.4 : go through an open door
+	take down my number for : for : 0.06666666666666667 : time
+	take down my number for : number : 0.14285714285714285 : go through an open door
+	take down my number for : number : 0.8571428571428571 : do nothing
+	take down my number for : down : 0.2 : go through an open door
+	take down my number for : down : 0.1 : look back
+	take down my number for : do : 0.5714285714285714 : do nothing
+	take down my number for : take : 0.2222222222222222 : go through an open door
+	take down my number for : take : 0.4444444444444444 : go back
+	take them ashore : a : 1.5 : go through an open door
+	take them ashore : them : 0.5 : date
+	take them ashore : the : 0.3076923076923077 : go through an open door
+	take them ashore : the : 0.15384615384615385 : date
+	take them ashore : the : 0.23076923076923078 : time
+	take them ashore : take : 0.2222222222222222 : go through an open door
+	take them ashore : take : 0.4444444444444444 : go back
+['go_through_an_open_door', [('go through an open door', 2.823023165165834), ('do nothing', 2.1249185428571424), ('go back', 0.7407490604705946), ('date', 0.11719695780770177), ('time', 0.08803029883409082), ('look back', 0.06999999999999999), ('repeat', 0.04666666666666666), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 24120
+Google: ['take door number 4', 0.78744298, '']
+WitAPI: ['take down my number for', 0.7, '']
+Sphinx: ['take them ashore', 0.179242406058838, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.823023165165834), ('do nothing', 2.1249185428571424), ('go back', 0.7407490604705946), ('date', 0.11719695780770177), ('time', 0.08803029883409082), ('look back', 0.06999999999999999), ('repeat', 0.04666666666666666), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+User Select - go_through_an_open_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a1
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	take door number 7 : do : 0.5714285714285714 : do nothing
+	take door number 7 : take : 0.4444444444444444 : go back
+	take door number 7 : take : 0.2222222222222222 : try another door
+	take door number 7 : number : 0.8571428571428571 : do nothing
+	take door number 7 : number : 0.14285714285714285 : try another door
+	take door number 7 : door number : 0.5 : try another door
+	take door number 7 : door : 1.0 : break the door down
+	take door number 7 : door : 1.8 : try another door
+	thank you donna listen : do : 0.5714285714285714 : do nothing
+	thank you donna listen : you : 0.5 : date
+	thank you donna listen : thank : 0.4 : do nothing
+	they've got a second : second : 0.1 : go back
+	they've got a second : second : 0.7 : time
+	they've got a second : second : 0.1 : look back
+	they've got a second : second : 0.3 : try another door
+	they've got a second : a : 1.0 : try another door
+	they've got a second : go : 0.125 : go back
+	they've got a second : the : 0.23076923076923078 : time
+	they've got a second : the : 0.23076923076923078 : break the door down
+	they've got a second : the : 0.15384615384615385 : try another door
+	they've got a second : the : 0.15384615384615385 : date
+['try_another_door', [('try another door', 2.568385776396167), ('do nothing', 1.857860414285714), ('break the door down', 0.8833946291835689), ('go back', 0.4238654929262019), ('date', 0.3892615594557126), ('time', 0.2375324347070615), ('look back', 0.02552001364621322), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 9848
+Google: ['take door number 7', 0.82450229, '']
+WitAPI: ['thank you donna listen', 0.7, '']
+Sphinx: ["they've got a second", 0.2552001364621322, '']
+Select: ['try_another_door', [('try another door', 2.568385776396167), ('do nothing', 1.857860414285714), ('break the door down', 0.8833946291835689), ('go back', 0.4238654929262019), ('date', 0.3892615594557126), ('time', 0.2375324347070615), ('look back', 0.02552001364621322), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a2
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	try older us : old : 0.3333333333333333 : date
+	try older us : try : 0.2857142857142857 : look around
+	try older us : try : 0.42857142857142855 : try another door
+	try to las : try : 0.2857142857142857 : look around
+	try to las : try : 0.42857142857142855 : try another door
+	try it on us : it : 1.0 : date
+	try it on us : try : 0.2857142857142857 : look around
+	try it on us : try : 0.42857142857142855 : try another door
+['try_another_door', [('try another door', 0.723325636675763), ('look around', 0.4822170911171753), ('date', 0.45030223224344723), ('go back', 0.0), ('wake up', 0.0), ('look back', 0.0), ('repeat', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('time', 0.0)]]
+
+Cleaning up: 18012
+Google: ['try older us', 0.80618638, '']
+WitAPI: ['try to las', 0.7, '']
+Sphinx: ['try it on us', 0.1815734389101139, '']
+Select: ['try_another_door', [('try another door', 0.723325636675763), ('look around', 0.4822170911171753), ('date', 0.45030223224344723), ('go back', 0.0), ('wake up', 0.0), ('look back', 0.0), ('repeat', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('time', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a3
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+Cleaning up: 22280
+	another night : another : 0.16666666666666666 : date
+	another night : another : 0.5 : try another door
+	another night : another : 0.3333333333333333 : repeat
+	another night : a : 1.0 : try another door
+	another night : nigh : 0.2 : look around
+	another night : night : 0.25 : wake up
+	another night : night : 0.25 : date
+	yeah bro : yea : 1.5 : try another door
+	yeah bro : yeah : 1.5 : try another door
+	in the on hal : in the : 1.0 : try another door
+	in the on hal : the : 0.23076923076923078 : break the door down
+	in the on hal : the : 0.23076923076923078 : time
+	in the on hal : the : 0.15384615384615385 : date
+	in the on hal : the : 0.15384615384615385 : try another door
+['try_another_door', [('try another door', 3.4987001094737216), ('date', 0.36428489476316295), ('repeat', 0.27352545666666667), ('wake up', 0.2051440925), ('look around', 0.16411527400000003), ('time', 0.03356711089474439), ('break the door down', 0.03356711089474439), ('look back', 0.0), ('restart', 0.0), ('go back', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 25456
+Google: ['another night', 0.82057637, '']
+WitAPI: ['yeah bro', 0.7, '']
+Sphinx: ['in the on hal', 0.14545748054389235, '']
+Select: ['try_another_door', [('try another door', 3.4987001094737216), ('date', 0.36428489476316295), ('repeat', 0.27352545666666667), ('wake up', 0.2051440925), ('look around', 0.16411527400000003), ('time', 0.03356711089474439), ('break the door down', 0.03356711089474439), ('look back', 0.0), ('restart', 0.0), ('go back', 0.0), ('do nothing', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a4
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	trainerroad or : train : 0.6666666666666666 : wake up
+	trainerroad or : train : 0.3333333333333333 : break the door down
+	try don't : don't : 0.2222222222222222 : do nothing
+	try don't : try : 0.2857142857142857 : look around
+	try don't : try : 0.42857142857142855 : try another door
+	try don't : do : 0.5714285714285714 : do nothing
+	try that are : a : 1.0 : try another door
+	try that are : try : 0.2857142857142857 : look around
+	try that are : try : 0.42857142857142855 : try another door
+	try that are : that : 0.2 : time
+	try that are : that : 0.13333333333333333 : try another door
+	try that are : that : 0.13333333333333333 : date
+	try that are : that : 0.2 : break the door down
+	try that are : that : 0.06666666666666667 : repeat
+['do_nothing', [('do nothing', 0.5555555555555555), ('try another door', 0.53340630018455), ('wake up', 0.47904475333333335), ('break the door down', 0.26940976876346884), ('look around', 0.24269627442400304), ('time', 0.02988739209680214), ('date', 0.01992492806453476), ('repeat', 0.00996246403226738), ('restart', 0.0), ('go back', 0.0), ('look back', 0.0)]]
+
+Cleaning up: 8720
+Google: ['trainerroad or', 0.71856713, '']
+WitAPI: ["try don't", 0.7, '']
+Sphinx: ['try that are', 0.1494369604840107, '']
+Select: ['look_around', ['look_around']]
+User Select - look_around
+Next Address: - 2/02d
+
+	pull up the string : up : 0.2857142857142857 : wake up
+	pull up the string : up : 0.14285714285714285 : go back
+	pull up the string : the : 0.15384615384615385 : date
+	pull up the string : the : 0.23076923076923078 : time
+	pull up the string : the : 0.3076923076923077 : go through an open door
+	pull up the string : pull : 0.1111111111111111 : look back
+	pull up the string : pull : 0.3333333333333333 : pull string
+	pull up the string : pull : 0.1111111111111111 : go back
+	pull up the string : string : 4.5 : pull string
+	what is wrong : what : 0.5 : date
+	what is wrong : is : 1.0 : date
+	put a strain : put : 0.2 : repeat
+	put a strain : put : 0.4 : go through an open door
+	put a strain : strain : 0.42857142857142855 : pull string
+	put a strain : strain : 0.8571428571428571 : go through an open door
+	put a strain : a : 1.5 : go through an open door
+['pull_string', [('pull string', 3.915718009482102), ('date', 1.172038163076923), ('go through an open door', 0.7695877881553659), ('wake up', 0.22664230285714285), ('go back', 0.20145982476190477), ('time', 0.18305724461538464), ('look back', 0.08813867333333333), ('repeat', 0.0381200024249807), ('restart', 0.0), ('look around', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 12664
+Google: ['pull up the string', 0.79324806, '']
+WitAPI: ['what is wrong', 0.7, '']
+Sphinx: ['put a strain', 0.1906000121249035, '']
+Select: ['pull_string', [('pull string', 3.915718009482102), ('date', 1.172038163076923), ('go through an open door', 0.7695877881553659), ('wake up', 0.22664230285714285), ('go back', 0.20145982476190477), ('time', 0.18305724461538464), ('look back', 0.08813867333333333), ('repeat', 0.0381200024249807), ('restart', 0.0), ('look around', 0.0), ('do nothing', 0.0)]]
+User Select - pull_string
+Next Address: - 2/23
+
+	take the stairs : take : 0.4444444444444444 : go back
+	take the stairs : take : 0.2222222222222222 : go through an open door
+	take the stairs : stairs : 3.0 : go up stairs
+	take the stairs : the : 0.23076923076923078 : time
+	take the stairs : the : 0.3076923076923077 : go through an open door
+	take the stairs : the : 0.15384615384615385 : date
+	take the stairs : stair : 1.5 : go up stairs
+Cleaning up: 4500
+	he helped o. uh : help : 0.08333333333333333 : go back
+	he helped o. uh : help : 0.4166666666666667 : go through an open door
+	he helped o. uh : help : 0.08333333333333333 : look back
+['go_up_stairs', [('go up stairs', 3.90516867), ('go through an open door', 0.5266732605614041), ('go back', 0.39905674011228076), ('time', 0.20026506), ('date', 0.13351004), ('look back', 0.013361069001169693), ('restart', 0.0), ('do nothing', 0.0), ('wake up', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 11288
+Google: ['take the stairs', 0.86781526, '']
+WitAPI: ['yeah yes', 0.7, '']
+Sphinx: ['he helped o. uh', 0.1603328280140363, '']
+Select: ['go_up_stairs', [('go up stairs', 3.90516867), ('go through an open door', 0.5266732605614041), ('go back', 0.39905674011228076), ('time', 0.20026506), ('date', 0.13351004), ('look back', 0.013361069001169693), ('restart', 0.0), ('do nothing', 0.0), ('wake up', 0.0), ('repeat', 0.0)]]
+User Select - go_up_stairs
+Next Address: - 2/24
+
+Auto Select - auto
+Next Address: - 2/24a
+
+Cleaning up: 7504
+User Select - $Silence
+Next Address: - 4/07
+
+Cleaning up: 2540
+	give me a : give : 0.375 : go back
+	give me a : give : 0.0625 : repeat
+	give me a : give : 0.0625 : look back
+	give me a : give : 0.0625 : stay in room
+	give me a : give : 0.125 : go through an open door
+	give me a : a : 1.5 : go through an open door
+	get me a : a : 1.5 : go through an open door
+	get me a : get : 0.10526315789473684 : wake up
+	get me a : get : 0.21052631578947367 : go back
+	get me a : get : 0.05263157894736842 : time
+	get me a : get : 0.05263157894736842 : look back
+	get me a : get : 0.05263157894736842 : go through an open door
+Cleaning up: 19084
+	hey it moving : it : 1.0 : date
+['go_through_an_open_door', [('go through an open door', 2.2597898227631577), ('go back', 0.4180486635526316), ('date', 0.22266740263420168), ('look back', 0.08195547901315789), ('wake up', 0.07368421052631578), ('repeat', 0.04511337375), ('stay in room', 0.04511337375), ('time', 0.03684210526315789), ('look around', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 17252
+Google: ['give me a', 0.72181398, '']
+WitAPI: ['get me a', 0.7, '']
+Sphinx: ['hey it moving', 0.22266740263420168, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.2597898227631577), ('go back', 0.4180486635526316), ('date', 0.22266740263420168), ('look back', 0.08195547901315789), ('wake up', 0.07368421052631578), ('repeat', 0.04511337375), ('stay in room', 0.04511337375), ('time', 0.03684210526315789), ('look around', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+User Select - go_through_an_open_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/03a
+
+Auto Select - auto
+Next Address: - 2/03c
+
+	Peter Pan films : film : 0.6666666666666666 : go back into the phone booth
+	he got from : go : 0.375 : go back into the phone booth
+	he got from : go : 0.125 : go back
+	the gunshot wound : the : 0.07692307692307693 : go back into the phone booth
+	the gunshot wound : the : 0.23076923076923078 : time
+	the gunshot wound : the : 0.15384615384615385 : date
+['go_back_into_the_phone_booth', [('go back into the phone booth', 0.8170314652236983), ('go back', 0.0875), ('time', 0.05199221567109504), ('date', 0.03466147711406336), ('look back', 0.0), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 11460
+Google: ['Peter Pan films', 0.80580109, '']
+WitAPI: ['he got from', 0.7, '']
+Sphinx: ['the gunshot wound', 0.22529960124141182, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 0.8170314652236983), ('go back', 0.0875), ('time', 0.05199221567109504), ('date', 0.03466147711406336), ('look back', 0.0), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('do nothing', 0.0)]]
+User Select - go_back_into_the_phone_booth
+Next Address: - 2/04a
+
+Auto Select - auto
+Next Address: - 4/98
+
+	no : no : 0.6 : quit
+	no : no : 0.6 : quit
+	no : no : 0.6 : quit
+['quit', [('quit', 1.2301877171795008), ('continue', 0.0), ('time', 0.0), ('date', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 21208
+Google: ['no', 0.90609157, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.44422129196583476, '']
+Select: ['quit', [('quit', 1.2301877171795008), ('continue', 0.0), ('time', 0.0), ('date', 0.0), ('repeat', 0.0)]]
+User Select - quit
+Next Address: - 4/99
+
+Traceback (most recent call last):
+  File "Main.py", line 71, in main
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 173, in checkReaderStatus
+    [self.__to_be_read[0], self.stack] = getNextText(self.stack)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 74, in getNextText
+    ci.interpretCode(text[2][0])
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Code_Interpreter.py", line 177, in interpretCode
+    result = glbl.callFunction(code[0], parameters)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Globals.py", line 55, in callFunction
+    last_function_result = map_function[function_code][0]()
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Default_Commands.py", line 430, in endTheProgram
+    quit(0)
+NameError: name 'quit' is not defined
+Program Error - name 'quit' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 35, in reader
+    has_changed = to_be_read[1]
+  File "<string>", line 2, in __getitem__
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(ForkingPickler.dumps(obj))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] The pipe is being closed
+Reader has failed unexpectedly. [WinError 232] The pipe is being closed
