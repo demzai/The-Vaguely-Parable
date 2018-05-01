@@ -1,0 +1,863 @@
+
+
+NEW GAME START!
+	ok : ok : 2.0 : yes
+	okay : okay : 2.4 : yes
+	okay : ok : 2.0 : yes
+	but then : the : 0.07692307692307693 : date
+	but then : the : 0.15384615384615385 : time
+	but then : then : 0.2 : repeat
+	but then : then : 0.6 : no
+['yes', [('yes', 5.0222014999999995), ('no', 0.20070718403661322), ('repeat', 0.06690239467887109), ('time', 0.05146338052220852), ('date', 0.02573169026110426), ('do nothing', 0.0)]]
+
+Cleaning up: 4904
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['ok', 0.97110075, '']
+WitAPI: ['okay', 0.7, '']
+Sphinx: ['but then', 0.3345119733943554, '']
+Select: ['yes', [('yes', 5.0222014999999995), ('no', 0.20070718403661322), ('repeat', 0.06690239467887109), ('time', 0.05146338052220852), ('date', 0.02573169026110426), ('do nothing', 0.0)]]
+User Select - yes
+Next Address: - 4/00b
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	yes : yes : 16.0 : yes
+	yes you : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 34.93028448011602), ('time', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('no', 0.0), ('leave phone booth', 0.0), ('date', 0.0), ('stay in phone booth', 0.0)]]
+
+Cleaning up: 1892
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.9650715, '']
+WitAPI: ['yes you', 0.7, '']
+Sphinx: ['yes', 0.5180712800072514, '']
+Select: ['yes', [('yes', 34.93028448011602), ('time', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('no', 0.0), ('leave phone booth', 0.0), ('date', 0.0), ('stay in phone booth', 0.0)]]
+User Select - yes
+Next Address: - 0/02b1
+
+Auto Select - auto
+Next Address: - 0/02b2
+
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no that and at i think though : think : 0.07692307692307693 : date
+	no that and at i think though : think : 0.07692307692307693 : go back into the phone booth
+	no that and at i think though : think : 0.15384615384615385 : yes
+	no that and at i think though : think : 0.15384615384615385 : time
+	no that and at i think though : i think : 2.0 : yes
+	no that and at i think though : that : 0.06666666666666667 : repeat
+	no that and at i think though : that : 0.06666666666666667 : date
+	no that and at i think though : that : 0.06666666666666667 : go back into the phone booth
+	no that and at i think though : that : 0.06666666666666667 : look for others
+	no that and at i think though : that : 0.13333333333333333 : time
+	no that and at i think though : and : 0.2 : repeat
+	no that and at i think though : and : 0.2 : look for others
+	no that and at i think though : no : 1.0 : do nothing
+	no that and at i think though : no : 4.5 : no
+['no', [('no', 7.950119025664833), ('do nothing', 1.7666931168144073), ('yes', 0.2614012731387233), ('time', 0.03485350308516311), ('look for others', 0.0323639671505086), ('repeat', 0.0323639671505086), ('date', 0.017426751542581553), ('go back into the phone booth', 0.017426751542581553), ('restart', 0.0), ('wake up', 0.0), ('wait around', 0.0)]]
+
+Cleaning up: 7832
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.94532824, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no that and at i think though', 0.12136487681440725, '']
+Select: ['no', [('no', 7.950119025664833), ('do nothing', 1.7666931168144073), ('yes', 0.2614012731387233), ('time', 0.03485350308516311), ('look for others', 0.0323639671505086), ('repeat', 0.0323639671505086), ('date', 0.017426751542581553), ('go back into the phone booth', 0.017426751542581553), ('restart', 0.0), ('wake up', 0.0), ('wait around', 0.0)]]
+User Select - no
+Next Address: - 4/03
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 34.64304524139267), ('restart', 0.0), ('time', 0.0), ('no', 0.0), ('look for others', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('do nothing', 0.0), ('wait around', 0.0), ('go back into the phone booth', 0.0), ('date', 0.0)]]
+
+Cleaning up: 2828
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.4940895775870421, '']
+Select: ['yes', [('yes', 34.64304524139267), ('restart', 0.0), ('time', 0.0), ('no', 0.0), ('look for others', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('do nothing', 0.0), ('wait around', 0.0), ('go back into the phone booth', 0.0), ('date', 0.0)]]
+User Select - yes
+Next Address: - 0/03b
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+['no', [('no', 9.899012480083742), ('wake up', 0.0), ('repeat', 0.0), ('restart', 0.0), ('time', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('yes', 0.0)]]
+
+Cleaning up: 9596
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.94997561, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5498049411297204, '']
+Select: ['no', [('no', 9.899012480083742), ('wake up', 0.0), ('repeat', 0.0), ('restart', 0.0), ('time', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('yes', 0.0)]]
+User Select - no
+Next Address: - 0/04
+
+Auto Select - auto
+Next Address: - 3/01
+
+Auto Select - auto
+Next Address: - 3/01a
+
+	no : no : 1.0 : do nothing
+	no : no : 1.0 : do nothing
+	no : no : 1.0 : do nothing
+['do_nothing', [('do nothing', 2.240543726149931), ('wake up', 0.0), ('climb', 0.0), ('date', 0.0), ('feel surroundings', 0.0), ('repeat', 0.0), ('sit in despair', 0.0), ('do not give up', 0.0), ('restart', 0.0), ('dig', 0.0), ('time', 0.0)]]
+
+Cleaning up: 9388
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.9589473, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5815964261499313, '']
+Select: ['do_nothing', [('do nothing', 2.240543726149931), ('wake up', 0.0), ('climb', 0.0), ('date', 0.0), ('feel surroundings', 0.0), ('repeat', 0.0), ('sit in despair', 0.0), ('do not give up', 0.0), ('restart', 0.0), ('dig', 0.0), ('time', 0.0)]]
+User Select - do_nothing
+Next Address: - 4/03
+
+['do_not_give_up', [('do not give up', 0.0), ('climb', 0.0), ('restart', 0.0), ('date', 0.0), ('dig', 0.0), ('repeat', 0.0), ('time', 0.0), ('wake up', 0.0), ('sit in despair', 0.0), ('feel surroundings', 0.0), ('do nothing', 0.0)]]
+
+Cleaning up: 7456
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.4693036111634126, '']
+Select: ['$User_Error', []]
+User Select - $User_Error
+Next Address: - 4/05
+
+	repeat : repeat : 1.2 : repeat
+Cleaning up: 2836
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+	repeat : repeat : 1.2 : repeat
+	repeat : repeat : 1.2 : repeat
+['repeat', [('repeat', 2.5034588629085475), ('date', 0.0), ('dig', 0.0), ('time', 0.0), ('do not give up', 0.0), ('wake up', 0.0), ('feel surroundings', 0.0), ('restart', 0.0), ('climb', 0.0), ('do nothing', 0.0), ('sit in despair', 0.0)]]
+
+Cleaning up: 4352
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['repeat', 0.97110075, '']
+WitAPI: ['repeat', 0.7, '']
+Sphinx: ['repeat', 0.41511496909045625, '']
+Select: ['repeat', [('repeat', 2.5034588629085475), ('date', 0.0), ('dig', 0.0), ('time', 0.0), ('do not give up', 0.0), ('wake up', 0.0), ('feel surroundings', 0.0), ('restart', 0.0), ('climb', 0.0), ('do nothing', 0.0), ('sit in despair', 0.0)]]
+User Select - repeat
+	feel surroundings : surroundings : 3.0 : feel surroundings
+	feel surroundings : feel : 0.26666666666666666 : feel surroundings
+	feel surroundings : feel : 0.06666666666666667 : dig
+	feel surroundings : feel : 0.06666666666666667 : date
+	feel surroundings : feel : 0.13333333333333333 : time
+	feel surroundings : fee : 0.25 : sit in despair
+	feel surroundings : fee : 0.25 : do not give up
+	feel surroundings : surround : 1.5 : feel surroundings
+	feel surroundings : surrounding : 0.6666666666666666 : feel surroundings
+	feel surroundings : feel surroundings : 1.0 : feel surroundings
+	feels around earnings : earn : 1.5 : do not give up
+	feels around earnings : feel : 0.26666666666666666 : feel surroundings
+	feels around earnings : feel : 0.06666666666666667 : dig
+	feels around earnings : feel : 0.06666666666666667 : date
+	feels around earnings : feel : 0.13333333333333333 : time
+	feels around earnings : fee : 0.25 : sit in despair
+	feels around earnings : fee : 0.25 : do not give up
+	feels around earnings : around : 0.08333333333333333 : sit in despair
+	feels around earnings : around : 0.16666666666666666 : feel surroundings
+	feel surroundings : surroundings : 3.0 : feel surroundings
+	feel surroundings : feel : 0.26666666666666666 : feel surroundings
+	feel surroundings : feel : 0.06666666666666667 : dig
+	feel surroundings : feel : 0.06666666666666667 : date
+	feel surroundings : feel : 0.13333333333333333 : time
+	feel surroundings : fee : 0.25 : sit in despair
+	feel surroundings : fee : 0.25 : do not give up
+	feel surroundings : surround : 1.5 : feel surroundings
+	feel surroundings : surrounding : 0.6666666666666666 : feel surroundings
+	feel surroundings : feel surroundings : 1.0 : feel surroundings
+['feel_surroundings', [('feel surroundings', 7.662374855175735), ('do not give up', 1.5109731161337718), ('sit in despair', 0.5193064494671054), ('time', 0.24585232860467843), ('dig', 0.12292616430233921), ('date', 0.12292616430233921), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+
+Cleaning up: 9192
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['feel surroundings', 0.83500648, '']
+WitAPI: ['feels around earnings', 0.7, '']
+Sphinx: ['feel surroundings', 0.3088859845350883, '']
+Select: ['feel_surroundings', [('feel surroundings', 7.662374855175735), ('do not give up', 1.5109731161337718), ('sit in despair', 0.5193064494671054), ('time', 0.24585232860467843), ('dig', 0.12292616430233921), ('date', 0.12292616430233921), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+User Select - feel_surroundings
+Next Address: - 3/02
+
+	look around : look around : 0.4 : feel surroundings
+	look around : around : 0.08333333333333333 : sit in despair
+	look around : around : 0.16666666666666666 : feel surroundings
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.17647058823529413 : sit in despair
+	look around : look : 0.4117647058823529 : feel surroundings
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.11764705882352941 : dig
+	look around : look around : 0.4 : feel surroundings
+	look around : around : 0.08333333333333333 : sit in despair
+	look around : around : 0.16666666666666666 : feel surroundings
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.17647058823529413 : sit in despair
+	look around : look : 0.4117647058823529 : feel surroundings
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.11764705882352941 : dig
+	look around : look around : 0.4 : feel surroundings
+	look around : around : 0.08333333333333333 : sit in despair
+	look around : around : 0.16666666666666666 : feel surroundings
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.17647058823529413 : sit in despair
+	look around : look : 0.4117647058823529 : feel surroundings
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.11764705882352941 : dig
+['feel_surroundings', [('feel surroundings', 2.1344770091788714), ('sit in despair', 0.566769947327055), ('wake up', 0.38497581327875435), ('dig', 0.2566505421858362), ('repeat', 0.1283252710929181), ('date', 0.0), ('time', 0.0), ('restart', 0.0), ('do not give up', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+
+Cleaning up: 2496
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['look around', 0.92990679, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ['look around', 0.5516228185796079, '']
+Select: ['feel_surroundings', [('feel surroundings', 2.1344770091788714), ('sit in despair', 0.566769947327055), ('wake up', 0.38497581327875435), ('dig', 0.2566505421858362), ('repeat', 0.1283252710929181), ('date', 0.0), ('time', 0.0), ('restart', 0.0), ('do not give up', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+User Select - feel_surroundings
+Next Address: - 3/02
+
+	get up : get up : 0.2 : feel surroundings
+	get up : get up : 0.6 : do not give up
+	get up : get up : 0.8 : wake up
+	get up : up : 0.14285714285714285 : sit in despair
+	get up : up : 0.5714285714285714 : do not give up
+	get up : up : 0.2857142857142857 : wake up
+	get up : up : 0.14285714285714285 : climb
+	get up : get : 0.05263157894736842 : time
+	get up : get : 0.21052631578947367 : do not give up
+	get up : get : 0.5263157894736842 : dig
+	get up : get : 0.10526315789473684 : wake up
+	get up : get : 0.05263157894736842 : climb
+	get up : get up : 0.2 : feel surroundings
+	get up : get up : 0.6 : do not give up
+	get up : get up : 0.8 : wake up
+	get up : up : 0.14285714285714285 : sit in despair
+	get up : up : 0.5714285714285714 : do not give up
+	get up : up : 0.2857142857142857 : wake up
+	get up : up : 0.14285714285714285 : climb
+	get up : get : 0.05263157894736842 : time
+	get up : get : 0.21052631578947367 : do not give up
+	get up : get : 0.5263157894736842 : dig
+	get up : get : 0.10526315789473684 : wake up
+	get up : get : 0.05263157894736842 : climb
+	get up : get up : 0.2 : feel surroundings
+	get up : get up : 0.6 : do not give up
+	get up : get up : 0.8 : wake up
+	get up : up : 0.14285714285714285 : sit in despair
+	get up : up : 0.5714285714285714 : do not give up
+	get up : up : 0.2857142857142857 : wake up
+	get up : up : 0.14285714285714285 : climb
+	get up : get : 0.05263157894736842 : time
+	get up : get : 0.21052631578947367 : do not give up
+	get up : get : 0.5263157894736842 : dig
+	get up : get : 0.10526315789473684 : wake up
+	get up : get : 0.05263157894736842 : climb
+['do_not_give_up', [('do not give up', 2.581000433661412), ('wake up', 2.224322462959564), ('dig', 0.982970785398797), ('feel surroundings', 0.3735288984515429), ('climb', 0.365103434576696), ('sit in despair', 0.26680635603681635), ('time', 0.09829707853987969), ('date', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 3416
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['get up', 0.93431211, '']
+WitAPI: ['get up', 0.7, '']
+Sphinx: ['get up', 0.2333323822577144, '']
+Select: ['do_not_give_up', [('do not give up', 2.581000433661412), ('wake up', 2.224322462959564), ('dig', 0.982970785398797), ('feel surroundings', 0.3735288984515429), ('climb', 0.365103434576696), ('sit in despair', 0.26680635603681635), ('time', 0.09829707853987969), ('date', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+User Select - do_not_give_up
+Next Address: - 3/03b
+
+Auto Select - auto
+Next Address: - 3/03b1
+
+	climb : climb : 3.6666666666666665 : climb
+	climate : climate : 1.5 : feel surroundings
+['climb', [('climb', 2.5666666666666664), ('feel surroundings', 0.46246034566664396), ('do not give up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('dig', 0.0), ('date', 0.0), ('do nothing', 0.0), ('time', 0.0), ('sit in despair', 0.0)]]
+
+Cleaning up: 5340
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['climb', 0.7, '']
+Sphinx: ['climate', 0.308306897111096, '']
+Select: ['climb', [('climb', 2.5666666666666664), ('feel surroundings', 0.46246034566664396), ('do not give up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('dig', 0.0), ('date', 0.0), ('do nothing', 0.0), ('time', 0.0), ('sit in despair', 0.0)]]
+User Select - climb
+Next Address: - 3/04
+
+Auto Select - auto
+Next Address: - 3/04a
+
+Auto Select - auto
+Next Address: - 1/01b
+
+Auto Select - auto
+Next Address: - 1/01c
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 35.304739595668785), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('restart', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('no', 0.0), ('time', 0.0)]]
+
+Cleaning up: 7076
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.535445474729299, '']
+Select: ['yes', [('yes', 35.304739595668785), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('restart', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('no', 0.0), ('time', 0.0)]]
+User Select - yes
+Next Address: - 2/01a
+
+Auto Select - auto
+Next Address: - 2/01c
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 38.04871996544798), ('wake up', 0.0), ('do nothing', 0.0), ('time', 0.0), ('go back', 0.0), ('repeat', 0.0), ('look around', 0.0), ('look back', 0.0), ('date', 0.0), ('no', 0.0), ('restart', 0.0), ('go through an open door', 0.0)]]
+
+Cleaning up: 912
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.7069442478404988, '']
+Select: ['yes', [('yes', 38.04871996544798), ('wake up', 0.0), ('do nothing', 0.0), ('time', 0.0), ('go back', 0.0), ('repeat', 0.0), ('look around', 0.0), ('look back', 0.0), ('date', 0.0), ('no', 0.0), ('restart', 0.0), ('go through an open door', 0.0)]]
+User Select - yes
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a1
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 36.24366814118753), ('time', 0.0), ('repeat', 0.0), ('restart', 0.0), ('date', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('no', 0.0), ('look back', 0.0), ('try another door', 0.0), ('wake up', 0.0), ('go back', 0.0), ('look around', 0.0)]]
+
+Cleaning up: 8736
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5941285088242205, '']
+Select: ['yes', [('yes', 36.24366814118753), ('time', 0.0), ('repeat', 0.0), ('restart', 0.0), ('date', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('no', 0.0), ('look back', 0.0), ('try another door', 0.0), ('wake up', 0.0), ('go back', 0.0), ('look around', 0.0)]]
+User Select - yes
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a2
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+['no', [('no', 9.850006365725715), ('do nothing', 2.1888903034946035), ('time', 0.0), ('look back', 0.0), ('date', 0.0), ('try another door', 0.0), ('break the door down', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('go back', 0.0), ('yes', 0.0), ('look around', 0.0)]]
+
+Cleaning up: 3760
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.94417155, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5447187534946035, '']
+Select: ['no', [('no', 9.850006365725715), ('do nothing', 2.1888903034946035), ('time', 0.0), ('look back', 0.0), ('date', 0.0), ('try another door', 0.0), ('break the door down', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('go back', 0.0), ('yes', 0.0), ('look around', 0.0)]]
+User Select - no
+Next Address: - 2/02b
+
+	look around : around : 0.3333333333333333 : try another door
+	look around : around : 0.25 : look around
+	look around : look around : 0.4 : look back
+	look around : look around : 1.6 : look around
+	look around : a : 1.0 : try another door
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.29411764705882354 : break the door down
+	look around : look : 0.11764705882352941 : look back
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.5294117647058824 : try another door
+	look around : look : 0.7058823529411765 : look around
+	look around : around : 0.3333333333333333 : try another door
+	look around : around : 0.25 : look around
+	look around : look around : 0.4 : look back
+	look around : look around : 1.6 : look around
+	look around : a : 1.0 : try another door
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.29411764705882354 : break the door down
+	look around : look : 0.11764705882352941 : look back
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.5294117647058824 : try another door
+	look around : look : 0.7058823529411765 : look around
+	look around : around : 0.3333333333333333 : try another door
+	look around : around : 0.25 : look around
+	look around : look around : 0.4 : look back
+	look around : look around : 1.6 : look around
+	look around : a : 1.0 : try another door
+	look around : look : 0.17647058823529413 : wake up
+	look around : look : 0.29411764705882354 : break the door down
+	look around : look : 0.11764705882352941 : look back
+	look around : look : 0.058823529411764705 : repeat
+	look around : look : 0.5294117647058824 : try another door
+	look around : look : 0.7058823529411765 : look around
+['look_around', [('look around', 4.781400287018916), ('try another door', 3.4847182759247946), ('look back', 0.9683848682569957), ('break the door down', 0.5502186751460202), ('wake up', 0.3301312050876121), ('repeat', 0.11004373502920405), ('time', 0.0), ('yes', 0.0), ('go back', 0.0), ('no', 0.0), ('do nothing', 0.0), ('date', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 4852
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['look around', 0.92998117, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ['look around', 0.24076232549646867, '']
+Select: ['look_around', [('look around', 4.781400287018916), ('try another door', 3.4847182759247946), ('look back', 0.9683848682569957), ('break the door down', 0.5502186751460202), ('wake up', 0.3301312050876121), ('repeat', 0.11004373502920405), ('time', 0.0), ('yes', 0.0), ('go back', 0.0), ('no', 0.0), ('do nothing', 0.0), ('date', 0.0), ('restart', 0.0)]]
+User Select - look_around
+Next Address: - 2/02d
+
+	Hulk strain : strain : 0.42857142857142855 : pull string
+	Hulk strain : strain : 0.8571428571428571 : go through an open door
+	pull string : string : 1.0 : no
+	pull string : string : 4.5 : pull string
+	pull string : pull string : 1.0 : pull string
+	pull string : pull : 0.1111111111111111 : look back
+	pull string : pull : 0.3333333333333333 : pull string
+	pull string : pull : 0.3333333333333333 : go back
+	the whole strain : who : 0.2 : time
+	the whole strain : who : 0.1 : date
+	the whole strain : the : 0.15384615384615385 : time
+	the whole strain : the : 0.3076923076923077 : go through an open door
+	the whole strain : the : 0.07692307692307693 : date
+	the whole strain : strain : 0.42857142857142855 : pull string
+	the whole strain : strain : 0.8571428571428571 : go through an open door
+['pull_string', [('pull string', 4.4935984290687205), ('go through an open door', 0.9021906078961832), ('no', 0.7), ('go back', 0.2333333333333333), ('time', 0.09390947888921795), ('look back', 0.07777777777777777), ('date', 0.04695473944460898), ('look around', 0.0), ('yes', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+
+Cleaning up: 7844
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['Hulk strain', 0.69188887, '']
+WitAPI: ['pull string', 0.7, '']
+Sphinx: ['the whole strain', 0.26539635338257245, '']
+Select: ['pull_string', [('pull string', 4.4935984290687205), ('go through an open door', 0.9021906078961832), ('no', 0.7), ('go back', 0.2333333333333333), ('time', 0.09390947888921795), ('look back', 0.07777777777777777), ('date', 0.04695473944460898), ('look around', 0.0), ('yes', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+User Select - pull_string
+Next Address: - 2/23
+
+	stairs : stair : 2.5 : go up stairs
+	stairs : stairs : 5.0 : go up stairs
+	stands : stand : 0.42857142857142855 : do nothing
+	stands : stand : 0.07142857142857142 : go up stairs
+	stands : stand : 0.14285714285714285 : yes
+	stands : stand : 0.14285714285714285 : wake up
+['go_up_stairs', [('go up stairs', 6.7302494), ('do nothing', 0.3), ('yes', 0.09999999999999999), ('wake up', 0.09999999999999999), ('look back', 0.0), ('go back', 0.0), ('go through an open door', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 9468
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['stairs', 0.89069992, '']
+WitAPI: ['stands', 0.7, '']
+Sphinx: ['ferris', 0.2762355923957392, '']
+Select: ['go_up_stairs', [('go up stairs', 6.7302494), ('do nothing', 0.3), ('yes', 0.09999999999999999), ('wake up', 0.09999999999999999), ('look back', 0.0), ('go back', 0.0), ('go through an open door', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('restart', 0.0)]]
+User Select - go_up_stairs
+Next Address: - 2/24
+
+Auto Select - auto
+Next Address: - 2/24a
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes sir : yes : 16.0 : yes
+['yes', [('yes', 32.45417915650271), ('repeat', 0.0), ('wake up', 0.0), ('stay in room', 0.0), ('go back', 0.0), ('look back', 0.0), ('date', 0.0), ('time', 0.0), ('go through an open door', 0.0), ('restart', 0.0), ('no', 0.0)]]
+
+Cleaning up: 1720
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.3572854472814195, '']
+Select: ['yes', [('yes', 32.45417915650271), ('repeat', 0.0), ('wake up', 0.0), ('stay in room', 0.0), ('go back', 0.0), ('look back', 0.0), ('date', 0.0), ('time', 0.0), ('go through an open door', 0.0), ('restart', 0.0), ('no', 0.0)]]
+User Select - yes
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a3
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 36.34857950259021), ('repeat', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('break the door down', 0.0), ('go back', 0.0), ('look around', 0.0), ('time', 0.0), ('date', 0.0), ('restart', 0.0), ('wake up', 0.0), ('try another door', 0.0)]]
+
+Cleaning up: 10084
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.6006854689118883, '']
+Select: ['yes', [('yes', 36.34857950259021), ('repeat', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('break the door down', 0.0), ('go back', 0.0), ('look around', 0.0), ('time', 0.0), ('date', 0.0), ('restart', 0.0), ('wake up', 0.0), ('try another door', 0.0)]]
+User Select - yes
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a4
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes sir : yes : 16.0 : yes
+['yes', [('yes', 34.98130476502733), ('date', 0.0), ('look around', 0.0), ('wake up', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('look back', 0.0), ('try another door', 0.0), ('time', 0.0), ('no', 0.0), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0)]]
+
+Cleaning up: 7936
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.5152307978142083, '']
+Select: ['yes', [('yes', 34.98130476502733), ('date', 0.0), ('look around', 0.0), ('wake up', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('look back', 0.0), ('try another door', 0.0), ('time', 0.0), ('no', 0.0), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0)]]
+User Select - yes
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/03a
+
+Auto Select - auto
+Next Address: - 2/03c
+
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+	no : no : 1.0 : do nothing
+	no : no : 4.5 : no
+['no', [('no', 9.558757491414969), ('do nothing', 2.1241683314255484), ('repeat', 0.0), ('go back', 0.0), ('go back into the phone booth', 0.0), ('yes', 0.0), ('time', 0.0), ('wake up', 0.0), ('look back', 0.0), ('date', 0.0), ('restart', 0.0)]]
+
+Cleaning up: 9100
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.95715892, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.4670094114255485, '']
+Select: ['no', [('no', 9.558757491414969), ('do nothing', 2.1241683314255484), ('repeat', 0.0), ('go back', 0.0), ('go back into the phone booth', 0.0), ('yes', 0.0), ('time', 0.0), ('wake up', 0.0), ('look back', 0.0), ('date', 0.0), ('restart', 0.0)]]
+User Select - no
+Next Address: - 2/04c
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 35.174646791416414), ('repeat', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('wake up', 0.0), ('go back', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('go back into the phone booth', 0.0)]]
+
+Cleaning up: 9876
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5273146744635259, '']
+Select: ['yes', [('yes', 35.174646791416414), ('repeat', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('wake up', 0.0), ('go back', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('go back into the phone booth', 0.0)]]
+User Select - yes
+Next Address: - 2/04a
+
+Auto Select - auto
+Next Address: - 4/98
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes sir : yes : 16.0 : yes
+['yes', [('yes', 33.257083973435485), ('repeat', 0.0), ('no', 0.0), ('time', 0.0), ('date', 0.0)]]
+
+Cleaning up: 4148
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.40746699833971783, '']
+Select: ['yes', [('yes', 33.257083973435485), ('repeat', 0.0), ('no', 0.0), ('time', 0.0), ('date', 0.0)]]
+User Select - yes
+Next Address: - 0/00a
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+Cleaning up: 6656
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+	no : no : 4.5 : no
+['no', [('no', 9.674047101614656), ('leave phone booth', 0.0), ('look around', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('stay in phone booth', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('yes', 0.0)]]
+
+Cleaning up: 10224
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.93874323, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5110450148032567, '']
+Select: ['no', [('no', 9.674047101614656), ('leave phone booth', 0.0), ('look around', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('stay in phone booth', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('yes', 0.0)]]
+User Select - no
+Next Address: - 0/02a1
+
+Auto Select - auto
+Next Address: - 0/02a2
+
+Auto Select - auto
+Next Address: - 4/98
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+	no the : the : 0.15384615384615385 : time
+	no the : the : 0.07692307692307693 : date
+	no the : no : 4.5 : no
+['no', [('no', 9.808245548114956), ('time', 0.08130223566204978), ('date', 0.04065111783102489), ('repeat', 0.0), ('yes', 0.0)]]
+
+Cleaning up: 7704
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.95114559, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no the', 0.5284645318033235, '']
+Select: ['no', [('no', 9.808245548114956), ('time', 0.08130223566204978), ('date', 0.04065111783102489), ('repeat', 0.0), ('yes', 0.0)]]
+User Select - no
+Next Address: - 4/99
+
+Traceback (most recent call last):
+  File "Main.py", line 73, in main
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 177, in checkReaderStatus
+    [self.__to_be_read[0], self.stack] = getNextText(self.stack)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 78, in getNextText
+    ci.interpretCode(text[2][0])
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Code_Interpreter.py", line 177, in interpretCode
+    result = glbl.callFunction(code[0], parameters)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Globals.py", line 55, in callFunction
+    last_function_result = map_function[function_code][0]()
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Default_Commands.py", line 430, in endTheProgram
+    quit(0)
+NameError: name 'quit' is not defined
+Program Error - name 'quit' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 37, in reader
+    has_changed = to_be_read[1]
+  File "<string>", line 2, in __getitem__
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(ForkingPickler.dumps(obj))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] The pipe is being closed
+Reader has failed unexpectedly. [WinError 232] The pipe is being closed
+Traceback (most recent call last):
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 709, in _callmethod
+    conn = self._tls.connection
+AttributeError: 'ForkAwareLocal' object has no attribute 'connection'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 56, in reader
+    is_faulty[0] = True
+  File "<string>", line 2, in __setitem__
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 713, in _callmethod
+    self._connect()
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 700, in _connect
+    conn = self._Client(self._token.address, authkey=self._authkey)
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 485, in Client
+    c = PipeClient(address)
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 686, in PipeClient
+    _winapi.WaitNamedPipe(address, 1000)
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+Selector Error: [WinError 2] The system cannot find the file specified
+
+
+NEW GAME START!
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+['yes', [('yes', 35.788453875925654), ('do nothing', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('no', 0.0)]]
+
+Cleaning up: 10176
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5656776172453534, '']
+Select: ['yes', [('yes', 35.788453875925654), ('do nothing', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('no', 0.0)]]
+User Select - yes
+Next Address: - 4/00b
+
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+Cleaning up: 8632
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+	no the : no : 4.5 : no
+	no the : the : 0.23076923076923078 : leave phone booth
+	no the : the : 0.07692307692307693 : date
+	no the : the : 0.15384615384615385 : time
+['no', [('no', 9.648416975564075), ('leave phone booth', 0.11402311874687567), ('time', 0.07601541249791711), ('date', 0.03800770624895856), ('yes', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('stay in phone booth', 0.0)]]
+
+Cleaning up: 8544
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.94999248, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no the', 0.4941001812364612, '']
+Select: ['no', [('no', 9.648416975564075), ('leave phone booth', 0.11402311874687567), ('time', 0.07601541249791711), ('date', 0.03800770624895856), ('yes', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('stay in phone booth', 0.0)]]
+User Select - no
+Next Address: - 0/02a1
+
+Auto Select - auto
+Next Address: - 0/02a2
+
+Auto Select - auto
+Next Address: - 4/98
+
+	yes : yes : 16.0 : yes
+	yes : yes : 16.0 : yes
+	yes so : yes : 16.0 : yes
+['yes', [('yes', 35.59541129961059), ('time', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0)]]
+
+Cleaning up: 3888
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes so', 0.5536124562256618, '']
+Select: ['yes', [('yes', 35.59541129961059), ('time', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0)]]
+User Select - yes
+Next Address: - 0/00a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+['no', [('no', 7.28503128), ('repeat', 0.0), ('look around', 0.0), ('time', 0.0), ('leave phone booth', 0.0), ('wake up', 0.0), ('date', 0.0), ('yes', 0.0), ('restart', 0.0), ('stay in phone booth', 0.0)]]
+
+Cleaning up: 1132
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.91889584, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['known', 0.48769473839855887, '']
+Select: ['no', [('no', 7.28503128), ('repeat', 0.0), ('look around', 0.0), ('time', 0.0), ('leave phone booth', 0.0), ('wake up', 0.0), ('date', 0.0), ('yes', 0.0), ('restart', 0.0), ('stay in phone booth', 0.0)]]
+User Select - no
+Next Address: - 0/02a1
+
+Auto Select - auto
+Next Address: - 0/02a2
+
+Auto Select - auto
+Next Address: - 4/98
+
+	no : no : 4.5 : no
+	no : no : 4.5 : no
+Cleaning up: 7788
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+	no : no : 4.5 : no
+['no', [('no', 9.941255897911226), ('time', 0.0), ('repeat', 0.0), ('date', 0.0), ('yes', 0.0)]]
+
+Cleaning up: 2220
+File Cleanup - .gram: FileNotFoundError
+File Cleanup - .fsg: FileNotFoundError
+File Cleanup - .dict: FileNotFoundError
+Google: ['no', 0.95049095, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5586770273136061, '']
+Select: ['no', [('no', 9.941255897911226), ('time', 0.0), ('repeat', 0.0), ('date', 0.0), ('yes', 0.0)]]
+User Select - no
+Next Address: - 4/99
+
+Traceback (most recent call last):
+  File "Main.py", line 73, in main
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 177, in checkReaderStatus
+    [self.__to_be_read[0], self.stack] = getNextText(self.stack)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 78, in getNextText
+    ci.interpretCode(text[2][0])
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Code_Interpreter.py", line 177, in interpretCode
+    result = glbl.callFunction(code[0], parameters)
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Globals.py", line 55, in callFunction
+    last_function_result = map_function[function_code][0]()
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Default_Commands.py", line 430, in endTheProgram
+    quit(0)
+NameError: name 'quit' is not defined
+Program Error - name 'quit' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Student\Desktop\Uni\The Vaguely Parable\The-Vaguely-Parable\Code\Reader.py", line 37, in reader
+    has_changed = to_be_read[1]
+  File "<string>", line 2, in __getitem__
+  File "C:\Program Files\Python35\lib\multiprocessing\managers.py", line 716, in _callmethod
+    conn.send((self._id, methodname, args, kwds))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 206, in send
+    self._send_bytes(ForkingPickler.dumps(obj))
+  File "C:\Program Files\Python35\lib\multiprocessing\connection.py", line 280, in _send_bytes
+    ov, err = _winapi.WriteFile(self._handle, buf, overlapped=True)
+BrokenPipeError: [WinError 232] The pipe is being closed
+Reader has failed unexpectedly. [WinError 232] The pipe is being closed

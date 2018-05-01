@@ -14,6 +14,7 @@ import Globals as glbl
 import traceback as t
 import Listener
 import Reader
+import random
 import time
 # import sys
 # sys.stderr = sys.__stderr__
@@ -104,7 +105,18 @@ def main():
                     # If so, then hmm and um until processing has finished
                     if listener.num_selectors is not 0 and reader.alive is False:
                         reader.interruptable = True
-                        read(reader, "Hmm hmm hmm... Um... Uhh... "*5)
+                        select_humm = random.randint(1,3)
+                        if select_humm is 1:
+                            read(reader, "Hmm hmm hmm... Um... Uhh... "*5)
+                        elif select_humm is 2:
+                            read(reader, "Um, let me think about that... Uhh... " +
+                                "These notes are in such a mess... " +
+                                "I should have words with that last narrator...")
+                        else:
+                            read(reader, "One moment please. Tasks such as these cannot be solved with ease. " +
+                                 "Computers such as me, find hearing uneasy. " +
+                                 "Give us a chance, and we'll take a glance, " +
+                                 "but may get things unconscionably incorrect!")
 
                     # Check whether a selection has been made
                     if len(listener.stack_user_input) > 0:
