@@ -29,5 +29,5 @@ setup(
     description='',
     executables=executables,
     requires=['cx_Freeze', 'gTTS', 'SpeechRecognition', 'idna', 'PyAudio', 'PocketSphinx', 'PyWin32',
-              'num2words', 'requests']
+              'num2words', 'requests', 'win_unicode_console']
 )

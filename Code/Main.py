@@ -105,18 +105,19 @@ def main():
                     # If so, then hmm and um until processing has finished
                     if listener.num_selectors is not 0 and reader.alive is False:
                         reader.interruptable = True
-                        select_humm = random.randint(1,3)
+                        select_humm = random.randint(1,6)
                         if select_humm is 1:
-                            read(reader, "Hmm hmm hmm... Um... Uhh... "*5)
+                            read(reader, "Hmm hmm hmm... Um... Uhh... ")
                         elif select_humm is 2:
-                            read(reader, "Um, let me think about that... Uhh... " +
-                                "These notes are in such a mess... " +
-                                "I should have words with that last narrator...")
+                            read(reader, "Hum, hum, diddly dum, dee do... ")
+                        elif select_humm is 3:
+                            read(reader, "Uhh huh, hmm huh, ohh huh, oh ooh ooh... ")
+                        elif select_humm is 4:
+                            read(reader, "Um, uhhhh, huh hmmmmmmmm")
+                        elif select_humm is 5:
+                            read(reader, "Ho, hor, hmmmmm, uhhhhh um, uhh")
                         else:
-                            read(reader, "One moment please. Tasks such as these cannot be solved with ease. " +
-                                 "Computers such as me, find hearing uneasy. " +
-                                 "Give us a chance, and we'll take a glance, " +
-                                 "but may get things unconscionably incorrect!")
+                            read(reader, "Uhh, ohh, ohh, uhh, huh, huh...")
 
                     # Check whether a selection has been made
                     if len(listener.stack_user_input) > 0:
