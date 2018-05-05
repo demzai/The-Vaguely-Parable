@@ -1,5 +1,7 @@
 Ah, a natural!
 With that, you can now guide Vaguely on her journey!
+#delay(0.1)
 Good luck!
+#delay(0.5)
 
 #auto

@@ -40,6 +40,7 @@ affiliate(2) AH F IH L IY EY T
 affiliation AH F IH L IY EY SH AH N
 affirmative AH F ER M AH T IH V
 afford AH F AO R D
+affront AH F R AH N T
 after AE F T ER
 agglutinate AH G L UW T IH N EY T
 aggravating AE G R AH V EY T IH NG
@@ -96,6 +97,7 @@ away AH W EY
 baby B EY B IY
 back B AE K
 bad B AE D
+baffle B AE F AH L
 balking B AO K IH NG
 balmy B AA M IY
 banishment B AE N IH SH M AH N T
@@ -122,6 +124,7 @@ best B EH S T
 bestow B IH S T OW
 betrayal B IH T R EY AH L
 better B EH T ER
+bewilder B IH W IH L D ER
 bilk B IH L K
 birth B ER TH
 black B L AE K
@@ -133,6 +136,7 @@ block B L AA K
 blowing B L OW IH NG
 blue B L UW
 blues B L UW Z
+blur B L ER
 boast B OW S T
 bob B AA B
 bolstering B OW L S T ER IH NG
@@ -183,6 +187,7 @@ cede S IY D
 celebrate S EH L AH B R EY T
 chaos K EY AA S
 charcoal CH AA R K OW L
+chat CH AE T
 cheap CH IY P
 cheerful CH IH R F AH L
 cheery CH IH R IY
@@ -207,6 +212,7 @@ commune K AA M Y UW N
 commune(2) K AA M Y UW N
 compensate K AA M P AH N S EY T
 complete K AH M P L IY T
+comply K AH M P L AY
 comprising K AH M P R AY Z IH NG
 compromise K AA M P R AH M AY Z
 concede K AH N S IY D
@@ -217,6 +223,8 @@ concrete K AH N K R IY T
 concrete(2) K AH N K R IY T
 conduct K AA N D AH K T
 confer K AH N F ER
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 connect K AH N EH K T
 consecrate K AA N S AH K R EY T
 consequence K AA N S AH K W AH N S
@@ -262,6 +270,7 @@ delay D IH L EY
 deliver D IH L IH V ER
 demise D IH M AY Z
 depart D IH P AA R T
+depend D IH P EH N D
 dependent D IH P EH N D AH N T
 depress D IH P R EH S
 depression D IH P R EH SH AH N
@@ -284,6 +293,7 @@ despondent D IH S P AA N D AH N T
 determine D AH T ER M AH N
 determine(2) D AH T ER M AH N
 devote D IH V OW T
+dimly D IH M L IY
 disappointed D IH S AH P OY N T IH D
 disappointed(2) D IH S AH P OY N T IH D
 discharge D IH S CH AA R JH
@@ -318,6 +328,7 @@ drift D R IH F T
 drive D R AY V
 drop D R AA P
 drop(2) D R AA P
+dubiously D UW B IY AH S L IY
 duck D AH K
 dull D AH L
 dumps D AH M P S
@@ -351,6 +362,8 @@ escalate EH S K AH L EY T
 eschew EH S CH UW
 eternal IH T ER N AH L
 eternal(2) IH T ER N AH L
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 evoke IH V OW K
 evoke(2) IH V OW K
@@ -363,6 +376,7 @@ eye AY
 facilitate F AH S IH L AH T EY T
 faggot F AE G AH T
 fail F EY L
+faintly F EY N T L IY
 faire F EH R
 fanny F AE N IY
 fare F EH R
@@ -389,6 +403,8 @@ for(2) F AO R
 for(3) F AO R
 force F AO R S
 forfeit F AO R F IH T
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 forgo F AO R G OW
 forsake F AO R S EY K
 forswear F AO R S W EH R
@@ -396,6 +412,7 @@ forth F AO R TH
 forty F AO R T IY
 foul F AW L
 fours F AO R Z
+frail F R EY L
 fry F R AY
 fuck F AH K
 fulfill F UH L F IH L
@@ -413,6 +430,7 @@ give G IH V
 glad G L AE D
 gloom G L UW M
 gloomy G L UW M IY
+gnarly N AA R L IY
 go G OW
 going G OW IH NG
 going(2) G OW IH NG
@@ -432,6 +450,7 @@ happiness HH AE P IY N AH S
 happy HH AE P IY
 hatter HH AE T ER
 hay HH EY
+hazy HH EY Z IY
 heart HH AA R T
 heartache HH AA R T EY K
 heartbreak HH AA R T B R EY K
@@ -456,21 +475,28 @@ huh HH AH
 hunker HH AH NG K ER
 hypnotic HH IH P N AA T IH K
 idle AY D AH L
+idly AY D L IY
 ignore IH G N AO R
 immobile IH M OW B AH L
 immobile(2) IH M OW B AH L
 immobile(3) IH M OW B AH L
 impart IH M P AA R T
 impel IH M P EH L
+imperceptibly IH M P ER S EH P T IH B L IY
 implode IH M P L OW D
 importance IH M P AO R T AH N S
 in IH N
 inactive IH N AE K T IH V
 inch IH N CH
 incite IH N S AY T
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 increase IH N K R IY S
 incubate IH N K Y AH B EY T
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 inert IH N ER T
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 influence IH N F L UW AH N S
 initiate IH N IH SH IY EY T
@@ -522,6 +548,7 @@ loiter L OY T ER
 loll L AA L
 long L AO NG
 look L UH K
+loosely L UW S L IY
 lose L UW Z
 lounge L AW N JH
 low L OW
@@ -541,6 +568,7 @@ minor M AY N ER
 misery M IH Z ER IY
 miss M IH S
 model M AA D AH L
+modicum M AA D IH K AH M
 mold M OW L D
 monotonous M AH N AA T AH N AH S
 moon M UW N
@@ -551,12 +579,14 @@ motivate M OW T AH V EY T
 mount M AW N T
 move M UW V
 movement M UW V M AH N T
+much M AH CH
 nada N AA D AA
 nap N AE P
 naught N AO T
 need N IY D
 negative N EH G AH T IH V
 neutral N UW T R AH L
+neutrally N UW T R AH L IY
 nice N AY S
 nice(2) N AY S
 nil N IH L
@@ -712,6 +742,7 @@ rem R EH M
 remain R IH M EY N
 remain(2) R IH M EY N
 remit R IY M IH T
+remotely R IY M OW T L IY
 render R EH N D ER
 renounce R IH N AW N S
 repose R IY P OW Z
@@ -735,6 +766,7 @@ rise R AY Z
 roe R OW
 roll R OW L
 roost R UW S T
+roughly R AH F L IY
 rum R AH M
 sack S AE K
 sacrifice S AE K R AH F AY S
@@ -748,6 +780,7 @@ scrunch S K R AH N CH
 seat S IY T
 seated S IY T IH D
 sell S EH L
+sense S EH N S
 serve S ER V
 session S EH SH AH N
 set S EH T
@@ -809,9 +842,11 @@ stay S T EY
 stop S T AA P
 strangely S T R EY N JH L IY
 stupor S T UW P ER
+subconsciously S AH B K AA N SH AH S L IY
 submit S AH B M IH T
 succeed S AH K S IY D
 succumb S AH K AH M
+such S AH CH
 suffice S AH F AY S
 suicidal S UW AH S AY D AH L
 suicide S UW AH S AY D
@@ -870,6 +905,7 @@ uhh AH
 um AH M
 umbra AH M B R AH
 umm AH M
+uncertainly AH N S ER T AH N L IY
 undeserving AH N D IH Z ER V IH NG
 unhappiness AH N HH AE P IY N IH S
 unite Y UW N AY T

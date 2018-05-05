@@ -261,10 +261,20 @@ def selector(inputs, outputs, lock_outputs, is_faulty):
             process_set = [mp.Process(target=getSphinxTranslation, args=(audio, result_sphinx, dictionary_file)),
                            mp.Process(target=getGoogleTranslation, args=(audio, result_google)),
                            mp.Process(target=getWitApiTranslation, args=(audio, result_witapi))]
+            t_start = time.time()
             for i in range(len(process_set)):
                 process_set[i].start()
-            time.sleep(0.5)
+
+            # Wait up to 7 seconds for each api to convert the speech into text
+            while time.time() - t_start < 7:
+                if any(p.is_alive() for p in process_set):
+                    time.sleep(.01)  # Just to avoid hogging the CPU
+                else:
+                    break
+
+            # Kill processes and merge, irrespective of how they ended
             for i in range(len(process_set)):
+                process_set[i].terminate()
                 process_set[i].join()
 
             with lock_outputs:

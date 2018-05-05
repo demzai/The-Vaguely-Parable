@@ -107,17 +107,17 @@ def main():
                         reader.interruptable = True
                         select_humm = random.randint(1,6)
                         if select_humm is 1:
-                            read(reader, "Hmm hmm hmm... Um... Uhh... ")
+                            read(reader, "Hmm hmm hmm... Um... Uhh... "*3)
                         elif select_humm is 2:
-                            read(reader, "Hum, hum, diddly dum, dee do... ")
+                            read(reader, "Hum, hum, diddly dum, dee do... "*3)
                         elif select_humm is 3:
-                            read(reader, "Uhh huh, hmm huh, ohh huh, oh ooh ooh... ")
+                            read(reader, "Uhh huh, hmm huh, ohh huh, oh ooh ooh... "*3)
                         elif select_humm is 4:
-                            read(reader, "Um, uhhhh, huh hmmmmmmmm")
+                            read(reader, "Um, uhhhh, huh hmmmmmmmm... "*3)
                         elif select_humm is 5:
-                            read(reader, "Ho, hor, hmmmmm, uhhhhh um, uhh")
+                            read(reader, "Ho, hor, hmmmmm, uhhhhh um, uhh... "*3)
                         else:
-                            read(reader, "Uhh, ohh, ohh, uhh, huh, huh...")
+                            read(reader, "Uhh, ohh, ohh, uhh, huh, huh..."*3)
 
                     # Check whether a selection has been made
                     if len(listener.stack_user_input) > 0:

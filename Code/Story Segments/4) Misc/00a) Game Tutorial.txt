@@ -3,6 +3,7 @@
 #NumIgnores(0)
 #NumErrors(0)
 #Stay(0)
+#Stairs(0)
 #Dark(0)
 #Time(0)
 #Dig(0)

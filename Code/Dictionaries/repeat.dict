@@ -23,6 +23,7 @@ admission(2) AE D M IH SH AH N
 advice AE D V AY S
 advice(2) AE D V AY S
 affirm AH F ER M
+affront AH F R AH N T
 afresh AH F R EH SH
 aft AE F T
 after AE F T ER
@@ -81,6 +82,7 @@ authority AH TH AO R AH T IY
 aver EY V ER
 avow AH V AW
 back B AE K
+baffle B AE F AH L
 barf B AA R F
 basis B EY S AH S
 basis(2) B EY S AH S
@@ -94,6 +96,7 @@ beginning B IH G IH N IH NG
 being B IY IH NG
 besides B IH S AY D Z
 besides(2) B IH S AY D Z
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -101,6 +104,7 @@ bis B IH S
 blaring B L EH R IH NG
 blather B L AE DH ER
 blink B L IH NG K
+blur B L ER
 bon B AA N
 boot B UW T
 bump B AH M P
@@ -113,12 +117,16 @@ capo K AA P OW
 capsize K AE P S AY Z
 case K EY S
 celebrate S EH L AH B R EY T
+chat CH AE T
 circuit S ER K AH T
 cite S AY T
 claim K L EY M
 come K AH M
 command K AH M AE N D
 communicate K AH M Y UW N AH K EY T
+comply K AH M P L AY
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 conjunction K AH N JH AH NG K SH AH N
 contend K AH N T EH N D
 contrast K AA N T R AE S T
@@ -136,14 +144,17 @@ daily D EY L IY
 dance D AE N S
 declare D IH K L EH R
 deliver D IH L IH V ER
+depend D IH P EH N D
 diction D IH K SH AH N
 dictum D IH K T AH M
+dimly D IH M L IY
 disclose D IH S K L OW Z
 disenfranchised D IH S IH N F R AE N CH AY Z D
 ditto D IH T OW
 do D UW
 dob D AA B
 double D AH B AH L
+dubiously D UW B IY AH S L IY
 duplicate D UW P L AH K AH T
 duplicate(2) D UW P L AH K AH T
 dwell D W EH L
@@ -163,6 +174,8 @@ epitome IH P IH T AH M IY
 er ER
 err EH R
 err(2) EH R
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 everywhere EH V R IY W EH R
 everywhere(2) EH V R IY W EH R
@@ -170,6 +183,7 @@ explain IH K S P L EY N
 express IH K S P R EH S
 extra EH K S T R AH
 fact F AE K T
+faintly F EY N T L IY
 farewell F EH R W EH L
 farther F AA R DH ER
 filthy F IH L TH IY
@@ -180,7 +194,10 @@ for F AO R
 for(2) F AO R
 for(3) F AO R
 forever F ER EH V ER
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 foul F AW L
+frail F R EY L
 freshly F R EH SH L IY
 from F R AH M
 further F ER DH ER
@@ -191,12 +208,14 @@ get G EH T
 get(2) G EH T
 give G IH V
 glimmering G L IH M ER IH NG
+gnarly N AA R L IY
 go G OW
 greeting G R IY T IH NG
 harp HH AA R P
 haunt HH AO N T
 have HH AE V
 having HH AE V IH NG
+hazy HH EY Z IY
 head HH EH D
 hello HH AH L OW
 hello(2) HH AH L OW
@@ -209,15 +228,23 @@ hope HH OW P
 how HH AW
 however HH AW EH V ER
 huh HH AH
+idly AY D L IY
 if IH F
 imitate IH M AH T EY T
+imperceptibly IH M P ER S EH P T IH B L IY
 in IH N
 inasmuch IH N AE S M AH K
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 indeed IH N D IY D
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 inevitably IH N EH V AH T AH B L IY
+inexplicably IH N IH K S P L IH K AH B L IY
 interpret IH N T ER P R AH T
 introduce IH N T R AH D UW S
 introduce(2) IH N T R AH D UW S
+invade IH N V EY D
 it IH T
 item AY T AH M
 itself IH T S EH L F
@@ -234,6 +261,7 @@ likewise L AY K W AY Z
 long L AO NG
 longevity L AO N JH EH V AH T IY
 look L UH K
+loosely L UW S L IY
 lose L UW Z
 maintain M EY N T EY N
 manner M AE N ER
@@ -244,6 +272,7 @@ mimic M IH M IH K
 mirror M IH R ER
 misstate M IH S S T EY T
 misstate(2) M IH S S T EY T
+modicum M AA D IH K AH M
 money M AH N IY
 more M AO R
 moreover M AO R OW V ER
@@ -252,6 +281,7 @@ much M AH CH
 namaste N AA M AA S T EY
 narrate N EH R EY T
 need N IY D
+neutrally N UW T R AH L IY
 new N UW
 new(2) N UW
 newly N UW L IY
@@ -336,6 +366,7 @@ remark R IH M AA R K
 remark(2) R IH M AA R K
 rematch R IY M AE CH
 remembrance R IY M EH M B R AH N S
+remotely R IY M OW T L IY
 render R EH N D ER
 renew R IH N UW
 repeat R IH P IY T
@@ -371,6 +402,7 @@ review R IY V Y UW
 reword R IY W ER D
 right R AY T
 rigorous R IH G ER AH S
+roughly R AH F L IY
 said S EH D
 salute S AH L UW T
 same S EY M
@@ -379,6 +411,7 @@ says S EH Z
 says(2) S EH Z
 secondly S EH K AH N D L IY
 send S EH N D
+sense S EH N S
 sequence S IY K W AH N S
 serendipity S EH R AH N D IH P IH T IY
 shake SH EY K
@@ -399,6 +432,7 @@ still S T IH L
 stop S T AA P
 straight S T R EY T
 stress S T R EH S
+subconsciously S AH B K AA N SH AH S L IY
 subordinating S AH B AO R D AH N EY T IH NG
 such S AH CH
 suggest S AH JH EH S T
@@ -447,6 +481,7 @@ uhh AH
 um AH M
 umm AH M
 uncertain AH N S ER T AH N
+uncertainly AH N S ER T AH N L IY
 up AH P
 us AH S
 us(2) AH S

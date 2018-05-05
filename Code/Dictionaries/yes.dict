@@ -36,6 +36,7 @@ advance AH D V AE N S
 affirm AH F ER M
 affirmation AE F ER M EY SH AH N
 affirmative AH F ER M AH T IH V
+affront AH F R AH N T
 after AE F T ER
 afterward AE F T ER W ER D
 against AH G EH N S T
@@ -109,6 +110,7 @@ back B AE K
 backfire B AE K F AY R
 backlash B AE K L AE SH
 bad B AE D
+baffle B AE F AH L
 ball B AO L
 bare B EH R
 base B EY S
@@ -127,6 +129,7 @@ beside(2) B IH S AY D
 bet B EH T
 betide B IH T AY D
 better B EH T ER
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -138,6 +141,7 @@ black B L AE K
 bless B L EH S
 blessing B L EH S IH NG
 blow B L OW
+blur B L ER
 board B AO R D
 boarding B AO R D IH NG
 boiling B OY L IH NG
@@ -181,6 +185,7 @@ certain S ER T AH N
 certainly S ER T AH N L IY
 chance CH AE N S
 changed CH EY N JH D
+chat CH AE T
 chatter CH AE T ER
 cheap CH IY P
 check CH EH K
@@ -201,6 +206,7 @@ comparison K AH M P EH R AH S AH N
 complete K AH M P L IY T
 completely K AH M P L IY T L IY
 completeness K AH M P L IY T N AH S
+comply K AH M P L AY
 conceive K AH N S IY V
 concerning K AH N S ER N IH NG
 conclude K AH N K L UW D
@@ -211,6 +217,8 @@ confident K AA N F AH D AH N T
 confine K AH N F AY N
 confirm K AH N F ER M
 confirmation K AA N F ER M EY SH AH N
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 conjecture K AH N JH EH K CH ER
 conjecture(2) K AH N JH EH K CH ER
 consecrate K AA N S AH K R EY T
@@ -269,6 +277,7 @@ deny D IH N AY
 depart D IH P AA R T
 departing D IH P AA R T IH NG
 departure D IH P AA R CH ER
+depend D IH P EH N D
 dependable D IH P EH N D AH B AH L
 dependent D IH P EH N D AH N T
 descend D IH S EH N D
@@ -280,6 +289,7 @@ determined D IH T ER M AH N D
 develop D IH V EH L AH P
 device D IH V AY S
 die D AY
+dimly D IH M L IY
 directed D ER EH K T AH D
 directed(2) D ER EH K T AH D
 directed(3) D ER EH K T AH D
@@ -305,6 +315,7 @@ dream D R IY M
 drift D R IH F T
 drive D R AY V
 driving D R AY V IH NG
+dubiously D UW B IY AH S L IY
 dungeon D AH N JH AH N
 dwell D W EH L
 ease IY Z
@@ -332,6 +343,8 @@ estimate EH S T AH M AH T
 estimate(2) EH S T AH M AH T
 evacuation IH V AE K Y AH W EY SH AH N
 evacuation(2) IH V AE K Y AH W EY SH AH N
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 evidence EH V AH D AH N S
 exactly IH G Z AE K T L IY
@@ -353,6 +366,7 @@ extra EH K S T R AH
 fact F AE K T
 fading F EY D IH NG
 fail F EY L
+faintly F EY N T L IY
 fair F EH R
 fall F AO L
 fall(2) F AO L
@@ -389,12 +403,15 @@ for F AO R
 for(2) F AO R
 for(3) F AO R
 force F AO R S
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 formal F AO R M AH L
 formulate F AO R M Y AH L EY T
 forth F AO R TH
 forward F AO R W ER D
 forwards F AO R W ER D Z
 foul F AW L
+frail F R EY L
 free F R IY
 french F R EH N CH
 frequent F R IY K W AH N T
@@ -418,6 +435,7 @@ get(2) G EH T
 give G IH V
 gladly G L AE D L IY
 glide G L AY D
+gnarly N AA R L IY
 go G OW
 going G OW IH NG
 going(2) G OW IH NG
@@ -444,6 +462,7 @@ harbour HH AA R B ER
 hard HH AA R D
 have HH AE V
 hay HH EY
+hazy HH EY Z IY
 head HH EH D
 heart HH AA R T
 held HH EH L D
@@ -468,17 +487,24 @@ hurray HH AH R EY
 hurry HH ER IY
 hypothesize HH AY P AA TH AH S AY Z
 i AY
+idly AY D L IY
 ignore IH G N AO R
 imagine IH M AE JH AH N
 immigration IH M AH G R EY SH AH N
+imperceptibly IH M P ER S EH P T IH B L IY
 in IH N
 inch IH N CH
 incipient IH N S IH P IY AH N T
 include IH N K L UW D
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 incontrovertible IH NG K AA N T R OW V ER T IH B AH L
 indeed IH N D IY D
+indefinitely IH N D EH F AH N AH T L IY
 indisputable IH N D IH S P Y UW T AH B AH L
+indistinct IH N D IH S T IH NG K T
 inevitable IH N EH V AH T AH B AH L
+inexplicably IH N IH K S P L IH K AH B L IY
 infallible IH N F AE L AH B AH L
 infer IH N F ER
 inferred IH N F ER D
@@ -486,6 +512,7 @@ interjection IH N T ER JH EH K SH AH N
 intervene IH N T ER V IY N
 into IH N T UW
 into(2) IH N T UW
+invade IH N V EY D
 iron AY ER N
 irrefutable IH R AH F Y UW T AH B AH L
 is IH Z
@@ -523,6 +550,7 @@ lone L OW N
 lonely L OW N L IY
 long L AO NG
 look L UH K
+loosely L UW S L IY
 loss L AO S
 lower L OW ER
 maintain M EY N T EY N
@@ -551,6 +579,7 @@ mind M AY N D
 miser M AY Z ER
 moderate M AA D ER AH T
 moderate(2) M AA D ER AH T
+modicum M AA D IH K AH M
 more M AO R
 most M OW S T
 most(2) M OW S T
@@ -565,6 +594,7 @@ naturally N AE CH ER AH L IY
 naturally(2) N AE CH ER AH L IY
 nay N EY
 near N IH R
+neutrally N UW T R AH L IY
 next N EH K S T
 next(2) N EH K S T
 niggardly N IH G ER D L IY
@@ -733,6 +763,7 @@ remain R IH M EY N
 remain(2) R IH M EY N
 remaining R IH M EY N IH NG
 remaining(2) R IH M EY N IH NG
+remotely R IY M OW T L IY
 renew R IH N UW
 reopening R IY OW P AH N IH NG
 repair R IH P EH R
@@ -770,6 +801,7 @@ right R AY T
 roar R AO R
 roll R OW L
 rolling R OW L IH NG
+roughly R AH F L IY
 run R AH N
 running R AH N IH NG
 rushing R AH SH IH NG
@@ -834,10 +866,12 @@ strong S T R AO NG
 stronghold S T R AO NG HH OW L D
 stubborn S T AH B ER N
 stud S T AH D
+subconsciously S AH B K AA N SH AH S L IY
 submit S AH B M IH T
 subscribe S AH B S K R AY B
 subsist S AH B S IH S T
 subsistence S AH B S IH S T AH N S
+such S AH CH
 sufficient S AH F IH SH AH N T
 suitable S UW T AH B AH L
 support S AH P AO R T
@@ -919,6 +953,7 @@ uhh AH
 um AH M
 umm AH M
 unavoidable AH N AH V OY D AH B AH L
+uncertainly AH N S ER T AH N L IY
 undeniable AH N D IH N AY AH B AH L
 undeniably AH N D IH N AY AH B L IY
 underpaid AH N D ER P EY D

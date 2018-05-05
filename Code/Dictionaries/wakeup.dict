@@ -17,6 +17,7 @@ activating AE K T AH V EY T IH NG
 adamant AE D AH M AH N T
 adjourn AH JH ER N
 advance AH D V AE N S
+affront AH F R AH N T
 after AE F T ER
 aftermath AE F T ER M AE TH
 afterwards AE F T ER W ER D Z
@@ -63,13 +64,16 @@ away AH W EY
 awoke AH W OW K
 back B AE K
 backwash B AE K W AA SH
+baffle B AE F AH L
 bar B AA R
 be B IY
 become B IH K AH M
 bemused B IH M Y UW Z D
 beseech B IY S IY CH
+bewilder B IH W IH L D ER
 blithe B L AY DH
 block B L AA K
+blur B L ER
 bold B OW L D
 book B UH K
 boost B UW S T
@@ -99,6 +103,7 @@ cease S IY S
 ceremony S EH R AH M OW N IY
 cessation S EH S EY SH AH N
 channel CH AE N AH L
+chat CH AE T
 check CH EH K
 checkpoint CH EH K P OY N T
 cheer CH IH R
@@ -123,8 +128,11 @@ coffee K AA F IY
 coffee(2) K AA F IY
 colored K AH L ER D
 come K AH M
+comply K AH M P L AY
 conception K AH N S EH P SH AH N
 conclude K AH N K L UW D
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 conscious K AA N SH AH S
 consciousness K AA N SH AH S N AH S
 conspire K AH N S P AY ER
@@ -146,8 +154,10 @@ decide D IH S AY D
 deep D IY P
 delay D IH L EY
 deliver D IH L IH V ER
+depend D IH P EH N D
 desist D IH S IH S T
 desist(2) D IH S IH S T
+dimly D IH M L IY
 disabuse D IH S AH B Y UW S
 disabuse(2) D IH S AH B Y UW S
 disappear D IH S AH P IH R
@@ -173,6 +183,7 @@ drop D R AA P
 drop(2) D R AA P
 drowsy D R AW Z IY
 drummed D R AH M D
+dubiously D UW B IY AH S L IY
 dull D AH L
 edify EH D AH F AY
 educate EH JH AH K EY T
@@ -202,6 +213,8 @@ er ER
 err EH R
 err(2) EH R
 escalate EH S K AH L EY T
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 event IH V EH N T
 event(2) IH V EH N T
 every EH V ER IY
@@ -213,6 +226,7 @@ expand IH K S P AE N D
 expired IH K S P AY R D
 eyes AY Z
 fact F AE K T
+faintly F EY N T L IY
 fantasy F AE N T AH S IY
 fantasy(2) F AE N T AH S IY
 faraway F AA R AH W EY
@@ -226,6 +240,7 @@ forgetful F AO R G EH T F AH L
 forgetful(2) F AO R G EH T F AH L
 forth F AO R TH
 fortify F AO R T IH F AY
+frail F R EY L
 frame F R EY M
 friend F R EH N D
 frustrate F R AH S T R EY T
@@ -248,6 +263,7 @@ glad G L AE D
 glasses G L AE S AH Z
 glasses(2) G L AE S AH Z
 glottal G L AA T AH L
+gnarly N AA R L IY
 go G OW
 going G OW IH NG
 going(2) G OW IH NG
@@ -273,16 +289,23 @@ hmm HH M
 hold HH OW L D
 huh HH AH
 idle AY D AH L
+idly AY D L IY
 ignite IH G N AY T
 illuminate IH L UW M IH N IH T
 impede IH M P IY D
+imperceptibly IH M P ER S EH P T IH B L IY
 in IH N
 inactive IH N AE K T IH V
 inattentive IH N AH T EH N T IH V
 incite IH N S AY T
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 increase IH N K R IY S
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 indolent IH N D AH L AH N T
 inert IH N ER T
+inexplicably IH N IH K S P L IH K AH B L IY
 inflame IH N F L EY M
 inhibit IH N HH IH B AH T
 insensible IH N S EH N S AH B AH L
@@ -292,6 +315,7 @@ intercept(2) IH N T ER S EH P T
 interrupt IH N T ER AH P T
 interruption IH N T ER AH P SH AH N
 intervene IH N T ER V IY N
+invade IH N V EY D
 invigorate IH N V IH G ER IH T
 it IH T
 jaunty JH AO N T IY
@@ -312,6 +336,7 @@ list L IH S T
 lively L AY V L IY
 long L AO NG
 look L UH K
+loosely L UW S L IY
 lost L AO S T
 low L OW
 mark M AA R K
@@ -325,14 +350,17 @@ midnight M IH D N AY T
 minded M AY N D AH D
 minded(2) M AY N D AH D
 mode M OW D
+modicum M AA D IH K AH M
 morning M AO R N IH NG
 mount M AW N T
 move M UW V
+much M AH CH
 musing M Y UW Z IH NG
 namaste N AA M AA S T EY
 napping N AE P IH NG
 negligent N EH G L AH JH AH N T
 negligent(2) N EH G L AH JH AH N T
+neutrally N UW T R AH L IY
 night N AY T
 nightmare N AY T M EH R
 nod N AA D
@@ -401,6 +429,7 @@ reinforce R IY IH N F AO R S
 remembrance R IY M EH M B R AH N S
 remote R IH M OW T
 remote(2) R IH M OW T
+remotely R IY M OW T L IY
 rest R EH S T
 restrain R IY S T R EY N
 retire R IH T AY R
@@ -412,6 +441,7 @@ revive(2) R IH V AY V
 rise R AY Z
 roll R OW L
 rose R OW Z
+roughly R AH F L IY
 round R AW N D
 rouse R AW S
 rouse(2) R AW S
@@ -421,6 +451,7 @@ run R AH N
 salute S AH L UW T
 say S EY
 scent S EH N T
+sense S EH N S
 sensor S EH N S ER
 sequence S IY K W AH N S
 service S ER V AH S
@@ -464,6 +495,8 @@ strong S T R AO NG
 study S T AH D IY
 stupid S T UW P AH D
 stupid(2) S T UW P AH D
+subconsciously S AH B K AA N SH AH S L IY
+such S AH CH
 sunny S AH N IY
 surcease S ER S IY S
 surge S ER JH
@@ -474,6 +507,8 @@ terminate T ER M AH N EY T
 termination T ER M AH N EY SH AH N
 thank TH AE NG K
 thanks TH AE NG K S
+that DH AE T
+that(2) DH AE T
 the DH AH
 the(2) DH AH
 this DH IH S
@@ -502,6 +537,7 @@ um AH M
 umm AH M
 unaware AH N AH W EH R
 uncaring AH N K EH R IH NG
+uncertainly AH N S ER T AH N L IY
 unconscious AH N K AA N SH AH S
 unfocused AH N F OW K AH S T
 uninterested AH N IH N T R AH S T IH D
@@ -533,6 +569,7 @@ watch W AA CH
 watch(2) W AA CH
 water W AO T ER
 wave W EY V
+way W EY
 welcome W EH L K AH M
 welcoming W EH L K AH M IH NG
 wet W EH T

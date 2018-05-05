@@ -41,6 +41,7 @@ afar AH F AA R
 affiliate AH F IH L IY EY T
 affiliate(2) AH F IH L IY EY T
 afford AH F AO R D
+affront AH F R AH N T
 afield AH F IY L D
 aft AE F T
 after AE F T ER
@@ -111,6 +112,7 @@ backtrack B AE K T R AE K
 backtracking B AE K T R AE K IH NG
 backward B AE K W ER D
 backwater B AE K W AO T ER
+baffle B AE F AH L
 bail B EY L
 balk B AO K
 balk(2) B AO K
@@ -131,6 +133,7 @@ bestow B IH S T OW
 bet B EH T
 betrayal B IH T R EY AH L
 better B EH T ER
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -141,6 +144,7 @@ blessing B L EH S IH NG
 blithe B L AY DH
 block B L AA K
 blow B L OW
+blur B L ER
 bob B AA B
 body B AA D IY
 bolt B OW L T
@@ -187,6 +191,7 @@ changes CH EY N JH AH Z
 changes(2) CH EY N JH AH Z
 chapter CH AE P T ER
 charity CH EH R IH T IY
+chat CH AE T
 cheek CH IY K
 cheerful CH IH R F AH L
 cheery CH IH R IY
@@ -211,6 +216,7 @@ commune(2) K AA M Y UW N
 companion K AH M P AE N Y AH N
 compensate K AA M P AH N S EY T
 compensation K AA M P AH N S EY SH AH N
+comply K AH M P L AY
 conceal K AH N S IY L
 concede K AH N S IY D
 concert K AA N S ER T
@@ -218,6 +224,7 @@ concert(2) K AA N S ER T
 confer K AH N F ER
 confirm K AH N F ER M
 confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 conjure K AA N JH ER
 connect K AH N EH K T
 consecrate K AA N S AH K R EY T
@@ -264,6 +271,7 @@ departing D IH P AA R T IH NG
 departs D IH P AA R T S
 departure D IH P AA R CH ER
 departures D IH P AA R CH ER Z
+depend D IH P EH N D
 depress D IH P R EH S
 descend D IH S EH N D
 desert D EH Z ER T
@@ -278,6 +286,7 @@ devolve D IH V AA L V
 devote D IH V OW T
 die D AY
 digress D AY G R EH S
+dimly D IH M L IY
 disappear D IH S AH P IH R
 disappear(2) D IH S AH P IH R
 disappeared D IH S AH P IH R D
@@ -306,6 +315,7 @@ drift D R IH F T
 drive D R AY V
 drop D R AA P
 drop(2) D R AA P
+dubiously D UW B IY AH S L IY
 dying D AY IH NG
 ear IY R
 ear(2) IY R
@@ -353,6 +363,8 @@ estrange EH S T R EY N JH
 evacuate IH V AE K Y AH EY T
 evacuate(2) IH V AE K Y AH EY T
 evaporate IH V AE P ER EY T
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 ever EH V ER
 everything EH V R IY TH IH NG
@@ -367,6 +379,7 @@ extend IH K S T EH N D
 face F EY S
 fade F EY D
 fail F EY L
+faintly F EY N T L IY
 fall F AO L
 fall(2) F AO L
 family F AE M AH L IY
@@ -409,6 +422,8 @@ forehead F AO R HH EH D
 forfeit F AO R F IH T
 forget F ER G EH T
 forget(2) F ER G EH T
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 forgo F AO R G OW
 formal F AO R M AH L
 forsake F AO R S EY K
@@ -417,6 +432,7 @@ forth F AO R TH
 forthwith F AO R TH W IH TH
 forward F AO R W ER D
 foster F AA S T ER
+frail F R EY L
 free F R IY
 from F R AH M
 fuck F AH K
@@ -439,6 +455,7 @@ get(2) G EH T
 give G IH V
 glad G L AE D
 glide G L AY D
+gnarly N AA R L IY
 go G OW
 godspeed G AA D S P IY D
 gone G AO N
@@ -458,6 +475,7 @@ happiness HH AE P IY N AH S
 happy HH AE P IY
 hark HH AA R K
 haunt HH AO N T
+hazy HH EY Z IY
 head HH EH D
 heart HH AA R T
 heel HH IY L
@@ -484,17 +502,24 @@ honest AA N AH S T
 huh HH AH
 hurry HH ER IY
 i'll AY L
+idly AY D L IY
 ignore IH G N AO R
 immigration IH M AH G R EY SH AH N
 impart IH M P AA R T
+imperceptibly IH M P ER S EH P T IH B L IY
 implode IH M P L OW D
 in IH N
 inaccessible IH N AH K S EH S AH B AH L
 inaccurate IH N AE K Y ER AH T
 incessantly IH N S EH S AH N T L IY
+incoherently IH N K OW HH IH R AH N T L IY
 income IH N K AH M
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 increase IH N K R IY S
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 industries IH N D AH S T R IY Z
+inexplicably IH N IH K S P L IH K AH B L IY
 instantly IH N S T AH N T L IY
 instruction IH N S T R AH K SH AH N
 interact IH N T ER AE K T
@@ -503,6 +528,7 @@ interest IH N T R AH S T
 interest(2) IH N T R AH S T
 interest(3) IH N T R AH S T
 interest(4) IH N T R AH S T
+invade IH N V EY D
 invert IH N V ER T
 is IH Z
 island AY L AH N D
@@ -557,6 +583,7 @@ live L AY V
 live(2) L AY V
 lively L AY V L IY
 looking L UH K IH NG
+loosely L UW S L IY
 lose L UW Z
 lost L AO S T
 make M EY K
@@ -578,13 +605,16 @@ mind M AY N D
 mingle M IH NG G AH L
 minor M AY N ER
 missing M IH S IH NG
+modicum M AA D IH K AH M
 mount M AW N T
 mouth M AW TH
 move M UW V
+much M AH CH
 my M AY
 neck N EH K
 need N IY D
 neo N IY OW
+neutrally N UW T R AH L IY
 no N OW
 nose N OW Z
 not N AA T
@@ -744,6 +774,7 @@ remember R IH M EH M B ER
 remember(2) R IH M EH M B ER
 remote R IH M OW T
 remote(2) R IH M OW T
+remotely R IY M OW T L IY
 removed R IY M UW V D
 renaissance R EH N AH S AA N S
 render R EH N D ER
@@ -807,6 +838,7 @@ riposte R IH P OW S T
 rise R AY Z
 road R OW D
 root R UW T
+roughly R AH F L IY
 round R AW N D
 rump R AH M P
 run R AH N
@@ -825,6 +857,7 @@ second S EH K AH N D
 selective S AH L EH K T IH V
 selfless S EH L F L AH S
 sell S EH L
+sense S EH N S
 separate S EH P ER EY T
 separate(2) S EH P ER EY T
 separate(3) S EH P ER EY T
@@ -849,6 +882,7 @@ sink S IH NG K
 skin S K IH N
 slide S L AY D
 slump S L AH M P
+so S OW
 soar S AO R
 spare S P EH R
 speed S P IY D
@@ -866,11 +900,13 @@ stern S T ER N
 still S T IH L
 stomach S T AH M AH K
 stop S T AA P
+subconsciously S AH B K AA N SH AH S L IY
 submit S AH B M IH T
 subsidize S AH B S IH D AY Z
 substantiate S AH B S T AE N CH IY EY T
 substantiate(2) S AH B S T AE N CH IY EY T
 succumb S AH K AH M
+such S AH CH
 summer S AH M ER
 summon S AH M AH N
 sunny S AH N IY
@@ -896,6 +932,7 @@ the DH AH
 the(2) DH AH
 thence DH EH N S
 therefore DH EH R F AO R
+this DH IH S
 though DH OW
 three TH R IY
 through TH R UW
@@ -926,6 +963,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 under AH N D ER
 underwrite AH N D ER R AY T
 unite Y UW N AY T

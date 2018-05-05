@@ -19,6 +19,7 @@ advances AH D V AE N S AH Z
 advances(2) AH D V AE N S AH Z
 adventures AE D V EH N CH ER Z
 affair AH F EH R
+affront AH F R AH N T
 age EY JH
 agrees AH G R IY Z
 ah AA
@@ -63,6 +64,7 @@ await AH W EY T
 awaited AH W EY T IH D
 awaiting AH W EY T IH NG
 back B AE K
+baffle B AE F AH L
 ballade B AH L AA D
 ballet B AE L EY
 ban B AE N
@@ -81,12 +83,14 @@ belly B EH L IY
 belongs B IH L AO NG Z
 best B EH S T
 bestows B IH S T OW Z
+bewilder B IH W IH L D ER
 bide B AY D
 biding B AY D IH NG
 big B IH G
 bilk B IH L K
 biological B AY AH L AA JH IH K AH L
 blues B L UW Z
+blur B L ER
 bob B AA B
 bode B OW D
 bottlenecks B AA T AH L N EH K S
@@ -130,6 +134,7 @@ cedes S IY D Z
 chance CH AE N S
 characters K AE R AH K T ER Z
 characters(2) K AE R AH K T ER Z
+chat CH AE T
 chits CH IH T S
 choir K W AY ER
 chronological K R AA N AH L AA JH IH K AH L
@@ -143,6 +148,7 @@ clock K L AA K
 come K AH M
 commissions K AH M IH SH AH N Z
 complete K AH M P L IY T
+comply K AH M P L AY
 concert K AA N S ER T
 concert(2) K AA N S ER T
 concerto K AH N CH EH R T OW
@@ -151,6 +157,8 @@ conditions K AH N D IH SH AH N Z
 condones K AH N D OW N Z
 conduct K AA N D AH K T
 confers K AH N F ER Z
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 consuming K AH N S UW M IH NG
 consummate K AA N S AH M AH T
 consummate(2) K AA N S AH M AH T
@@ -191,6 +199,7 @@ defy D IH F AY
 delay D IH L EY
 delaying D IH L EY IH NG
 departs D IH P AA R T S
+depend D IH P EH N D
 determine D AH T ER M AH N
 determine(2) D AH T ER M AH N
 did D IH D
@@ -199,6 +208,7 @@ didn't(2) D IH D AH N T
 didn't(3) D IH D AH N T
 didn't(4) D IH D AH N T
 dies D AY Z
+dimly D IH M L IY
 discharge D IH S CH AA R JH
 discretion D IH S K R EH SH AH N
 disguising D IH S G AY Z IH NG
@@ -214,6 +224,7 @@ drag D R AE G
 drop D R AA P
 drop(2) D R AA P
 drops D R AA P S
+dubiously D UW B IY AH S L IY
 duet D UW EH T
 duet(2) D UW EH T
 duration D UH R EY SH AH N
@@ -254,6 +265,8 @@ err(2) EH R
 etcetera EH T S EH T ER AH
 eternity IH T ER N AH T IY
 eternity(2) IH T ER N AH T IY
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 evenhandedly EH V AH N HH AE N D IH D L IY
 ever EH V ER
@@ -274,6 +287,7 @@ expires IH K S P AY ER Z
 extension IH K S T EH N SH AH N
 face F EY S
 facilitate F AH S IH L AH T EY T
+faintly F EY N T L IY
 fairly F EH R L IY
 far F AA R
 fare F EH R
@@ -289,9 +303,12 @@ for(2) F AO R
 for(3) F AO R
 force F AO R S
 foresees F AO R S IY Z
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 forth F AO R TH
 forward F AO R W ER D
 fours F AO R Z
+frail F R EY L
 free F R IY
 fulfill F UH L F IH L
 full F UH L
@@ -303,6 +320,7 @@ geologic JH IY AH L AA JH IH K
 geological JH IY AH L AA JH IH K AH L
 ghost G OW S T
 give G IH V
+gnarly N AA R L IY
 go G OW
 going G OW IH NG
 going(2) G OW IH NG
@@ -320,6 +338,7 @@ hang HH AE NG
 happens HH AE P AH N Z
 hard HH AA R D
 hardly HH AA R D L IY
+hazy HH EY Z IY
 heels HH IY L Z
 hereafter HH IH R AE F T ER
 hesitate HH EH Z AH T EY T
@@ -334,14 +353,21 @@ hoped HH OW P T
 hour AW ER
 hour(2) AW ER
 huh HH AH
+idly AY D L IY
 immortality IH M AO R T AE L IH T IY
 impatient IH M P EY SH AH N T
 impel IH M P EH L
+imperceptibly IH M P ER S EH P T IH B L IY
 imprecise IH M P R AH S AY S
 in IH N
 inactive IH N AE K T IH V
 inch IH N CH
 incite IH N S AY T
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 infinity IH N F IH N IH T IY
 influence IH N F L UW AH N S
@@ -380,6 +406,7 @@ loiter L OY T ER
 loitering L OY T ER IH NG
 long L AO NG
 look L UH K
+loosely L UW S L IY
 lurk L ER K
 lute L UW T
 lyre L AY R
@@ -402,12 +429,14 @@ minute(3) M IH N AH T
 misses M IH S AH Z
 misses(2) M IH S AH Z
 moderately M AA D ER AH T L IY
+modicum M AA D IH K AH M
 mold M OW L D
 moment M OW M AH N T
 moratorium M AO R AH T AO R IY AH M
 motivate M OW T AH V EY T
 move M UW V
 moves M UW V Z
+much M AH CH
 music M Y UW Z IH K
 musical M Y UW Z IH K AH L
 musician M Y UW Z IH SH AH N
@@ -415,6 +444,7 @@ naught N AO T
 need N IY D
 neither N IY DH ER
 neither(2) N IY DH ER
+neutrally N UW T R AH L IY
 nil N IH L
 nirvana N IH R V AA N AH
 nirvana(2) N IH R V AA N AH
@@ -521,6 +551,7 @@ relatively R EH L AH T IH V L IY
 releases R IH L IY S IH Z
 remain R IH M EY N
 remain(2) R IH M EY N
+remotely R IY M OW T L IY
 render R EH N D ER
 renewal R IH N UW AH L
 respite R EH S P IH T
@@ -531,6 +562,7 @@ rhythm R IH DH AH M
 rock R AA K
 roll R OW L
 room R UW M
+roughly R AH F L IY
 sanctions S AE NG K SH AH N Z
 satisfy S AE T AH S F AY
 satisfy(2) S AE T AH S F AY
@@ -542,6 +574,7 @@ scrabble S K R AE B AH L
 scupper S K AH P ER
 season S IY Z AH N
 second S EH K AH N D
+sense S EH N S
 sensibly S EH N S AH B L IY
 sequence S IY K W AH N S
 seria S IH R IY AH
@@ -582,8 +615,10 @@ stirs S T ER Z
 stop S T AA P
 stoppage S T AA P IH JH
 stretch S T R EH CH
+subconsciously S AH B K AA N SH AH S L IY
 succeed S AH K S IY D
 succumbs S AH K AH M Z
+such S AH CH
 suffice S AH F AY S
 suit S UW T
 suite S W IY T
@@ -600,6 +635,8 @@ tense T EH N S
 term T ER M
 thank TH AE NG K
 thanks TH AE NG K S
+that DH AE T
+that(2) DH AE T
 the DH AH
 the(2) DH AH
 theatre TH IY AH T ER
@@ -629,6 +666,7 @@ um AH M
 umm AH M
 unable AH N EY B AH L
 unbearable AH N B EH R AH B AH L
+uncertainly AH N S ER T AH N L IY
 universal Y UW N AH V ER S AH L
 up AH P
 vaguely V EY G L IY

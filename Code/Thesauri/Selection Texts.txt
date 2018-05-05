@@ -12,6 +12,7 @@ yes
 yes
 yup
 ok
+vaguely
 
 no
 sod off
@@ -19,8 +20,6 @@ fuck no
 not now
 later
 quit
-no
-no
 no
 quit
 nine
@@ -31,12 +30,14 @@ don't
 date
 the date
 today
+vaguely
 
 time
 the time
 the time
 time now
 current time
+vaguely
 
 break the door down
 break the door
@@ -48,6 +49,7 @@ break
 open the door
 open door
 close
+vaguely
 
 climb
 climb
@@ -55,6 +57,7 @@ climb
 climb out
 climb up
 climbing
+vaguely
 
 dig
 another way
@@ -64,12 +67,14 @@ dig
 dig
 dig
 dig
+vaguely
 
 do not give up
 pull yourself together
 get up
 get up
 get up
+vaguely
 
 do not go anywhere
 nowhere
@@ -84,18 +89,31 @@ remain
 wait
 wait
 wait
+look around
+vaguely
 
 do nothing
 don't
 nothing
 wait
 no
+stay still
+do nothing
+do nothing
+do nothing
+do nothing
+do nothing
+do nothing
+do nothing
+do nothing
+do nothing
 do nothing
 do nothing
 do nothing
 tumbleweed
 tumbleweed
 tumbleweed
+vaguely
 
 examine rock
 pry the rock
@@ -116,6 +134,7 @@ dig
 dig
 dig
 dig
+vaguely
 
 feel surroundings
 surroundings
@@ -123,6 +142,7 @@ feel
 attempt to move
 explore
 look around
+vaguely
 
 go back
 return
@@ -131,6 +151,7 @@ give up
 go back
 go back
 go away
+vaguely
 
 go back into the phone booth
 phone booth
@@ -138,6 +159,7 @@ phone booth
 phone booth
 enter
 go into
+vaguely
 
 go through an open door
 through
@@ -150,6 +172,9 @@ try another
 try a different
 try a door
 try door
+left side
+right side
+vaguely
 
 go up stairs
 go up
@@ -159,10 +184,26 @@ stairs
 upstairs
 upstairs
 climb
+vaguely
 
 leave phone booth
 step out
 get out
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
+leave
 leave
 leave
 leave
@@ -172,21 +213,31 @@ left the
 phone booth
 phone booth
 exit
+vaguely
 
+look around
+look around
 look around
 look around
 look around
 search
+search
+search
 look
 explore
+explore
+explore
+vaguely
 
 look back
 look behind
+vaguely
 
 look for others
 explore
 search
 look
+vaguely
 
 pry rock
 pry the rock
@@ -204,6 +255,7 @@ dig
 dig
 dig
 dig
+vaguely
 
 pull string
 string
@@ -211,6 +263,7 @@ rope
 cord
 cable
 pull
+vaguely
 
 reply
 ask
@@ -218,12 +271,27 @@ shout back
 call back
 reply
 say
+vaguely
 
 repeat
 say that again
 repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+repeat
+vaguely
 
 restart
+vaguely
 
 run away from the light
 leave
@@ -235,6 +303,7 @@ away
 go around
 hide
 dark
+vaguely
 
 run toward the light
 towards
@@ -244,6 +313,7 @@ go to
 enter
 light
 to the
+vaguely
 
 sit in despair
 sit
@@ -251,6 +321,7 @@ despair
 do nothing
 give up
 sleep
+vaguely
 
 stay in phone booth
 stayed
@@ -264,6 +335,7 @@ do nothing
 close door
 remain
 wait
+vaguely
 
 stay in room
 stay
@@ -272,6 +344,7 @@ ball pit
 rainbow
 vegetation
 pool
+vaguely
 
 stop climbing
 stop
@@ -280,6 +353,7 @@ do nothing
 give up
 fall
 jump
+vaguely
 
 try another door
 through
@@ -293,12 +367,15 @@ try a door
 try door
 other door
 again
+vaguely
 
 wait around
 don't do anything
 time passes
 wait
+vaguely
 
 wake up
 stop dreaming
 wake up
+vaguely

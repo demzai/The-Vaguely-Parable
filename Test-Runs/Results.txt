@@ -1,0 +1,1765 @@
+(.*['"], )([0-9.]+)(, '.*\r\n.*['"], )([0-9.]+)(, '.*\r\n.*['"], )([0-9.]+)(, '.*\r\n)
+\1\2\3\4\5\6\7\2\t\4\t\6\r\n
+(Select[^0-9\r\n]*', )([0-9.]+)([^0-9\r\n]*, )([0-9.]+)(.*)
+\1\2\3\4\5\r\n\2\t\4
+(Select.*\r\n)(User.*)
+\10\t0\r\n\2
+([0-9.]+\t[0-9.]+\t[0-9.]+)(\r\nSelect.*\r\n)([0-9.]+\t[0-9.]+)
+\3t\tt\tt\t\1\tt\t\4
+
+Demi_1:
+Google: ['', 0, 'Failed Server Request']
+WitAPI: ['', 0, 'Failed Server Request']
+Sphinx: ['and vote yes', 0.2638119643891617, '']
+Select: ['continue', [('continue', 1.0552478575566469), ('repeat', 0.05276239287783235), ('do nothing', 0.0), ('quit', 0.0), ('time', 0.0), ('date', 0.0)]]
+			0	0	0.2638119643891617		1.0552478575566469	0.05276239287783235
+User Select - continue
+
+Google: ['', 0, 'Failed Server Request']
+WitAPI: ['', 0, 'Failed Server Request']
+Sphinx: ['they did', 0.29573703449795513, '']
+Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
+			0	0	0.29573703449795513		0	0
+User Select - stay_in_phone_booth
+
+Google: ['', 0, 'Failed Server Request']
+WitAPI: ['', 0, 'Failed Server Request']
+Sphinx: ['yes', 0.621841745981522, '']
+Select: ['continue', [('continue', 2.487366983926088), ('date', 0.0), ('time', 0.0), ('repeat', 0.0), ('do nothing', 0.0), ('quit', 0.0)]]
+			0	0	0.621841745981522		2.487366983926088	0.0
+User Select - continue
+
+Google: ['exit', 0.93760121, '']
+WitAPI: ['exit', 0.7, '']
+Sphinx: ['exit', 0.44403280914751014, '']
+Select: ['leave_phone_booth', [('leave phone booth', 1.1208798564640439), ('stay in phone booth', 0.1601256937805777), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('time', 0.0), ('date', 0.0)]]
+			0.93760121	0.7	0.44403280914751014		1.1208798564640439	0.1601256937805777
+User Select - leave_phone_booth
+
+Google: ['look for others', 0.97110075, '']
+WitAPI: ['look at others', 0.7, '']
+Sphinx: ['old what causes', 0.18023022123571217, '']
+Select: ['look_for_others', [('look for others', 3.435436862990196), ('repeat', 0.497260244117647), ('wait around', 0.41381536061785607), ('wake up', 0.2949001323529412), ('date', 0.24030696164761622), ('time', 0.1848935308238081), ('go back into the phone booth', 0.1433575994265751), ('do nothing', 0.060076740411904056), ('restart', 0.0)]]
+			0.97110075	0.7	0.18023022123571217		3.435436862990196	0.497260244117647
+User Select - look_for_others
+
+Google: ['step into the light', 0.97110069, '']
+WitAPI: ['stepping into the light', 0.7, '']
+Sphinx: ['stet into the light', 0.1846164508553591, '']
+Select: ['run_toward_the_light', [('run toward the light', 2.141806866737227), ('date', 0.4252685114460198), ('run away from the light', 0.27062541637473986), ('wake up', 0.23196464260691987), ('time', 0.15464309507127993), ('repeat', 0.0), ('do not go anywhere', 0.0), ('restart', 0.0)]]
+			0.97110069	0.7	0.1846164508553591		2.141806866737227	0.4252685114460198
+User Select - run_toward_the_light
+
+Google: ['go through a door', 0.8654564, '']
+WitAPI: ['go through a dual', 0.7, '']
+Sphinx: ['go through a goal tough', 0.1776217192380135, '']
+Select: ['go_through_an_open_door', [('go through an open door', 5.4257268999602175), ('do nothing', 0.4945465142857143), ('go back', 0.392192576828553), ('look around', 0.2988133918693737), ('time', 0.0), ('date', 0.0), ('restart', 0.0), ('repeat', 0.0), ('look back', 0.0), ('wake up', 0.0)]]
+			0.8654564	0.7	0.1776217192380135		5.4257268999602175	0.4945465142857143
+User Select - go_through_an_open_door
+
+Google: ['break the door open', 0.95665538, '']
+WitAPI: ['break the door open', 0.7, '']
+Sphinx: ['break the door open', 0.28252359818577627, '']
+Select: ['break_the_door_down', [('break the door down', 5.68052972414203), ('try another door', 3.8137186570986934), ('do nothing', 1.108102273249015), ('time', 0.8360952840728527), ('date', 0.32319649636429604), ('go back', 0.2529363884590143), ('wake up', 0.0843121294863381), ('repeat', 0.0), ('look back', 0.0), ('look around', 0.0), ('restart', 0.0)]]
+			0.95665538	0.7	0.28252359818577627		5.68052972414203	3.8137186570986934
+User Select - break_the_door_down
+
+Google: ['going through a door', 0.90577495, '']
+WitAPI: ['go through a little', 0.7, '']
+Sphinx: ['go through the dole', 0.33761211421519793, '']
+Select: ['go_through_an_open_door', [('go through an open door', 5.1656180236403495), ('do nothing', 0.7105068938372558), ('go back', 0.34668459444841954), ('look around', 0.24257457315117678), ('time', 0.17909683451793312), ('date', 0.05626868570253299), ('restart', 0.0), ('repeat', 0.0), ('look back', 0.0), ('wake up', 0.0)]]
+			0.90577495	0.7	0.33761211421519793		5.1656180236403495	0.7105068938372558
+User Select - go_through_an_open_door
+
+Google: ['break the Door Down', 0.97110069, '']
+WitAPI: ['break the door down', 0.7, '']
+Sphinx: ['break the door down', 0.3182979045356836, '']
+Select: ['break_the_door_down', [('break the door down', 4.259542290161922), ('try another door', 2.368162241493981), ('time', 0.8577479447454577), ('do nothing', 0.5818845168775334), ('date', 0.3315664324226139), ('go back', 0.25948677320030655), ('look back', 0.10182979045356835), ('wake up', 0.08649559106676885), ('restart', 0.0), ('repeat', 0.0), ('look around', 0.0)]]
+			0.97110069	0.7	0.3182979045356836		4.259542290161922	2.368162241493981
+User Select - break_the_door_down
+
+Google: ['go to one of the Open Doors', 0.9638322, '']
+WitAPI: ['go through one of the kindles', 0.7, '']
+Sphinx: ['i it it i i i i go through one of the idols', 0.18867411547544574, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.112467313543454), ('date', 0.9481038018506933), ('wake up', 0.4666666666666666), ('time', 0.3297148431876238), ('go back', 0.3204307009819753), ('repeat', 0.15437552628962048), ('look around', 0.152344134081505), ('restart', 0.0), ('do nothing', 0.0), ('look back', 0.0)]]
+			0.9638322	0.7	0.18867411547544574		2.112467313543454	0.9481038018506933
+User Select - go_through_an_open_door
+
+Google: ['break the Door Down', 0.97110069, '']
+WitAPI: ['break the door down', 0.7, '']
+Sphinx: ['wait a little down', 0.28301328150783867, '']
+Select: ['break_the_door_down', [('break the door down', 3.124672362824697), ('try another door', 2.0181327194760734), ('time', 0.7205108047463767), ('do nothing', 0.5617218751473363), ('date', 0.27851678166666666), ('go back', 0.2179696552173913), ('wake up', 0.11982543199043688), ('look back', 0.09830132815078386), ('restart', 0.0), ('repeat', 0.0), ('look around', 0.0)]]
+			0.97110069	0.7	0.28301328150783867		3.124672362824697	2.0181327194760734
+User Select - break_the_door_down
+
+Google: ['go through door', 0.91912174, '']
+WitAPI: ['', 0, 'Failed Server Request']
+Sphinx: ['goiter dole with', 0.15759891892446953, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.051630089155516), ('do nothing', 0.6152689479568397), ('go back', 0.2265022563655587), ('look around', 0.15756372685714287), ('wake up', 0.0), ('look back', 0.0), ('restart', 0.0), ('repeat', 0.0), ('time', 0.0), ('date', 0.0)]]
+			0.91912174	0	0.15759891892446953		2.051630089155516	0.6152689479568397
+User Select - go_through_an_open_door
+
+Google: ['break the Door Down', 0.97110069, '']
+WitAPI: ['break the door down', 0.7, '']
+Sphinx: ['break the door down', 0.25744884266596063, '']
+Select: ['break_the_door_down', [('break the door down', 4.037178653198869), ('try another door', 2.236322607442915), ('time', 0.8315122985045265), ('do nothing', 0.5471136243805489), ('date', 0.32142492211099344), ('go back', 0.2515499390433862), ('look back', 0.09574488426659605), ('wake up', 0.08384997968112873), ('look around', 0.0), ('repeat', 0.0), ('restart', 0.0)]]
+			0.97110069	0.7	0.25744884266596063		4.037178653198869	2.236322607442915
+User Select - break_the_door_down
+
+Google: ['go through door', 0.86758941, '']
+WitAPI: ['go through dual', 0.7, '']
+Sphinx: ["there's your goal", 0.29898224200017215, '']
+Select: ['go_through_an_open_door', [('go through an open door', 3.033774081762285), ('do nothing', 0.4957653771428571), ('go back', 0.3900803975000215), ('date', 0.34881261566686755), ('look around', 0.26872961314285715), ('time', 0.024915186833347678), ('wake up', 0.0), ('repeat', 0.0), ('restart', 0.0), ('look back', 0.0)]]
+			0.86758941	0.7	0.29898224200017215		3.033774081762285	0.4957653771428571
+User Select - go_through_an_open_door
+
+Google: ['break the Door Down', 0.97110069, '']
+WitAPI: ['break the door down south', 0.7, '']
+Sphinx: ['to break the door down but think', 0.13535390200970324, '']
+Select: ['break_the_door_down', [('break the door down', 3.6248397477378846), ('try another door', 2.0018622142454023), ('time', 0.8202280513960374), ('do nothing', 0.4773450868626875), ('date', 0.34243390206013763), ('go back', 0.23562451200126563), ('look back', 0.08353539020097031), ('wake up', 0.07854150400042188), ('look around', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.97110069	0.7	0.13535390200970324		3.6248397477378846	2.0018622142454023
+User Select - break_the_door_down
+
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['climb', 0.7, '']
+Sphinx: ['clawing with', 0.3186238751635391, '']
+Select: ['stop_climbing', [('stop climbing', 0.175), ('look around', 0.0), ('time', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('date', 0.0), ('restart', 0.0)]]
+0.175	0.0
+User Select - stop_climbing
+
+Google: ['what is the time', 0.96490842, '']
+WitAPI: ['what is the time', 0.7, '']
+Sphinx: ['what is the time', 0.3896806310431742, '']
+Select: ['date', [('date', 6.506198661636719), ('time', 5.463339067546622), ('repeat', 0.37356164564421346), ('quit', 0.37356164564421346), ('continue', 0.0)]]
+			0.96490842	0.7	0.3896806310431742		6.506198661636719	5.463339067546622
+User Select - date
+
+Google: ['the time', 0.96770972, '']
+WitAPI: ['what time', 0.7, '']
+Sphinx: ['but our aim at', 0.2624945465562415, '']
+Select: ['time', [('time', 3.0894507302448213), ('date', 2.5873267947902754), ('restart', 0.3032199490909091), ('quit', 0.3032199490909091), ('repeat', 0.3032199490909091), ('wake up', 0.15160997454545455), ('do nothing', 0.0), ('continue', 0.0)]]
+			0.96770972	0.7	0.2624945465562415		3.0894507302448213	2.5873267947902754
+User Select - time
+
+Google: ['the time', 0.96770972, '']
+WitAPI: ['the time', 0.7, '']
+Sphinx: ['the time', 0.3950701843417823, '']
+Select: ['time', [('time', 4.1099326881961264), ('date', 2.4065765550654126), ('repeat', 0.3750508916985059), ('quit', 0.3750508916985059), ('restart', 0.3750508916985059), ('wake up', 0.18752544584925296), ('continue', 0.0), ('do nothing', 0.0)]]
+			0.96770972	0.7	0.3950701843417823		4.1099326881961264	2.4065765550654126
+User Select - time
+
+Google: ['repeat', 0.96351874, '']
+WitAPI: ['repeat', 0.7, '']
+Sphinx: ['repeat', 0.39000408219882376, '']
+Select: ['repeat', [('repeat', 3.0802842332982356), ('continue', 0.5133807055497059), ('quit', 0.0), ('do nothing', 0.0), ('time', 0.0), ('date', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+			0.96351874	0.7	0.39000408219882376		3.0802842332982356	0.5133807055497059
+User Select - repeat
+
+Google: ['the time', 0.96770972, '']
+WitAPI: ['the time', 0.7, '']
+Sphinx: ['vuitton in', 0.1991501008500808, '']
+Select: ['time', [('time', 3.322785275454545), ('date', 1.94566134), ('repeat', 0.3032199490909091), ('quit', 0.3032199490909091), ('continue', 0.0)]]
+			0.96770972	0.7	0.1991501008500808		3.322785275454545	1.94566134
+User Select - time
+
+Google: ['the time', 0.96771246, '']
+WitAPI: ['the time', 0.7, '']
+Sphinx: ['the time', 0.3824183171320754, '']
+Select: ['time', [('time', 4.084730260497999), ('date', 2.3918192399874214), ('restart', 0.37275105038765005), ('repeat', 0.37275105038765005), ('quit', 0.37275105038765005), ('wake up', 0.18637552519382503), ('continue', 0.0), ('do nothing', 0.0)]]
+			0.96771246	0.7	0.3824183171320754		4.084730260497999	2.3918192399874214
+User Select - time
+
+Google: ['time flies like an arrow fruit flies like a banana', 0.97110069, '']
+WitAPI: ['time flies like an arrow and fruit flies like a banana', 0.7, '']
+Sphinx: ['time flies like an hour and a few their fruit flies like a ban on what', 0.07363007910931868, '']
+Select: ['date', [('date', 20.08397139790153), ('time', 2.200862906953164), ('repeat', 0.4719497920235581), ('do nothing', 0.43618269227732964), ('restart', 0.31722377620169434), ('quit', 0.31722377620169434), ('wake up', 0.15861188810084717), ('continue', 0.07363007910931868)]]
+			0.97110069	0.7	0.07363007910931868		20.08397139790153	2.200862906953164
+User Select - date
+
+
+
+
+
+
+
+
+
+Demi_2:
+Google: ['ok', 0.97110075, '']
+WitAPI: ['okay', 0.7, '']
+Sphinx: ['but then', 0.3345119733943554, '']
+Select: ['yes', [('yes', 5.0222014999999995), ('no', 0.20070718403661322), ('repeat', 0.06690239467887109), ('time', 0.05146338052220852), ('date', 0.02573169026110426), ('do nothing', 0.0)]]
+			0.97110075	0.7	0.3345119733943554		5.0222014999999995	0.20070718403661322
+User Select - yes
+
+Google: ['yes', 0.9650715, '']
+WitAPI: ['yes you', 0.7, '']
+Sphinx: ['yes', 0.5180712800072514, '']
+Select: ['yes', [('yes', 34.93028448011602), ('time', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('no', 0.0), ('leave phone booth', 0.0), ('date', 0.0), ('stay in phone booth', 0.0)]]
+			0.9650715	0.7	0.5180712800072514		34.93028448011602	0.0
+User Select - yes
+
+Google: ['no', 0.94532824, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no that and at i think though', 0.12136487681440725, '']
+Select: ['no', [('no', 7.950119025664833), ('do nothing', 1.7666931168144073), ('yes', 0.2614012731387233), ('time', 0.03485350308516311), ('look for others', 0.0323639671505086), ('repeat', 0.0323639671505086), ('date', 0.017426751542581553), ('go back into the phone booth', 0.017426751542581553), ('restart', 0.0), ('wake up', 0.0), ('wait around', 0.0)]]
+			0.94532824	0.7	0.12136487681440725		7.950119025664833	1.7666931168144073
+User Select - no
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.4940895775870421, '']
+Select: ['yes', [('yes', 34.64304524139267), ('restart', 0.0), ('time', 0.0), ('no', 0.0), ('look for others', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('do nothing', 0.0), ('wait around', 0.0), ('go back into the phone booth', 0.0), ('date', 0.0)]]
+			0.97110075	0.7	0.4940895775870421		34.64304524139267	0.0
+User Select - yes
+
+Google: ['no', 0.94997561, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5498049411297204, '']
+Select: ['no', [('no', 9.899012480083742), ('wake up', 0.0), ('repeat', 0.0), ('restart', 0.0), ('time', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('yes', 0.0)]]
+			0.94997561	0.7	0.5498049411297204		9.899012480083742	0.0
+User Select - no
+
+Google: ['no', 0.9589473, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5815964261499313, '']
+Select: ['do_nothing', [('do nothing', 2.240543726149931), ('wake up', 0.0), ('climb', 0.0), ('date', 0.0), ('feel surroundings', 0.0), ('repeat', 0.0), ('sit in despair', 0.0), ('do not give up', 0.0), ('restart', 0.0), ('dig', 0.0), ('time', 0.0)]]
+			0.9589473	0.7	0.5815964261499313		2.240543726149931	0.0
+User Select - do_nothing
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.4693036111634126, '']
+Select: ['$User_Error', []]
+			0.97110075	0.7	0.4693036111634126		0	0
+User Select - $User_Error
+
+Google: ['repeat', 0.97110075, '']
+WitAPI: ['repeat', 0.7, '']
+Sphinx: ['repeat', 0.41511496909045625, '']
+Select: ['repeat', [('repeat', 2.5034588629085475), ('date', 0.0), ('dig', 0.0), ('time', 0.0), ('do not give up', 0.0), ('wake up', 0.0), ('feel surroundings', 0.0), ('restart', 0.0), ('climb', 0.0), ('do nothing', 0.0), ('sit in despair', 0.0)]]
+			0.97110075	0.7	0.41511496909045625		2.5034588629085475	0.0
+User Select - repeat
+
+Google: ['feel surroundings', 0.83500648, '']
+WitAPI: ['feels around earnings', 0.7, '']
+Sphinx: ['feel surroundings', 0.3088859845350883, '']
+Select: ['feel_surroundings', [('feel surroundings', 7.662374855175735), ('do not give up', 1.5109731161337718), ('sit in despair', 0.5193064494671054), ('time', 0.24585232860467843), ('dig', 0.12292616430233921), ('date', 0.12292616430233921), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+			0.83500648	0.7	0.3088859845350883		7.662374855175735	1.5109731161337718
+User Select - feel_surroundings
+
+Google: ['look around', 0.92990679, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ['look around', 0.5516228185796079, '']
+Select: ['feel_surroundings', [('feel surroundings', 2.1344770091788714), ('sit in despair', 0.566769947327055), ('wake up', 0.38497581327875435), ('dig', 0.2566505421858362), ('repeat', 0.1283252710929181), ('date', 0.0), ('time', 0.0), ('restart', 0.0), ('do not give up', 0.0), ('do nothing', 0.0), ('climb', 0.0)]]
+			0.92990679	0.7	0.5516228185796079		2.1344770091788714	0.566769947327055
+User Select - feel_surroundings
+
+Google: ['get up', 0.93431211, '']
+WitAPI: ['get up', 0.7, '']
+Sphinx: ['get up', 0.2333323822577144, '']
+Select: ['do_not_give_up', [('do not give up', 2.581000433661412), ('wake up', 2.224322462959564), ('dig', 0.982970785398797), ('feel surroundings', 0.3735288984515429), ('climb', 0.365103434576696), ('sit in despair', 0.26680635603681635), ('time', 0.09829707853987969), ('date', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.93431211	0.7	0.2333323822577144		2.581000433661412	2.224322462959564
+User Select - do_not_give_up
+
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['climb', 0.7, '']
+Sphinx: ['climate', 0.308306897111096, '']
+Select: ['climb', [('climb', 2.5666666666666664), ('feel surroundings', 0.46246034566664396), ('do not give up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('dig', 0.0), ('date', 0.0), ('do nothing', 0.0), ('time', 0.0), ('sit in despair', 0.0)]]
+2.5666666666666664	0.46246034566664396
+User Select - climb
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.535445474729299, '']
+Select: ['yes', [('yes', 35.304739595668785), ('run away from the light', 0.0), ('do not go anywhere', 0.0), ('restart', 0.0), ('date', 0.0), ('run toward the light', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('no', 0.0), ('time', 0.0)]]
+			0.97110075	0.7	0.535445474729299		35.304739595668785	0.0
+User Select - yes
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.7069442478404988, '']
+Select: ['yes', [('yes', 38.04871996544798), ('wake up', 0.0), ('do nothing', 0.0), ('time', 0.0), ('go back', 0.0), ('repeat', 0.0), ('look around', 0.0), ('look back', 0.0), ('date', 0.0), ('no', 0.0), ('restart', 0.0), ('go through an open door', 0.0)]]
+			0.97110075	0.7	0.7069442478404988		38.04871996544798	0.0
+User Select - yes
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5941285088242205, '']
+Select: ['yes', [('yes', 36.24366814118753), ('time', 0.0), ('repeat', 0.0), ('restart', 0.0), ('date', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('no', 0.0), ('look back', 0.0), ('try another door', 0.0), ('wake up', 0.0), ('go back', 0.0), ('look around', 0.0)]]
+			0.97110075	0.7	0.5941285088242205		36.24366814118753	0.0
+User Select - yes
+
+Google: ['no', 0.94417155, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5447187534946035, '']
+Select: ['no', [('no', 9.850006365725715), ('do nothing', 2.1888903034946035), ('time', 0.0), ('look back', 0.0), ('date', 0.0), ('try another door', 0.0), ('break the door down', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0), ('go back', 0.0), ('yes', 0.0), ('look around', 0.0)]]
+			0.94417155	0.7	0.5447187534946035		9.850006365725715	2.1888903034946035
+User Select - no
+
+Google: ['look around', 0.92998117, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ['look around', 0.24076232549646867, '']
+Select: ['look_around', [('look around', 4.781400287018916), ('try another door', 3.4847182759247946), ('look back', 0.9683848682569957), ('break the door down', 0.5502186751460202), ('wake up', 0.3301312050876121), ('repeat', 0.11004373502920405), ('time', 0.0), ('yes', 0.0), ('go back', 0.0), ('no', 0.0), ('do nothing', 0.0), ('date', 0.0), ('restart', 0.0)]]
+			0.92998117	0.7	0.24076232549646867		4.781400287018916	3.4847182759247946
+User Select - look_around
+
+Google: ['Hulk strain', 0.69188887, '']
+WitAPI: ['pull string', 0.7, '']
+Sphinx: ['the whole strain', 0.26539635338257245, '']
+Select: ['pull_string', [('pull string', 4.4935984290687205), ('go through an open door', 0.9021906078961832), ('no', 0.7), ('go back', 0.2333333333333333), ('time', 0.09390947888921795), ('look back', 0.07777777777777777), ('date', 0.04695473944460898), ('look around', 0.0), ('yes', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+			0.69188887	0.7	0.26539635338257245		4.4935984290687205	0.9021906078961832
+User Select - pull_string
+
+Google: ['stairs', 0.89069992, '']
+WitAPI: ['stands', 0.7, '']
+Sphinx: ['ferris', 0.2762355923957392, '']
+Select: ['go_up_stairs', [('go up stairs', 6.7302494), ('do nothing', 0.3), ('yes', 0.09999999999999999), ('wake up', 0.09999999999999999), ('look back', 0.0), ('go back', 0.0), ('go through an open door', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('restart', 0.0)]]
+			0.89069992	0.7	0.2762355923957392		6.7302494	0.3
+User Select - go_up_stairs
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.3572854472814195, '']
+Select: ['yes', [('yes', 32.45417915650271), ('repeat', 0.0), ('wake up', 0.0), ('stay in room', 0.0), ('go back', 0.0), ('look back', 0.0), ('date', 0.0), ('time', 0.0), ('go through an open door', 0.0), ('restart', 0.0), ('no', 0.0)]]
+			0.97110075	0.7	0.3572854472814195		32.45417915650271	0.0
+User Select - yes
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.6006854689118883, '']
+Select: ['yes', [('yes', 36.34857950259021), ('repeat', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('break the door down', 0.0), ('go back', 0.0), ('look around', 0.0), ('time', 0.0), ('date', 0.0), ('restart', 0.0), ('wake up', 0.0), ('try another door', 0.0)]]
+			0.97110075	0.7	0.6006854689118883		36.34857950259021	0.0
+User Select - yes
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.5152307978142083, '']
+Select: ['yes', [('yes', 34.98130476502733), ('date', 0.0), ('look around', 0.0), ('wake up', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('look back', 0.0), ('try another door', 0.0), ('time', 0.0), ('no', 0.0), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0)]]
+			0.97110075	0.7	0.5152307978142083		34.98130476502733	0.0
+User Select - yes
+
+Google: ['no', 0.95715892, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.4670094114255485, '']
+Select: ['no', [('no', 9.558757491414969), ('do nothing', 2.1241683314255484), ('repeat', 0.0), ('go back', 0.0), ('go back into the phone booth', 0.0), ('yes', 0.0), ('time', 0.0), ('wake up', 0.0), ('look back', 0.0), ('date', 0.0), ('restart', 0.0)]]
+			0.95715892	0.7	0.4670094114255485		9.558757491414969	2.1241683314255484
+User Select - no
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5273146744635259, '']
+Select: ['yes', [('yes', 35.174646791416414), ('repeat', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('wake up', 0.0), ('go back', 0.0), ('no', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('go back into the phone booth', 0.0)]]
+			0.97110075	0.7	0.5273146744635259		35.174646791416414	0.0
+User Select - yes
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir', 0.40746699833971783, '']
+Select: ['yes', [('yes', 33.257083973435485), ('repeat', 0.0), ('no', 0.0), ('time', 0.0), ('date', 0.0)]]
+			0.97110075	0.7	0.40746699833971783		33.257083973435485	0.0
+User Select - yes
+
+Google: ['no', 0.93874323, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5110450148032567, '']
+Select: ['no', [('no', 9.674047101614656), ('leave phone booth', 0.0), ('look around', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('stay in phone booth', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('yes', 0.0)]]
+			0.93874323	0.7	0.5110450148032567		9.674047101614656	0.0
+User Select - no
+
+Google: ['no', 0.95114559, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no the', 0.5284645318033235, '']
+Select: ['no', [('no', 9.808245548114956), ('time', 0.08130223566204978), ('date', 0.04065111783102489), ('repeat', 0.0), ('yes', 0.0)]]
+			0.95114559	0.7	0.5284645318033235		9.808245548114956	0.08130223566204978
+User Select - no
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5656776172453534, '']
+Select: ['yes', [('yes', 35.788453875925654), ('do nothing', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('no', 0.0)]]
+			0.97110075	0.7	0.5656776172453534		35.788453875925654	0.0
+User Select - yes
+
+Google: ['no', 0.94999248, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no the', 0.4941001812364612, '']
+Select: ['no', [('no', 9.648416975564075), ('leave phone booth', 0.11402311874687567), ('time', 0.07601541249791711), ('date', 0.03800770624895856), ('yes', 0.0), ('repeat', 0.0), ('look around', 0.0), ('restart', 0.0), ('wake up', 0.0), ('stay in phone booth', 0.0)]]
+			0.94999248	0.7	0.4941001812364612		9.648416975564075	0.11402311874687567
+User Select - no
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes so', 0.5536124562256618, '']
+Select: ['yes', [('yes', 35.59541129961059), ('time', 0.0), ('no', 0.0), ('repeat', 0.0), ('date', 0.0)]]
+			0.97110075	0.7	0.5536124562256618		35.59541129961059	0.0
+User Select - yes
+
+Google: ['no', 0.91889584, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['known', 0.48769473839855887, '']
+Select: ['no', [('no', 7.28503128), ('repeat', 0.0), ('look around', 0.0), ('time', 0.0), ('leave phone booth', 0.0), ('wake up', 0.0), ('date', 0.0), ('yes', 0.0), ('restart', 0.0), ('stay in phone booth', 0.0)]]
+			0.91889584	0.7	0.48769473839855887		7.28503128	0.0
+User Select - no
+
+Google: ['no', 0.95049095, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.5586770273136061, '']
+Select: ['no', [('no', 9.941255897911226), ('time', 0.0), ('repeat', 0.0), ('date', 0.0), ('yes', 0.0)]]
+			0.95049095	0.7	0.5586770273136061		9.941255897911226	0.0
+User Select - no
+
+
+
+
+
+
+
+
+
+Piotre Martello:
+Google: ['decided to do nothing', 0.87567121, '']
+WitAPI: ['this is to do nothing', 0.7, '']
+Sphinx: ['in the set to not to', 0.17115675428143123, '']
+Select: ['do_nothing', [('do nothing', 4.439909960633969), ('quit', 3.5935688317972274), ('continue', 0.9184603985703579), ('date', 0.8557988529862991), ('time', 0.07789942649314957), ('repeat', 0.06363636363636363)]]
+			0.87567121	0.7	0.17115675428143123		4.439909960633969	3.5935688317972274
+User Select - do_nothing
+
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['barely decided to are now and stop of it just set in the move in the', 0.7, '']
+Sphinx: ['then he decided to on moon face of the young up that doctors said aunt says the ah fidel that is usually they fed was it', 0.03538994354680336, '']
+Select: ['quit', [('quit', 2.128528305106735), ('continue', 1.7566782110180739), ('time', 1.0347051601360617), ('date', 1.0145495858245535), ('wake up', 0.4285747269575449), ('do nothing', 0.36048278724842314), ('repeat', 0.21714945391508989), ('restart', 0.175)]]
+2.128528305106735	1.7566782110180739
+User Select - quit
+
+Google: ['say yes', 0.92555398, '']
+WitAPI: ['say yes', 0.7, '']
+Sphinx: ['say yes', 0.40491581405510146, '']
+Select: ['continue', [('continue', 8.460290808562924), ('repeat', 0.8460290808562922), ('date', 0.0), ('time', 0.0), ('quit', 0.0), ('do nothing', 0.0)]]
+			0.92555398	0.7	0.40491581405510146		8.460290808562924	0.8460290808562922
+User Select - continue
+
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['maybe the size to look', 0.7, '']
+Sphinx: ['maybe decides to go around', 0.16287238912433324, '']
+Select: ['wake_up', [('wake up', 0.1642475090457892), ('date', 0.11666666666666665), ('stay in phone booth', 0.06533885798580122), ('time', 0.05833333333333333), ('repeat', 0.041176470588235294), ('restart', 0.0), ('leave phone booth', 0.0)]]
+0.1642475090457892	0.11666666666666665
+User Select - wake_up
+
+Google: ['yes', 0.96848321, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5069155337802498, '']
+Select: ['continue', [('continue', 8.701594975120999), ('repeat', 0.0), ('date', 0.0), ('time', 0.0), ('quit', 0.0)]]
+			0.96848321	0.7	0.5069155337802498		8.701594975120999	0.0
+User Select - continue
+
+Google: ['look around', 0.9189868, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ["you'll get round of", 0.22091541446146418, '']
+Select: ['wake_up', [('wake up', 0.30895780709501486), ('stay in phone booth', 0.2418635052470514), ('date', 0.11045770723073209), ('leave phone booth', 0.10231871827688867), ('repeat', 0.09523451764705881), ('time', 0.011627127076919166), ('restart', 0.0)]]
+			0.9189868	0.7	0.22091541446146418		0.30895780709501486	0.2418635052470514
+User Select - wake_up
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.567420300796474, '']
+Select: ['continue', [('continue', 8.954084203185896), ('repeat', 0.0), ('time', 0.0), ('date', 0.0), ('quit', 0.0)]]
+			0.97110075	0.7	0.567420300796474		8.954084203185896	0.0
+User Select - continue
+
+Google: ['go out', 0.81625956, '']
+WitAPI: ['go to', 0.7, '']
+Sphinx: ['go and do', 0.21942893378368003, '']
+Select: ['leave_phone_booth', [('leave phone booth', 1.2584001550000001), ('date', 0.9523028200000001), ('wake up', 0.13604326), ('stay in phone booth', 0.13337943554052573), ('repeat', 0.04388578675673601), ('time', 0.0), ('restart', 0.0)]]
+			0.81625956	0.7	0.21942893378368003		1.2584001550000001	0.9523028200000001
+User Select - leave_phone_booth
+
+Google: ['ok there is a', 0.65588933, '']
+WitAPI: ['okay is it', 0.7, '']
+Sphinx: ['and the year the bob', 0.14730576884535554, '']
+Select: ['date', [('date', 3.6961459955704035), ('go back into the phone booth', 0.06693292490377963), ('time', 0.06693292490377963), ('do nothing', 0.06546923059793579), ('repeat', 0.02946115376907111), ('look for others', 0.02946115376907111), ('wait around', 0.016367307649483947), ('wake up', 0.0), ('restart', 0.0)]]
+			0.65588933	0.7	0.14730576884535554		3.6961459955704035	0.06693292490377963
+User Select - date
+
+Google: ['Luke', 0.80791104, '']
+WitAPI: ['look', 0.7, '']
+Sphinx: ["you'll come", 0.23652289818429353, '']
+Select: ['look_for_others', [('look for others', 0.28823529411764703), ('wake up', 0.14842655894199994), ('date', 0.11826144909214677), ('go back into the phone booth', 0.10341933853147042), ('do nothing', 0.04979429435458811), ('repeat', 0.041176470588235294), ('wait around', 0.012448573588647028), ('time', 0.0), ('restart', 0.0)]]
+			0.80791104	0.7	0.23652289818429353		0.28823529411764703	0.14842655894199994
+User Select - look_for_others
+
+Google: ['il', 0.87155193, '']
+WitAPI: ['yeah', 0.7, '']
+Sphinx: ['you know', 0.3405736598269098, '']
+Select: ['date', [('date', 0.1702868299134549), ('restart', 0.0), ('wake up', 0.0), ('do not go anywhere', 0.0), ('repeat', 0.0), ('run toward the light', 0.0), ('run away from the light', 0.0), ('time', 0.0)]]
+			0.87155193	0.7	0.3405736598269098		0.1702868299134549	0.0
+User Select - date
+
+Google: ['stay Steel', 0.83701801, '']
+WitAPI: ['stay still', 0.7, '']
+Sphinx: ['face the man', 0.2684475199477634, '']
+Select: ['do_not_go_anywhere', [('do not go anywhere', 0.600215258453502), ('repeat', 0.35), ('run toward the light', 0.1844701633246272), ('wake up', 0.13972890999999998), ('run away from the light', 0.06367024511581568), ('date', 0.04474125332462723), ('time', 0.022370626662313615), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.83701801	0.7	0.2684475199477634		0.600215258453502	0.35
+User Select - do_not_go_anywhere
+
+Google: ["what's the weather like", 0.83287239, '']
+WitAPI: ['what is the night', 0.7, '']
+Sphinx: ["what though it's united", 0.1292956455387295, '']
+Select: ['date', [('date', 3.236320811616189), ('time', 1.4209341428591529), ('run away from the light', 0.7452807424999999), ('wake up', 0.175), ('do not go anywhere', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.83287239	0.7	0.1292956455387295		3.236320811616189	1.4209341428591529
+User Select - date
+
+Google: ['what colour is the light', 0.7307542, '']
+WitAPI: ['what colors tonight', 0.7, '']
+Sphinx: ['well solace in night', 0.20747178692352317, '']
+Select: ['date', [('date', 2.380840850897548), ('time', 1.0147323166666666), ('run away from the light', 0.2621721610259757), ('wake up', 0.1432122217308808), ('do not go anywhere', 0.10373589346176158), ('repeat', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.7307542	0.7	0.20747178692352317		2.380840850897548	1.0147323166666666
+User Select - date
+
+Google: ['workaway', 0.6948806, '']
+WitAPI: ['walk away', 0.7, '']
+Sphinx: ['walk away', 0.5392075469091755, '']
+Select: ['$Creator_Error', [['run_toward_thelight', 'run_away_from_the_light', 'do_not_go_anywhere'], ['run_toward_thelight', 'run_away_from_the_light', 'do_not_go_anywhere'], ['run_toward_thelight', 'run_away_from_the_light', 'do_not_go_anywhere']]]
+			0.6948806	0.7	0.5392075469091755		0	0
+User Select - $Creator_Error
+
+Google: ['walk to the light', 0.79985899, '']
+WitAPI: ['what to the light', 0.7, '']
+Sphinx: ["it's the what do they lighted", 0.12976934623885622, '']
+Select: ['date', [('date', 2.162764532437973), ('time', 1.3889819255124753), ('run away from the light', 0.2991817469835511), ('wake up', 0.20370354202985702), ('do not go anywhere', 0.08006609264950694), ('do nothing', 0.07415391213648927), ('restart', 0.0), ('repeat', 0.0)]]
+			0.79985899	0.7	0.12976934623885622		2.162764532437973	1.3889819255124753
+User Select - date
+
+Google: ['on the bank', 0.5869866, '']
+WitAPI: ['what is the band', 0.7, '']
+Sphinx: ['all the fun of them', 0.16138817288665133, '']
+Select: ['date', [('date', 1.8680047017010932), ('time', 1.3726774129983217), ('do not go anywhere', 0.32174665), ('do nothing', 0.32174665), ('run away from the light', 0.1859186310738876), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.5869866	0.7	0.16138817288665133		1.8680047017010932	1.3726774129983217
+User Select - date
+
+Google: ['walk away from the light', 0.94299012, '']
+WitAPI: ['and walk away from the light', 0.7, '']
+Sphinx: ['and walk away from the light', 0.32580658975055393, '']
+Select: ['run_away_from_the_light', [('run away from the light', 3.123284873612148), ('do not go anywhere', 0.8673719770229713), ('date', 0.45118257931783523), ('time', 0.343047911547445), ('wake up', 0.24609958871881923), ('repeat', 0.20516131795011078), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.94299012	0.7	0.32580658975055393		3.123284873612148	0.8673719770229713
+User Select - run_away_from_the_light
+
+Google: ['Datsun', 0.66068119, '']
+WitAPI: ["that's", 0.7, '']
+Sphinx: ['got to', 0.24735846982899456, '']
+Select: ['date', [('date', 0.19999999999999998), ('dig', 0.15), ('time', 0.15), ('feel surroundings', 0.12367923491449728), ('repeat', 0.049999999999999996), ('do nothing', 0.0), ('do not give up', 0.0), ('wake up', 0.0), ('restart', 0.0), ('sit in despair', 0.0), ('climb out', 0.0)]]
+			0.66068119	0.7	0.24735846982899456		0.19999999999999998	0.15
+User Select - date
+
+Google: ['vitamin C', 0.74137616, '']
+WitAPI: ['light a match thinking', 0.7, '']
+Sphinx: ["i commend he didn't and mope", 0.14870917766660982, '']
+Select: ['feel_surroundings', ['feel_surroundings']]
+			0.74137616	0.7	0.14870917766660982		0	0
+User Select - feel_surroundings
+
+Google: ['get up', 0.93090659, '']
+WitAPI: ['get up', 0.7, '']
+Sphinx: ['you gotta', 0.26884562780535365, '']
+Select: ['wake_up', [('wake up', 2.268554279323308), ('dig', 0.8583718894736841), ('do not give up', 0.6862333142786166), ('feel surroundings', 0.4077266475), ('sit in despair', 0.23298665571428567), ('date', 0.13442281390267682), ('time', 0.08583718894736841), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0), ('climb out', 0.0)]]
+			0.93090659	0.7	0.26884562780535365		2.268554279323308	0.8583718894736841
+User Select - wake_up
+
+Google: ['no', 0.95251751, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['oh mom out a', 0.18863546896001016, '']
+Select: ['quit', [('quit', 2.502355698620001), ('continue', 0.0), ('repeat', 0.0), ('date', 0.0), ('time', 0.0)]]
+			0.95251751	0.7	0.18863546896001016		2.502355698620001	0.0
+User Select - quit
+
+Google: ['yes', 0.94921929, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['that film yes', 0.1940474401996537, '']
+Select: ['continue', [('continue', 7.373066920798615), ('date', 0.05544212577132963), ('time', 0.04158159432849722), ('repeat', 0.013860531442832407), ('do nothing', 0.0), ('quit', 0.0)]]
+			0.94921929	0.7	0.1940474401996537		7.373066920798615	0.05544212577132963
+User Select - continue
+
+Google: ['the phone book', 0.61999243, '']
+WitAPI: ["the phone won't", 0.7, '']
+Sphinx: ['different', 0.4050654182789609, '']
+Select: ['leave_phone_booth', [('leave phone booth', 0.6638401851923077), ('stay in phone booth', 0.5049625601573426), ('date', 0.3010118219891255), ('time', 0.10999936916666667), ('wake up', 0.04769172538461539), ('repeat', 0.0), ('restart', 0.0)]]
+			0.61999243	0.7	0.4050654182789609		0.6638401851923077	0.5049625601573426
+User Select - leave_phone_booth
+
+Google: ['and look for others', 0.80037975, '']
+WitAPI: ['and for others', 0.7, '']
+Sphinx: ['a little rodents', 0.2354248635809841, '']
+Select: ['look_for_others', [('look for others', 2.649875453186275), ('repeat', 0.7472583784313725), ('wait around', 0.26679325), ('wake up', 0.14124348529411765), ('time', 0.10002531666666666), ('go back into the phone booth', 0.04708116176470588), ('restart', 0.0), ('date', 0.0), ('do nothing', 0.0)]]
+			0.80037975	0.7	0.2354248635809841		2.649875453186275	0.7472583784313725
+User Select - look_for_others
+
+Google: ['ran towards the light', 0.91420317, '']
+WitAPI: ['run towards the light', 0.7, '']
+Sphinx: ['and ongoing tonight', 0.10314205474899105, '']
+Select: ['run_toward_the_light', [('run toward the light', 3.747137623567677), ('run away from the light', 0.5488170383522727), ('date', 0.36992155979166663), ('time', 0.27099231891565767), ('wake up', 0.20177539625), ('repeat', 0.16737415367707092), ('do not go anywhere', 0.033333333333333326), ('restart', 0.0)]]
+			0.91420317	0.7	0.10314205474899105		3.747137623567677	0.5488170383522727
+User Select - run_toward_the_light
+
+Google: ['go through the first door', 0.80779523, '']
+WitAPI: ['go to that post door', 0.7, '']
+Sphinx: ["those who they're slow to go out on ah", 0.0930127421247665, '']
+Select: ['go_through_an_open_door', [('go through an open door', 3.3702730111326686), ('do nothing', 0.9147474126427236), ('date', 0.5232417098641098), ('go back', 0.311884766890518), ('time', 0.25607157838531935), ('look around', 0.1384791822857143), ('repeat', 0.049999999999999996), ('wake up', 0.02878965827671344), ('look back', 0.013287534589252355), ('restart', 0.0)]]
+			0.80779523	0.7	0.0930127421247665		3.3702730111326686	0.9147474126427236
+User Select - go_through_an_open_door
+
+Google: ['and the downloader', 0.91356927, '']
+WitAPI: ["i'm tired", 0.7, '']
+Sphinx: ['and then and', 0.2451512803137554, '']
+Select: ['try_another_door', [('try another door', 2.38875195634647), ('do nothing', 0.5220395828571428), ('break the door down', 0.38103706457843883), ('repeat', 0.27260265678171036), ('date', 0.23397863843791847), ('time', 0.09656004585947961), ('look back', 0.091356927), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0), ('go back', 0.0)]]
+			0.91356927	0.7	0.2451512803137554		2.38875195634647	0.5220395828571428
+User Select - try_another_door
+
+Google: ['nothing really decided to do nothing', 0.86944932, '']
+WitAPI: ['nothing barely decided to do nothing', 0.7, '']
+Sphinx: ['nothing any decided to do nothing', 0.16851839235694377, '']
+Select: ['do_nothing', [('do nothing', 4.85527487896543), ('try another door', 1.4719941766246514), ('break the door down', 0.7), ('date', 0.6638920761784718), ('time', 0.6638920761784718), ('wake up', 0.574491928089236), ('restart', 0.0), ('repeat', 0.0), ('go back', 0.0), ('look around', 0.0), ('look back', 0.0)]]
+			0.86944932	0.7	0.16851839235694377		4.85527487896543	1.4719941766246514
+User Select - do_nothing
+
+Google: ['go to oneplus store', 0.78501076, '']
+WitAPI: ['go to one close door', 0.7, '']
+Sphinx: ['good cool one go slower', 0.16952471172303457, '']
+Select: ['try_another_door', [('try another door', 1.5809625017466484), ('break the door down', 1.1136338679307587), ('do nothing', 0.49687126384173397), ('date', 0.2870575594020414), ('go back', 0.2068169339653793), ('time', 0.14917960342512185), ('repeat', 0.13787795597691954), ('wake up', 0.11171781596043351), ('look around', 0.0875), ('look back', 0.024217815960433507), ('restart', 0.0)]]
+			0.78501076	0.7	0.16952471172303457		1.5809625017466484	1.1136338679307587
+User Select - try_another_door
+
+Google: ['if you go away you can you send me the darkness ok record', 0.90788269, '']
+WitAPI: ["i'm going of you go away you knew something in got rid okay let go of it before you so that i can talk to", 0.7, '']
+Sphinx: ["off the few good way you've been you've been here in arkansas and i got fight for what thought how high on they don't all a family for you so when in father ah a smooth", 0.023491000952882868, '']
+Select: ['$Creator_Error', [['go_back', 'time'], ['try_another_door', 'go_back', 'date', 'do_nothing', 'time'], ['try_another_door', 'go_back', 'restart', 'date', 'do_nothing', 'time']]]
+			0.90788269	0.7	0.023491000952882868		0	0
+User Select - $Creator_Error
+
+Google: ['breakdown', 0.767479, '']
+WitAPI: ['black dog', 0.7, '']
+Sphinx: ['they have pagoda', 0.27449337705870686, '']
+Select: ['look_around', [('look around', 0.4666666666666666), ('do nothing', 0.39999999999999997), ('break the door down', 0.30220390948206804), ('time', 0.2898236654795299), ('go back', 0.10010595652173913), ('try another door', 0.04574889617645114), ('date', 0.04574889617645114), ('wake up', 0.03336865217391304), ('repeat', 0.0), ('look back', 0.0), ('restart', 0.0)]]
+			0.767479	0.7	0.27449337705870686		0.4666666666666666	0.39999999999999997
+User Select - look_around
+
+Google: ['big string', 0.66774124, '']
+WitAPI: ['speak stinger', 0.7, '']
+Sphinx: ['and fig thing that', 0.1716198842947067, '']
+Select: ['pull_string', [('pull string', 3.00483558), ('date', 1.267535431148048), ('go through an open door', 0.4878908139235233), ('repeat', 0.2799158733561823), ('time', 0.053937677921193534), ('restart', 0.0), ('go back', 0.0), ('look back', 0.0), ('wake up', 0.0), ('look around', 0.0), ('do nothing', 0.0)]]
+			0.66774124	0.7	0.1716198842947067		3.00483558	1.267535431148048
+User Select - pull_string
+
+Google: ['trespass', 0.6044426, '']
+WitAPI: ['kristin ice', 0.7, '']
+Sphinx: ['proof that', 0.29679688473719323, '']
+Select: ['go_through_an_open_door', [('go through an open door', 0.12874849781959902), ('date', 0.08479910992491235), ('time', 0.06359933244368426), ('repeat', 0.021199777481228088), ('do nothing', 0.0), ('look back', 0.0), ('wake up', 0.0), ('go back', 0.0), ('restart', 0.0), ('go up stairs', 0.0)]]
+			0.6044426	0.7	0.29679688473719323		0.12874849781959902	0.08479910992491235
+User Select - go_through_an_open_door
+
+Google: ['go to the States best days', 0.81844991, '']
+WitAPI: ['go to the dyson best that is in', 0.7, '']
+Sphinx: ['go through this thanks to essayist do', 0.11587011877914748, '']
+Select: ['date', [('date', 2.763222236102629), ('time', 1.548771132440888), ('break the door down', 0.561213418985222), ('try another door', 0.5086720016462838), ('go back', 0.2158770154753082), ('do nothing', 0.06621149644522713), ('repeat', 0.06053364716174067), ('look around', 0.01986344893356814), ('wake up', 0.0), ('look back', 0.0), ('restart', 0.0)]]
+			0.81844991	0.7	0.11587011877914748		2.763222236102629	1.548771132440888
+User Select - date
+
+Google: ['go upstairs', 0.93480253, '']
+WitAPI: ['go upstairs okay', 0.7, '']
+Sphinx: ['go upstairs and oh good', 0.152130689343223, '']
+Select: ['$Creator_Error', [['time', 'look_around'], ['time', 'look_around'], ['time', 'look_around', 'try_another_door']]]
+			0.93480253	0.7	0.152130689343223		0	0
+User Select - $Creator_Error
+
+Google: ['go after', 0.73045921, '']
+WitAPI: ['go up', 0.7, '']
+Sphinx: ['got good', 0.2656321301101871, '']
+Select: ['look_around', [('look around', 1.151877985), ('try another door', 0.9636187135849389), ('go back', 0.4724180183723592), ('wake up', 0.32727272727272727), ('look back', 0.19354047444444444), ('repeat', 0.09677023722222222), ('date', 0.017708808674012474), ('time', 0.017708808674012474), ('break the door down', 0.0), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.73045921	0.7	0.2656321301101871		1.151877985	0.9636187135849389
+User Select - look_around
+
+Google: ['pull string', 0.67436701, '']
+WitAPI: ['for staying', 0.7, '']
+Sphinx: ['for thirteen years', 0.2637877834141785, '']
+Select: ['pull_string', [('pull string', 4.188353012878788), ('date', 2.110302267313428), ('go through an open door', 0.3855151133656714), ('look back', 0.07492966777777778), ('go back', 0.07492966777777778), ('time', 0.06425251889427856), ('repeat', 0.06425251889427856), ('wake up', 0.06363636363636363), ('look around', 0.0), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.67436701	0.7	0.2637877834141785		4.188353012878788	2.110302267313428
+User Select - pull_string
+
+Google: ['go up the stairs go upstairs', 0.91107529, '']
+WitAPI: ['got this days go upstairs', 0.7, '']
+Sphinx: ['go ahead please thanks go upstairs', 0.14525375238976374, '']
+Select: ['go_up_stairs', [('go up stairs', 14.183967250523525), ('date', 1.9177056946624909), ('time', 1.4981463901927938), ('go through an open door', 0.9644161624339505), ('wake up', 0.8372801568085069), ('go back', 0.6301115557924314), ('repeat', 0.07977566945744849), ('look back', 0.03227861164216972), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.91107529	0.7	0.14525375238976374		14.183967250523525	1.9177056946624909
+User Select - go_up_stairs
+
+Google: ['going the pool', 0.77226847, '']
+WitAPI: ['going to pool', 0.7, '']
+Sphinx: ['going that fool you', 0.19645496061485754, '']
+Select: ['go_through_an_open_door', [('go through an open door', 1.0503193900720273), ('time', 0.38457376916280284), ('date', 0.2830688807211976), ('go back', 0.2085904288268572), ('repeat', 0.014032497186775537), ('wake up', 0.0), ('restart', 0.0), ('look back', 0.0), ('stay in room', 0.0)]]
+			0.77226847	0.7	0.19645496061485754		1.0503193900720273	0.38457376916280284
+User Select - go_through_an_open_door
+
+Google: ['go away', 0.97110075, '']
+WitAPI: ['go away', 0.7, '']
+Sphinx: ['go way', 0.382227851367556, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 1.6815077255128337), ('go back', 0.7124208251709445), ('time', 0.15191824999999998), ('wake up', 0.15191824999999998), ('repeat', 0.0), ('restart', 0.0), ('look back', 0.0), ('do nothing', 0.0), ('date', 0.0)]]
+			0.97110075	0.7	0.382227851367556		1.6815077255128337	0.7124208251709445
+User Select - go_back_into_the_phone_booth
+
+Google: ['anyway no', 0.72416276, '']
+WitAPI: ['and what no', 0.7, '']
+Sphinx: ['the u. up the no', 0.2056225397556517, '']
+Select: ['quit', [('quit', 2.444677949633477), ('date', 1.0963518032926085), ('time', 0.8458832583129708), ('repeat', 0.50208138), ('continue', 0.0)]]
+			0.72416276	0.7	0.2056225397556517		2.444677949633477	1.0963518032926085
+User Select - quit
+
+
+
+
+
+
+
+
+
+Sam White:
+Google: ['Bailey said yes', 0.92913491, '']
+WitAPI: ['finally said yes', 0.7, '']
+Sphinx: ['bailey said yes', 0.35664896138382596, '']
+Select: ['continue', [('continue', 3.9715677427676517), ('time', 0.1654819892819855), ('repeat', 0.1654819892819855), ('do nothing', 0.0), ('quit', 0.0), ('date', 0.0)]]
+			0.92913491	0.7	0.35664896138382596		3.9715677427676517	0.1654819892819855
+User Select - continue
+
+Google: ['go outside', 0.92367673, '']
+WitAPI: ['go outside', 0.7, '']
+Sphinx: ['good said', 0.3242419365884639, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.640639262858015), ('date', 1.3733290627034456), ('wake up', 0.2706127883333333), ('stay in phone booth', 0.22322471228677898), ('time', 0.047285282419150976), ('repeat', 0.02702016138237199), ('restart', 0.0)]]
+			0.92367673	0.7	0.3242419365884639		4.640639262858015	1.3733290627034456
+User Select - leave_phone_booth
+
+Google: ["don't look for them", 0.96098411, '']
+WitAPI: ["don't look for them", 0.7, '']
+Sphinx: ["don't look for them", 0.2706247820093395, '']
+Select: ['$Creator_Error', [['wait_around', 'do_nothing', 'look_for_others'], ['wait_around', 'do_nothing', 'look_for_others'], ['wait_around', 'do_nothing', 'look_for_others']]]
+			0.96098411	0.7	0.2706247820093395		0	0
+User Select - $Creator_Error
+
+Google: ['run', 0.92720795, '']
+WitAPI: ['run for', 0.7, '']
+Sphinx: ['brian that if', 0.2896464735592021, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 0.2315542801213381), ('look for others', 0.20747277504887432), ('time', 0.17534413311763752), ('do nothing', 0.14149634347826084), ('repeat', 0.06597643157061348), ('date', 0.03861952980789361), ('restart', 0.0), ('wake up', 0.0), ('wait around', 0.0)]]
+			0.92720795	0.7	0.2896464735592021		0.2315542801213381	0.20747277504887432
+User Select - go_back_into_the_phone_booth
+
+Google: ['yeah boy yes', 0.77765292, '']
+WitAPI: ['your boy ad if yes', 0.7, '']
+Sphinx: ['the employee the a a a a yes', 0.26054585569458394, '']
+Select: ['continue', [('continue', 5.420529851389167), ('date', 0.39008397779916676), ('time', 0.060125966698750144), ('quit', 0.0), ('repeat', 0.0)]]
+			0.77765292	0.7	0.26054585569458394		5.420529851389167	0.39008397779916676
+User Select - continue
+
+Google: ['run', 0.95457906, '']
+WitAPI: ['run', 0.7, '']
+Sphinx: ['rowland', 0.3283576102541895, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 0.9351968599999999), ('leave phone booth', 0.79132042), ('time', 0.07193822), ('restart', 0.0), ('date', 0.0), ('wake up', 0.0), ('repeat', 0.0)]]
+			0.95457906	0.7	0.3283576102541895		0.9351968599999999	0.79132042
+User Select - stay_in_phone_booth
+
+Google: ['yes no', 0.83085442, '']
+WitAPI: ['yes for', 0.7, '']
+Sphinx: ['yes so for', 0.34847081900931853, '']
+Select: ['continue', [('continue', 3.828548532619258), ('quit', 0.5684107066006211), ('repeat', 0.06989805460062123), ('time', 0.06989805460062123), ('date', 0.0)]]
+			0.83085442	0.7	0.34847081900931853		3.828548532619258	0.5684107066006211
+User Select - continue
+
+Google: ['leave the phone Booth', 0.9055174, '']
+WitAPI: ['leave the phone numbers', 0.7, '']
+Sphinx: ['leave the phone booth', 0.2506028708461613, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.555128389003746), ('stay in phone booth', 3.025773943102591), ('time', 0.4283354471183449), ('date', 0.2855569647455633), ('restart', 0.2506028708461613), ('wake up', 0.2506028708461613), ('repeat', 0.0)]]
+			0.9055174	0.7	0.2506028708461613		4.555128389003746	3.025773943102591
+User Select - leave_phone_booth
+
+Google: ['keep going', 0.97110075, '']
+WitAPI: ['keep going', 0.7, '']
+Sphinx: ['keep going', 0.2555513857741019, '']
+Select: ['do_nothing', [('do nothing', 0.856289838121823), ('go back into the phone booth', 0.7224945509152882), ('time', 0.32110868929568365), ('restart', 0.2964080208883234), ('wait around', 0.21407245953045576), ('date', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('look for others', 0.0)]]
+			0.97110075	0.7	0.2555513857741019		0.856289838121823	0.7224945509152882
+User Select - do_nothing
+
+Google: ['look for people', 0.94236779, '']
+WitAPI: ['look for people', 0.7, '']
+Sphinx: ['but for people', 0.2543824239259798, '']
+Select: ['look_for_others', [('look for others', 1.660243345536872), ('wait around', 0.492710337), ('do nothing', 0.328473558), ('wake up', 0.28982961), ('repeat', 0.22305988426173198), ('time', 0.12645001426173197), ('go back into the phone booth', 0.09660987), ('date', 0.0), ('restart', 0.0)]]
+			0.94236779	0.7	0.2543824239259798		1.660243345536872	0.492710337
+User Select - look_for_others
+
+Google: ['walk towards the light', 0.94332778, '']
+WitAPI: ['wall to wall street like', 0.7, '']
+Sphinx: ["won't fool the like", 0.24815297584824797, '']
+Select: ['run_toward_the_light', [('run toward the light', 2.5693480097429706), ('do not go anywhere', 0.817682398266115), ('run away from the light', 0.4443815234993652), ('time', 0.2749570975034419), ('date', 0.24226271791896123), ('wake up', 0.1179159725), ('repeat', 0.0857570709090909), ('restart', 0.0)]]
+			0.94332778	0.7	0.24815297584824797		2.5693480097429706	0.817682398266115
+User Select - run_toward_the_light
+
+Google: ['go back', 0.97110075, '']
+WitAPI: ['go back', 0.7, '']
+Sphinx: ["don't that", 0.29304561350920666, '']
+Select: ['go_back', [('go back', 1.1411859069078947), ('go through an open door', 0.5909757593231573), ('look back', 0.3430154171052632), ('do nothing', 0.2325758837374656), ('repeat', 0.10748904528657868), ('look around', 0.08795267105263158), ('time', 0.058609122701841335), ('date', 0.03907274846789422), ('restart', 0.0), ('wake up', 0.0)]]
+			0.97110075	0.7	0.29304561350920666		1.1411859069078947	0.5909757593231573
+User Select - go_back
+
+Google: ['check the floor', 0.94293857, '']
+WitAPI: ["what's the check for flow", 0.7, '']
+Sphinx: ['if check this loan', 0.22662579076855066, '']
+Select: ['dig', [('dig', 1.0876383755309817), ('time', 0.6574627843588043), ('date', 0.6405307451280917), ('feel surroundings', 0.5736674911170703), ('wake up', 0.1335403114834679), ('repeat', 0.06555214923071255), ('sit in despair', 0.04666666666666666), ('restart', 0.0), ('do not give up', 0.0), ('climb out', 0.0), ('do nothing', 0.0)]]
+			0.94293857	0.7	0.22662579076855066		1.0876383755309817	0.6574627843588043
+User Select - dig
+
+Google: ['gig at the loose Rock', 0.71932876, '']
+WitAPI: ['to get to loose rock', 0.7, '']
+Sphinx: ["they didn't lose rock", 0.30567488054202796, '']
+Select: ['examine_rock', [('examine rock', 6.195929522580382), ('time', 1.4466687675590688), ('do not give up', 0.43761583752937233), ('feel surroundings', 0.4288464338878483), ('date', 0.15769286777569663), ('do nothing', 0.12906272733996735), ('wake up', 0.07368421052631578), ('sit in despair', 0.0611349761084056), ('restart', 0.0), ('climb out', 0.0), ('repeat', 0.0)]]
+			0.71932876	0.7	0.30567488054202796		6.195929522580382	1.4466687675590688
+User Select - examine_rock
+
+Google: ['pray out the rock', 0.90468884, '']
+WitAPI: ['try out the role', 0.7, '']
+Sphinx: ['try out the rope', 0.2194393909289393, '']
+Select: ['pry_rock', [('pry rock', 2.682674768675909), ('time', 1.4764229820092427), ('feel surroundings', 0.7182508876663505), ('date', 0.2806351124506061), ('climb out', 0.22801602886611744), ('sit in despair', 0.22801602886611744), ('do not give up', 0.0), ('repeat', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+			0.90468884	0.7	0.2194393909289393		2.682674768675909	1.4764229820092427
+User Select - pry_rock
+
+Google: ['call out to The Voice', 0.96378362, '']
+WitAPI: ['cool out to the voice', 0.7, '']
+Sphinx: ['pull out of employees', 0.27168823251053503, '']
+Select: ['reply', [('reply', 3.1698342127801187), ('feel surroundings', 0.8857379638461538), ('repeat', 0.41884168714285713), ('time', 0.36806352296703293), ('sit in despair', 0.3419339815638168), ('wake up', 0.27536674857142857), ('climb out', 0.24193398156381685), ('date', 0.17653399483516485), ('do not give up', 0.13018758139005943), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.96378362	0.7	0.27168823251053503		3.1698342127801187	0.8857379638461538
+User Select - reply
+
+Google: ['yep', 0.70282865, '']
+WitAPI: ['yup', 0.7, '']
+Sphinx: ['the outcome', 0.33958906968004693, '']
+Select: ['continue', [('continue', 2.10282865), ('time', 0.07836670838770314), ('date', 0.05224447225846876), ('quit', 0.042448633710005866), ('repeat', 0.0)]]
+			0.70282865	0.7	0.33958906968004693		2.10282865	0.07836670838770314
+User Select - continue
+
+Google: ['leave the phone Booth', 0.82146513, '']
+WitAPI: ['the phone booth', 0.7, '']
+Sphinx: ['we have phone booth', 0.17489213262135986, '']
+Select: ['leave_phone_booth', [('leave phone booth', 5.175710207932649), ('stay in phone booth', 4.234769232111653), ('restart', 0.8748921326213598), ('wake up', 0.8748921326213598), ('time', 0.35110733769230773), ('date', 0.23407155846153846), ('repeat', 0.0)]]
+			0.82146513	0.7	0.17489213262135986		5.175710207932649	4.234769232111653
+User Select - leave_phone_booth
+
+Google: ["don't do anything", 0.97110075, '']
+WitAPI: ["don't do anything", 0.7, '']
+Sphinx: ['then do anything', 0.24807810709297448, '']
+Select: ['wait_around', [('wait around', 4.050125876360225), ('do nothing', 1.4680293548467789), ('go back into the phone booth', 0.8546333063148441), ('date', 0.0795122138118508), ('time', 0.057248793944532576), ('repeat', 0.041346351182162414), ('restart', 0.0), ('look for others', 0.0), ('wake up', 0.0)]]
+			0.97110075	0.7	0.24807810709297448		4.050125876360225	1.4680293548467789
+User Select - wait_around
+
+Google: ["now don't do anything again", 0.86589682, '']
+WitAPI: ["nah don't do anything again", 0.7, '']
+Sphinx: ['that could do anything again', 0.21875758602814419, '']
+Select: ['wait_around', [('wait around', 3.8877274935162918), ('do nothing', 1.9941383168414792), ('repeat', 1.799238245096687), ('time', 1.0178854397056287), ('go back into the phone booth', 0.7975322490685429), ('date', 0.1374047806370859), ('look for others', 0.12282094156854295), ('wake up', 0.0), ('restart', 0.0)]]
+			0.86589682	0.7	0.21875758602814419		3.8877274935162918	1.9941383168414792
+User Select - wait_around
+
+Google: ['look for people', 0.94237107, '']
+WitAPI: ['look for people', 0.7, '']
+Sphinx: ['look for the poor', 0.19841039869317698, '']
+Select: ['look_for_others', [('look for others', 1.801078338976265), ('wait around', 0.552234440607953), ('do nothing', 0.3681562937386354), ('wake up', 0.3248437885929136), ('repeat', 0.23100002744384965), ('time', 0.16850577966258595), ('go back into the phone booth', 0.12354360122531814), ('date', 0.03052467672202723), ('restart', 0.0)]]
+			0.94237107	0.7	0.19841039869317698		1.801078338976265	0.552234440607953
+User Select - look_for_others
+
+Google: ["don't run towards the light", 0.95511264, '']
+WitAPI: ["don't run towards the light", 0.7, '']
+Sphinx: ["don't run towards the light", 0.3412298596221786, '']
+Select: ['run_toward_the_light', [('run toward the light', 4.635990537802676), ('run away from the light', 0.89380939559133), ('do not go anywhere', 0.8156209522265906), ('time', 0.5474919229733066), ('date', 0.4319010215528752), ('wake up', 0.24954281245277232), ('repeat', 0.18148568178383442), ('restart', 0.0)]]
+			0.95511264	0.7	0.3412298596221786		4.635990537802676	0.89380939559133
+User Select - run_toward_the_light
+
+Google: ['big left', 0.7591489, '']
+WitAPI: ['set left', 0.7, '']
+Sphinx: ['the left', 0.401393160714824, '']
+Select: ['go_through_an_open_door', [('go through an open door', 0.2012833656900313), ('restart', 0.15555555555555553), ('time', 0.09262919093419016), ('date', 0.061752793956126775), ('do nothing', 0.0), ('repeat', 0.0), ('look around', 0.0), ('look back', 0.0), ('wake up', 0.0), ('go back', 0.0)]]
+			0.7591489	0.7	0.401393160714824		0.2012833656900313	0.15555555555555553
+User Select - go_through_an_open_door
+
+Google: ['who should the door with the biggest boobs', 0.85934275, '']
+WitAPI: ['curse of the door with the biggest boobs', 0.7, '']
+Sphinx: ["they're too that door with the biggest wounds", 0.09513350591944557, '']
+Select: ['try_another_door', [('try another door', 3.7967686220204016), ('break the door down', 2.3131079950078224), ('do nothing', 0.9454150033825404), ('time', 0.6586317390883766), ('date', 0.4390878260589178), ('repeat', 0.10147573964740861), ('look back', 0.0), ('go back', 0.0), ('restart', 0.0), ('look around', 0.0), ('wake up', 0.0)]]
+			0.85934275	0.7	0.09513350591944557		3.7967686220204016	2.3131079950078224
+User Select - try_another_door
+
+Google: ['give up and take a nap', 0.96077138, '']
+WitAPI: ['give up and taking up', 0.7, '']
+Sphinx: ['give up and taken up', 0.11639616160500141, '']
+Select: ['try_another_door', [('try another door', 2.905121877208613), ('go back', 2.287643805878742), ('wake up', 0.7299080974449114), ('repeat', 0.46650647967131287), ('look back', 0.11107297135031258), ('do nothing', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('look around', 0.0), ('break the door down', 0.0)]]
+			0.96077138	0.7	0.11639616160500141		2.905121877208613	2.287643805878742
+User Select - try_another_door
+
+Google: ['look around the room', 0.97110069, '']
+WitAPI: ['look around the room', 0.7, '']
+Sphinx: ["it's blood for rounds the roof", 0.36607965109990626, '']
+Select: ['try_another_door', [('try another door', 3.6274513438889127), ('look around', 2.28843504873895), ('date', 1.0455716623690288), ('break the door down', 0.961618743195001), ('look back', 0.8650403571764707), ('time', 0.4945238503271516), ('wake up', 0.2949001217647059), ('repeat', 0.12270535066156238), ('do nothing', 0.0), ('go back', 0.0), ('restart', 0.0)]]
+			0.97110069	0.7	0.36607965109990626		3.6274513438889127	2.28843504873895
+User Select - try_another_door
+
+Google: ['look around the room', 0.97110069, '']
+WitAPI: ['look around the room', 0.7, '']
+Sphinx: ['look around the room', 0.2909826470601473, '']
+Select: ['try_another_door', [('try another door', 3.9064102638301574), ('look around', 2.643929492201411), ('break the door down', 1.0298717968279505), ('look back', 1.015666668595841), ('time', 0.4527884623984956), ('wake up', 0.3462500006576731), ('date', 0.3018589749323304), ('repeat', 0.11541666688589103), ('do nothing', 0.0), ('go back', 0.0), ('restart', 0.0)]]
+			0.97110069	0.7	0.2909826470601473		3.9064102638301574	2.643929492201411
+User Select - try_another_door
+
+Google: ['run back to the phone booth with great enthusiasm', 0.92105228, '']
+WitAPI: ['run back to the phone booth with great enthusiasm', 0.7, '']
+Sphinx: ['run back to the phone booth with great enthusiasm', 0.14450525753319066, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 5.523388723078442), ('restart', 3.531115075066381), ('wake up', 1.7655575375331904), ('repeat', 0.9757028496893947), ('go back', 0.5090623563596841), ('time', 0.484199726012447), ('date', 0.2716242365435678), ('look back', 0.185848161845599), ('do nothing', 0.15352674239419048)]]
+			0.92105228	0.7	0.14450525753319066		5.523388723078442	3.531115075066381
+User Select - go_back_into_the_phone_booth
+
+Google: ['Livin do it again do the same', 0.83556134, '']
+WitAPI: ['hey bitch through the same', 0.7, '']
+Sphinx: ['the fun you have a gang to saying', 0.12329916299560316, '']
+Select: ['date', [('date', 2.9213149029843044), ('repeat', 0.886935991248168), ('quit', 0.8766610609985345), ('time', 0.38281396222975456), ('continue', 0.020549860499267193)]]
+			0.83556134	0.7	0.12329916299560316		2.9213149029843044	0.886935991248168
+User Select - date
+
+Google: ['order me some pizza', 0.97110069, '']
+WitAPI: ['what movies and pizza', 0.7, '']
+Sphinx: ['it it up the polls one amazing piece of', 0.10008939742624613, '']
+Select: ['date', [('date', 0.4808861350958603), ('repeat', 0.42515652441740354), ('quit', 0.27745734), ('continue', 0.10008939742624613), ('time', 0.046195106504421296), ('wake up', 0.02859697069321318), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.97110069	0.7	0.10008939742624613		0.4808861350958603	0.42515652441740354
+User Select - date
+
+Google: ['continue', 0.9629153, '']
+WitAPI: ['and continue', 0.7, '']
+Sphinx: ["it didn't continue", 0.36929751137829875, '']
+Select: ['continue', [('continue', 1.0161064056891493), ('date', 0.36929751137829875), ('restart', 0.3387021352297165), ('do nothing', 0.1559256159152817), ('repeat', 0.13999999999999999), ('quit', 0.036929751137829876), ('wake up', 0.0), ('time', 0.0)]]
+			0.9629153	0.7	0.36929751137829875		1.0161064056891493	0.36929751137829875
+User Select - continue
+
+Google: ["what's the time Mr Wolf", 0.96394426, '']
+WitAPI: ["what's the time mr wolf", 0.7, '']
+Sphinx: ["what's the time mr wolf", 0.26053995880277486, '']
+Select: ['time', [('time', 7.6171892856109835), ('date', 2.4829883802035795), ('leave phone booth', 0.7940179644011448), ('repeat', 0.3499062216005045), ('restart', 0.3499062216005045), ('wake up', 0.17495311080025225), ('stay in phone booth', 0.0)]]
+			0.96394426	0.7	0.26053995880277486		7.6171892856109835	2.4829883802035795
+User Select - time
+
+Google: ['the time', 0.96771145, '']
+WitAPI: ['taking the time', 0.7, '']
+Sphinx: ["he can't vote time", 0.16661831123328683, '']
+Select: ['time', [('time', 6.722048846631202), ('date', 1.4238717494561475), ('leave phone booth', 0.7183709905039543), ('restart', 0.33351450204241584), ('repeat', 0.33351450204241584), ('wake up', 0.16675725102120792), ('stay in phone booth', 0.0), ('do nothing', 0.0)]]
+			0.96771145	0.7	0.16661831123328683		6.722048846631202	1.4238717494561475
+User Select - time
+
+Google: ['tell me a joke', 0.97110069, '']
+WitAPI: ['tell me a joke', 0.7, '']
+Sphinx: ['it only adjourned', 0.26200464617158054, '']
+Select: ['repeat', ['repeat']]
+			0.97110069	0.7	0.26200464617158054		0	0
+User Select - repeat
+
+Google: ['pizza phone Booth', 0.80913663, '']
+WitAPI: ['is a fungus', 0.7, '']
+Sphinx: ['the u. sleuth', 0.18234135436235063, '']
+Select: ['$User_Error', []]
+			0.80913663	0.7	0.18234135436235063		0	0
+User Select - $User_Error
+
+Google: ["South Devon league one of the Odeon this one goes I don't care what's the time Spread Your Love and your ass cheeks do the boat", 0.84110159, '']
+WitAPI: ["is the money for them to do this when i go to mama's okay and what's the time spread your love and your ass cheeks do the same", 0.7, '']
+Sphinx: ['could a the the one for the if fit but then the flood of your view of this warrant huh after loans and the air with dying spread your love and eurest cheap student of', 0.03127180201411041, '']
+Select: ['$User_Error', []]
+			0.84110159	0.7	0.03127180201411041		0	0
+User Select - $User_Error
+
+Google: ['leave', 0.93450809, '']
+WitAPI: ['leave', 0.7, '']
+Sphinx: ['but believe that', 0.25117701359407457, '']
+Select: ['leave_phone_booth', [('leave phone booth', 1.107858284483521), ('time', 0.050235402718814916), ('stay in phone booth', 0.03588243051343922), ('date', 0.03349026847920994), ('repeat', 0.01674513423960497), ('wake up', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.93450809	0.7	0.25117701359407457		1.107858284483521	0.050235402718814916
+User Select - leave_phone_booth
+
+Google: ['eat your own feet', 0.95129168, '']
+WitAPI: ['eat your own feet', 0.7, '']
+Sphinx: ['the jurors seemed', 0.27345011212796144, '']
+Select: ['look_for_others', ['look_for_others']]
+			0.95129168	0.7	0.27345011212796144		0	0
+User Select - look_for_others
+
+Google: ["no you're a piece of s***", 0.94325382, '']
+WitAPI: ['new piece of shit', 0.7, '']
+Sphinx: ['good to a piece of shit', 0.23524445066224867, '']
+Select: ['quit', [('quit', 1.015357848332781), ('date', 0.48632968816639055), ('do nothing', 0.37730152800000005), ('time', 0.2947027781663905), ('continue', 0.11762222533112433), ('repeat', 0.0)]]
+			0.94325382	0.7	0.23524445066224867		1.015357848332781	0.48632968816639055
+User Select - quit
+
+Google: ['suck my dick', 0.83263737, '']
+WitAPI: ['so much do', 0.7, '']
+Sphinx: ['so what do you you', 0.2985673775898031, '']
+Select: ['continue', [('continue', 1.75), ('do nothing', 0.570609930051316), ('date', 0.2985673775898031), ('quit', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+			0.83263737	0.7	0.2985673775898031		1.75	0.570609930051316
+User Select - continue
+
+Google: ['go outside', 0.97110075, '']
+WitAPI: ['go outside', 0.7, '']
+Sphinx: ['the asides', 0.33492560488765916, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.603188388788177), ('date', 1.4441109744698961), ('stay in phone booth', 0.2926189949719148), ('wake up', 0.27851679166666665), ('time', 0.07729052420484442), ('repeat', 0.0), ('restart', 0.0)]]
+			0.97110075	0.7	0.33492560488765916		4.603188388788177	1.4441109744698961
+User Select - leave_phone_booth
+
+Google: ['shout', 0.93318355, '']
+WitAPI: ['shout', 0.7, '']
+Sphinx: ['shouted', 0.2343465179068048, '']
+Select: ['look_for_others', [('look for others', 0.6225100226356015), ('wake up', 0.20750334087853384), ('repeat', 0.20750334087853384), ('wait around', 0.0), ('time', 0.0), ('date', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('go back into the phone booth', 0.0)]]
+			0.93318355	0.7	0.2343465179068048		0.6225100226356015	0.20750334087853384
+User Select - look_for_others
+
+Google: ['do nothing', 0.97110075, '']
+WitAPI: ['do not send', 0.7, '']
+Sphinx: ['you know said', 0.29760254125087315, '']
+Select: ['do_not_go_anywhere', [('do not go anywhere', 1.7183525945436506), ('date', 0.14880127062543658), ('time', 0.024800211770906095), ('repeat', 0.024800211770906095), ('wake up', 0.0), ('run toward the light', 0.0), ('restart', 0.0), ('run away from the light', 0.0)]]
+			0.97110075	0.7	0.29760254125087315		1.7183525945436506	0.14880127062543658
+User Select - do_not_go_anywhere
+
+Google: ['Rhonda Ward StarLite', 0.75006622, '']
+WitAPI: ['run towards the light', 0.7, '']
+Sphinx: ['rises towards the right', 0.1680877803370409, '']
+Select: ['run_away_from_the_light', [('run away from the light', 0.36029338712350756), ('time', 0.23076273191724359), ('date', 0.1773019662056986), ('wake up', 0.16220568014979594), ('repeat', 0.13494633105207793), ('do not go anywhere', 0.03043478260869565), ('restart', 0.0)]]
+			0.75006622	0.7	0.1680877803370409		0.36029338712350756	0.23076273191724359
+User Select - run_away_from_the_light
+
+Google: ['look around', 0.93078309, '']
+WitAPI: ['look around', 0.7, '']
+Sphinx: ['look around', 0.5450024330932065, '']
+Select: ['dig', [('dig', 0.9864873729137525), ('feel surroundings', 0.8073050357178414), ('sit in despair', 0.5513302682951111), ('wake up', 0.38396215113409526), ('repeat', 0.1279873837113651), ('restart', 0.0), ('do not give up', 0.0), ('climb out', 0.0), ('date', 0.0), ('do nothing', 0.0), ('time', 0.0)]]
+			0.93078309	0.7	0.5450024330932065		0.9864873729137525	0.8073050357178414
+User Select - dig
+
+Google: ['your surroundings feel surroundings', 0.88820332, '']
+WitAPI: ['your surroundings feel surrounding', 0.7, '']
+Sphinx: ['if lemons feels surroundings', 0.2768967198278689, '']
+Select: ['feel_surroundings', [('feel surroundings', 10.773233531087707), ('date', 2.3029252617945355), ('do not give up', 1.7266516799139344), ('examine rock', 0.8703800185863388), ('sit in despair', 0.4662750099569672), ('time', 0.3730200079655738), ('do nothing', 0.0), ('climb out', 0.0), ('repeat', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+			0.88820332	0.7	0.2768967198278689		10.773233531087707	2.3029252617945355
+User Select - feel_surroundings
+
+Google: ['climb like a mother f*****', 0.84592974, '']
+WitAPI: ['climb like a mother fucker', 0.7, '']
+Sphinx: ['limelight and model for ca', 0.12810428681663177, '']
+Select: ['dig', [('dig', 2.2938739150206113), ('climb out', 1.932412175), ('sit in despair', 1.080366918618623), ('date', 0.6405214340831589), ('do not give up', 0.386482435), ('time', 0.1366445726044072), ('repeat', 0.0341611431511018), ('feel surroundings', 0.00854028578777545), ('restart', 0.0), ('wake up', 0.0), ('do nothing', 0.0)]]
+			0.84592974	0.7	0.12810428681663177		2.2938739150206113	1.932412175
+User Select - dig
+
+Google: ['climb the wall', 0.93561482, '']
+WitAPI: ['climb the war', 0.7, '']
+Sphinx: ['climb the war', 0.29157964655614416, '']
+Select: ['climb_out', [('climb out', 2.4089930831951802), ('time', 0.44473718458987943), ('pry rock', 0.44473718458987943), ('date', 0.296491456393253), ('feel surroundings', 0.1482457281966265), ('restart', 0.0), ('sit in despair', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('do not give up', 0.0), ('do nothing', 0.0)]]
+			0.93561482	0.7	0.29157964655614416		2.4089930831951802	0.44473718458987943
+User Select - climb_out
+
+Google: ['towards the line', 0.88777035, '']
+WitAPI: ['walls nine', 0.7, '']
+Sphinx: ['goldstone learn', 0.17955273366798716, '']
+Select: ['time', [('time', 0.2048700807692308), ('run away from the light', 0.1714405140861208), ('date', 0.13658005384615385), ('repeat', 0.08070639545454546), ('do not go anywhere', 0.022444091708498395), ('wake up', 0.0), ('restart', 0.0)]]
+			0.88777035	0.7	0.17955273366798716		0.2048700807692308	0.1714405140861208
+User Select - time
+
+Google: ['walk towards the light', 0.946208, '']
+WitAPI: ['walk towards the light', 0.7, '']
+Sphinx: ["we're told the light", 0.1439721084346635, '']
+Select: ['run_away_from_the_light', [('run away from the light', 0.5258790763071057), ('time', 0.41311848656184547), ('date', 0.3872985811517301), ('wake up', 0.22377251355433295), ('repeat', 0.14965527272727275), ('do not go anywhere', 0.12663138461538465), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.946208	0.7	0.1439721084346635		0.5258790763071057	0.41311848656184547
+User Select - run_away_from_the_light
+
+Google: ["don't give up", 0.97110075, '']
+WitAPI: ["don't give", 0.7, '']
+Sphinx: ["don't give up", 0.18387333872531483, '']
+Select: ['do_not_give_up', [('do not give up', 2.4766864992458903), ('do nothing', 1.4722016577185035), ('sit in despair', 1.3837231633226472), ('wake up', 0.4743643578693257), ('repeat', 0.11593588054533217), ('dig', 0.0), ('feel surroundings', 0.0), ('date', 0.0), ('restart', 0.0), ('time', 0.0), ('climb out', 0.0)]]
+			0.97110075	0.7	0.18387333872531483		2.4766864992458903	1.4722016577185035
+User Select - do_not_give_up
+
+Google: ['drive to Poole', 0.51371467, '']
+WitAPI: ['on a cool cool', 0.7, '']
+Sphinx: ['globe hey hey', 0.10151575206070071, '']
+Select: ['$Creator_Error', [['sit_in_despair', 'dig'], [], []]]
+			0.51371467	0.7	0.10151575206070071		0	0
+User Select - $Creator_Error
+
+Google: ["it'll be a to take so many times", 0.74553949, '']
+WitAPI: ['if we have to take some times they', 0.7, '']
+Sphinx: ['the soviets think sometimes that', 0.16500266549508108, '']
+Select: ['date', [('date', 1.8331984576464604), ('feel surroundings', 1.5273859497677171), ('time', 1.32199551829255), ('do not give up', 0.7), ('sit in despair', 0.4818464966666666), ('repeat', 0.27382553951785393), ('restart', 0.26282536181818184), ('wake up', 0.13141268090909092), ('dig', 0.11223171240595177), ('do nothing', 0.0), ('climb out', 0.0)]]
+			0.74553949	0.7	0.16500266549508108		1.8331984576464604	1.5273859497677171
+User Select - date
+
+Google: ['climb', 0.84871083, '']
+WitAPI: ['climb', 0.7, '']
+Sphinx: ['the clonidine the', 0.21492049251021306, '']
+Select: ['climb_out', [('climb out', 1.9358885375000001), ('time', 0.04959703673312609), ('date', 0.033064691155417394), ('feel surroundings', 0.016532345577708697), ('dig', 0.016532345577708697), ('wake up', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0), ('sit in despair', 0.0), ('do not give up', 0.0)]]
+			0.84871083	0.7	0.21492049251021306		1.9358885375000001	0.04959703673312609
+User Select - climb_out
+
+Google: ['walk towards the light', 0.95527554, '']
+WitAPI: ['walk two wards the light', 0.7, '']
+Sphinx: ['want to hold the light', 0.16989123897679467, '']
+Select: ['run_away_from_the_light', [('run away from the light', 1.8890294355013404), ('time', 0.4415792822872449), ('date', 0.4016634623184745), ('wake up', 0.2349414969311711), ('do not go anywhere', 0.15451148592859487), ('repeat', 0.09363888046816271), ('restart', 0.013591299118143574)]]
+			0.95527554	0.7	0.16989123897679467		1.8890294355013404	0.4415792822872449
+User Select - run_away_from_the_light
+
+Google: ['give up and die', 0.95856363, '']
+WitAPI: ['give up and die', 0.7, '']
+Sphinx: ['give up and die', 0.23091722344535273, '']
+Select: ['sit_in_despair', [('sit in despair', 1.6870364762904932), ('do not give up', 1.248406992454965), ('wake up', 0.776036779093627), ('repeat', 0.4959887240294051), ('dig', 0.37789617068907055), ('time', 0.0), ('feel surroundings', 0.0), ('date', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('climb out', 0.0)]]
+			0.95856363	0.7	0.23091722344535273		1.6870364762904932	1.248406992454965
+User Select - sit_in_despair
+
+Google: ["it's gonna say that you can also die", 0.84524703, '']
+WitAPI: ['was gonna say lol you can also does iphone', 0.7, '']
+Sphinx: ['to the said if the fifth if it brought it off their children die stones', 0.06621237930861462, '']
+Select: ['date', [('date', 2.685322267856555), ('repeat', 0.7057204294423847), ('continue', 0.5519703181176238), ('time', 0.18984688411616743), ('quit', 0.009458911329802089)]]
+			0.84524703	0.7	0.06621237930861462		2.685322267856555	0.7057204294423847
+User Select - date
+
+Google: ['f*** off', 0.97110075, '']
+WitAPI: ['fuck off', 0.7, '']
+Sphinx: ['it that golf', 0.2315791889671092, '']
+Select: ['quit', [('quit', 1.1720620119047618), ('date', 0.26245641416272375), ('time', 0.04631583779342184), ('continue', 0.02894739862088865), ('repeat', 0.015438612597807279), ('do nothing', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+			0.97110075	0.7	0.2315791889671092		1.1720620119047618	0.26245641416272375
+User Select - quit
+
+
+
+
+
+
+
+
+
+Stergios:
+Google: ['do I save big leaders have to say yes yes', 0.73929125, '']
+WitAPI: ['do i have a feeling this say yes just yes', 0.7, '']
+Sphinx: ['when the was a failure of the or or if the is yet', 0.15178367083517208, '']
+Select: ['yes', [('yes', 24.432126274107272), ('no', 1.1671494999999998), ('repeat', 0.9297626291685054), ('do nothing', 0.8224521428571427), ('time', 0.3733513339746418), ('date', 0.11667566698732093)]]
+			0.73929125	0.7	0.15178367083517208		24.432126274107272	1.1671494999999998
+User Select - yes
+
+Google: ['I believe', 0.56220579, '']
+WitAPI: ['i believe', 0.7, '']
+Sphinx: ["until you'd and one moment please a certain these are the soft money", 0.06150024643027896, '']
+Select: ['yes', [('yes', 2.4669714302443557), ('date', 0.24008750048743518), ('time', 0.11117352239319658), ('leave phone booth', 0.07143490162286249), ('look around', 0.034166803572377204), ('repeat', 0.023864198187475767), ('stay in phone booth', 0.00768753080378487), ('wake up', 0.00683336071447544), ('no', 0.0), ('restart', 0.0)]]
+			0.56220579	0.7	0.06150024643027896		2.4669714302443557	0.24008750048743518
+User Select - yes
+
+User Select - $Silence
+
+Google: ['motherload', 0.64593148, '']
+WitAPI: ["let's", 0.7, '']
+Sphinx: ['move to them', 0.21450999184145716, '']
+Select: ['$User_Error', []]
+			0.64593148	0.7	0.21450999184145716		0	0
+User Select - $User_Error
+
+Google: ['yes', 0.96419775, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5133124174922775, '']
+Select: ['yes', [('yes', 34.84016267987644), ('repeat', 0.0), ('time', 0.0), ('do nothing', 0.0), ('date', 0.0), ('no', 0.0)]]
+			0.96419775	0.7	0.5133124174922775		34.84016267987644	0.0
+User Select - yes
+
+Google: ['live', 0.79944301, '']
+WitAPI: ['i live', 0.7, '']
+Sphinx: ['leave', 0.3170574159136982, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 2.6989974180000003), ('yes', 0.6790415579784246), ('no', 0.39632176989212275), ('time', 0.299888602), ('leave phone booth', 0.2179769734406675), ('repeat', 0.0), ('look around', 0.0), ('date', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+			0.79944301	0.7	0.3170574159136982		2.6989974180000003	0.6790415579784246
+User Select - stay_in_phone_booth
+
+Google: ['how to get Park', 0.66002995, '']
+WitAPI: ['she was hard go go go about your also know', 0.7, '']
+Sphinx: ["if fifteen hundred fuck won't group a at you about the hoover we'd move move to you you toto and no", 0.04376837891039116, '']
+Select: ['repeat', [('repeat', 0.66002995), ('yes', 0.19815330743034057), ('time', 0.03473841842105263), ('no', 0.03473841842105263), ('date', 0.0)]]
+			0.66002995	0.7	0.04376837891039116		0.66002995	0.19815330743034057
+User Select - repeat
+
+Google: ['no', 0.9141835, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no and', 0.44364777385784476, '']
+Select: ['no', [('no', 9.260240732360302), ('repeat', 0.08872955477156896), ('date', 0.0), ('time', 0.0), ('yes', 0.0)]]
+			0.9141835	0.7	0.44364777385784476		9.260240732360302	0.08872955477156896
+User Select - no
+
+
+
+
+
+
+
+
+
+Sandra:
+Google: ['yes', 0.82144558, '']
+WitAPI: ['oh yes', 0.7, '']
+Sphinx: ["i don't give", 0.24909266263772215, '']
+Select: ['continue', [('continue', 3.0584594514148575), ('do nothing', 0.19769258939501758), ('repeat', 0.015568291414857634), ('quit', 0.0), ('date', 0.0), ('time', 0.0)]]
+			0.82144558	0.7	0.24909266263772215		3.0584594514148575	0.19769258939501758
+Google: ['yes', 0.92509198, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yep', 0.3088901286986428, '']
+Select: ['continue', [('continue', 3.559074088698643), ('date', 0.0), ('quit', 0.0), ('time', 0.0), ('do nothing', 0.0), ('repeat', 0.0)]]
+			0.92509198	0.7	0.3088901286986428		3.559074088698643	0.0
+User Select - continue
+
+Google: ['leaf', 0.82065833, '']
+WitAPI: ['please', 0.7, '']
+Sphinx: ['they said', 0.3785077610909395, '']
+Select: ['restart', [('restart', 1.64131666), ('time', 0.11889025829138483), ('repeat', 0.10932009120202271), ('leave phone booth', 0.08734794486713988), ('wake up', 0.07777777777777777), ('date', 0.058231963244759925), ('stay in phone booth', 0.0)]]
+			0.82065833	0.7	0.3785077610909395		1.64131666	0.11889025829138483
+User Select - restart
+
+Google: ['go outside', 0.8864122, '']
+WitAPI: ['go outside', 0.7, '']
+Sphinx: ['god has', 0.17970128745579766, '']
+Select: ['leave_phone_booth', [('leave phone booth', 4.296533041666667), ('date', 1.3220101666666668), ('wake up', 0.2644020333333333), ('stay in phone booth', 0.19830152499999998), ('restart', 0.0), ('time', 0.0), ('repeat', 0.0)]]
+			0.8864122	0.7	0.17970128745579766		4.296533041666667	1.3220101666666668
+User Select - leave_phone_booth
+
+Google: ['look around', 0.89339858, '']
+WitAPI: ['your aunt', 0.7, '']
+Sphinx: ['the road', 0.35815249412153055, '']
+Select: ['look_for_others', [('look for others', 0.9726321192217194), ('date', 0.40510038371100465), ('wake up', 0.1576585729411765), ('time', 0.08265057556650705), ('go back into the phone booth', 0.08010304950256117), ('wait around', 0.06872296769230771), ('repeat', 0.052552857647058825), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.89339858	0.7	0.35815249412153055		0.9726321192217194	0.40510038371100465
+User Select - look_for_others
+
+Google: ['look at the lights', 0.91472495, '']
+WitAPI: ['look at the lights', 0.7, '']
+Sphinx: ['the night', 0.18652646422500585, '']
+Select: ['run_toward_the_light', [('run toward the light', 0.6748603509016977), ('wake up', 0.5334236965709575), ('date', 0.4246675276197139), ('time', 0.4156734032826937), ('run away from the light', 0.3700466354267353), ('repeat', 0.09498382058823529), ('do not go anywhere', 0.0), ('restart', 0.0)]]
+			0.91472495	0.7	0.18652646422500585		0.6748603509016977	0.5334236965709575
+User Select - run_toward_the_light
+
+Google: ['take door number 4', 0.78744298, '']
+WitAPI: ['take down my number for', 0.7, '']
+Sphinx: ['take them ashore', 0.179242406058838, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.823023165165834), ('do nothing', 2.1249185428571424), ('go back', 0.7407490604705946), ('date', 0.11719695780770177), ('time', 0.08803029883409082), ('look back', 0.06999999999999999), ('repeat', 0.04666666666666666), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0)]]
+			0.78744298	0.7	0.179242406058838		2.823023165165834	2.1249185428571424
+User Select - go_through_an_open_door
+
+Google: ['take door number 7', 0.82450229, '']
+WitAPI: ['thank you donna listen', 0.7, '']
+Sphinx: ["they've got a second", 0.2552001364621322, '']
+Select: ['try_another_door', [('try another door', 2.568385776396167), ('do nothing', 1.857860414285714), ('break the door down', 0.8833946291835689), ('go back', 0.4238654929262019), ('date', 0.3892615594557126), ('time', 0.2375324347070615), ('look back', 0.02552001364621322), ('look around', 0.0), ('wake up', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.82450229	0.7	0.2552001364621322		2.568385776396167	1.857860414285714
+User Select - try_another_door
+
+Google: ['try older us', 0.80618638, '']
+WitAPI: ['try to las', 0.7, '']
+Sphinx: ['try it on us', 0.1815734389101139, '']
+Select: ['try_another_door', [('try another door', 0.723325636675763), ('look around', 0.4822170911171753), ('date', 0.45030223224344723), ('go back', 0.0), ('wake up', 0.0), ('look back', 0.0), ('repeat', 0.0), ('break the door down', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('time', 0.0)]]
+			0.80618638	0.7	0.1815734389101139		0.723325636675763	0.4822170911171753
+User Select - try_another_door
+
+Google: ['another night', 0.82057637, '']
+WitAPI: ['yeah bro', 0.7, '']
+Sphinx: ['in the on hal', 0.14545748054389235, '']
+Select: ['try_another_door', [('try another door', 3.4987001094737216), ('date', 0.36428489476316295), ('repeat', 0.27352545666666667), ('wake up', 0.2051440925), ('look around', 0.16411527400000003), ('time', 0.03356711089474439), ('break the door down', 0.03356711089474439), ('look back', 0.0), ('restart', 0.0), ('go back', 0.0), ('do nothing', 0.0)]]
+			0.82057637	0.7	0.14545748054389235		3.4987001094737216	0.36428489476316295
+User Select - try_another_door
+
+Google: ['trainerroad or', 0.71856713, '']
+WitAPI: ["try don't", 0.7, '']
+Sphinx: ['try that are', 0.1494369604840107, '']
+Select: ['look_around', ['look_around']]
+			0.71856713	0.7	0.1494369604840107		0	0
+User Select - look_around
+
+Google: ['pull up the string', 0.79324806, '']
+WitAPI: ['what is wrong', 0.7, '']
+Sphinx: ['put a strain', 0.1906000121249035, '']
+Select: ['pull_string', [('pull string', 3.915718009482102), ('date', 1.172038163076923), ('go through an open door', 0.7695877881553659), ('wake up', 0.22664230285714285), ('go back', 0.20145982476190477), ('time', 0.18305724461538464), ('look back', 0.08813867333333333), ('repeat', 0.0381200024249807), ('restart', 0.0), ('look around', 0.0), ('do nothing', 0.0)]]
+			0.79324806	0.7	0.1906000121249035		3.915718009482102	1.172038163076923
+User Select - pull_string
+
+Google: ['take the stairs', 0.86781526, '']
+WitAPI: ['yeah yes', 0.7, '']
+Sphinx: ['he helped o. uh', 0.1603328280140363, '']
+Select: ['go_up_stairs', [('go up stairs', 3.90516867), ('go through an open door', 0.5266732605614041), ('go back', 0.39905674011228076), ('time', 0.20026506), ('date', 0.13351004), ('look back', 0.013361069001169693), ('restart', 0.0), ('do nothing', 0.0), ('wake up', 0.0), ('repeat', 0.0)]]
+			0.86781526	0.7	0.1603328280140363		3.90516867	0.5266732605614041
+User Select - go_up_stairs
+
+User Select - $Silence
+
+Google: ['give me a', 0.72181398, '']
+WitAPI: ['get me a', 0.7, '']
+Sphinx: ['hey it moving', 0.22266740263420168, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.2597898227631577), ('go back', 0.4180486635526316), ('date', 0.22266740263420168), ('look back', 0.08195547901315789), ('wake up', 0.07368421052631578), ('repeat', 0.04511337375), ('stay in room', 0.04511337375), ('time', 0.03684210526315789), ('look around', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.72181398	0.7	0.22266740263420168		2.2597898227631577	0.4180486635526316
+User Select - go_through_an_open_door
+
+Google: ['Peter Pan films', 0.80580109, '']
+WitAPI: ['he got from', 0.7, '']
+Sphinx: ['the gunshot wound', 0.22529960124141182, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 0.8170314652236983), ('go back', 0.0875), ('time', 0.05199221567109504), ('date', 0.03466147711406336), ('look back', 0.0), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('do nothing', 0.0)]]
+			0.80580109	0.7	0.22529960124141182		0.8170314652236983	0.0875
+User Select - go_back_into_the_phone_booth
+
+Google: ['no', 0.90609157, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['no', 0.44422129196583476, '']
+Select: ['quit', [('quit', 1.2301877171795008), ('continue', 0.0), ('time', 0.0), ('date', 0.0), ('repeat', 0.0)]]
+			0.90609157	0.7	0.44422129196583476		1.2301877171795008	0.0
+User Select - quit
+
+
+
+
+
+
+
+
+
+Thomas Sauerwald:
+Google: ['no', 0.80777431, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['nope', 0.3610110116901448, '']
+Select: ['quit', [('quit', 1.2656755976901448), ('do nothing', 0.891918533352116), ('repeat', 0.0), ('date', 0.0), ('continue', 0.0), ('time', 0.0)]]
+			0.80777431	0.7	0.3610110116901448		1.2656755976901448	0.891918533352116
+User Select - quit
+
+Google: ['yes', 0.97232258, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes that', 0.34315233345934, '']
+Select: ['continue', [('continue', 4.03094982691868), ('time', 0.068630466691868), ('date', 0.04575364446124533), ('repeat', 0.022876822230622665), ('quit', 0.0), ('do nothing', 0.0)]]
+			0.97232258	0.7	0.34315233345934		4.03094982691868	0.068630466691868
+User Select - continue
+
+Google: ['WikiLeaks for photos', 0.64860636, '']
+WitAPI: ['thank you these phone', 0.7, '']
+Sphinx: ['they the stuff will do', 0.14859783979579744, '']
+Select: ['stay_in_phone_booth', ['stay_in_phone_booth']]
+			0.64860636	0.7	0.14859783979579744		0	0
+User Select - stay_in_phone_booth
+
+Google: ['yes', 0.97268617, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes sir and i i i i i i i', 0.361975914784762, '']
+Select: ['continue', [('continue', 4.069324169569524), ('repeat', 0.0723951829569524), ('time', 0.0), ('quit', 0.0), ('date', 0.0)]]
+			0.97268617	0.7	0.361975914784762		4.069324169569524	0.0723951829569524
+User Select - continue
+
+Google: ['delete the phone Booth', 0.79544729, '']
+WitAPI: ['i live in the phone book', 0.7, '']
+Sphinx: ['phillies the phone with', 0.1779457082225993, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 3.4437495439762857), ('leave phone booth', 3.0702165550603873), ('restart', 1.59089458), ('time', 0.5028342816411127), ('date', 0.2574450766496307), ('wake up', 0.05384615384615385), ('repeat', 0.0)]]
+			0.79544729	0.7	0.1779457082225993		3.4437495439762857	3.0702165550603873
+User Select - stay_in_phone_booth
+
+User Select - $Silence
+
+Google: ['yes', 0.97110075, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.5534926733063336, '']
+Select: ['continue', [('continue', 4.449186846612667), ('do nothing', 0.0), ('restart', 0.0), ('quit', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('date', 0.0), ('time', 0.0)]]
+			0.97110075	0.7	0.5534926733063336		4.449186846612667	0.0
+User Select - continue
+
+Google: ['', 0, KeyError('confidence',)]
+WitAPI: ['except the phone to', 0.7, '']
+Sphinx: ['did the phone booth', 0.2725534183369733, '']
+Select: ['$Creator_Error', [[], [], ['stay_in_phone_booth', 'leave_phone_booth', 'restart']]]
+			0	0.7	0.2725534183369733		0	0
+User Select - $Creator_Error
+
+Google: ['exert', 0.80310822, '']
+WitAPI: ['exit', 0.7, '']
+Sphinx: ['is a it', 0.4044250344409235, '']
+Select: ['date', [('date', 0.808850068881847), ('leave phone booth', 0.5923076923076923), ('stay in phone booth', 0.05384615384615385), ('wake up', 0.0), ('time', 0.0), ('do nothing', 0.0), ('restart', 0.0), ('repeat', 0.0)]]
+			0.80310822	0.7	0.4044250344409235		0.808850068881847	0.5923076923076923
+User Select - date
+
+Google: ['exit', 0.91866338, '']
+WitAPI: ['exit', 0.7, '']
+Sphinx: ['have it fixed it up', 0.1118742515036752, '']
+Select: ['leave_phone_booth', [('leave phone booth', 1.574741039038789), ('stay in phone booth', 0.1245125676923077), ('date', 0.1118742515036752), ('wake up', 0.031964071858192916), ('time', 0.0), ('do nothing', 0.0), ('repeat', 0.0), ('restart', 0.0)]]
+			0.91866338	0.7	0.1118742515036752		1.574741039038789	0.1245125676923077
+User Select - leave_phone_booth
+
+Google: ['look for other', 0.56414723, '']
+WitAPI: ["your father's", 0.7, '']
+Sphinx: ['notebooks', 0.15431481987746037, '']
+Select: ['look_for_others', [('look for others', 0.6648087945686275), ('date', 0.35), ('do nothing', 0.2362813019019683), ('repeat', 0.214487356485296), ('wait around', 0.18467565098774605), ('wake up', 0.09955539352941177), ('go back into the phone booth', 0.09491105912745473), ('time', 0.03760981533333333), ('restart', 0.0)]]
+			0.56414723	0.7	0.15431481987746037		0.6648087945686275	0.35
+User Select - look_for_others
+
+User Select - $Silence
+
+Google: ['rental Aphrodite', 0.68798065, '']
+WitAPI: ['rofl like', 0.7, '']
+Sphinx: ['of the a and russia lost lives', 0.1714703374949726, '']
+Select: ['run_away_from_the_light', [('run away from the light', 0.28466036345612433), ('do not go anywhere', 0.1714703374949726), ('time', 0.06814846746595066), ('wake up', 0.05715677916499086), ('repeat', 0.03429406749899452), ('date', 0.026380051922303478), ('run toward the light', 0.026380051922303478), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.68798065	0.7	0.1714703374949726		0.28466036345612433	0.1714703374949726
+User Select - run_away_from_the_light
+
+Google: ['feel the surroundings', 0.70982671, '']
+WitAPI: ['feels rounds', 0.7, '']
+Sphinx: ['feel strongly that', 0.15673097583892745, '']
+Select: ['feel_surroundings', [('feel surroundings', 3.9880298127831706), ('do not give up', 0.7832788429194637), ('time', 0.5398100913495104), ('sit in despair', 0.39163942145973185), ('dig', 0.29482260789502707), ('date', 0.23453875173188804), ('wake up', 0.015673097583892747), ('repeat', 0.010448731722595164), ('restart', 0.0), ('climb out', 0.0), ('do nothing', 0.0)]]
+			0.70982671	0.7	0.15673097583892745		3.9880298127831706	0.7832788429194637
+User Select - feel_surroundings
+
+Google: ['get up', 0.92187828, '']
+WitAPI: ['get', 0.7, '']
+Sphinx: ['get up and move', 0.19716324179144185, '']
+Select: ['wake_up', [('wake up', 1.6466759959494124), ('dig', 0.996822922985363), ('do not give up', 0.43189544669526336), ('feel surroundings', 0.2879755155225039), ('sit in despair', 0.16807820961627795), ('time', 0.09573902746270746), ('repeat', 0.03943264835828837), ('do nothing', 0.03286054029857364), ('climb out', 0.02464540522393023), ('restart', 0.0), ('date', 0.0)]]
+			0.92187828	0.7	0.19716324179144185		1.6466759959494124	0.996822922985363
+User Select - wake_up
+
+Google: ['brother 93', 0.83899385, '']
+WitAPI: ['what is three of', 0.7, '']
+Sphinx: ['get out of you fool of of', 0.09739771566526421, '']
+Select: ['date', [('date', 1.098698857832632), ('quit', 0.7173009100194877), ('repeat', 0.019479543133052845), ('continue', 0.0051261955613296955), ('time', 0.0051261955613296955)]]
+			0.83899385	0.7	0.09739771566526421		1.098698857832632	0.7173009100194877
+User Select - date
+
+Google: ['I think so', 0.85010314, '']
+WitAPI: ['i think you probably know', 0.7, '']
+Sphinx: ['i think the broken out', 0.18583540343442023, '']
+Select: ['continue', [('continue', 2.03873827508952), ('date', 0.5121237961771739), ('time', 0.4434862954312709), ('quit', 0.02322942542930253), ('repeat', 0.0), ('wake up', 0.0), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.85010314	0.7	0.18583540343442023		2.03873827508952	0.5121237961771739
+User Select - continue
+
+
+
+
+
+
+
+
+
+Tom Queen:
+Google: ['yes', 0.94596744, '']
+WitAPI: ['yes', 0.7, '']
+Sphinx: ['yes', 0.4987131204506115, '']
+Select: ['continue', [('continue', 8.578722241802446), ('repeat', 0.0), ('date', 0.0), ('do nothing', 0.0), ('quit', 0.0), ('time', 0.0)]]
+			0.94596744	0.7	0.4987131204506115		8.578722241802446	0.0
+User Select - continue
+
+Google: ['baby pretends to the phone Booth', 0.79969543, '']
+WitAPI: ['thank you returns to the phone booth', 0.7, '']
+Sphinx: ['the returns to the vendors', 0.2189344057565703, '']
+Select: ['date', [('date', 1.3364383059594283), ('restart', 0.867078982864831), ('time', 0.843219152979714), ('leave phone booth', 0.7832571908333332), ('stay in phone booth', 0.7832571908333332), ('wake up', 0.7), ('repeat', 0.3341579657296619)]]
+			0.79969543	0.7	0.2189344057565703		1.3364383059594283	0.867078982864831
+User Select - date
+
+User Select - $Silence
+
+Google: ["you've not offended", 0.74217367, '']
+WitAPI: ['you know that a friend with', 0.7, '']
+Sphinx: ["you don't have to find this", 0.12603206212213539, '']
+Select: ['date', [('date', 1.0070177864469103), ('stay in phone booth', 0.3787982213892516), ('leave phone booth', 0.2720648876772073), ('do nothing', 0.2684538189654049), ('time', 0.1614574601929214), ('repeat', 0.06145746019292139), ('wake up', 0.0), ('restart', 0.0)]]
+			0.74217367	0.7	0.12603206212213539		1.0070177864469103	0.3787982213892516
+User Select - date
+
+Google: ['and then you said yes', 0.95270663, '']
+WitAPI: ['and then you said yes', 0.7, '']
+Sphinx: ['when you said yes', 0.2064134014781297, '']
+Select: ['date', [('date', 1.4804622257390647), ('repeat', 0.8297235674492207), ('time', 0.2926522217898441), ('stay in phone booth', 0.0), ('wake up', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('leave phone booth', 0.0)]]
+			0.95270663	0.7	0.2064134014781297		1.4804622257390647	0.8297235674492207
+User Select - date
+
+Google: ['vaguely left the phone Booth', 0.77809501, '']
+WitAPI: ['they left the phone with', 0.7, '']
+Sphinx: ['think he left the fun with', 0.14595265358983284, '']
+Select: ['stay_in_phone_booth', [('stay in phone booth', 0.4400198069658194), ('leave phone booth', 0.3695237525), ('date', 0.2828373317307915), ('time', 0.1475000264316388), ('repeat', 0.0), ('wake up', 0.0), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.77809501	0.7	0.14595265358983284		0.4400198069658194	0.3695237525
+User Select - stay_in_phone_booth
+
+User Select - $Silence
+
+Google: ['yes yes I would let me play the game again', 0.97110069, '']
+WitAPI: ['yes yes i would let me play the game again', 0.7, '']
+Sphinx: ['yes yes i would you play the game again', 0.16539026508630186, '']
+Select: ['continue', [('continue', 7.345963820345207), ('repeat', 1.8364909550863018), ('do nothing', 0.5650741400265545), ('date', 0.3887769583908679), ('time', 0.1530409129238585), ('wake up', 0.0), ('restart', 0.0), ('quit', 0.0)]]
+			0.97110069	0.7	0.16539026508630186		7.345963820345207	1.8364909550863018
+User Select - continue
+
+Google: ['leave the phone Booth', 0.9296155, '']
+WitAPI: ['leave the phone with', 0.7, '']
+Sphinx: ['leave the kenneth', 0.19244973692706902, '']
+Select: ['leave_phone_booth', [('leave phone booth', 1.1576660313817342), ('stay in phone booth', 0.4657372083333333), ('date', 0.3036775394878448), ('time', 0.1518387697439224), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+			0.9296155	0.7	0.19244973692706902		1.1576660313817342	0.4657372083333333
+User Select - leave_phone_booth
+
+Google: ["vaguely didn't find anyone", 0.92163885, '']
+WitAPI: ['thank you to find me one', 0.7, '']
+Sphinx: ["theta didn't find any whoa whoa", 0.15728453757792063, '']
+Select: ['date', [('date', 1.8022466889754674), ('time', 1.3633302511130938), ('wait around', 0.8316895967392669), ('do nothing', 0.5094915996895737), ('look for others', 0.5082638250222631), ('go back into the phone booth', 0.08891643786237344), ('repeat', 0.05833333333333333), ('wake up', 0.0), ('restart', 0.0)]]
+			0.92163885	0.7	0.15728453757792063		1.8022466889754674	1.3633302511130938
+User Select - date
+
+Google: ['not saying this is what you do', 0.94409502, '']
+WitAPI: ["not saying this is what you do it's sunny room to tools to do that", 0.7, '']
+Sphinx: ["no i'm saying this is why the they say and tonight and the bills them to films that", 0.05121097175210713, '']
+Select: ['date', [('date', 6.778608119809064), ('time', 1.8507750534169387), ('wait around', 1.6655796149206346), ('do nothing', 1.3048373174603174), ('repeat', 1.27439634399044), ('look for others', 0.48772661884217006), ('go back into the phone booth', 0.3874603812033967), ('wake up', 0.2968310548682311), ('restart', 0.0)]]
+			0.94409502	0.7	0.05121097175210713		6.778608119809064	1.8507750534169387
+User Select - date
+
+Google: ["vaguely didn't look for others", 0.91759574, '']
+WitAPI: ["he didn't look for others", 0.7, '']
+Sphinx: ["they'd do it happens", 0.21889485654509586, '']
+Select: ['look_for_others', [('look for others', 4.018086673117647), ('wait around', 1.0253665534738552), ('do nothing', 0.8889474301686262), ('repeat', 0.5265115545882353), ('date', 0.40130723699934245), ('wake up', 0.2854580717647059), ('time', 0.2720108584088219), ('go back into the phone booth', 0.11339392863365995), ('restart', 0.0)]]
+			0.91759574	0.7	0.21889485654509586		4.018086673117647	1.0253665534738552
+User Select - look_for_others
+
+Google: ['and selected do', 0.69252354, '']
+WitAPI: ['yeah and selecting our selected the', 0.7, '']
+Sphinx: ['yeah and selecting a group of it its that he had this', 0.09961261046575134, '']
+Select: ['run_toward_the_light', ['run_toward_the_light']]
+			0.69252354	0.7	0.09961261046575134		0	0
+User Select - run_toward_the_light
+
+Google: ['ugly went through door number four', 0.82898015, '']
+WitAPI: ["eighty one three don't wonderful", 0.7, '']
+Sphinx: ['they they went through the long before', 0.13952836277690567, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.215750437453008), ('do nothing', 1.759257357142857), ('look around', 0.4191791794840647), ('date', 0.13992139379615093), ('time', 0.06996069689807546), ('repeat', 0.05833333333333333), ('wake up', 0.0), ('go back', 0.0), ('restart', 0.0), ('look back', 0.0)]]
+			0.82898015	0.7	0.13952836277690567		2.215750437453008	1.759257357142857
+User Select - go_through_an_open_door
+
+Google: ["no she didn't", 0.96612996, '']
+WitAPI: ['michigan', 0.7, '']
+Sphinx: ['michigan', 0.2665238930205051, '']
+Select: ['do_nothing', ['do_nothing']]
+			0.96612996	0.7	0.2665238930205051		0	0
+User Select - do_nothing
+
+Google: ['taste the tumbleweed', 0.7014696, '']
+WitAPI: ['he chased the tumbleweed', 0.7, '']
+Sphinx: ["the chase that i'm worried", 0.17698679116134763, '']
+Select: ['try_another_door', [('try another door', 0.989829492502322), ('look around', 0.8769867911613476), ('break the door down', 0.43253983875348284), ('date', 0.3136437198110858), ('time', 0.16946377355992487), ('repeat', 0.012641913654381973), ('do nothing', 0.0), ('restart', 0.0), ('wake up', 0.0), ('look back', 0.0), ('go back', 0.0)]]
+			0.7014696	0.7	0.17698679116134763		0.989829492502322	0.8769867911613476
+User Select - try_another_door
+
+Google: ['OK continue', 0.94149822, '']
+WitAPI: ['okay continue', 0.7, '']
+Sphinx: ['they continue', 0.41561704710434777, '']
+Select: ['restart', [('restart', 0.37402095765533594), ('go back', 0.30367714549433467), ('break the door down', 0.10390426177608694), ('try another door', 0.06926950785072462), ('date', 0.06926950785072462), ('time', 0.03463475392536231), ('do nothing', 0.0), ('look around', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('look back', 0.0)]]
+			0.94149822	0.7	0.41561704710434777		0.37402095765533594	0.30367714549433467
+User Select - restart
+
+Google: ['ugly left the phone Booth', 0.89701539, '']
+WitAPI: ['he left the phone with', 0.7, '']
+Sphinx: ['they get henry this', 0.517140338115466, '']
+Select: ['leave_phone_booth', [('leave phone booth', 0.5353434101619647), ('stay in phone booth', 0.4575871808333333), ('date', 0.4463848040402381), ('time', 0.250410314552512), ('wake up', 0.05443582506478589), ('repeat', 0.04701275801049691), ('restart', 0.0)]]
+			0.89701539	0.7	0.517140338115466		0.5353434101619647	0.4575871808333333
+User Select - leave_phone_booth
+
+Google: ['look for others', 0.91520387, '']
+WitAPI: ['look for this', 0.7, '']
+Sphinx: ['and and is that', 0.3281376543278106, '']
+Select: ['look_for_others', [('look for others', 3.086211234050042), ('date', 0.5491639971227694), ('repeat', 0.5384353227354248), ('wait around', 0.5384012899999999), ('wake up', 0.28503597705882355), ('time', 0.24163183327803733), ('go back into the phone booth', 0.1820867598698627), ('restart', 0.0), ('do nothing', 0.0)]]
+			0.91520387	0.7	0.3281376543278106		3.086211234050042	0.5491639971227694
+User Select - look_for_others
+
+Google: ['run towards the light', 0.93776655, '']
+WitAPI: ['run towards the light', 0.7, '']
+Sphinx: ['run towards the light', 0.21009968532036136, '']
+Select: ['run_toward_the_light', [('run toward the light', 4.33018654331971), ('run away from the light', 0.877436483492217), ('date', 0.4234693455942494), ('time', 0.24198248319671392), ('wake up', 0.23098327941504515), ('repeat', 0.1679878395745783), ('do not go anywhere', 0.08799363025335052), ('restart', 0.0)]]
+			0.93776655	0.7	0.21009968532036136		4.33018654331971	0.877436483492217
+User Select - run_toward_the_light
+
+Google: ['went through the door', 0.94127798, '']
+WitAPI: ['we went through the door', 0.7, '']
+Sphinx: ['the went through the door', 0.2267641824974976, '']
+Select: ['go_through_an_open_door', [('go through an open door', 3.638234497435602), ('do nothing', 1.0674526642842843), ('date', 0.3113403604162496), ('time', 0.1556701802081248), ('look around', 0.13343158303553554), ('go back', 0.0), ('restart', 0.0), ('wake up', 0.0), ('repeat', 0.0), ('look back', 0.0)]]
+			0.94127798	0.7	0.2267641824974976		3.638234497435602	1.0674526642842843
+User Select - go_through_an_open_door
+
+Google: ['air through another door', 0.70046306, '']
+WitAPI: ['go through another door', 0.7, '']
+Sphinx: ["here's your model", 0.22073961439037385, '']
+Select: ['try_another_door', [('try another door', 6.362057309428572), ('break the door down', 1.4004630599999999), ('do nothing', 0.8002646057142857), ('date', 0.6380998030490187), ('time', 0.6293430660570406), ('look around', 0.47759260934851), ('repeat', 0.46682102), ('look back', 0.2050396890894829), ('go back', 0.1575), ('restart', 0.0), ('wake up', 0.0)]]
+			0.70046306	0.7	0.22073961439037385		6.362057309428572	1.4004630599999999
+User Select - try_another_door
+
+Google: ['go through another door', 0.87056065, '']
+WitAPI: ['go through another door', 0.7, '']
+Sphinx: ['good for the job', 0.2676237184484684, '']
+Select: ['try_another_door', [('try another door', 7.479225335056785), ('break the door down', 1.637466579612117), ('do nothing', 0.8974632285714286), ('repeat', 0.5413617978965645), ('go back', 0.38682911105605855), ('date', 0.3242056426379759), ('look around', 0.2692389685714286), ('time', 0.05798513899716815), ('wake up', 0.0), ('look back', 0.0), ('restart', 0.0)]]
+			0.87056065	0.7	0.2676237184484684		7.479225335056785	1.637466579612117
+User Select - try_another_door
+
+Google: ['go to another.', 0.89332217, '']
+WitAPI: ['go through the door', 0.7, '']
+Sphinx: ['they turned up a book', 0.14546575184785004, '']
+Select: ['try_another_door', [('try another door', 3.141672149894195), ('break the door down', 0.9113664379619625), ('do nothing', 0.39999999999999997), ('repeat', 0.32839842547674036), ('go back', 0.32763762378571765), ('date', 0.28979798697464165), ('time', 0.13170421694080156), ('look around', 0.12), ('wake up', 0.0527513166041654), ('restart', 0.015312184405036846), ('look back', 0.0)]]
+			0.89332217	0.7	0.14546575184785004		3.141672149894195	0.9113664379619625
+User Select - try_another_door
+
+Google: ['are thrown on the door', 0.73859227, '']
+WitAPI: ['turn on the door', 0.7, '']
+Sphinx: ['just the the job food and', 0.19267360336863418, '']
+Select: ['try_another_door', [('try another door', 3.866293815456389), ('break the door down', 2.325939495008825), ('do nothing', 0.8220527257142857), ('time', 0.6290539711152651), ('date', 0.43172123111699456), ('look around', 0.24619742333333333), ('repeat', 0.1859031417263584), ('look back', 0.16413161555555555), ('go back', 0.15575001830409357), ('restart', 0.07368421052631578), ('wake up', 0.0)]]
+			0.73859227	0.7	0.19267360336863418		3.866293815456389	2.325939495008825
+User Select - try_another_door
+
+Google: ['going to the phone Booth', 0.79051137, '']
+WitAPI: ['when the fan', 0.7, '']
+Sphinx: ['men and in this', 0.2316467596659394, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 1.0345933684166004), ('repeat', 0.3007214815997884), ('date', 0.29053615433320107), ('time', 0.27701997216660057), ('go back', 0.09881392125), ('do nothing', 0.0), ('restart', 0.0), ('wake up', 0.0), ('look back', 0.0)]]
+			0.79051137	0.7	0.2316467596659394		1.0345933684166004	0.3007214815997884
+User Select - go_back_into_the_phone_booth
+
+Google: ['no', 0.90593219, '']
+WitAPI: ['no', 0.7, '']
+Sphinx: ['yes', 0.3596181957941971, '']
+Select: ['quit', [('quit', 2.408898285), ('continue', 1.4384727831767885), ('date', 0.0), ('repeat', 0.0), ('time', 0.0)]]
+			0.90593219	0.7	0.3596181957941971		2.408898285	1.4384727831767885
+User Select - quit
+
+
+
+
+
+
+
+
+
+Abdul:
+Google: ['yes yes', 0.83281356, '']
+WitAPI: ['yeah yes', 0.7, '']
+Sphinx: ['yet yes so', 0.2714639911329236, '']
+Select: ['continue', [('continue', 10.717110204531695), ('time', 0.10858559645316944), ('repeat', 0.10858559645316944), ('date', 0.10858559645316944), ('quit', 0.0), ('do nothing', 0.0)]]
+			0.83281356	0.7	0.2714639911329236		10.717110204531695	0.10858559645316944
+User Select - continue
+
+Google: ['what should I do now suggesting what you can do here', 0.90593487, '']
+WitAPI: ['what should i do now the one is suggesting we do here', 0.7, '']
+Sphinx: ['what should i cannot do speak when and if it is suggested we should get', 0.06227359447320223, '']
+Select: ['date', [('date', 5.521044773836272), ('time', 3.038759929335987), ('repeat', 0.9464080141133764), ('stay in phone booth', 0.23831549492474313), ('leave phone booth', 0.016387788019263744), ('wake up', 0.006555115207705497), ('restart', 0.0)]]
+			0.90593487	0.7	0.06227359447320223		5.521044773836272	3.038759929335987
+User Select - date
+
+Google: ['not really decided to leave her phone book', 0.8922317, '']
+WitAPI: ['not related to what the they decided to be a thing this am on', 0.7, '']
+Sphinx: ["we have been on review of the of the i'm eighty decided to be a splendid off i know i'm i'm i'm um", 0.03303176886838176, '']
+Select: ['date', [('date', 1.911676388750791), ('time', 1.2562101443753955), ('leave phone booth', 1.0913281402464685), ('stay in phone booth', 0.6667551079172197), ('repeat', 0.6456575428819515), ('wake up', 0.4749490749094031), ('do nothing', 0.3538292666666666), ('restart', 0.0)]]
+			0.8922317	0.7	0.03303176886838176		1.911676388750791	1.2562101443753955
+User Select - date
+
+Google: ['phone Booth', 0.93053341, '']
+WitAPI: ['find news', 0.7, '']
+Sphinx: ['by this', 0.26041029468184135, '']
+Select: ['$User_Error', []]
+			0.93053341	0.7	0.26041029468184135		0	0
+User Select - $User_Error
+
+Google: ['the phone', 0.77400422, '']
+WitAPI: ['one', 0.7, '']
+Sphinx: ['the one', 0.28487626657063675, '']
+Select: ['date', [('date', 0.34062612552354554), ('stay in phone booth', 0.193501055), ('leave phone booth', 0.193501055), ('time', 0.17031306276177277), ('repeat', 0.08207302221421972), ('do nothing', 0.0), ('restart', 0.0), ('wake up', 0.0)]]
+			0.77400422	0.7	0.28487626657063675		0.34062612552354554	0.193501055
+User Select - date
+
+Google: ["that's not fair that's easy for every time you said something it was in the middle of a cough try to send it over to another process and then start up again", 0.860053, '']
+WitAPI: ["but it's not that easy for nice is every time i use it something that was in the middle of the second law of send that to another process and then stops right up against rake in the fall freeze yeah and", 0.7, '']
+Sphinx: ["that's nothin' matthew four feet that it is everytime i need said something we must get him isn't that it they cut him off a sedative and over assistance that i i think it's a beautiful phrase yam penang", 0.03011486603708091, '']
+Select: ['date', [('date', 9.070691196180876), ('repeat', 4.723723224517401), ('stay in phone booth', 4.511918714273226), ('time', 3.167170364830384), ('do nothing', 2.653517880921849), ('leave phone booth', 1.309094232909799), ('wake up', 0.7130725344071102), ('restart', 0.28364599999999995)]]
+			0.860053	0.7	0.03011486603708091		9.070691196180876	4.723723224517401
+User Select - date
+
+
+
+
+
+
+
+
+
+Dan Van Cleak:
+Google: ['vaguely stepped outside the cubicle', 0.89710408, '']
+WitAPI: ['vaguely stepped outside the cubicle', 0.7, '']
+Sphinx: ['take three steps outside the cubicle', 0.11261188207208798, '']
+Select: ['leave_phone_booth', [('leave phone booth', 2.549641719057839), ('stay in phone booth', 0.641143485777033), ('time', 0.14247633017267397), ('date', 0.14247633017267397), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+			0.89710408	0.7	0.11261188207208798		2.549641719057839	0.641143485777033
+User Select - leave_phone_booth
+
+Google: ['vaguely decided to look for others', 0.69153386, '']
+WitAPI: ['vaguely decided to look for office', 0.7, '']
+Sphinx: ['they treat decided to lots of us', 0.12215433114991327, '']
+Select: ['look_for_others', [('look for others', 2.51363230830966), ('wake up', 0.6239868466110078), ('wait around', 0.5805112866666666), ('go back into the phone booth', 0.42107413113933806), ('repeat', 0.3850110189959342), ('time', 0.17502884165058388), ('date', 0.08225991765058387), ('do nothing', 0.0), ('restart', 0.0)]]
+			0.69153386	0.7	0.12215433114991327		2.51363230830966	0.6239868466110078
+User Select - look_for_others
+
+Google: ['maybe run towards the light', 0.75147587, '']
+WitAPI: ['like the landlord to the light', 0.7, '']
+Sphinx: ['they the u. n. portland', 0.166658112581347, '']
+Select: ['run_toward_the_light', [('run toward the light', 2.5011262075038174), ('run away from the light', 1.0835896996508987), ('time', 0.3953025179135249), ('date', 0.35951795267542963), ('do not go anywhere', 0.2357845652380952), ('wake up', 0.19353011599999997), ('repeat', 0.13743388675324675), ('restart', 0.0)]]
+			0.75147587	0.7	0.166658112581347		2.5011262075038174	1.0835896996508987
+User Select - run_toward_the_light
+
+Google: ['vaguely', 0.81028938, '']
+WitAPI: ['vaguely is the with some of the computer is me just talking on', 0.7, '']
+Sphinx: ["they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh", 0.05361120741033855, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.1339662592226367), ('look around', 0.3154156147871626), ('repeat', 0.24201170863149019), ('time', 0.23437606952408427), ('date', 0.08365382804201657), ('look back', 0.022460017390220615), ('restart', 0.0), ('do nothing', 0.0), ('go back', 0.0), ('wake up', 0.0)]]
+			0.81028938	0.7	0.05361120741033855		2.1339662592226367	0.3154156147871626
+User Select - go_through_an_open_door
+
+Google: ['baby went through another door', 0.8653568, '']
+WitAPI: ['baby went to another', 0.7, '']
+Sphinx: ["if if they'd be went through in the what", 0.10195270342727611, '']
+Select: ['try_another_door', [('try another door', 4.7931729862314745), ('break the door down', 1.3520811604722038), ('repeat', 0.9052723991850773), ('do nothing', 0.7039098637852286), ('date', 0.23020992244225197), ('time', 0.23020992244225197), ('look around', 0.07334156526856098), ('look back', 0.037581362642803165), ('wake up', 0.008496058618939675), ('restart', 0.0), ('go back', 0.0)]]
+			0.8653568	0.7	0.10195270342727611		4.7931729862314745	1.3520811604722038
+User Select - try_another_door
+
+Google: ['baby driver', 0.81876743, '']
+WitAPI: ['make it in the middle of on of on', 0.7, '']
+Sphinx: ["they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob", 0.04074378933991309, '']
+Select: ['try_another_door', [('try another door', 1.553058688026155), ('break the door down', 0.36508150077384016), ('date', 0.23460970401947404), ('time', 0.23460970401947404), ('wake up', 0.07086988389946043), ('repeat', 0.06474101326671669), ('do nothing', 0.06286042103776812), ('go back', 0.05458449533333333), ('look around', 0.039352614001644935), ('look back', 0.03110684711142443), ('restart', 0.0)]]
+			0.81876743	0.7	0.04074378933991309		1.553058688026155	0.36508150077384016
+User Select - try_another_door
+
+Google: ['vagary gave up', 0.70476991, '']
+WitAPI: ['what the baby gave up', 0.7, '']
+Sphinx: ['if the splendid bakery gave up', 0.17514625279614218, '']
+Select: ['try_another_door', ['try_another_door']]
+			0.70476991	0.7	0.17514625279614218		0	0
+User Select - try_another_door
+
+Google: ["favourite I'd another door", 0.84169704, '']
+WitAPI: ['they be fighting over the ps', 0.7, '']
+Sphinx: ['if they side that those laugh with whoa hope fight feet and for two the again what', 0.04762009547275998, '']
+Select: ['date', [('date', 5.420600216726934), ('try another door', 4.095221173183068), ('break the door down', 1.2586312281898637), ('repeat', 0.5630866843641572), ('look back', 0.3088442801126754), ('go back', 0.30604309802604246), ('time', 0.19043422144913133), ('do nothing', 0.07651791272727274), ('wake up', 0.07368421052631578), ('look around', 0.045245651523056714), ('restart', 0.0)]]
+			0.84169704	0.7	0.04762009547275998		5.420600216726934	4.095221173183068
+User Select - date
+
+Google: ['step through a door', 0.80623817, '']
+WitAPI: ['what steps would on a number of of of the person responsible is sending me so', 0.7, '']
+Sphinx: ["i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of", 0.028841376397484096, '']
+Select: ['try_another_door', [('try another door', 3.9917566407545957), ('break the door down', 1.0040775291938866), ('time', 0.5475958647818807), ('date', 0.5458993132290876), ('do nothing', 0.37775294935525444), ('repeat', 0.29749336832318435), ('look around', 0.05879016473084755), ('wake up', 0.0070505240255571726), ('go back', 0.005684677087040344), ('look back', 0.0025751228926325083), ('restart', 0.0)]]
+			0.80623817	0.7	0.028841376397484096		3.9917566407545957	1.0040775291938866
+User Select - try_another_door
+
+Google: ['vaguely did nothing', 0.79468852, '']
+WitAPI: ['they created nothing', 0.7, '']
+Sphinx: ['they greeted nothing', 0.21192142291350852, '']
+Select: ['do_nothing', [('do nothing', 1.880080583590761), ('time', 0.07599345190945904), ('date', 0.07599345190945904), ('go back into the phone booth', 0.07599345190945904), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('look back', 0.0)]]
+			0.79468852	0.7	0.21192142291350852		1.880080583590761	0.07599345190945904
+User Select - do_nothing
+
+Google: ['fake we enter the phone Booth', 0.72575992, '']
+WitAPI: ['thank you and the finally', 0.7, '']
+Sphinx: ['take the end of the scientists', 0.19317475475652782, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 1.0924109711459487), ('date', 0.8887573767425311), ('time', 0.8887573767425311), ('do nothing', 0.27215997000000003), ('repeat', 0.19071999), ('go back', 0.07726990190261113), ('wake up', 0.024146844344565977), ('look back', 0.0), ('restart', 0.0)]]
+			0.72575992	0.7	0.19317475475652782		1.0924109711459487	0.8887573767425311
+User Select - go_back_into_the_phone_booth
+
+
+
+
+
+
+
+
+
+
+
+
+

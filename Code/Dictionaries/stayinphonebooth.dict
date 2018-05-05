@@ -30,6 +30,7 @@ admission(2) AE D M IH SH AH N
 admittance AH D M IH T AH N S
 advance AH D V AE N S
 affair AH F EH R
+affront AH F R AH N T
 agreement AH G R IY M AH N T
 ah AA
 ahead AH HH EH D
@@ -87,6 +88,7 @@ awaiting AH W EY T IH NG
 away AH W EY
 back B AE K
 backdoor B AE K D AO R
+baffle B AE F AH L
 balance B AE L AH N S
 band B AE N D
 bandstand B AE N D S T AE N D
@@ -115,6 +117,7 @@ berth B ER TH
 beside B IH S AY D
 beside(2) B IH S AY D
 best B EH S T
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -129,6 +132,7 @@ blockages B L AA K IH JH IH Z
 blocked B L AA K T
 blockhead B L AA K HH EH D
 blocks B L AA K S
+blur B L ER
 board B AO R D
 boast B OW S T
 bob B AA B
@@ -209,6 +213,7 @@ chalet(2) SH AE L EY
 chamber CH EY M B ER
 channel CH AE N AH L
 charcuterie SH AA R K UH T R IY
+chat CH AE T
 cheap CH IY P
 check CH EH K
 checked CH EH K T
@@ -239,6 +244,7 @@ compact(2) K AA M P AE K T
 compartment K AH M P AA R T M AH N T
 complete K AH M P L IY T
 completion K AH M P L IY SH AH N
+comply K AH M P L AY
 conclude K AH N K L UW D
 conclusion K AH N K L UW ZH AH N
 conduct K AA N D AH K T
@@ -246,6 +252,8 @@ conduit K AA N D UW IH T
 conduit(2) K AA N D UW IH T
 conduit(3) K AA N D UW IH T
 confessional K AH N F EH SH AH N AH L
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 consequence K AA N S AH K W AH N S
 consonant K AA N S AH N AH N T
 consuming K AH N S UW M IH NG
@@ -302,6 +310,7 @@ delays D IH L EY Z
 demarche D IH M AA R CH
 demarche(2) D IH M AA R CH
 denominational D IH N AO M AH N EY SH AH N AH L
+depend D IH P EH N D
 dependent D IH P EH N D AH N T
 desist D IH S IH S T
 desist(2) D IH S IH S T
@@ -314,6 +323,7 @@ deterred D IH T ER D
 deterrent D IH T ER R AH N T
 dial D AY AH L
 dial(2) D AY AH L
+dimly D IH M L IY
 dined D AY N D
 dines D AY N Z
 dining D AY N IH NG
@@ -344,6 +354,7 @@ drift D R IH F T
 drop D R AA P
 drop(2) D R AA P
 drug D R AH G
+dubiously D UW B IY AH S L IY
 duck D AH K
 dugout D AH G AW T
 dwarf D W AO R F
@@ -423,6 +434,8 @@ err EH R
 err(2) EH R
 escapement IH S K EY P M AH N T
 etcetera EH T S EH T ER AH
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 ever EH V ER
 evoke IH V OW K
@@ -447,6 +460,7 @@ facebook F EY S B UH K
 faced F EY S T
 facilitate F AH S IH L AH T EY T
 faggot F AE G AH T
+faintly F EY N T L IY
 fair F EH R
 faire F EH R
 faithful F EY TH F AH L
@@ -479,12 +493,15 @@ fore F AO R
 forebode F AO R B OW D
 foresees F AO R S IY Z
 foretell F AO R T EH L
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 formula F AO R M Y AH L AH
 forth F AO R TH
 forthcoming F AO R TH K AH M IH NG
 forward F AO R W ER D
 fours F AO R Z
 foyer F OY ER
+frail F R EY L
 free F R IY
 freeze F R IY Z
 freezes F R IY Z IH Z
@@ -516,6 +533,7 @@ given G IH V AH N
 given(2) G IH V AH N
 glass G L AE S
 glide G L AY D
+gnarly N AA R L IY
 go G OW
 goal G OW L
 going G OW IH NG
@@ -549,6 +567,7 @@ hatch HH AE CH
 hatching HH AE CH IH NG
 hatter HH AE T ER
 hauled HH AO L D
+hazy HH EY Z IY
 head HH EH D
 headphone HH EH D F OW N
 headphones HH EH D F OW N Z
@@ -583,6 +602,7 @@ hut HH AH T
 hutch HH AH CH
 huts HH AH T S
 idle AY D AH L
+idly AY D L IY
 immediate IH M IY D IY AH T
 imminent IH M AH N AH N T
 immobile IH M OW B AH L
@@ -594,13 +614,19 @@ impatient IH M P EY SH AH N T
 impede IH M P IY D
 impel IH M P EH L
 impending IH M P EH N D IH NG
+imperceptibly IH M P ER S EH P T IH B L IY
 importance IH M P AO R T AH N S
 improve IH M P R UW V
 in IH N
 inactive IH N AE K T IH V
 inch IH N CH
 incite IH N S AY T
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 inert IH N ER T
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 influence IH N F L UW AH N S
 information IH N F ER M EY SH AH N
@@ -701,6 +727,7 @@ loitering L OY T ER IH NG
 loll L AA L
 long L AO NG
 look L UH K
+loosely L UW S L IY
 lounge L AW N JH
 low L OW
 lower L OW ER
@@ -730,6 +757,7 @@ miserly M AY Z ER L IY
 mizen M AY Z AH N
 mobile M OW B AH L
 mobilize M OW B AH L AY Z
+modicum M AA D IH K AH M
 mold M OW L D
 monotonous M AH N AA T AH N AH S
 moon M UW N
@@ -741,6 +769,7 @@ mount M AW N T
 mouth M AW TH
 mouthed M AW DH D
 move M UW V
+much M AH CH
 mustard M AH S T ER D
 nada N AA D AA
 name N EY M
@@ -755,6 +784,7 @@ negotiated(2) N AH G OW SH IY EY T AH D
 neighbouring N EY B ER IH NG
 nestled N EH S AH L D
 neutral N UW T R AH L
+neutrally N UW T R AH L IY
 newsletter N UW Z L EH T ER
 newsstand N UW Z S T AE N D
 next N EH K S T
@@ -947,6 +977,7 @@ remained(2) R IH M EY N D
 remains R IH M EY N Z
 remains(2) R IH M EY N Z
 remit R IY M IH T
+remotely R IY M OW T L IY
 render R EH N D ER
 renew R IH N UW
 renewal R IH N UW AH L
@@ -980,6 +1011,7 @@ roe R OW
 room R UW M
 roost R UW S T
 roosted R UW S T IH D
+roughly R AH F L IY
 round R AW N D
 rum R AH M
 run R AH N
@@ -999,6 +1031,7 @@ secure S IH K Y UH R
 sedate S IH D EY T
 self S EH L F
 selfie S EH L F IY
+sense S EH N S
 serve S ER V
 set S EH T
 settle S EH T AH L
@@ -1097,6 +1130,7 @@ strict S T R IH K T
 striker S T R AY K ER
 structure S T R AH K CH ER
 stuffy S T AH F IY
+subconsciously S AH B K AA N SH AH S L IY
 subdivision S AH B D IH V IH ZH AH N
 subsist S AH B S IH S T
 succeed S AH K S IY D
@@ -1180,6 +1214,7 @@ umbra AH M B R AH
 umm AH M
 unable AH N EY B AH L
 unbearable AH N B EH R AH B AH L
+uncertainly AH N S ER T AH N L IY
 undertaker AH N D ER T EY K ER
 undeserving AH N D IH Z ER V IH NG
 up AH P

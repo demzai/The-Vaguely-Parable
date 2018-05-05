@@ -18,6 +18,7 @@ admission AE D M IH SH AH N
 admission(2) AE D M IH SH AH N
 admittance AH D M IH T AH N S
 affairs AH F EH R Z
+affront AH F R AH N T
 aforementioned AH F AO R M EH N SH AH N D
 agreement AH G R IY M AH N T
 ah AA
@@ -62,6 +63,7 @@ avenue AE V AH N UW
 away AH W EY
 babble B AE B AH L
 backdoor B AE K D AO R
+baffle B AE F AH L
 bag B AE G
 bang B AE NG
 bare B EH R
@@ -73,11 +75,13 @@ belch B EH L CH
 beside B IH S AY D
 beside(2) B IH S AY D
 best B EH S T
+bewilder B IH W IH L D ER
 blab B L AE B
 blank B L AE NG K
 blast B L AE S T
 blessing B L EH S IH NG
 blow B L OW
+blur B L ER
 board B AO R D
 body B AA D IY
 bog B AA G
@@ -121,6 +125,7 @@ cease S IY S
 chance CH AE N S
 channel CH AE N AH L
 character K EH R IH K T ER
+chat CH AE T
 cheer CH IH R
 chops CH AA P S
 clamber K L AE M B ER
@@ -149,6 +154,7 @@ compact(2) K AA M P AE K T
 company K AH M P AH N IY
 complete K AH M P L IY T
 completion K AH M P L IY SH AH N
+comply K AH M P L AY
 compromise K AA M P R AH M AY Z
 conceive K AH N S IY V
 conclude K AH N K L UW D
@@ -156,6 +162,8 @@ conclusion K AH N K L UW ZH AH N
 conduit K AA N D UW IH T
 conduit(2) K AA N D UW IH T
 conduit(3) K AA N D UW IH T
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 connector K AH N EH K T ER
 consider K AH N S IH D ER
 consult K AH N S AH L T
@@ -197,10 +205,12 @@ deem D IY M
 demarche D IH M AA R CH
 demarche(2) D IH M AA R CH
 dent D EH N T
+depend D IH P EH N D
 desegregated D IH S EH G R IH G EY T IH D
 detente D EY T AA N T
 deterrence D IH T ER AH N S
 detonate D EH T AH N EY T
+dimly D IH M L IY
 diplomacy D IH P L OW M AH S IY
 diplomatic D IH P L AH M AE T IH K
 direct D ER EH K T
@@ -228,6 +238,7 @@ down D AW N
 draw D R AO
 drop D R AA P
 drop(2) D R AA P
+dubiously D UW B IY AH S L IY
 dysfunctional D IH S F AH NG K SH AH N AH L
 ease IY Z
 easier IY Z IY ER
@@ -274,6 +285,8 @@ eruptions(2) IY R AH P SH AH N Z
 escapement IH S K EY P M AH N T
 essence EH S AH N S
 establish IH S T AE B L IH SH
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 exact IH G Z AE K T
 exit EH G Z IH T
 exit(2) EH G Z IH T
@@ -290,6 +303,7 @@ exposed IH K S P OW Z D
 extend IH K S T EH N D
 exterior IH K S T IH R IY ER
 facilitate F AH S IH L AH T EY T
+faintly F EY N T L IY
 fair F EH R
 faithful F EY TH F AH L
 fall F AO L
@@ -319,6 +333,8 @@ for(3) F AO R
 force F AO R S
 foreign F AO R AH N
 foreign(2) F AO R AH N
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 formula F AO R M Y AH L AH
 forthcoming F AO R TH K AH M IH NG
 forthright F AO R TH R AY T
@@ -327,6 +343,7 @@ found F AW N D
 foyer F OY ER
 fracture F R AE K CH ER
 fracture(2) F R AE K CH ER
+frail F R EY L
 frank F R AE NG K
 free F R IY
 french F R EH N CH
@@ -352,6 +369,7 @@ genuine(2) JH EH N Y AH W AH N
 give G IH V
 given G IH V AH N
 given(2) G IH V AH N
+gnarly N AA R L IY
 goal G OW L
 goes G OW Z
 good G UH D
@@ -368,6 +386,7 @@ handed(2) HH AE N D AH D
 hatch HH AE CH
 hatching HH AE CH IH NG
 hauled HH AO L D
+hazy HH EY Z IY
 heckling HH EH K L IH NG
 help HH EH L P
 hiatus HH AY EY T AH S
@@ -381,16 +400,23 @@ hospitality HH AA S P AH T AE L AH T IY
 house HH AW S
 huh HH AH
 i AY
+idly AY D L IY
 idol AY D AH L
 ignite IH G N AY T
 immediate IH M IY D IY AH T
 imminent IH M AH N AH N T
 impacted IH M P AE K T IH D
 impending IH M P EH N D IH NG
+imperceptibly IH M P ER S EH P T IH B L IY
 import IH M P AO R T
 improve IH M P R UW V
 in IH N
 inch IH N CH
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 ingenuous IH N JH EH N Y UW AH S
 injure IH N JH ER
@@ -449,6 +475,7 @@ like L AY K
 lock L AA K
 look L UH K
 loop L UW P
+loosely L UW S L IY
 lovemaking L AH V M EY K IH NG
 lover's L AH V ER Z
 loyalty L OY AH L T IY
@@ -471,10 +498,12 @@ mitigate M IH T AH G EY T
 mixed M IH K S T
 moderate M AA D ER AH T
 moderate(2) M AA D ER AH T
+modicum M AA D IH K AH M
 mollify M AA L AH F AY
 mouth M AW TH
 mouthed M AW DH D
 move M UW V
+much M AH CH
 multinational M AH L T AY N AE SH AH N AH L
 multinational(2) M AH L T AY N AE SH AH N AH L
 multiracial M AH L T AY R EY SH AH L
@@ -492,6 +521,7 @@ negotiated(2) N AH G OW SH IY EY T AH D
 neighbouring N EY B ER IH NG
 nestled N EH S AH L D
 neutralism N UW T R AH L IH Z AH M
+neutrally N UW T R AH L IY
 next N EH K S T
 next(2) N EH K S T
 nib N IH B
@@ -609,6 +639,7 @@ relent R IH L EH N T
 relevance R EH L AH V AH N S
 relieve R IH L IY V
 relieve(2) R IH L IY V
+remotely R IY M OW T L IY
 rent R EH N T
 reopen R IY OW P AH N
 reprieve R IY P R IY V
@@ -625,6 +656,7 @@ rigorous R IH G ER AH S
 robot R OW B AA T
 robot(2) R OW B AA T
 room R UW M
+roughly R AH F L IY
 ruin R UW AH N
 ruin(2) R UW AH N
 run R AH N
@@ -638,6 +670,7 @@ seal S IY L
 second S EH K AH N D
 secretive S IY K R AH T IH V
 secure S IH K Y UH R
+sense S EH N S
 separate S EH P ER EY T
 separate(2) S EH P ER EY T
 separate(3) S EH P ER EY T
@@ -667,6 +700,7 @@ smiling S M AY L IH NG
 smooth S M UW DH
 snap S N AE P
 snuggled S N AH G AH L D
+so S OW
 something S AH M TH IH NG
 spill S P IH L
 spirit S P IH R AH T
@@ -688,6 +722,7 @@ straightforward S T R EY T F AO R W ER D
 strict S T R IH K T
 structure S T R AH K CH ER
 stuffy S T AH F IY
+subconsciously S AH B K AA N SH AH S L IY
 subject S AH B JH EH K T
 subject(2) S AH B JH EH K T
 submerged S AH B M ER JH D
@@ -742,6 +777,7 @@ um AH M
 umm AH M
 unbolt AH N B OW L T
 uncertain AH N S ER T AH N
+uncertainly AH N S ER T AH N L IY
 unconcealed AH N K AH N S IY L D
 unconfined AH N K AH N F AY N D
 uncork AH N K AO R K

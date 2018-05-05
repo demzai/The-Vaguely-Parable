@@ -17,6 +17,7 @@ administrator AH D M IH N AH S T R EY T ER
 advance AH D V AE N S
 advancement AH D V AE N S M AH N T
 advisers AE D V AY Z ER Z
+affront AH F R AH N T
 agility AH JH IH L AH T IY
 ah AA
 ahead AH HH EH D
@@ -66,6 +67,7 @@ away AH W EY
 azure AE ZH ER
 back B AE K
 backstairs B AE K S T EH R Z
+baffle B AE F AH L
 balcony B AE L K AH N IY
 balloon B AH L UW N
 be B IY
@@ -80,6 +82,7 @@ below(2) B IH L OW
 beneath B IH N IY TH
 besides B IH S AY D Z
 besides(2) B IH S AY D Z
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -88,6 +91,7 @@ blast B L AE S T
 blithe B L AY DH
 block B L AA K
 blow B L OW
+blur B L ER
 board B AO R D
 boom B UW M
 boost B UW S T
@@ -123,6 +127,7 @@ cast K AE S T
 champion CH AE M P IY AH N
 channel CH AE N AH L
 charge CH AA R JH
+chat CH AE T
 cheerful CH IH R F AH L
 cheery CH IH R IY
 chest CH EH S T
@@ -144,7 +149,10 @@ command K AH M AE N D
 commander K AH M AE N D ER
 companion K AH M P AE N Y AH N
 companionway K AH M P AE N Y AH N W EY
+comply K AH M P L AY
 conduct K AA N D AH K T
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 conn K AA N
 continue K AH N T IH N Y UW
 control K AH N T R OW L
@@ -171,9 +179,11 @@ deep D IY P
 degrees D IH G R IY Z
 depart D IH P AA R T
 department D IH P AA R T M AH N T
+depend D IH P EH N D
 descend D IH S EH N D
 develop D IH V EH L AH P
 die D AY
+dimly D IH M L IY
 direct D ER EH K T
 direct(2) D ER EH K T
 direct(3) D ER EH K T
@@ -195,6 +205,7 @@ drag D R AE G
 dragon D R AE G AH N
 draw D R AO
 drive D R AY V
+dubiously D UW B IY AH S L IY
 ease IY Z
 echelons EH SH AH L AA N Z
 ecstasy EH K S T AH S IY
@@ -228,6 +239,8 @@ eternal IH T ER N AH L
 eternal(2) IH T ER N AH L
 eternity IH T ER N AH T IY
 eternity(2) IH T ER N AH T IY
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 executive IH G Z EH K Y AH T IH V
 exit EH G Z IH T
 exit(2) EH G Z IH T
@@ -236,6 +249,7 @@ expire IH K S P AY R
 extend IH K S T EH N D
 face F EY S
 fail F EY L
+faintly F EY N T L IY
 fairyland F EH R IY L AE N D
 fall F AO L
 fall(2) F AO L
@@ -259,8 +273,11 @@ fore F AO R
 forefront F AO R F R AH N T
 foreman F AO R M AH N
 foremost F AO R M OW S T
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 formerly F AO R M ER L IY
 forward F AO R W ER D
+frail F R EY L
 from F R AH M
 front F R AH N T
 froth F R AO TH
@@ -276,6 +293,7 @@ get G EH T
 get(2) G EH T
 glad G L AE D
 glide G L AY D
+gnarly N AA R L IY
 go G OW
 govern G AH V ER N
 governor G AH V ER N ER
@@ -295,6 +313,7 @@ harbinger HH AA R B IH N JH ER
 harmony HH AA R M AH N IY
 hatteras HH AE T ER AH S
 have HH AE V
+hazy HH EY Z IY
 head HH EH D
 heading HH EH D IH NG
 heaven HH EH V AH N
@@ -315,16 +334,24 @@ horse HH AO R S
 household HH AW S HH OW L D
 huh HH AH
 hurry HH ER IY
+idly AY D L IY
+imperceptibly IH M P ER S EH P T IH B L IY
 improve IH M P R UW V
 in IH N
 incinerate IH N S IH N ER EY T
 incline IH N K L AY N
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 increase IH N K R IY S
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
+inexplicably IH N IH K S P L IH K AH B L IY
 intimate IH N T AH M AH T
 intimate(2) IH N T AH M AH T
 intimate(3) IH N T AH M AH T
 introduce IH N T R AH D UW S
 introduce(2) IH N T R AH D UW S
+invade IH N V EY D
 jack JH AE K
 jaunty JH AO N T IY
 jolly JH AA L IY
@@ -357,6 +384,7 @@ live L AY V
 live(2) L AY V
 lively L AY V L IY
 loggia L AA G IY AH
+loosely L UW S L IY
 lurking L ER K IH NG
 main M EY N
 maker M EY K ER
@@ -377,6 +405,7 @@ mental M EH N T AH L
 merry M EH R IY
 micromanage M AY K R OW M AE N IH JH
 mind M AY N D
+modicum M AA D IH K AH M
 more M AO R
 mount M AW N T
 mountain M AW N T AH N
@@ -385,8 +414,10 @@ mountaineering M AW N T IH N IH R IH NG
 mounting M AW N T IH NG
 move M UW V
 moving M UW V IH NG
+much M AH CH
 navigate N AE V AH G EY T
 near N IH R
+neutrally N UW T R AH L IY
 never N EH V ER
 of AH V
 off AO F
@@ -456,6 +487,7 @@ ranks R AE NG K S
 rear R IH R
 refuge R EH F Y UW JH
 regulate R EH G Y AH L EY T
+remotely R IY M OW T L IY
 repair R IH P EH R
 rest R EH S T
 retire R IH T AY R
@@ -468,6 +500,7 @@ rise R AY Z
 rising R AY Z IH NG
 rock R AA K
 rocket R AA K AH T
+roughly R AH F L IY
 rounded R AW N D AH D
 rounded(2) R AW N D AH D
 rule R UW L
@@ -481,6 +514,7 @@ scramble S K R AE M B AH L
 secret S IY K R AH T
 secret(2) S IY K R AH T
 secretary S EH K R AH T EH R IY
+sense S EH N S
 set S EH T
 shangri SH AE NG G R IY
 sharply SH AA R P L IY
@@ -495,6 +529,7 @@ sky S K AY
 skyrocket S K AY R AA K AH T
 skyward S K AY W ER D
 snowball S N OW B AO L
+so S OW
 soar S AO R
 space S P EY S
 speed S P IY D
@@ -536,6 +571,8 @@ strides S T R AY D Z
 striker S T R AY K ER
 strings S T R IH NG Z
 subconscious S AH B K AA N SH AH S
+subconsciously S AH B K AA N SH AH S L IY
+such S AH CH
 sunny S AH N IY
 superintendent S UW P ER AH N T EH N D AH N T
 superintendent(2) S UW P ER AH N T EH N D AH N T
@@ -556,9 +593,12 @@ tank T AE NG K
 terraced T EH R AH S T
 thank TH AE NG K
 thanks TH AE NG K S
+that DH AE T
+that(2) DH AE T
 the DH AH
 the(2) DH AH
 think TH IH NG K
+this DH IH S
 throat TH R OW T
 through TH R UW
 timely T AY M L IY
@@ -583,6 +623,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 unconscious AH N K AA N SH AH S
 under AH N D ER
 unknown AH N N OW N

@@ -24,6 +24,7 @@ adverse(2) AE D V ER S
 affect AH F EH K T
 affinity AH F IH N AH T IY
 affinity(2) AH F IH N AH T IY
+affront AH F R AH N T
 afloat AH F L OW T
 aft AE F T
 after AE F T ER
@@ -128,6 +129,7 @@ background B AE K G R AW N D
 backward B AE K W ER D
 backwardation B AE K W ER D EY SH AH N
 bad B AE D
+baffle B AE F AH L
 baptism B AE P T IH Z AH M
 basis B EY S AH S
 basis(2) B EY S AH S
@@ -159,6 +161,7 @@ belt B EH L T
 benefit B EH N AH F IH T
 beside B IH S AY D
 beside(2) B IH S AY D
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -166,6 +169,7 @@ bid B IH D
 bird B ER D
 bitter B IH T ER
 blank B L AE NG K
+blur B L ER
 board B AO R D
 bob B AA B
 body B AA D IY
@@ -209,6 +213,7 @@ cave K EY V
 chance CH AE N S
 character K EH R IH K T ER
 charmed CH AA R M D
+chat CH AE T
 check CH EH K
 chemical K EH M AH K AH L
 chemical(2) K EH M AH K AH L
@@ -240,11 +245,14 @@ compensate K AA M P AH N S EY T
 complaint K AH M P L EY N T
 complement K AA M P L AH M AH N T
 complicated K AA M P L AH K EY T AH D
+comply K AH M P L AY
 composition K AA M P AH Z IH SH AH N
 compromise K AA M P R AH M AY Z
 concerning K AH N S ER N IH NG
 condition K AH N D IH SH AH N
 conditions K AH N D IH SH AH N Z
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 consider K AH N S IH D ER
 consummate K AA N S AH M AH T
 consummate(2) K AA N S AH M AH T
@@ -274,6 +282,7 @@ deal D IY L
 deem D IY M
 degree D IH G R IY
 delve D EH L V
+depend D IH P EH N D
 descend D IH S EH N D
 desert D EH Z ER T
 desert(2) D EH Z ER T
@@ -284,6 +293,7 @@ detail D IH T EY L
 detail(2) D IH T EY L
 detect D IH T EH K T
 dig D IH G
+dimly D IH M L IY
 direct D ER EH K T
 direct(2) D ER EH K T
 direct(3) D ER EH K T
@@ -307,6 +317,7 @@ drift D R IH F T
 drilling D R IH L IH NG
 drive D R AY V
 driving D R AY V IH NG
+dubiously D UW B IY AH S L IY
 during D UH R IH NG
 during(2) D UH R IH NG
 during(3) D UH R IH NG
@@ -349,6 +360,8 @@ err(2) EH R
 essay EH S EY
 estimated EH S T AH M EY T AH D
 estimated(2) EH S T AH M EY T AH D
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 every EH V ER IY
 every(2) EH V ER IY
 everything EH V R IY TH IH NG
@@ -382,6 +395,7 @@ eye AY
 face F EY S
 facial F EY SH AH L
 facing F EY S IH NG
+faintly F EY N T L IY
 fall F AO L
 fall(2) F AO L
 family F AE M AH L IY
@@ -414,9 +428,12 @@ for(3) F AO R
 forage F AO R IH JH
 foray F AO R EY
 force F AO R S
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 form F AO R M
 forward F AO R W ER D
 fragmentation F R AE G M AH N T EY SH AH N
+frail F R EY L
 frame F R EY M
 frequent F R IY K W AH N T
 frequent(2) F R IY K W AH N T
@@ -450,6 +467,7 @@ glisten G L IH S AH N
 glitter G L IH T ER
 globe G L OW B
 glow G L OW
+gnarly N AA R L IY
 go G OW
 goad G OW D
 goes G OW Z
@@ -485,6 +503,7 @@ harmony HH AA R M AH N IY
 harshness HH AA R SH N AH S
 have HH AE V
 hazard HH AE Z ER D
+hazy HH EY Z IY
 head HH EH D
 heart HH AA R T
 heave HH IY V
@@ -512,13 +531,20 @@ hunt HH AH N T
 i AY
 idea AY D IY AH
 identity AY D EH N T IH T IY
+idly AY D L IY
 image IH M AH JH
 image(2) IH M AH JH
 impel IH M P EH L
+imperceptibly IH M P ER S EH P T IH B L IY
 impress IH M P R EH S
 in IH N
 incite IH N S AY T
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 induce IH N D UW S
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 influence IH N F L UW AH N S
 innovation IH N AH V EY SH AH N
@@ -576,6 +602,7 @@ location L OW K EY SH AH N
 locomotor L OW K AH M OW T ER
 long L AO NG
 look L UH K
+loosely L UW S L IY
 love L AH V
 low L OW
 lump L AH M P
@@ -610,6 +637,7 @@ minded(2) M AY N D AH D
 mineral M IH N ER AH L
 mineral(2) M IH N ER AH L
 mode M OW D
+modicum M AA D IH K AH M
 mood M UW D
 more M AO R
 morning M AO R N IH NG
@@ -629,6 +657,7 @@ nearly N IH R L IY
 neighborhood N EY B ER HH UH D
 neighbourhood N EY B ER HH UH D
 nerd N ER D
+neutrally N UW T R AH L IY
 never N EH V ER
 new N UW
 new(2) N UW
@@ -787,6 +816,7 @@ relief R IH L IY F
 relief(2) R IH L IY F
 relocate R IY L OW K EY T
 remembrance R IY M EH M B R AH N S
+remotely R IY M OW T L IY
 remove R IY M UW V
 repent R IH P EH N T
 repudiate R IY P Y UW D IY EY T
@@ -911,6 +941,8 @@ structure S T R AH K CH ER
 struggle S T R AH G AH L
 study S T AH D IY
 style S T AY L
+subconsciously S AH B K AA N SH AH S L IY
+such S AH CH
 suffer S AH F ER
 suffering S AH F ER IH NG
 suffering(2) S AH F ER IH NG
@@ -1003,6 +1035,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 undergo AH N D ER G OW
 undertake AH N D ER T EY K
 undertaking AH N D ER T EY K IH NG

@@ -36,6 +36,7 @@ advantageous AE D V AH N T EY JH AH S
 adverse AE D V ER S
 adverse(2) AE D V ER S
 advert AE D V ER T
+affront AH F R AH N T
 afloat AH F L OW T
 aforementioned AH F AO R M EH N SH AH N D
 aft AE F T
@@ -103,6 +104,7 @@ award AH W AO R D
 aware AH W EH R
 away AH W EY
 back B AE K
+baffle B AE F AH L
 bargaining B AA R G IH N IH NG
 bask B AE S K
 be B IY
@@ -140,6 +142,7 @@ betake B IY T EY K
 between B IH T W IY N
 between(2) B IH T W IY N
 betwixt B IY T W IH K S T
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -147,6 +150,7 @@ bind B AY N D
 blank B L AE NG K
 blaze B L EY Z
 blow B L OW
+blur B L ER
 board B AO R D
 body B AA D IY
 bold B OW L D
@@ -182,6 +186,7 @@ chalk CH AA K
 chalk(2) CH AA K
 character K EH R IH K T ER
 charmed CH AA R M D
+chat CH AE T
 check CH EH K
 cheer CH IH R
 cheerful CH IH R F AH L
@@ -207,12 +212,15 @@ coming K AH M IH NG
 commence K AH M EH N S
 common K AA M AH N
 company K AH M P AH N IY
+comply K AH M P L AY
 computer K AH M P Y UW T ER
 conceive K AH N S IY V
 concern K AH N S ER N
 concerning K AH N S ER N IH NG
 conduct K AA N D AH K T
 confront K AH N F R AH N T
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 connect K AH N EH K T
 connector K AH N EH K T ER
 conscript K AA N S K R IH P T
@@ -263,11 +271,13 @@ degree D IH G R IY
 delicate D EH L AH K AH T
 delicious D IH L IH SH AH S
 depart D IH P AA R T
+depend D IH P EH N D
 descend D IH S EH N D
 determine D AH T ER M AH N
 determine(2) D AH T ER M AH N
 deviate D IY V IY EY T
 die D AY
+dimly D IH M L IY
 dip D IH P
 direct D ER EH K T
 direct(2) D ER EH K T
@@ -298,6 +308,7 @@ draft D R AE F T
 drag D R AE G
 draw D R AO
 drive D R AY V
+dubiously D UW B IY AH S L IY
 during D UH R IH NG
 during(2) D UH R IH NG
 during(3) D UH R IH NG
@@ -328,6 +339,8 @@ err(2) EH R
 erudite EH R AH D AY T
 escape IH S K EY P
 essence EH S AH N S
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 excessively IH K S EH S IH V L IY
 exit EH G Z IH T
 exit(2) EH G Z IH T
@@ -341,6 +354,7 @@ eye AY
 eyes AY Z
 facing F EY S IH NG
 fail F EY L
+faintly F EY N T L IY
 fair F EH R
 fall F AO L
 fall(2) F AO L
@@ -372,8 +386,11 @@ foot F UH T
 for F AO R
 for(2) F AO R
 for(3) F AO R
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 forward F AO R W ER D
 forwards F AO R W ER D Z
+frail F R EY L
 frequent F R IY K W AH N T
 frequent(2) F R IY K W AH N T
 friction F R IH K SH AH N
@@ -391,6 +408,7 @@ gleam G L IY M
 glide G L AY D
 glow G L OW
 glowing G L OW IH NG
+gnarly N AA R L IY
 go G OW
 goes G OW Z
 going G OW IH NG
@@ -413,6 +431,7 @@ hang HH AE NG
 happy HH AE P IY
 hard HH AA R D
 haunt HH AO N T
+hazy HH EY Z IY
 headed HH EH D AH D
 headed(2) HH EH D AH D
 heat HH IY T
@@ -432,17 +451,24 @@ hooked HH UH K T
 huh HH AH
 humble HH AH M B AH L
 hurry HH ER IY
+idly AY D L IY
 idol AY D AH L
 ignite IH G N AY T
 illuminate IH L UW M IH N IH T
 illumination IH L UW M AH N EY SH AH N
 immersed IH M ER S T
+imperceptibly IH M P ER S EH P T IH B L IY
 import IH M P AO R T
 in IH N
 incipient IH N S IH P IY AH N T
 incline IH N K L AY N
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 incorporate IH N K AO R P ER EY T
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
 induct IH N D AH K T
+inexplicably IH N IH K S P L IH K AH B L IY
 infiltrate IH N F IH L T R EY T
 inflame IH N F L EY M
 informed IH N F AO R M D
@@ -501,6 +527,7 @@ locate L OW K EY T
 log L AO G
 look L UH K
 loop L UW P
+loosely L UW S L IY
 lovemaking L AH V M EY K IH NG
 lover's L AH V ER Z
 lucifer L UW S AH F ER
@@ -521,6 +548,7 @@ mental M EH N T AH L
 mentioned M EH N SH AH N D
 merry M EH R IY
 meteor M IY T IY ER
+modicum M AA D IH K AH M
 moon M UW N
 moonlight M UW N L AY T
 moonshine M UW N SH AY N
@@ -529,6 +557,7 @@ morning M AO R N IH NG
 most M OW S T
 most(2) M OW S T
 move M UW V
+much M AH CH
 muster M AH S T ER
 myrtle M ER T AH L
 natural N AE CH ER AH L
@@ -536,6 +565,7 @@ natural(2) N AE CH ER AH L
 nature N EY CH ER
 near N IH R
 nearly N IH R L IY
+neutrally N UW T R AH L IY
 nip N IH P
 nirvana N IH R V AA N AH
 nirvana(2) N IH R V AA N AH
@@ -658,6 +688,7 @@ relationship R IY L EY SH AH N SH IH P
 relevance R EH L AH V AH N S
 remain R IH M EY N
 remain(2) R IH M EY N
+remotely R IY M OW T L IY
 repair R IH P EH R
 repay R IY P EY
 reside R IH Z AY D
@@ -683,6 +714,7 @@ savvy S AE V IY
 scene S IY N
 scrutinize S K R UW T AH N AY Z
 see S IY
+sense S EH N S
 serve S ER V
 set S EH T
 shaft SH AE F T
@@ -716,10 +748,12 @@ stay S T EY
 stopping S T AA P IH NG
 straight S T R EY T
 strong S T R AO NG
+subconsciously S AH B K AA N SH AH S L IY
 subject S AH B JH EH K T
 subject(2) S AH B JH EH K T
 submit S AH B M IH T
 substance S AH B S T AH N S
+such S AH CH
 summit S AH M AH T
 summit(2) S AH M AH T
 sun S AH N
@@ -783,6 +817,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 undertake AH N D ER T EY K
 unionize Y UW N Y AH N AY Z
 until AH N T IH L
@@ -809,6 +844,7 @@ warmth W AO R M TH
 watch W AA CH
 watch(2) W AA CH
 water W AO T ER
+way W EY
 weather W EH DH ER
 well W EH L
 wend W EH N D

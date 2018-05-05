@@ -3,7 +3,7 @@ Vaguely screamed through the hole in the floor.
 Suddenly, a deep rumbling sound from beneath the floor began shaking everything around her.
 Scared stiff, Vaguely curled into a ball, pinning herself tightly to a nearby wall.
 Blocks began to fall all around her when, without warning, she began to fall as well!
-Landing with a thud Vaguely curled up terrified, crying with fear.
+Landing with a thud, Vaguely curled up terrified, crying with fear.
 "Hey! Fancy seeing you here." A friendly voice gestured.
 When Vaguely gathered the courage to finally look up, she saw the smile of an old friend with an outstretched hand to help her up.
 As Vaguely lunged into her friend with a deep hug, her tears began to melt away.
@@ -12,7 +12,7 @@ And in this weird world, they smiled solemnly to each other.
 #delay(0.5)
 For although their journeys would not be without falls...
 They were together now, and could pull each other out from their darkest wells.
-#delay(1)
+#delay(1.2)
 And so they walked.
 #delay(2.5)
 And as the minutes turned to days, and days melted into years, and those years drifted into millennia, their paths and sombre smiles drifted into the void.

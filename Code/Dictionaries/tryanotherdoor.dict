@@ -51,6 +51,7 @@ affix AE F IH K S
 affix(2) AE F IH K S
 afflict AH F L IH K T
 affliction AH F L IH K SH AH N
+affront AH F R AH N T
 aforesaid AH F AO R S EH D
 afresh AH F R EH SH
 aft AE F T
@@ -161,6 +162,7 @@ awkward(2) AA K W ER D
 back B AE K
 backdoor B AE K D AO R
 backward B AE K W ER D
+baffle B AE F AH L
 ballade B AH L AA D
 ballet B AE L EY
 band B AE N D
@@ -187,6 +189,7 @@ besides B IH S AY D Z
 besides(2) B IH S AY D Z
 between B IH T W IY N
 between(2) B IH T W IY N
+bewilder B IH W IH L D ER
 beyond B IH AA N D
 beyond(2) B IH AA N D
 beyond(3) B IH AA N D
@@ -202,6 +205,7 @@ blank B L AE NG K
 blessing B L EH S IH NG
 blow B L OW
 blues B L UW Z
+blur B L ER
 board B AO R D
 bold B OW L D
 books B UH K S
@@ -254,6 +258,7 @@ chanson SH AA N S AO N
 character K EH R IH K T ER
 charcoal CH AA R K OW L
 chartered CH AA R T ER D
+chat CH AE T
 check CH EH K
 cheese CH IY Z
 chemistry K EH M AH S T R IY
@@ -279,6 +284,7 @@ complete K AH M P L IY T
 completed K AH M P L IY T AH D
 completed(2) K AH M P L IY T AH D
 completely K AH M P L IY T L IY
+comply K AH M P L AY
 compute K AH M P Y UW T
 concerning K AH N S ER N IH NG
 concert K AA N S ER T
@@ -290,6 +296,8 @@ conduit K AA N D UW IH T
 conduit(2) K AA N D UW IH T
 conduit(3) K AA N D UW IH T
 conflicting K AH N F L IH K T IH NG
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 congratulations K AH N G R AE CH AH L EY SH AH N Z
 conquest K AA NG K W EH S T
 consecrate K AA N S AH K R EY T
@@ -349,6 +357,7 @@ decide D IH S AY D
 dedicate D EH D AH K EY T
 demarche D IH M AA R CH
 demarche(2) D IH M AA R CH
+depend D IH P EH N D
 detached D IH T AE CH T
 detached(2) D IH T AE CH T
 detox D IY T AA K S
@@ -362,6 +371,7 @@ different D IH F ER AH N T
 different(2) D IH F ER AH N T
 digit D IH JH AH T
 digit(2) D IH JH AH T
+dimly D IH M L IY
 direct D ER EH K T
 direct(2) D ER EH K T
 direct(3) D ER EH K T
@@ -400,6 +410,7 @@ doorway D AO R W EY
 double D AH B AH L
 down D AW N
 drive D R AY V
+dubiously D UW B IY AH S L IY
 due D UW
 due(2) D UW
 duet D UW EH T
@@ -461,6 +472,8 @@ essay EH S EY
 estimate EH S T AH M AH T
 estimate(2) EH S T AH M AH T
 ethic EH TH IH K
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 even IY V IH N
 ever EH V ER
 examine IH G Z AE M IH N
@@ -490,6 +503,7 @@ extraordinary EH K S T R AH AO R D AH N EH R IY
 extraordinary(2) EH K S T R AH AO R D AH N EH R IY
 extremely EH K S T R IY M L IY
 facing F EY S IH NG
+faintly F EY N T L IY
 fall F AO L
 fall(2) F AO L
 farther F AA R DH ER
@@ -515,6 +529,8 @@ foolish F UW L IH SH
 for F AO R
 for(2) F AO R
 for(3) F AO R
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 form F AO R M
 formal F AO R M AH L
 former F AO R M ER
@@ -523,6 +539,7 @@ forthcoming F AO R TH K AH M IH NG
 forward F AO R W ER D
 forwards F AO R W ER D Z
 foyer F OY ER
+frail F R EY L
 free F R IY
 french F R EH N CH
 fresh F R EH SH
@@ -550,6 +567,7 @@ giddy G IH D IY
 give G IH V
 given G IH V AH N
 given(2) G IH V AH N
+gnarly N AA R L IY
 go G OW
 goal G OW L
 going G OW IH NG
@@ -571,6 +589,7 @@ hatch HH AE CH
 hatching HH AE CH IH NG
 have HH AE V
 hazard HH AE Z ER D
+hazy HH EY Z IY
 healthy HH EH L TH IY
 hear HH IY R
 help HH EH L P
@@ -590,16 +609,22 @@ however HH AW EH V ER
 huh HH AH
 i AY
 identification AY D EH N T AH F AH K EY SH AH N
+idly AY D L IY
+imperceptibly IH M P ER S EH P T IH B L IY
 implement IH M P L AH M AH N T
 in IH N
 inadequate IH N AE D AH K W AH T
 inadequate(2) IH N AE D AH K W AH T
 incline IH N K L AY N
+incoherently IH N K OW HH IH R AH N T L IY
 incomparable IH N K AA M P ER AH B AH L
 incompatible IH N K AH M P AE T AH B AH L
 incompetent IH N K AA M P AH T AH N T
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
 inconsistent IH N K AH N S IH S T AH N T
+indefinitely IH N D EH F AH N AH T L IY
 independent IH N D IH P EH N D AH N T
+indistinct IH N D IH S T IH NG K T
 individual IH N D AH V IH JH AH W AH L
 ineffectual IH N AH F EH K CH UW AH L
 inefficient IH N IH F IH SH AH N T
@@ -607,6 +632,7 @@ inequality IH N IH K W AA L AH T IY
 inequality(2) IH N IH K W AA L AH T IY
 inequality(3) IH N IH K W AA L AH T IY
 inexperienced IH N IH K S P IH R IY AH N S T
+inexplicably IH N IH K S P L IH K AH B L IY
 inferior IH N F IH R IY ER
 infinity IH N F IH N IH T IY
 inlet IH N L EH T
@@ -624,6 +650,7 @@ interior IH N T IH R IY ER
 interval IH N T ER V AH L
 into IH N T UW
 into(2) IH N T UW
+invade IH N V EY D
 irk ER K
 irrational IH R AE SH AH N AH L
 irregular IH R EH G Y AH L ER
@@ -665,6 +692,7 @@ lines L AY N Z
 literary L IH T ER EH R IY
 longer L AO NG G ER
 look L UH K
+loosely L UW S L IY
 lot L AA T
 lot(2) L AA T
 love L AH V
@@ -713,6 +741,7 @@ mistaken M IH S T EY K AH N
 misuse M IH S Y UW Z
 misuse(2) M IH S Y UW Z
 mobile M OW B AH L
+modicum M AA D IH K AH M
 monochrome M AA N AH K R OW M
 more M AO R
 moreover M AO R OW V ER
@@ -736,6 +765,7 @@ musician M Y UW Z IH SH AH N
 nature N EY CH ER
 near N IH R
 need N IY D
+neutrally N UW T R AH L IY
 new N UW
 new(2) N UW
 newly N UW L IY
@@ -887,6 +917,7 @@ regard R IH G AA R D
 regarding R IH G AA R D IH NG
 remaining R IH M EY N IH NG
 remaining(2) R IH M EY N IH NG
+remotely R IY M OW T L IY
 removed R IY M UW V D
 renewed R IH N UW D
 renewed(2) R IH N UW D
@@ -921,6 +952,7 @@ rock R AA K
 roll R OW L
 room R UW M
 roots R UW T S
+roughly R AH F L IY
 round R AW N D
 route R UW T
 route(2) R UW T
@@ -993,6 +1025,7 @@ structure S T R AH K CH ER
 struggle S T R AH G AH L
 stupid S T UW P AH D
 stupid(2) S T UW P AH D
+subconsciously S AH B K AA N SH AH S L IY
 substitute S AH B S T AH T UW T
 succeed S AH K S IY D
 such S AH CH
@@ -1100,6 +1133,7 @@ ultimately AH L T AH M AH T L IY
 um AH M
 umm AH M
 unbroken AH N B R OW K AH N
+uncertainly AH N S ER T AH N L IY
 uncommon AH N K AA M AH N
 unconventional AH N K AH N V EH N SH AH N AH L
 undertake AH N D ER T EY K

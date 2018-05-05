@@ -46,7 +46,7 @@ def reader(to_be_read, lock_to_be_read, is_faulty):
                 with lock_to_be_read:
                     to_be_read[1] = False
             else:
-                time.sleep(0.1)
+                time.sleep(0.01)
     except Exception as e:
         with open("log_file.txt", "a") as log_file:
             log_file.write(str(t.format_exc()))
@@ -91,6 +91,8 @@ class ReaderObj:
         :return: list
         """
         self.stack = []
+        self.read_start_time = time.time()
+        self.currently_reading = ""
         self.interruptable = True
         self.alive = False
         self.is_busy = False
@@ -155,8 +157,14 @@ class ReaderObj:
         """
         self.alive = self.__process.is_alive()
         # Check whether the reader has crashed
-        if self.alive is True and self.__is_faulty[0] is True:
+        if self.alive is True and (self.__is_faulty[0] is True or time.time() - self.read_start_time > 30):
+            with open("log_file.txt", "a") as log_file:
+                log_file.write("\tREADER CRASH - time = {0}".format(time.time()-self.read_start_time))
             self.__restartReader()
+            with self.__lock_to_be_read:
+                self.__to_be_read[0] = self.currently_reading
+                self.__to_be_read[1] = True
+                self.is_busy = True
 
         # If there's work to be done and the reader is dead, start it up
         if len(self.stack) is not 0 and self.alive is False:
@@ -173,11 +181,14 @@ class ReaderObj:
                 self.stopReader()
             # If there's work left to do then get the next chunk for processing
             else:
-                with self.__lock_to_be_read:
-                    [self.__to_be_read[0], self.stack] = getNextText(self.stack)
-                    if self.__to_be_read[0] is None:
-                        self.__stopReader()
-                    else:
+                # Start the watchdog timer
+                self.read_start_time = time.time()
+                [self.currently_reading, self.stack] = getNextText(self.stack)
+                if self.currently_reading is None:
+                    self.__stopReader()
+                else:
+                    with self.__lock_to_be_read:
+                        self.__to_be_read[0] = self.currently_reading
                         self.__to_be_read[1] = True
                         self.is_busy = True
 

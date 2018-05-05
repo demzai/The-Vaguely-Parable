@@ -14,6 +14,7 @@ adventure AE D V EH N CH ER
 adventure(2) AE D V EH N CH ER
 advertisement AE D V ER T AH Z M AH N T
 advertisement(2) AE D V ER T AH Z M AH N T
+affront AH F R AH N T
 ah AA
 ahh AA
 air EH R
@@ -43,6 +44,7 @@ authority AH TH AO R AH T IY
 aviation EY V IY EY SH AH N
 away AH W EY
 back B AE K
+baffle B AE F AH L
 baguette B AE G EH T
 band B AE N D
 bandage B AE N D IH JH
@@ -60,6 +62,7 @@ bearing B EH R IH NG
 beating B IY T IH NG
 bedford B EH D F ER D
 berth B ER TH
+bewilder B IH W IH L D ER
 billiards B IH L Y ER D Z
 bind B AY N D
 biochemist B AY OW K EH M AH S T
@@ -67,6 +70,7 @@ blackjack B L AE K JH AE K
 block B L AA K
 bloodshed B L AH D SH EH D
 bloodsucking B L AH D S AH K IH NG
+blur B L ER
 bola B OW L AH
 bond B AA N D
 book B UH K
@@ -108,6 +112,7 @@ chamber CH EY M B ER
 channel CH AE N AH L
 charisma K ER IH Z M AH
 charm CH AA R M
+chat CH AE T
 children's CH IH L D R AH N Z
 chilling CH IH L IH NG
 chord K AO R D
@@ -125,6 +130,7 @@ comedy K AA M AH D IY
 commandeer K AA M AH N D IH R
 commit K AH M IH T
 communicate K AH M Y UW N AH K EY T
+comply K AH M P L AY
 computer K AH M P Y UW T ER
 concatenate K AH N K AE T AH N EY T
 concatenation K AH N K AE T AH N EY SH AH N
@@ -133,6 +139,8 @@ condition K AH N D IH SH AH N
 conduit K AA N D UW IH T
 conduit(2) K AA N D UW IH T
 conduit(3) K AA N D UW IH T
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 connect K AH N EH K T
 connection K AH N EH K SH AH N
 connections K AH N EH K SH AH N Z
@@ -168,9 +176,11 @@ definition D EH F AH N IH SH AH N
 demodulate D IY M AA JH AH L EY T
 departmental D IH P AA R T M EH N AH L
 departmental(2) D IH P AA R T M EH N AH L
+depend D IH P EH N D
 detective D IH T EH K T IH V
 digital D IH JH AH T AH L
 digital(2) D IH JH AH T AH L
+dimly D IH M L IY
 docudrama D OW K AH D R AE M AH
 documentary D AA K Y AH M EH N T ER IY
 documentary(2) D AA K Y AH M EH N T ER IY
@@ -188,6 +198,7 @@ draught D R AE F T
 draw D R AO
 drawing D R AO IH NG
 driller D R IH L ER
+dubiously D UW B IY AH S L IY
 economic EH K AH N AA M IH K
 economic(2) EH K AH N AA M IH K
 educational EH JH AH K EY SH AH N AH L
@@ -208,6 +219,8 @@ er ER
 err EH R
 err(2) EH R
 ethnos EH TH N OW S
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 excision IH K S IH ZH AH N
 exertion IH G Z ER SH AH N
 extension IH K S T EH N SH AH N
@@ -215,6 +228,7 @@ extract EH K S T R AE K T
 extract(2) EH K S T R AE K T
 factor F AE K T ER
 factual F AE K CH UW AH L
+faintly F EY N T L IY
 fantasy F AE N T AH S IY
 fantasy(2) F AE N T AH S IY
 fascination F AE S AH N EY SH AH N
@@ -239,7 +253,10 @@ fishing F IH SH IH NG
 flex F L EH K S
 fly F L AY
 force F AO R S
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 formal F AO R M AH L
+frail F R EY L
 from F R AH M
 gable G EY B AH L
 gallows G AE L OW Z
@@ -251,6 +268,7 @@ generated JH EH N ER EY T AH D
 generated(2) JH EH N ER EY T AH D
 get G EH T
 get(2) G EH T
+gnarly N AA R L IY
 gristle G R IH S AH L
 ground G R AW N D
 group G R UW P
@@ -271,6 +289,7 @@ harping HH AA R P IH NG
 harpoon HH AA R P UW N
 haul HH AO L
 haulage HH AO L AH JH
+hazy HH EY Z IY
 heave HH IY V
 hemp HH EH M P
 hempen HH EH M P AH N
@@ -281,11 +300,18 @@ hoop HH UW P
 horror HH AO R ER
 huh HH AH
 hula HH UW L AH
+idly AY D L IY
 imagery IH M AH JH R IY
 imagery(2) IH M AH JH R IY
 impact IH M P AE K T
+imperceptibly IH M P ER S EH P T IH B L IY
 important IH M P AO R T AH N T
 in IH N
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
+inexplicably IH N IH K S P L IH K AH B L IY
 influence IH N F L UW AH N S
 infomercials IH N F OW M ER SH AH L Z
 injection IH N JH EH K SH AH N
@@ -294,6 +320,7 @@ insanity(2) IH N S AE N AH T IY
 inspiration IH N S P ER EY SH AH N
 instructional IH N S T R AH K SH AH N AH L
 internet IH N T ER N EH T
+invade IH N V EY D
 jerk JH ER K
 join JH OY N
 jump JH AH M P
@@ -326,6 +353,7 @@ linguistic L IH NG G W IH S T IH K
 link L IH NG K
 log L AO G
 loop L UW P
+loosely L UW S L IY
 love L AH V
 lug L AH G
 lure L UH R
@@ -340,10 +368,12 @@ medical(2) M EH D AH K AH L
 middleman M IH D AH L M AE N
 miniseries M IH N IH S EH R IY Z
 miniseries(2) M IH N IH S EH R IY Z
+modicum M AA D IH K AH M
 mooring M UH R IH NG
 motion M OW SH AH N
 move M UW V
 movies M UW V IY Z
+much M AH CH
 muscle M AH S AH L
 music M Y UW Z IH K
 name N EY M
@@ -352,6 +382,7 @@ narrow(2) N EH R OW
 necktie N EH K T AY
 need N IY D
 negatively N EH G AH T IH V L IY
+neutrally N UW T R AH L IY
 news N UW Z
 news(2) N UW Z
 nexus N EH K S AH S
@@ -410,6 +441,7 @@ rank R AE NG K
 recipient R AH S IH P IY AH N T
 recipient(2) R AH S IH P IY AH N T
 rein R EY N
+remotely R IY M OW T L IY
 remove R IY M UW V
 report R IY P AO R T
 report(2) R IY P AO R T
@@ -423,12 +455,14 @@ ring R IH NG
 rip R IH P
 rock R AA K
 rope R OW P
+roughly R AH F L IY
 row R OW
 run R AH N
 sash S AE SH
 satellite S AE T AH L AY T
 secure S IH K Y UH R
 send S EH N D
+sense S EH N S
 sequence S IY K W AH N S
 series S IH R IY Z
 service S ER V AH S
@@ -445,6 +479,7 @@ small S M AO L
 smart S M AA R T
 snap S N AE P
 snare S N EH R
+so S OW
 sprain S P R EY N
 squeeze S K W IY Z
 static S T AE T IH K
@@ -462,7 +497,9 @@ stretch S T R EH CH
 string S T R IH NG
 structure S T R AH K CH ER
 stuff S T AH F
+subconsciously S AH B K AA N SH AH S L IY
 succession S AH K S EH SH AH N
+such S AH CH
 support S AH P AO R T
 system S IH S T AH M
 ta T AA
@@ -483,6 +520,9 @@ terrestrial T ER EH S T R IY AH L
 tether T EH DH ER
 thank TH AE NG K
 thanks TH AE NG K S
+that DH AE T
+that(2) DH AE T
+this DH IH S
 thong TH AO NG
 thread TH R EH D
 tie T AY
@@ -515,6 +555,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 undue AH N D UW
 unload AH N L OW D
 up AH P
@@ -526,6 +567,7 @@ viola(2) V AY OW L AH
 violin V AY AH L IH N
 wale W EY L
 washing W AA SH IH NG
+way W EY
 weed W IY D
 weight W EY T
 wick W IH K

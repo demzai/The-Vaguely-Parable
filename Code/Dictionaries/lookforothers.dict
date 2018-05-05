@@ -3,6 +3,7 @@ a(2) AH
 about AH B AW T
 academic AE K AH D EH M IH K
 action AE K SH AH N
+affront AH F R AH N T
 after AE F T ER
 agreement AH G R IY M AH N T
 ah AA
@@ -35,10 +36,13 @@ avenue AE V AH N UW
 avenues AE V AH N UW Z
 await AH W EY T
 back B AE K
+baffle B AE F AH L
 beam B IY M
 bearing B EH R IH NG
 beat B IY T
 behold B IH HH OW L D
+bewilder B IH W IH L D ER
+blur B L ER
 body B AA D IY
 browse B R AW Z
 burrow B ER OW
@@ -51,14 +55,18 @@ cast K AE S T
 cave K EY V
 chance CH AE N S
 chase CH EY S
+chat CH AE T
 check CH EH K
 chemical K EH M AH K AH L
 chemical(2) K EH M AH K AH L
 classy K L AE S IY
 comb K OW M
 complaint K AH M P L EY N T
+comply K AH M P L AY
 composition K AA M P AH Z IH SH AH N
 compromise K AA M P R AH M AY Z
+confuse K AH N F Y UW Z
+confusingly K AH N F Y UW Z IH NG L IY
 contemplate K AA N T AH M P L EY T
 context K AA N T EH K S T
 contour K AA N T UH R
@@ -72,23 +80,28 @@ cruise K R UW Z
 cut K AH T
 deal D IY L
 delve D EH L V
+depend D IH P EH N D
 detail D IH T EY L
 detail(2) D IH T EY L
 detect D IH T EH K T
 dig D IH G
 digging D IH G IH NG
+dimly D IH M L IY
 disclose D IH S K L OW Z
 dog D AO G
 down D AW N
 drag D R AE G
 dredge D R EH JH
 drilling D R IH L IH NG
+dubiously D UW B IY AH S L IY
 ease IY Z
 edge EH JH
 eh EH
 er ER
 err EH R
 err(2) EH R
+evasive IH V EY Z IH V
+evasive(2) IH V EY Z IH V
 every EH V ER IY
 every(2) EH V ER IY
 evil IY V AH L
@@ -104,6 +117,7 @@ expression IH K S P R EH SH AH N
 eye AY
 face F EY S
 facial F EY SH AH L
+faintly F EY N T L IY
 fashion F AE SH AH N
 feel F IY L
 feelers F IY L ER Z
@@ -121,8 +135,11 @@ for(2) F AO R
 for(3) F AO R
 forage F AO R IH JH
 foraging F AO R IH JH IH NG
+forgetful F AO R G EH T F AH L
+forgetful(2) F AO R G EH T F AH L
 form F AO R M
 forward F AO R W ER D
+frail F R EY L
 frisk F R IH S K
 front F R AH N T
 fumble F AH M B AH L
@@ -139,6 +156,7 @@ glint G L IH N T
 glisten G L IH S AH N
 glitter G L IH T ER
 glow G L OW
+gnarly N AA R L IY
 go G OW
 going G OW IH NG
 going(2) G OW IH NG
@@ -156,6 +174,7 @@ grounds(2) G R AW N D Z
 group G R UW P
 grub G R AH B
 hang HH AE NG
+hazy HH EY Z IY
 hello HH AH L OW
 hello(2) HH AH L OW
 hit HH IH T
@@ -173,9 +192,16 @@ huh HH AH
 hunt HH AH N T
 hunting HH AH N T IH NG
 idea AY D IY AH
+idly AY D L IY
 image IH M AH JH
 image(2) IH M AH JH
+imperceptibly IH M P ER S EH P T IH B L IY
 in IH N
+incoherently IH N K OW HH IH R AH N T L IY
+incomprehensibly IH NG K AA M P R AH HH EH N S IH B L IY
+indefinitely IH N D EH F AH N AH T L IY
+indistinct IH N D IH S T IH NG K T
+inexplicably IH N IH K S P L IH K AH B L IY
 inquest IH N K W EH S T
 inquire IH N K W AY R
 inquiry IH N K W AY R IY
@@ -187,6 +213,7 @@ internet IH N T ER N EH T
 into IH N T UW
 into(2) IH N T UW
 intrude IH N T R UW D
+invade IH N V EY D
 investigate IH N V EH S T AH G EY T
 investigation IH N V EH S T AH G EY SH AH N
 leave L IY V
@@ -198,6 +225,7 @@ long L AO NG
 look L UH K
 looking L UH K IH NG
 lookup L UH K AH P
+loosely L UW S L IY
 manhunt M AE N HH AH N T
 manner M AE N ER
 map M AE P
@@ -209,9 +237,12 @@ mind M AY N D
 mineral M IH N ER AH L
 mineral(2) M IH N ER AH L
 mode M OW D
+modicum M AA D IH K AH M
 morning M AO R N IH NG
+much M AH CH
 namaste N AA M AA S T EY
 nerd N ER D
+neutrally N UW T R AH L IY
 new N UW
 new(2) N UW
 no N OW
@@ -281,11 +312,13 @@ reconnoiter R IY K AH N OY T ER
 reconnoitre R IY K AH N OY T ER
 regard R IH G AA R D
 remembrance R IY M EH M B R AH N S
+remotely R IY M OW T L IY
 research R IY S ER CH
 resources R IY S AO R S IH Z
 revive R IH V AY V
 revive(2) R IH V AY V
 rifle R AY F AH L
+roughly R AH F L IY
 rummage R AH M IH JH
 rummaging R AH M IH JH IH NG
 run R AH N
@@ -308,6 +341,7 @@ see S IY
 seek S IY K
 seeking S IY K IH NG
 seem S IY M
+sense S EH N S
 sexuality S EH K SH UW AE L AH T IY
 shake SH EY K
 shakedown SH EY K D AW N
@@ -339,6 +373,8 @@ stone S T OW N
 stop S T AA P
 study S T AH D IY
 style S T AY L
+subconsciously S AH B K AA N SH AH S L IY
+such S AH CH
 surf S ER F
 surgically S ER JH IH K AH L IY
 surgically(2) S ER JH IH K AH L IY
@@ -356,6 +392,7 @@ that DH AE T
 that(2) DH AE T
 the DH AH
 the(2) DH AH
+this DH IH S
 through TH R UW
 throw TH R OW
 thumb TH AH M
@@ -381,6 +418,7 @@ uh AH
 uhh AH
 um AH M
 umm AH M
+uncertainly AH N S ER T AH N L IY
 unturned AH N T ER N D
 up AH P
 upon AH P AA N
@@ -393,6 +431,7 @@ want(2) W AA N T
 watch W AA CH
 watch(2) W AA CH
 wave W EY V
+way W EY
 welcome W EH L K AH M
 welcoming W EH L K AH M IH NG
 wild W AY L D

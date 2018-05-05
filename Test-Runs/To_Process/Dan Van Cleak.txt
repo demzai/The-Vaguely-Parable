@@ -1,0 +1,582 @@
+
+
+NEW GAME START!
+Auto Select - auto
+Next Address: - 0/00b
+
+Auto Select - auto
+Next Address: - 0/01a
+
+Auto Select - auto
+Next Address: - 0/01b
+
+	vaguely stepped outside the cubicle : the : 0.08333333333333333 : time
+	vaguely stepped outside the cubicle : the : 0.08333333333333333 : date
+	vaguely stepped outside the cubicle : out : 0.125 : stay in phone booth
+	vaguely stepped outside the cubicle : out : 0.375 : leave phone booth
+	vaguely stepped outside the cubicle : step : 0.3333333333333333 : leave phone booth
+	vaguely stepped outside the cubicle : cubicle : 0.25 : stay in phone booth
+	vaguely stepped outside the cubicle : cubicle : 0.25 : leave phone booth
+	vaguely stepped outside the cubicle : outside : 0.5 : leave phone booth
+	vaguely stepped outside the cubicle : the : 0.08333333333333333 : time
+	vaguely stepped outside the cubicle : the : 0.08333333333333333 : date
+	vaguely stepped outside the cubicle : out : 0.125 : stay in phone booth
+	vaguely stepped outside the cubicle : out : 0.375 : leave phone booth
+	vaguely stepped outside the cubicle : step : 0.3333333333333333 : leave phone booth
+	vaguely stepped outside the cubicle : cubicle : 0.25 : stay in phone booth
+	vaguely stepped outside the cubicle : cubicle : 0.25 : leave phone booth
+	vaguely stepped outside the cubicle : outside : 0.5 : leave phone booth
+	take three steps outside the cubicle : the : 0.08333333333333333 : time
+	take three steps outside the cubicle : the : 0.08333333333333333 : date
+	take three steps outside the cubicle : out : 0.125 : stay in phone booth
+	take three steps outside the cubicle : out : 0.375 : leave phone booth
+	take three steps outside the cubicle : step : 0.3333333333333333 : leave phone booth
+	take three steps outside the cubicle : cubicle : 0.25 : stay in phone booth
+	take three steps outside the cubicle : cubicle : 0.25 : leave phone booth
+	take three steps outside the cubicle : outside : 0.5 : leave phone booth
+	take three steps outside the cubicle : take : 0.5 : leave phone booth
+['leave_phone_booth', [('leave phone booth', 2.549641719057839), ('stay in phone booth', 0.641143485777033), ('time', 0.14247633017267397), ('date', 0.14247633017267397), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]Cleaning up: 17648
+Google: ['vaguely stepped outside the cubicle', 0.89710408, '']
+WitAPI: ['vaguely stepped outside the cubicle', 0.7, '']
+Sphinx: ['take three steps outside the cubicle', 0.11261188207208798, '']
+Select: ['leave_phone_booth', [('leave phone booth', 2.549641719057839), ('stay in phone booth', 0.641143485777033), ('time', 0.14247633017267397), ('date', 0.14247633017267397), ('restart', 0.0), ('repeat', 0.0), ('wake up', 0.0)]]
+User Select - leave_phone_booth
+Next Address: - 0/02b1
+
+Auto Select - auto
+Next Address: - 0/02b2
+
+	vaguely decided to look for others : look : 0.058823529411764705 : go back into the phone booth
+	vaguely decided to look for others : look : 0.17647058823529413 : wake up
+	vaguely decided to look for others : look : 0.058823529411764705 : repeat
+	vaguely decided to look for others : look : 0.4117647058823529 : look for others
+	vaguely decided to look for others : look for : 0.3333333333333333 : wait around
+	vaguely decided to look for others : look for : 0.5555555555555556 : look for others
+	vaguely decided to look for others : for : 0.06666666666666667 : repeat
+	vaguely decided to look for others : for : 0.06666666666666667 : time
+	vaguely decided to look for others : for : 0.06666666666666667 : look for others
+	vaguely decided to look for others : look for others : 1.0 : look for others
+	vaguely decided to look for others : decide : 0.25 : wake up
+	vaguely decided to look for others : to : 0.19047619047619047 : go back into the phone booth
+	vaguely decided to look for others : to : 0.047619047619047616 : repeat
+	vaguely decided to look for others : to : 0.047619047619047616 : time
+	vaguely decided to look for others : to : 0.047619047619047616 : date
+	vaguely decided to look for others : to : 0.047619047619047616 : look for others
+	vaguely decided to look for others : other : 0.2 : repeat
+	vaguely decided to look for others : other : 0.2 : look for others
+	vaguely decided to look for others : others : 0.25 : look for others
+	vaguely decided to look for office : office : 0.16666666666666666 : wait around
+	vaguely decided to look for office : look : 0.058823529411764705 : go back into the phone booth
+	vaguely decided to look for office : look : 0.17647058823529413 : wake up
+	vaguely decided to look for office : look : 0.058823529411764705 : repeat
+	vaguely decided to look for office : look : 0.4117647058823529 : look for others
+	vaguely decided to look for office : look for : 0.3333333333333333 : wait around
+	vaguely decided to look for office : look for : 0.5555555555555556 : look for others
+	vaguely decided to look for office : for : 0.06666666666666667 : repeat
+	vaguely decided to look for office : for : 0.06666666666666667 : time
+	vaguely decided to look for office : for : 0.06666666666666667 : look for others
+	vaguely decided to look for office : decide : 0.25 : wake up
+	vaguely decided to look for office : to : 0.19047619047619047 : go back into the phone booth
+	vaguely decided to look for office : to : 0.047619047619047616 : repeat
+	vaguely decided to look for office : to : 0.047619047619047616 : time
+	vaguely decided to look for office : to : 0.047619047619047616 : date
+	vaguely decided to look for office : to : 0.047619047619047616 : look for others
+	they treat decided to lots of us : treat : 0.3333333333333333 : go back into the phone booth
+	they treat decided to lots of us : decide : 0.25 : wake up
+	they treat decided to lots of us : the : 0.08333333333333333 : go back into the phone booth
+	they treat decided to lots of us : the : 0.08333333333333333 : time
+	they treat decided to lots of us : the : 0.08333333333333333 : date
+	they treat decided to lots of us : to : 0.19047619047619047 : go back into the phone booth
+	they treat decided to lots of us : to : 0.047619047619047616 : repeat
+	they treat decided to lots of us : to : 0.047619047619047616 : time
+	they treat decided to lots of us : to : 0.047619047619047616 : date
+	they treat decided to lots of us : to : 0.047619047619047616 : look for others
+['look_for_others', [('look for others', 2.51363230830966), ('wake up', 0.6239868466110078), ('wait around', 0.5805112866666666), ('go back into the phone booth', 0.42107413113933806), ('repeat', 0.3850110189959342), ('time', 0.17502884165058388), ('date', 0.08225991765058387), ('do nothing', 0.0), ('restart', 0.0)]]Cleaning up: 160
+Google: ['vaguely decided to look for others', 0.69153386, '']
+WitAPI: ['vaguely decided to look for office', 0.7, '']
+Sphinx: ['they treat decided to lots of us', 0.12215433114991327, '']
+Select: ['look_for_others', [('look for others', 2.51363230830966), ('wake up', 0.6239868466110078), ('wait around', 0.5805112866666666), ('go back into the phone booth', 0.42107413113933806), ('repeat', 0.3850110189959342), ('time', 0.17502884165058388), ('date', 0.08225991765058387), ('do nothing', 0.0), ('restart', 0.0)]]
+User Select - look_for_others
+Next Address: - 0/03b
+
+	maybe run towards the light : may : 0.3333333333333333 : run away from the light
+	maybe run towards the light : towards : 0.6666666666666666 : run toward the light
+	maybe run towards the light : to : 0.047619047619047616 : repeat
+	maybe run towards the light : to : 0.047619047619047616 : date
+	maybe run towards the light : to : 0.047619047619047616 : time
+	maybe run towards the light : to : 0.42857142857142855 : run toward the light
+	maybe run towards the light : to : 0.19047619047619047 : run away from the light
+	maybe run towards the light : run : 0.047619047619047616 : do not go anywhere
+	maybe run towards the light : run : 0.047619047619047616 : time
+	maybe run towards the light : run : 0.09523809523809523 : run toward the light
+	maybe run towards the light : run : 0.23809523809523808 : run away from the light
+	maybe run towards the light : toward : 0.09090909090909091 : repeat
+	maybe run towards the light : toward : 0.7272727272727273 : run toward the light
+	maybe run towards the light : toward : 0.09090909090909091 : run away from the light
+	maybe run towards the light : the : 0.08333333333333333 : date
+	maybe run towards the light : the : 0.08333333333333333 : time
+	maybe run towards the light : the : 0.16666666666666666 : run toward the light
+	maybe run towards the light : the : 0.08333333333333333 : run away from the light
+	maybe run towards the light : light : 0.2 : run toward the light
+	maybe run towards the light : light : 0.06666666666666667 : run away from the light
+	maybe run towards the light : light : 0.13333333333333333 : wake up
+	like the landlord to the light : like : 0.2222222222222222 : date
+	like the landlord to the light : like : 0.2222222222222222 : time
+	like the landlord to the light : like : 0.1111111111111111 : run away from the light
+	like the landlord to the light : to : 0.047619047619047616 : repeat
+	like the landlord to the light : to : 0.047619047619047616 : date
+	like the landlord to the light : to : 0.047619047619047616 : time
+	like the landlord to the light : to : 0.42857142857142855 : run toward the light
+	like the landlord to the light : to : 0.19047619047619047 : run away from the light
+	like the landlord to the light : the : 0.08333333333333333 : date
+	like the landlord to the light : the : 0.08333333333333333 : time
+	like the landlord to the light : the : 0.16666666666666666 : run toward the light
+	like the landlord to the light : the : 0.08333333333333333 : run away from the light
+	like the landlord to the light : land : 0.2857142857142857 : do not go anywhere
+	like the landlord to the light : land : 0.2857142857142857 : run toward the light
+	like the landlord to the light : light : 0.2 : run toward the light
+	like the landlord to the light : light : 0.06666666666666667 : run away from the light
+	like the landlord to the light : light : 0.13333333333333333 : wake up
+	they the u. n. portland : the : 0.08333333333333333 : date
+	they the u. n. portland : the : 0.08333333333333333 : time
+	they the u. n. portland : the : 0.16666666666666666 : run toward the light
+	they the u. n. portland : the : 0.08333333333333333 : run away from the light
+['run_toward_the_light', [('run toward the light', 2.5011262075038174), ('run away from the light', 1.0835896996508987), ('time', 0.3953025179135249), ('date', 0.35951795267542963), ('do not go anywhere', 0.2357845652380952), ('wake up', 0.19353011599999997), ('repeat', 0.13743388675324675), ('restart', 0.0)]]Cleaning up: 7020
+Google: ['maybe run towards the light', 0.75147587, '']
+WitAPI: ['like the landlord to the light', 0.7, '']
+Sphinx: ['they the u. n. portland', 0.166658112581347, '']
+Select: ['run_toward_the_light', [('run toward the light', 2.5011262075038174), ('run away from the light', 1.0835896996508987), ('time', 0.3953025179135249), ('date', 0.35951795267542963), ('do not go anywhere', 0.2357845652380952), ('wake up', 0.19353011599999997), ('repeat', 0.13743388675324675), ('restart', 0.0)]]
+User Select - run_toward_the_light
+Next Address: - 2/01a
+
+Auto Select - auto
+Next Address: - 2/01c
+
+Cleaning up: 15696
+	vaguely is the with some of the computer is me just talking on : of : 0.2 : go through an open door
+	vaguely is the with some of the computer is me just talking on : so : 0.14285714285714285 : repeat
+	vaguely is the with some of the computer is me just talking on : some : 0.8 : go through an open door
+	vaguely is the with some of the computer is me just talking on : some : 0.2 : look around
+	vaguely is the with some of the computer is me just talking on : the : 0.3333333333333333 : go through an open door
+	vaguely is the with some of the computer is me just talking on : the : 0.08333333333333333 : time
+	vaguely is the with some of the computer is me just talking on : the : 0.08333333333333333 : date
+	vaguely is the with some of the computer is me just talking on : with : 0.4166666666666667 : go through an open door
+	vaguely is the with some of the computer is me just talking on : just : 0.2 : time
+	vaguely is the with some of the computer is me just talking on : on : 0.3333333333333333 : go through an open door
+	vaguely is the with some of the computer is me just talking on : compute : 0.5 : go through an open door
+	vaguely is the with some of the computer is me just talking on : talk : 0.16666666666666666 : look around
+	vaguely is the with some of the computer is me just talking on : talk : 0.16666666666666666 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : may : 0.3333333333333333 : look around
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : so : 0.14285714285714285 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : some : 0.8 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : some : 0.2 : look around
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : that : 0.125 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : that : 0.1875 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : that : 0.1875 : date
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : that : 0.0625 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : see : 0.625 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : see : 0.25 : look around
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : and : 0.14285714285714285 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : and : 0.14285714285714285 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : the : 0.3333333333333333 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : the : 0.08333333333333333 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : the : 0.08333333333333333 : date
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : this : 0.07692307692307693 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : this : 0.07692307692307693 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : this : 0.07692307692307693 : date
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : this : 0.07692307692307693 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : an : 0.3076923076923077 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : an : 0.07692307692307693 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : an : 0.07692307692307693 : date
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : at : 0.29411764705882354 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : at : 0.058823529411764705 : look back
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : about : 0.75 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : about : 0.0625 : look around
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : about : 0.0625 : look back
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : can : 0.25 : look around
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : can : 0.25 : look back
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : to : 0.2857142857142857 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : to : 0.047619047619047616 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : to : 0.047619047619047616 : date
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : to : 0.047619047619047616 : look back
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : to : 0.047619047619047616 : repeat
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : bit : 1.0 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : just : 0.2 : time
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : on : 0.3333333333333333 : go through an open door
+	they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh : a : 1.0 : go through an open door
+['go_through_an_open_door', [('go through an open door', 2.1339662592226367), ('look around', 0.3154156147871626), ('repeat', 0.24201170863149019), ('time', 0.23437606952408427), ('date', 0.08365382804201657), ('look back', 0.022460017390220615), ('restart', 0.0), ('do nothing', 0.0), ('go back', 0.0), ('wake up', 0.0)]]Cleaning up: 21356
+Google: ['vaguely', 0.81028938, '']
+WitAPI: ['vaguely is the with some of the computer is me just talking on', 0.7, '']
+Sphinx: ["they drilled and that all the aunt bit is listen and some woman about aunt the so you can see this may just told at on i'm oh", 0.05361120741033855, '']
+Select: ['go_through_an_open_door', [('go through an open door', 2.1339662592226367), ('look around', 0.3154156147871626), ('repeat', 0.24201170863149019), ('time', 0.23437606952408427), ('date', 0.08365382804201657), ('look back', 0.022460017390220615), ('restart', 0.0), ('do nothing', 0.0), ('go back', 0.0), ('wake up', 0.0)]]
+User Select - go_through_an_open_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a1
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	baby went through another door : another door : 1.0 : try another door
+	baby went through another door : a : 0.5 : try another door
+	baby went through another door : do : 0.09090909090909091 : do nothing
+	baby went through another door : we : 0.125 : repeat
+	baby went through another door : we : 0.375 : do nothing
+	baby went through another door : another : 0.4 : repeat
+	baby went through another door : another : 0.6 : try another door
+	baby went through another door : door : 1.0 : break the door down
+	baby went through another door : door : 1.8 : try another door
+	baby went through another door : through : 0.07142857142857142 : look around
+	baby went through another door : through : 0.14285714285714285 : try another door
+	baby went through another door : an : 0.23076923076923078 : break the door down
+	baby went through another door : an : 0.07692307692307693 : date
+	baby went through another door : an : 0.07692307692307693 : time
+	baby went through another door : an : 0.15384615384615385 : try another door
+	baby went to another : a : 0.5 : try another door
+	baby went to another : we : 0.125 : repeat
+	baby went to another : we : 0.375 : do nothing
+	baby went to another : another : 0.4 : repeat
+	baby went to another : another : 0.6 : try another door
+	baby went to another : an : 0.23076923076923078 : break the door down
+	baby went to another : an : 0.07692307692307693 : date
+	baby went to another : an : 0.07692307692307693 : time
+	baby went to another : an : 0.15384615384615385 : try another door
+	baby went to another : to : 0.14285714285714285 : break the door down
+	baby went to another : to : 0.047619047619047616 : look back
+	baby went to another : to : 0.047619047619047616 : date
+	baby went to another : to : 0.047619047619047616 : repeat
+	baby went to another : to : 0.047619047619047616 : time
+	baby went to another : to : 0.19047619047619047 : try another door
+	if if they'd be went through in the what : in the : 1.0 : try another door
+	if if they'd be went through in the what : in : 0.041666666666666664 : look back
+	if if they'd be went through in the what : in : 0.041666666666666664 : look around
+	if if they'd be went through in the what : in : 0.08333333333333333 : wake up
+	if if they'd be went through in the what : in : 0.16666666666666666 : try another door
+	if if they'd be went through in the what : the : 0.25 : break the door down
+	if if they'd be went through in the what : the : 0.08333333333333333 : date
+	if if they'd be went through in the what : the : 0.08333333333333333 : time
+	if if they'd be went through in the what : the : 0.16666666666666666 : try another door
+	if if they'd be went through in the what : if : 0.2 : repeat
+	if if they'd be went through in the what : we : 0.125 : repeat
+	if if they'd be went through in the what : we : 0.375 : do nothing
+	if if they'd be went through in the what : be : 0.16666666666666666 : repeat
+	if if they'd be went through in the what : what : 0.6666666666666666 : date
+	if if they'd be went through in the what : what : 0.6666666666666666 : time
+	if if they'd be went through in the what : through : 0.07142857142857142 : look around
+	if if they'd be went through in the what : through : 0.14285714285714285 : try another door
+['try_another_door', [('try another door', 4.7931729862314745), ('break the door down', 1.3520811604722038), ('repeat', 0.9052723991850773), ('do nothing', 0.7039098637852286), ('date', 0.23020992244225197), ('time', 0.23020992244225197), ('look around', 0.07334156526856098), ('look back', 0.037581362642803165), ('wake up', 0.008496058618939675), ('restart', 0.0), ('go back', 0.0)]]Cleaning up: 16516
+Google: ['baby went through another door', 0.8653568, '']
+WitAPI: ['baby went to another', 0.7, '']
+Sphinx: ["if if they'd be went through in the what", 0.10195270342727611, '']
+Select: ['try_another_door', [('try another door', 4.7931729862314745), ('break the door down', 1.3520811604722038), ('repeat', 0.9052723991850773), ('do nothing', 0.7039098637852286), ('date', 0.23020992244225197), ('time', 0.23020992244225197), ('look around', 0.07334156526856098), ('look back', 0.037581362642803165), ('wake up', 0.008496058618939675), ('restart', 0.0), ('go back', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a2
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+Cleaning up: 24196
+	baby driver : drive : 0.06666666666666667 : go back
+	baby driver : drive : 0.13333333333333333 : try another door
+	make it in the middle of on of on : make : 0.08333333333333333 : try another door
+	make it in the middle of on of on : make : 0.08333333333333333 : do nothing
+	make it in the middle of on of on : of : 0.2 : try another door
+	make it in the middle of on of on : the : 0.25 : break the door down
+	make it in the middle of on of on : the : 0.08333333333333333 : time
+	make it in the middle of on of on : the : 0.16666666666666666 : try another door
+	make it in the middle of on of on : the : 0.08333333333333333 : date
+	make it in the middle of on of on : in the : 1.0 : try another door
+	make it in the middle of on of on : it : 0.23076923076923078 : break the door down
+	make it in the middle of on of on : it : 0.23076923076923078 : time
+	make it in the middle of on of on : it : 0.15384615384615385 : try another door
+	make it in the middle of on of on : it : 0.07692307692307693 : repeat
+	make it in the middle of on of on : it : 0.23076923076923078 : date
+	make it in the middle of on of on : in : 0.041666666666666664 : look back
+	make it in the middle of on of on : in : 0.16666666666666666 : try another door
+	make it in the middle of on of on : in : 0.041666666666666664 : look around
+	make it in the middle of on of on : in : 0.08333333333333333 : wake up
+	make it in the middle of on of on : on : 0.16666666666666666 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : up : 0.15384615384615385 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : up : 0.15384615384615385 : wake up
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : lift : 0.07692307692307693 : break the door down
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : lift : 0.15384615384615385 : wake up
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : see : 0.625 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : see : 0.25 : look around
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : of : 0.2 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : the : 0.25 : break the door down
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : the : 0.08333333333333333 : time
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : the : 0.16666666666666666 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : the : 0.08333333333333333 : date
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : so : 0.14285714285714285 : repeat
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.047619047619047616 : look back
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.14285714285714285 : break the door down
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.047619047619047616 : time
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.19047619047619047 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.047619047619047616 : repeat
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : to : 0.047619047619047616 : date
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : bob : 0.1111111111111111 : do nothing
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : it : 0.23076923076923078 : break the door down
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : it : 0.23076923076923078 : time
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : it : 0.15384615384615385 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : it : 0.07692307692307693 : repeat
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : it : 0.23076923076923078 : date
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : a : 0.5 : try another door
+	they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob : on : 0.16666666666666666 : try another door
+['try_another_door', [('try another door', 1.553058688026155), ('break the door down', 0.36508150077384016), ('date', 0.23460970401947404), ('time', 0.23460970401947404), ('wake up', 0.07086988389946043), ('repeat', 0.06474101326671669), ('do nothing', 0.06286042103776812), ('go back', 0.05458449533333333), ('look around', 0.039352614001644935), ('look back', 0.03110684711142443), ('restart', 0.0)]]Cleaning up: 21188
+Google: ['baby driver', 0.81876743, '']
+WitAPI: ['make it in the middle of on of on', 0.7, '']
+Sphinx: ["they see it joined up to lift of a a phone i'm i'm on on so i'm of on i'm i'm bob", 0.04074378933991309, '']
+Select: ['try_another_door', [('try another door', 1.553058688026155), ('break the door down', 0.36508150077384016), ('date', 0.23460970401947404), ('time', 0.23460970401947404), ('wake up', 0.07086988389946043), ('repeat', 0.06474101326671669), ('do nothing', 0.06286042103776812), ('go back', 0.05458449533333333), ('look around', 0.039352614001644935), ('look back', 0.03110684711142443), ('restart', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a3
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	vagary gave up : up : 0.15384615384615385 : wake up
+	vagary gave up : up : 0.15384615384615385 : try another door
+	what the baby gave up : up : 0.15384615384615385 : wake up
+	what the baby gave up : up : 0.15384615384615385 : try another door
+	what the baby gave up : the : 0.16666666666666666 : try another door
+	what the baby gave up : the : 0.08333333333333333 : date
+	what the baby gave up : the : 0.08333333333333333 : time
+	what the baby gave up : the : 0.25 : break the door down
+	what the baby gave up : what : 0.6666666666666666 : date
+	what the baby gave up : what : 0.6666666666666666 : time
+	if the splendid bakery gave up : up : 0.15384615384615385 : wake up
+	if the splendid bakery gave up : up : 0.15384615384615385 : try another door
+	if the splendid bakery gave up : the : 0.16666666666666666 : try another door
+	if the splendid bakery gave up : the : 0.08333333333333333 : date
+	if the splendid bakery gave up : the : 0.08333333333333333 : time
+	if the splendid bakery gave up : the : 0.25 : break the door down
+	if the splendid bakery gave up : if : 0.2 : repeat
+['time', [('time', 0.5395955210663451), ('date', 0.5395955210663451), ('try another door', 0.3889217338449173), ('wake up', 0.24306402504556035), ('break the door down', 0.21878656319903553), ('repeat', 0.03502925055922844), ('look back', 0.0), ('go back', 0.0), ('restart', 0.0), ('do nothing', 0.0), ('look around', 0.0)]]Cleaning up: 8020
+Google: ['vagary gave up', 0.70476991, '']
+WitAPI: ['what the baby gave up', 0.7, '']
+Sphinx: ['if the splendid bakery gave up', 0.17514625279614218, '']
+Select: ['try_another_door', ['try_another_door']]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/02a4
+
+Auto Select - auto
+Next Address: - 2/02a5
+
+	favourite I'd another door : another door : 1.0 : try another door
+	favourite I'd another door : door : 1.8 : try another door
+	favourite I'd another door : door : 1.0 : break the door down
+	favourite I'd another door : an : 0.15384615384615385 : try another door
+	favourite I'd another door : an : 0.07692307692307693 : time
+	favourite I'd another door : an : 0.07692307692307693 : date
+	favourite I'd another door : an : 0.23076923076923078 : break the door down
+	favourite I'd another door : favour : 0.3333333333333333 : look back
+	favourite I'd another door : favour : 0.3333333333333333 : go back
+	favourite I'd another door : another : 0.4 : repeat
+	favourite I'd another door : another : 0.6 : try another door
+	favourite I'd another door : a : 0.5 : try another door
+	favourite I'd another door : do : 0.09090909090909091 : do nothing
+	they be fighting over the ps : be : 0.16666666666666666 : repeat
+	they be fighting over the ps : the : 0.16666666666666666 : try another door
+	they be fighting over the ps : the : 0.08333333333333333 : time
+	they be fighting over the ps : the : 0.08333333333333333 : date
+	they be fighting over the ps : the : 0.25 : break the door down
+	they be fighting over the ps : over : 0.10526315789473684 : wake up
+	they be fighting over the ps : over : 0.05263157894736842 : repeat
+	they be fighting over the ps : over : 0.10526315789473684 : try another door
+	they be fighting over the ps : over : 0.05263157894736842 : look around
+	they be fighting over the ps : fig : 7.0 : date
+	they be fighting over the ps : fight : 0.5 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : those : 0.6666666666666666 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : hope : 0.058823529411764705 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : hope : 0.11764705882352941 : look back
+	if they side that those laugh with whoa hope fight feet and for two the again what : hope : 0.17647058823529413 : look around
+	if they side that those laugh with whoa hope fight feet and for two the again what : hope : 0.058823529411764705 : go back
+	if they side that those laugh with whoa hope fight feet and for two the again what : an : 0.15384615384615385 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : an : 0.07692307692307693 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : an : 0.07692307692307693 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : an : 0.23076923076923078 : break the door down
+	if they side that those laugh with whoa hope fight feet and for two the again what : again : 1.0 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : feet : 0.3333333333333333 : look back
+	if they side that those laugh with whoa hope fight feet and for two the again what : feet : 0.3333333333333333 : go back
+	if they side that those laugh with whoa hope fight feet and for two the again what : that : 0.0625 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : that : 0.125 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : that : 0.1875 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : that : 0.1875 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : that : 0.1875 : break the door down
+	if they side that those laugh with whoa hope fight feet and for two the again what : side : 0.2857142857142857 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : side : 0.14285714285714285 : look back
+	if they side that those laugh with whoa hope fight feet and for two the again what : side : 0.14285714285714285 : go back
+	if they side that those laugh with whoa hope fight feet and for two the again what : the : 0.16666666666666666 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : the : 0.08333333333333333 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : the : 0.08333333333333333 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : the : 0.25 : break the door down
+	if they side that those laugh with whoa hope fight feet and for two the again what : fig : 7.0 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : fight : 0.5 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : for : 0.06666666666666667 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : for : 0.26666666666666666 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : for : 0.06666666666666667 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : and : 0.14285714285714285 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : a : 0.5 : try another door
+	if they side that those laugh with whoa hope fight feet and for two the again what : what : 0.6666666666666666 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : what : 0.6666666666666666 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : if : 0.2 : repeat
+	if they side that those laugh with whoa hope fight feet and for two the again what : who : 0.3333333333333333 : time
+	if they side that those laugh with whoa hope fight feet and for two the again what : who : 0.3333333333333333 : date
+	if they side that those laugh with whoa hope fight feet and for two the again what : who : 0.3333333333333333 : break the door down
+	if they side that those laugh with whoa hope fight feet and for two the again what : with : 0.3333333333333333 : try another door
+['date', [('date', 5.420600216726934), ('try another door', 4.095221173183068), ('break the door down', 1.2586312281898637), ('repeat', 0.5630866843641572), ('look back', 0.3088442801126754), ('go back', 0.30604309802604246), ('time', 0.19043422144913133), ('do nothing', 0.07651791272727274), ('wake up', 0.07368421052631578), ('look around', 0.045245651523056714), ('restart', 0.0)]]Cleaning up: 13004
+Google: ["favourite I'd another door", 0.84169704, '']
+WitAPI: ['they be fighting over the ps', 0.7, '']
+Sphinx: ['if they side that those laugh with whoa hope fight feet and for two the again what', 0.04762009547275998, '']
+Select: ['date', [('date', 5.420600216726934), ('try another door', 4.095221173183068), ('break the door down', 1.2586312281898637), ('repeat', 0.5630866843641572), ('look back', 0.3088442801126754), ('go back', 0.30604309802604246), ('time', 0.19043422144913133), ('do nothing', 0.07651791272727274), ('wake up', 0.07368421052631578), ('look around', 0.045245651523056714), ('restart', 0.0)]]
+User Select - date
+Next Address: - 4/09
+
+Cleaning up: 12096
+	step through a door : a : 0.5 : try another door
+	step through a door : door : 1.8 : try another door
+	step through a door : door : 1.0 : break the door down
+	step through a door : do : 0.09090909090909091 : do nothing
+	step through a door : through : 0.07142857142857142 : look around
+	step through a door : through : 0.14285714285714285 : try another door
+	what steps would on a number of of of the person responsible is sending me so : of : 0.2 : try another door
+	what steps would on a number of of of the person responsible is sending me so : a : 0.5 : try another door
+	what steps would on a number of of of the person responsible is sending me so : number : 0.42857142857142855 : do nothing
+	what steps would on a number of of of the person responsible is sending me so : number : 0.14285714285714285 : try another door
+	what steps would on a number of of of the person responsible is sending me so : per : 0.4 : try another door
+	what steps would on a number of of of the person responsible is sending me so : the : 0.08333333333333333 : time
+	what steps would on a number of of of the person responsible is sending me so : the : 0.08333333333333333 : date
+	what steps would on a number of of of the person responsible is sending me so : the : 0.16666666666666666 : try another door
+	what steps would on a number of of of the person responsible is sending me so : the : 0.25 : break the door down
+	what steps would on a number of of of the person responsible is sending me so : on : 0.16666666666666666 : try another door
+	what steps would on a number of of of the person responsible is sending me so : what : 0.6666666666666666 : time
+	what steps would on a number of of of the person responsible is sending me so : what : 0.6666666666666666 : date
+	what steps would on a number of of of the person responsible is sending me so : would : 0.6666666666666666 : try another door
+	what steps would on a number of of of the person responsible is sending me so : re : 0.25 : repeat
+	what steps would on a number of of of the person responsible is sending me so : re : 0.5 : try another door
+	what steps would on a number of of of the person responsible is sending me so : so : 0.14285714285714285 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : of : 0.2 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : that : 0.0625 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : that : 0.1875 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : that : 0.1875 : date
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : that : 0.125 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : that : 0.1875 : break the door down
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : good : 0.11764705882352941 : wake up
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : good : 0.058823529411764705 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : good : 0.23529411764705882 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : a : 0.5 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : it : 0.07692307692307693 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : it : 0.23076923076923078 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : it : 0.23076923076923078 : date
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : it : 0.15384615384615385 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : it : 0.23076923076923078 : break the door down
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : go : 0.043478260869565216 : wake up
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : go : 0.043478260869565216 : do nothing
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : go : 0.13043478260869565 : go back
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : go : 0.30434782608695654 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : walk : 0.06666666666666667 : go back
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : an : 0.07692307692307693 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : an : 0.07692307692307693 : date
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : an : 0.15384615384615385 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : an : 0.23076923076923078 : break the door down
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : if : 0.2 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : on : 0.16666666666666666 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.047619047619047616 : look back
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.047619047619047616 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.047619047619047616 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.047619047619047616 : date
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.19047619047619047 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : to : 0.14285714285714285 : break the door down
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : but : 0.18181818181818182 : time
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : but : 0.18181818181818182 : date
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : but : 0.18181818181818182 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : bob : 0.1111111111111111 : do nothing
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : in : 0.08333333333333333 : wake up
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : in : 0.041666666666666664 : look back
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : in : 0.041666666666666664 : look around
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : in : 0.16666666666666666 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : use : 0.6666666666666666 : try another door
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : and : 0.14285714285714285 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : re : 0.25 : repeat
+	i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of : re : 0.5 : try another door
+['try_another_door', [('try another door', 3.9917566407545957), ('break the door down', 1.0040775291938866), ('time', 0.5475958647818807), ('date', 0.5458993132290876), ('do nothing', 0.37775294935525444), ('repeat', 0.29749336832318435), ('look around', 0.05879016473084755), ('wake up', 0.0070505240255571726), ('go back', 0.005684677087040344), ('look back', 0.0025751228926325083), ('restart', 0.0)]]Cleaning up: 8496
+Google: ['step through a door', 0.80623817, '']
+WitAPI: ['what steps would on a number of of of the person responsible is sending me so', 0.7, '']
+Sphinx: ["i'm that's a good job confident of on i'm and all that is that a film bob ah i'm on but in our response and walked use it if to niece of", 0.028841376397484096, '']
+Select: ['try_another_door', [('try another door', 3.9917566407545957), ('break the door down', 1.0040775291938866), ('time', 0.5475958647818807), ('date', 0.5458993132290876), ('do nothing', 0.37775294935525444), ('repeat', 0.29749336832318435), ('look around', 0.05879016473084755), ('wake up', 0.0070505240255571726), ('go back', 0.005684677087040344), ('look back', 0.0025751228926325083), ('restart', 0.0)]]
+User Select - try_another_door
+Next Address: - 2/02a
+
+Auto Select - auto
+Next Address: - 2/03a
+
+Auto Select - auto
+Next Address: - 2/03c
+
+	vaguely did nothing : nothing : 0.375 : do nothing
+	vaguely did nothing : did : 0.3333333333333333 : do nothing
+	vaguely did nothing : not : 0.2857142857142857 : do nothing
+	vaguely did nothing : no : 0.2857142857142857 : do nothing
+	they created nothing : nothing : 0.375 : do nothing
+	they created nothing : not : 0.2857142857142857 : do nothing
+	they created nothing : no : 0.2857142857142857 : do nothing
+	they created nothing : the : 0.08333333333333333 : time
+	they created nothing : the : 0.08333333333333333 : date
+	they created nothing : the : 0.08333333333333333 : go back into the phone booth
+	they greeted nothing : nothing : 0.375 : do nothing
+	they greeted nothing : not : 0.2857142857142857 : do nothing
+	they greeted nothing : no : 0.2857142857142857 : do nothing
+	they greeted nothing : the : 0.08333333333333333 : time
+	they greeted nothing : the : 0.08333333333333333 : date
+	they greeted nothing : the : 0.08333333333333333 : go back into the phone booth
+['do_nothing', [('do nothing', 1.880080583590761), ('time', 0.07599345190945904), ('date', 0.07599345190945904), ('go back into the phone booth', 0.07599345190945904), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('look back', 0.0)]]Cleaning up: 23924
+Google: ['vaguely did nothing', 0.79468852, '']
+WitAPI: ['they created nothing', 0.7, '']
+Sphinx: ['they greeted nothing', 0.21192142291350852, '']
+Select: ['do_nothing', [('do nothing', 1.880080583590761), ('time', 0.07599345190945904), ('date', 0.07599345190945904), ('go back into the phone booth', 0.07599345190945904), ('restart', 0.0), ('go back', 0.0), ('repeat', 0.0), ('wake up', 0.0), ('look back', 0.0)]]
+User Select - do_nothing
+Next Address: - 4/03
+
+	fake we enter the phone Booth : the : 0.08333333333333333 : date
+	fake we enter the phone Booth : the : 0.08333333333333333 : go back into the phone booth
+	fake we enter the phone Booth : the : 0.08333333333333333 : time
+	fake we enter the phone Booth : we : 0.125 : repeat
+	fake we enter the phone Booth : we : 0.375 : do nothing
+	fake we enter the phone Booth : phone : 0.75 : go back into the phone booth
+	fake we enter the phone Booth : enter : 0.42857142857142855 : go back into the phone booth
+	thank you and the finally : the : 0.08333333333333333 : date
+	thank you and the finally : the : 0.08333333333333333 : go back into the phone booth
+	thank you and the finally : the : 0.08333333333333333 : time
+	thank you and the finally : than : 1.0 : date
+	thank you and the finally : than : 1.0 : time
+	thank you and the finally : and : 0.14285714285714285 : repeat
+	thank you and the finally : an : 0.07692307692307693 : date
+	thank you and the finally : an : 0.07692307692307693 : go back into the phone booth
+	thank you and the finally : an : 0.07692307692307693 : time
+	take the end of the scientists : end : 0.25 : go back into the phone booth
+	take the end of the scientists : end : 0.125 : wake up
+	take the end of the scientists : the : 0.08333333333333333 : date
+	take the end of the scientists : the : 0.08333333333333333 : go back into the phone booth
+	take the end of the scientists : the : 0.08333333333333333 : time
+	take the end of the scientists : take : 0.4 : go back
+['go_back_into_the_phone_booth', [('go back into the phone booth', 1.0924109711459487), ('date', 0.8887573767425311), ('time', 0.8887573767425311), ('do nothing', 0.27215997000000003), ('repeat', 0.19071999), ('go back', 0.07726990190261113), ('wake up', 0.024146844344565977), ('look back', 0.0), ('restart', 0.0)]]Cleaning up: 15048
+Google: ['fake we enter the phone Booth', 0.72575992, '']
+WitAPI: ['thank you and the finally', 0.7, '']
+Sphinx: ['take the end of the scientists', 0.19317475475652782, '']
+Select: ['go_back_into_the_phone_booth', [('go back into the phone booth', 1.0924109711459487), ('date', 0.8887573767425311), ('time', 0.8887573767425311), ('do nothing', 0.27215997000000003), ('repeat', 0.19071999), ('go back', 0.07726990190261113), ('wake up', 0.024146844344565977), ('look back', 0.0), ('restart', 0.0)]]
+User Select - go_back_into_the_phone_booth
+Next Address: - 2/04a
+
+Auto Select - auto
+Next Address: - 4/98
+
+Cleaning up: 18776
